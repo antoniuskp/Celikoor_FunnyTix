@@ -117,6 +117,12 @@
     <Compile Include="FormPegawai.Designer.cs">
       <DependentUpon>FormPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPenjadwalan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenjadwalan.Designer.cs">
+      <DependentUpon>FormPenjadwalan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     <EmbeddedResource Include="FormPegawai.resx">
       <DependentUpon>FormPegawai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjadwalan.resx">
+      <DependentUpon>FormPenjadwalan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +204,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="db.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>db.Designer.cs</LastGenOutput>
@@ -208,9 +218,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FunnyTix_LIB\FunnyTix_LIB.csproj">
@@ -256,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FormAwal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormPenjadwalan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

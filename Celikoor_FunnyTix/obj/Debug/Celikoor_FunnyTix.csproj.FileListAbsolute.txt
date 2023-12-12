@@ -328,3 +328,30 @@ C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tah
 C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
 C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
 C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPenjadwalan.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb

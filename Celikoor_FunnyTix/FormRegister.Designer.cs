@@ -52,29 +52,32 @@ namespace Celikoor_FunnyTix
             // textBoxFirstName
             // 
             this.textBoxFirstName.BackColor = System.Drawing.Color.Maroon;
-            this.textBoxFirstName.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFirstName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxFirstName.Location = new System.Drawing.Point(148, 263);
+            this.textBoxFirstName.Location = new System.Drawing.Point(166, 329);
+            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(222, 36);
+            this.textBoxFirstName.Size = new System.Drawing.Size(249, 39);
             this.textBoxFirstName.TabIndex = 20;
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(138, 521);
+            this.dateTimePicker.Location = new System.Drawing.Point(155, 651);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(494, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(555, 26);
             this.dateTimePicker.TabIndex = 21;
             // 
             // radioButtonMale
             // 
             this.radioButtonMale.AutoSize = true;
             this.radioButtonMale.BackColor = System.Drawing.Color.Maroon;
-            this.radioButtonMale.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonMale.Location = new System.Drawing.Point(256, 608);
+            this.radioButtonMale.Location = new System.Drawing.Point(288, 760);
+            this.radioButtonMale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(114, 45);
+            this.radioButtonMale.Size = new System.Drawing.Size(124, 44);
             this.radioButtonMale.TabIndex = 22;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "Male";
@@ -84,11 +87,12 @@ namespace Celikoor_FunnyTix
             // 
             this.radioButtonFemale.AutoSize = true;
             this.radioButtonFemale.BackColor = System.Drawing.Color.Maroon;
-            this.radioButtonFemale.Font = new System.Drawing.Font("Montserrat SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFemale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonFemale.Location = new System.Drawing.Point(410, 608);
+            this.radioButtonFemale.Location = new System.Drawing.Point(461, 760);
+            this.radioButtonFemale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(159, 43);
+            this.radioButtonFemale.Size = new System.Drawing.Size(176, 42);
             this.radioButtonFemale.TabIndex = 23;
             this.radioButtonFemale.TabStop = true;
             this.radioButtonFemale.Text = " Female ";
@@ -98,76 +102,83 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxEmail.BackColor = System.Drawing.Color.Maroon;
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxEmail.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxEmail.Location = new System.Drawing.Point(148, 388);
+            this.textBoxEmail.Location = new System.Drawing.Point(166, 485);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(484, 29);
+            this.textBoxEmail.Size = new System.Drawing.Size(544, 32);
             this.textBoxEmail.TabIndex = 24;
             // 
             // textBoxNoHp
             // 
             this.textBoxNoHp.BackColor = System.Drawing.Color.Maroon;
             this.textBoxNoHp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNoHp.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNoHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNoHp.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxNoHp.Location = new System.Drawing.Point(220, 730);
+            this.textBoxNoHp.Location = new System.Drawing.Point(248, 912);
+            this.textBoxNoHp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNoHp.Name = "textBoxNoHp";
-            this.textBoxNoHp.Size = new System.Drawing.Size(402, 29);
+            this.textBoxNoHp.Size = new System.Drawing.Size(452, 32);
             this.textBoxNoHp.TabIndex = 25;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Maroon;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(145, 729);
+            this.textBox1.Location = new System.Drawing.Point(163, 911);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 29);
+            this.textBox1.Size = new System.Drawing.Size(71, 32);
             this.textBox1.TabIndex = 26;
             this.textBox1.Text = "+62";
             // 
             // textBoxLastName
             // 
             this.textBoxLastName.BackColor = System.Drawing.Color.Maroon;
-            this.textBoxLastName.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLastName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxLastName.Location = new System.Drawing.Point(400, 263);
+            this.textBoxLastName.Location = new System.Drawing.Point(450, 329);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(222, 36);
+            this.textBoxLastName.Size = new System.Drawing.Size(249, 39);
             this.textBoxLastName.TabIndex = 27;
             // 
             // textBoxConfirmPassw
             // 
             this.textBoxConfirmPassw.BackColor = System.Drawing.Color.Maroon;
             this.textBoxConfirmPassw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxConfirmPassw.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfirmPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxConfirmPassw.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxConfirmPassw.Location = new System.Drawing.Point(779, 528);
+            this.textBoxConfirmPassw.Location = new System.Drawing.Point(876, 660);
+            this.textBoxConfirmPassw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxConfirmPassw.Name = "textBoxConfirmPassw";
-            this.textBoxConfirmPassw.Size = new System.Drawing.Size(442, 29);
+            this.textBoxConfirmPassw.Size = new System.Drawing.Size(497, 32);
             this.textBoxConfirmPassw.TabIndex = 28;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.Maroon;
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxPassword.Location = new System.Drawing.Point(779, 388);
+            this.textBoxPassword.Location = new System.Drawing.Point(876, 485);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(442, 29);
+            this.textBoxPassword.Size = new System.Drawing.Size(497, 32);
             this.textBoxPassword.TabIndex = 29;
             // 
             // buttonRegister
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonRegister.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonRegister.Location = new System.Drawing.Point(724, 651);
+            this.buttonRegister.Location = new System.Drawing.Point(814, 814);
+            this.buttonRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(543, 79);
+            this.buttonRegister.Size = new System.Drawing.Size(611, 99);
             this.buttonRegister.TabIndex = 30;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
@@ -177,11 +188,11 @@ namespace Celikoor_FunnyTix
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.BackColor = System.Drawing.Color.Maroon;
-            this.labelLogin.Font = new System.Drawing.Font("Montserrat Medium", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLogin.Location = new System.Drawing.Point(1078, 751);
+            this.labelLogin.Location = new System.Drawing.Point(1213, 939);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(115, 26);
+            this.labelLogin.Size = new System.Drawing.Size(124, 26);
             this.labelLogin.TabIndex = 32;
             this.labelLogin.Text = "Login Now";
             this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
@@ -190,11 +201,11 @@ namespace Celikoor_FunnyTix
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Maroon;
-            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(763, 750);
+            this.label1.Location = new System.Drawing.Point(858, 938);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 26);
+            this.label1.Size = new System.Drawing.Size(351, 26);
             this.label1.TabIndex = 31;
             this.label1.Text = "  Already have an acoount?       ";
             // 
@@ -202,11 +213,12 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.Maroon;
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxUsername.Location = new System.Drawing.Point(779, 263);
+            this.textBoxUsername.Location = new System.Drawing.Point(876, 329);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(442, 29);
+            this.textBoxUsername.Size = new System.Drawing.Size(497, 32);
             this.textBoxUsername.TabIndex = 33;
             // 
             // pictBoxHidePwd
@@ -214,9 +226,10 @@ namespace Celikoor_FunnyTix
             this.pictBoxHidePwd.BackColor = System.Drawing.Color.Transparent;
             this.pictBoxHidePwd.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.visibleHide;
             this.pictBoxHidePwd.Image = global::Celikoor_FunnyTix.Properties.Resources.visibleHide;
-            this.pictBoxHidePwd.Location = new System.Drawing.Point(1241, 388);
+            this.pictBoxHidePwd.Location = new System.Drawing.Point(1396, 485);
+            this.pictBoxHidePwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictBoxHidePwd.Name = "pictBoxHidePwd";
-            this.pictBoxHidePwd.Size = new System.Drawing.Size(37, 31);
+            this.pictBoxHidePwd.Size = new System.Drawing.Size(42, 39);
             this.pictBoxHidePwd.TabIndex = 34;
             this.pictBoxHidePwd.TabStop = false;
             this.pictBoxHidePwd.Click += new System.EventHandler(this.pictBoxHidePwd_Click);
@@ -226,21 +239,22 @@ namespace Celikoor_FunnyTix
             this.pictureBoxHideConfirm.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxHideConfirm.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.visibleHide;
             this.pictureBoxHideConfirm.Image = global::Celikoor_FunnyTix.Properties.Resources.visibleHide;
-            this.pictureBoxHideConfirm.Location = new System.Drawing.Point(1241, 528);
+            this.pictureBoxHideConfirm.Location = new System.Drawing.Point(1396, 660);
+            this.pictureBoxHideConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxHideConfirm.Name = "pictureBoxHideConfirm";
-            this.pictureBoxHideConfirm.Size = new System.Drawing.Size(37, 31);
+            this.pictureBoxHideConfirm.Size = new System.Drawing.Size(42, 39);
             this.pictureBoxHideConfirm.TabIndex = 35;
             this.pictureBoxHideConfirm.TabStop = false;
             this.pictureBoxHideConfirm.Click += new System.EventHandler(this.pictureBoxHideConfirm_Click);
             // 
             // FormRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.formRegister;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1385, 894);
+            this.ClientSize = new System.Drawing.Size(1558, 1118);
             this.Controls.Add(this.pictureBoxHideConfirm);
             this.Controls.Add(this.pictBoxHidePwd);
             this.Controls.Add(this.textBoxUsername);
@@ -258,6 +272,7 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.textBoxFirstName);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRegister";
             this.Text = "FunnyTix";
             this.Load += new System.EventHandler(this.FormRegister_Load);
