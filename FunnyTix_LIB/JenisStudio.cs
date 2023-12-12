@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+namespace FunnyTix_LIB
+{
+    public class JenisStudio
+    {
+        #region DATA MEMBERS
+        private int id;
+        private string nama;
+        private string deskripsi;
+
+        
+        #endregion
+
+        #region CONSTRUCTORS
+        public JenisStudio(int id, string nama, string deskripsi)
+        {
+            this.Id = id;
+            this.Nama = nama;
+            this.Deskripsi = deskripsi;
+        }
+        public JenisStudio()
+        {
+            this.Id = 0;
+            this.Nama = "";
+            this.Deskripsi = "";
+        }
+        #endregion
+
+        #region PROPERTIES
+        public int Id { get => id; set => id = value; }
+        public string Nama { get => nama; set => nama = value; }
+        public string Deskripsi { get => deskripsi; set => deskripsi = value; }
+        #endregion
+
+        #region METHODS
+        public static List<JenisStudio> BacaData(string value = "")
+        {
+            string query = "SELECT * FROM jenis_studios;";
+            if(value!= "")
+            {
+                int kode = int.Parse(value);
+                query = $"SELECT * FROM jenis_studios where id = {kode};";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<JenisStudio> listJenisStudio = new List<JenisStudio>();
+            
+            while(hasil.Read() == true)
+            {
+                JenisStudio jS = new JenisStudio(
+                    int.Parse(hasil.GetValue(0).ToString()), 
+                    hasil.GetValue(1).ToString(), 
+                    hasil.GetValue(2).ToString());
+
+                listJenisStudio.Add(jS);
+            }
+            return listJenisStudio;
+        }
+
+        public static void TambahData(JenisStudio js)
+        {
+            string cmd = $"INSERT INTO jenis_studios (nama, deskripsi) values ('{js.Nama}', '{js.Deskripsi}');";
+
+            Koneksi.JalankanPerintahNonQuery(cmd);
+        }
+
+        public static void DeleteData(JenisStudio js)
+        {
+            string cmd = $"UPDATE jenis_studios set nama = '{js.Nama}', deskripsi = '{js.Deskripsi}' where id = {js.Id};";
+
+            Koneksi.JalankanPerintahNonQuery(cmd);
+        }
+        #endregion
+
+    }
+}

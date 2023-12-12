@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celikoor_FunnyTix", "Celikoor_FunnyTix\Celikoor_FunnyTix.csproj", "{3436DE4A-86EF-4558-AACA-096C4F4C29D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyTix_LIB", "FunnyTix_LIB\FunnyTix_LIB.csproj", "{1C90924F-4E15-4375-B207-36D65B87339E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3436DE4A-86EF-4558-AACA-096C4F4C29D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3436DE4A-86EF-4558-AACA-096C4F4C29D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3436DE4A-86EF-4558-AACA-096C4F4C29D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3436DE4A-86EF-4558-AACA-096C4F4C29D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C90924F-4E15-4375-B207-36D65B87339E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C90924F-4E15-4375-B207-36D65B87339E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C90924F-4E15-4375-B207-36D65B87339E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C90924F-4E15-4375-B207-36D65B87339E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4481C65B-0593-4663-B89D-861567E4B712}
+	EndGlobalSection
+EndGlobal

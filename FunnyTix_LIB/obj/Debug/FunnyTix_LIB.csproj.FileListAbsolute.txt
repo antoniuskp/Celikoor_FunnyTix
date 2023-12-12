@@ -1,0 +1,66 @@
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\MySql.Data.dll
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\MySql.Data.dll
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\MySql.Data.dll
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\MySql.Data.dll
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb

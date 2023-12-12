@@ -1,0 +1,330 @@
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Documents\GitHub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\c#\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+D:\Kuliah\Mata Kuliah\Semester 3\Database\anton\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Downloads\Celikoor_FunnyTix_Rawr\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Celikoor_FunnyTix_Miaw\Celikoor_FunnyTix_CiputLagi\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Project DB\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Downloads\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\HP\Downloads\Tahap4_Celikoor_FunnyTix_\Tahap3_Celikoor_FunnyTix (1)\Tahap3_Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb

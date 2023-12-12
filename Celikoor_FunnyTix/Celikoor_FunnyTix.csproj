@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3436DE4A-86EF-4558-AACA-096C4F4C29D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Celikoor_FunnyTix</RootNamespace>
+    <AssemblyName>Celikoor_FunnyTix</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>db.settings</DependentUpon>
+    </Compile>
+    <Compile Include="FormInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInvoice.Designer.cs">
+      <DependentUpon>FormInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterAktor.Designer.cs">
+      <DependentUpon>FormMasterAktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterGenre.Designer.cs">
+      <DependentUpon>FormMasterGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterKelompok.Designer.cs">
+      <DependentUpon>FormMasterKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterCinema.Designer.cs">
+      <DependentUpon>FormMasterCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterKonsumen.Designer.cs">
+      <DependentUpon>FormMasterKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterPegawai.Designer.cs">
+      <DependentUpon>FormMasterPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOperator.Designer.cs">
+      <DependentUpon>FormOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawai.Designer.cs">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfile.Designer.cs">
+      <DependentUpon>FormProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRolePegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRolePegawai.Designer.cs">
+      <DependentUpon>FormRolePegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormInvoice.resx">
+      <DependentUpon>FormInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterAktor.resx">
+      <DependentUpon>FormMasterAktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterGenre.resx">
+      <DependentUpon>FormMasterGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterKelompok.resx">
+      <DependentUpon>FormMasterKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterCinema.resx">
+      <DependentUpon>FormMasterCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterKonsumen.resx">
+      <DependentUpon>FormMasterKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterPegawai.resx">
+      <DependentUpon>FormMasterPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperator.resx">
+      <DependentUpon>FormOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawai.resx">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRolePegawai.resx">
+      <DependentUpon>FormRolePegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="db.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>db.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FunnyTix_LIB\FunnyTix_LIB.csproj">
+      <Project>{1c90924f-4e15-4375-b207-36d65b87339e}</Project>
+      <Name>FunnyTix_LIB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_FormProfileKonsumen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_FormProfileKonsumen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_FormProfileKonsumen_FormProfileKonsumen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_FormProfileKonsumen_FormProfileKonsumen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_FormMasterUtama-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_FormLogin-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visibleHide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formRegister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormOperator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formPegawai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formInvoiceKasirValidasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormAwal.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
