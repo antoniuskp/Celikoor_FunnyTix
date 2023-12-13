@@ -183,9 +183,9 @@ namespace Celikoor_FunnyTix.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FormPemesanan_min {
+        internal static System.Drawing.Bitmap FormPemesanan {
             get {
-                object obj = ResourceManager.GetObject("FormPemesanan_min", resourceCulture);
+                object obj = ResourceManager.GetObject("FormPemesanan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

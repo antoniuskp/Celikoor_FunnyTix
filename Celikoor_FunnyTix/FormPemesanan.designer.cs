@@ -44,16 +44,15 @@
             this.textBoxKapasitas = new System.Windows.Forms.TextBox();
             this.textBoxCinema = new System.Windows.Forms.TextBox();
             this.textBoxStudio = new System.Windows.Forms.TextBox();
-            this.panelDenahKursi = new System.Windows.Forms.Panel();
-            this.panelRowA = new System.Windows.Forms.Panel();
-            this.panelRowB = new System.Windows.Forms.Panel();
-            this.panelRowC = new System.Windows.Forms.Panel();
+            this.panelA = new System.Windows.Forms.Panel();
             this.listBoxSinopsis = new System.Windows.Forms.ListBox();
             this.comboBoxJudul = new System.Windows.Forms.ComboBox();
             this.dateTimePickerTambah = new System.Windows.Forms.DateTimePicker();
+            this.panelB = new System.Windows.Forms.Panel();
+            this.panelC = new System.Windows.Forms.Panel();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).BeginInit();
-            this.panelDenahKursi.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxKonfirmasiPembayaran
@@ -228,37 +227,13 @@
             this.textBoxStudio.Size = new System.Drawing.Size(106, 25);
             this.textBoxStudio.TabIndex = 17;
             // 
-            // panelDenahKursi
+            // panelA
             // 
-            this.panelDenahKursi.BackColor = System.Drawing.Color.Transparent;
-            this.panelDenahKursi.Controls.Add(this.panelRowC);
-            this.panelDenahKursi.Controls.Add(this.panelRowB);
-            this.panelDenahKursi.Controls.Add(this.panelRowA);
-            this.panelDenahKursi.Location = new System.Drawing.Point(59, 527);
-            this.panelDenahKursi.Name = "panelDenahKursi";
-            this.panelDenahKursi.Size = new System.Drawing.Size(690, 409);
-            this.panelDenahKursi.TabIndex = 18;
-            // 
-            // panelRowA
-            // 
-            this.panelRowA.Location = new System.Drawing.Point(32, 83);
-            this.panelRowA.Name = "panelRowA";
-            this.panelRowA.Size = new System.Drawing.Size(195, 54);
-            this.panelRowA.TabIndex = 0;
-            // 
-            // panelRowB
-            // 
-            this.panelRowB.Location = new System.Drawing.Point(249, 83);
-            this.panelRowB.Name = "panelRowB";
-            this.panelRowB.Size = new System.Drawing.Size(195, 54);
-            this.panelRowB.TabIndex = 1;
-            // 
-            // panelRowC
-            // 
-            this.panelRowC.Location = new System.Drawing.Point(464, 82);
-            this.panelRowC.Name = "panelRowC";
-            this.panelRowC.Size = new System.Drawing.Size(195, 54);
-            this.panelRowC.TabIndex = 2;
+            this.panelA.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panelA.Location = new System.Drawing.Point(91, 670);
+            this.panelA.Name = "panelA";
+            this.panelA.Size = new System.Drawing.Size(182, 252);
+            this.panelA.TabIndex = 18;
             // 
             // listBoxSinopsis
             // 
@@ -296,17 +271,48 @@
             this.dateTimePickerTambah.Size = new System.Drawing.Size(327, 28);
             this.dateTimePickerTambah.TabIndex = 21;
             // 
+            // panelB
+            // 
+            this.panelB.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panelB.Location = new System.Drawing.Point(311, 670);
+            this.panelB.Name = "panelB";
+            this.panelB.Size = new System.Drawing.Size(189, 252);
+            this.panelB.TabIndex = 19;
+            // 
+            // panelC
+            // 
+            this.panelC.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panelC.Location = new System.Drawing.Point(523, 670);
+            this.panelC.Name = "panelC";
+            this.panelC.Size = new System.Drawing.Size(195, 252);
+            this.panelC.TabIndex = 19;
+            // 
+            // textBoxAge
+            // 
+            this.textBoxAge.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAge.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAge.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBoxAge.Location = new System.Drawing.Point(1842, 87);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.Size = new System.Drawing.Size(66, 37);
+            this.textBoxAge.TabIndex = 22;
+            this.textBoxAge.Text = "SU";
+            // 
             // FormPemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan_min;
+            this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1906, 1037);
+            this.Controls.Add(this.textBoxAge);
+            this.Controls.Add(this.panelC);
+            this.Controls.Add(this.panelB);
             this.Controls.Add(this.dateTimePickerTambah);
             this.Controls.Add(this.comboBoxJudul);
             this.Controls.Add(this.listBoxSinopsis);
-            this.Controls.Add(this.panelDenahKursi);
+            this.Controls.Add(this.panelA);
             this.Controls.Add(this.textBoxStudio);
             this.Controls.Add(this.textBoxCinema);
             this.Controls.Add(this.textBoxKapasitas);
@@ -328,7 +334,6 @@
             this.Load += new System.EventHandler(this.FormPemesanan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).EndInit();
-            this.panelDenahKursi.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,12 +357,12 @@
         private System.Windows.Forms.TextBox textBoxKapasitas;
         private System.Windows.Forms.TextBox textBoxCinema;
         private System.Windows.Forms.TextBox textBoxStudio;
-        private System.Windows.Forms.Panel panelDenahKursi;
-        private System.Windows.Forms.Panel panelRowC;
-        private System.Windows.Forms.Panel panelRowB;
-        private System.Windows.Forms.Panel panelRowA;
+        private System.Windows.Forms.Panel panelA;
         private System.Windows.Forms.ListBox listBoxSinopsis;
         private System.Windows.Forms.ComboBox comboBoxJudul;
         private System.Windows.Forms.DateTimePicker dateTimePickerTambah;
+        private System.Windows.Forms.Panel panelB;
+        private System.Windows.Forms.Panel panelC;
+        private System.Windows.Forms.TextBox textBoxAge;
     }
 }

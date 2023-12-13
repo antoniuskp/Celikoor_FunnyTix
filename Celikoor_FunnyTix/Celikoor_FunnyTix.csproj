@@ -117,6 +117,12 @@
     <Compile Include="FormPegawai.Designer.cs">
       <DependentUpon>FormPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPemesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPemesanan.designer.cs">
+      <DependentUpon>FormPemesanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPenjadwalan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawai.resx">
       <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPemesanan.resx">
+      <DependentUpon>FormPemesanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPenjadwalan.resx">
       <DependentUpon>FormPenjadwalan.cs</DependentUpon>
@@ -266,6 +275,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FormPenjadwalan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormPemesanan-min1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormPemesanan-min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormPemesanan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -151,6 +151,9 @@
   <data name="account" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FormPenjadwalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormPenjadwalan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FormOperator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormOperator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,7 +163,7 @@
   <data name="ai_FormProfileKonsumen_FormProfileKonsumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ai_FormProfileKonsumen_FormProfileKonsumen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FormPenjadwalan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FormPenjadwalan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FormPemesanan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormPemesanan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
