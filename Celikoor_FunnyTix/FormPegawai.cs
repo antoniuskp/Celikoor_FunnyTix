@@ -81,5 +81,18 @@ namespace Celikoor_FunnyTix
             form.WindowState = FormWindowState.Maximized;
             form.ShowDialog();
         }
+
+        private void updateStatusHadirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLaporan form = new FormLaporan();
+            form.Owner = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.ShowDialog();
+        }
     }
 }

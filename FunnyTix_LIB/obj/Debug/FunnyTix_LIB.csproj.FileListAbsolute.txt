@@ -70,3 +70,14 @@ C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\Fu
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Memory.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Buffers.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb

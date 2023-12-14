@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
             this.labelNama = new System.Windows.Forms.Label();
+            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             this.masterToolStripMenuItem,
             this.dataTransaksiToolStripMenuItem,
             this.invoiceToolStripMenuItem,
-            this.updateStatusHadirToolStripMenuItem});
+            this.updateStatusHadirToolStripMenuItem,
+            this.laporanToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1902, 28);
@@ -69,27 +71,27 @@
             this.aktorToolStripMenuItem,
             this.genreToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.masterToolStripMenuItem.Text = "Master";
             // 
             // konsumenToolStripMenuItem
             // 
             this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.konsumenToolStripMenuItem.Text = "Konsumen";
             this.konsumenToolStripMenuItem.Click += new System.EventHandler(this.konsumenToolStripMenuItem_Click);
             // 
             // cinemaToolStripMenuItem
             // 
             this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.cinemaToolStripMenuItem.Text = "Cinema";
             this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
             // 
             // pegawaiToolStripMenuItem
             // 
             this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.pegawaiToolStripMenuItem.Text = "Pegawai";
             this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
             // 
@@ -103,27 +105,27 @@
             // aktorToolStripMenuItem
             // 
             this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
-            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.aktorToolStripMenuItem.Text = "Aktor";
             this.aktorToolStripMenuItem.Click += new System.EventHandler(this.aktorToolStripMenuItem_Click);
             // 
             // genreToolStripMenuItem
             // 
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.genreToolStripMenuItem.Text = "Genre";
             this.genreToolStripMenuItem.Click += new System.EventHandler(this.genreToolStripMenuItem_Click);
             // 
             // dataTransaksiToolStripMenuItem
             // 
             this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
-            this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
             this.dataTransaksiToolStripMenuItem.Text = "Data Transaksi";
             // 
             // invoiceToolStripMenuItem
             // 
             this.invoiceToolStripMenuItem.Name = "invoiceToolStripMenuItem";
-            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.invoiceToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.invoiceToolStripMenuItem.Text = "Invoice";
             this.invoiceToolStripMenuItem.Click += new System.EventHandler(this.invoiceToolStripMenuItem_Click);
             // 
@@ -132,6 +134,7 @@
             this.updateStatusHadirToolStripMenuItem.Name = "updateStatusHadirToolStripMenuItem";
             this.updateStatusHadirToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.updateStatusHadirToolStripMenuItem.Text = "Update status hadir";
+            this.updateStatusHadirToolStripMenuItem.Click += new System.EventHandler(this.updateStatusHadirToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -165,6 +168,13 @@
             this.labelNama.Size = new System.Drawing.Size(121, 42);
             this.labelNama.TabIndex = 3;
             this.labelNama.Text = "Nama";
+            // 
+            // laporanToolStripMenuItem
+            // 
+            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.laporanToolStripMenuItem.Text = "Laporan";
+            this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click);
             // 
             // FormPegawai
             // 
@@ -204,5 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateStatusHadirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem laporanToolStripMenuItem;
     }
 }
