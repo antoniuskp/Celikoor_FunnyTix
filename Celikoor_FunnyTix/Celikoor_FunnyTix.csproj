@@ -57,6 +57,12 @@
     <Compile Include="FormDataTransaksi.Designer.cs">
       <DependentUpon>FormDataTransaksi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHistoryPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistoryPembelian.Designer.cs">
+      <DependentUpon>FormHistoryPembelian.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormJadwalFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDataTransaksi.resx">
       <DependentUpon>FormDataTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistoryPembelian.resx">
+      <DependentUpon>FormHistoryPembelian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormJadwalFilm.resx">
       <DependentUpon>FormJadwalFilm.cs</DependentUpon>

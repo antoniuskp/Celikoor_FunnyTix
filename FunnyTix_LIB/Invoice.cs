@@ -78,7 +78,6 @@ namespace FunnyTix_LIB
             }
             return listInvoice;
         }
-
         public static void TambahData(Invoice invoice)
         {
             string cmd = $"INSERT INTO invoices (tanggal, grand_total, diskon_nominal, konsumen_id, kasir_id, status) values ('{invoice.Id}', '{invoice.Tanggal}','{invoice.GrandTotal}','{invoice.DiskonNominal}','{invoice.Konsumen.ID}','{invoice.Kasir.ID}','{invoice.Status}');";

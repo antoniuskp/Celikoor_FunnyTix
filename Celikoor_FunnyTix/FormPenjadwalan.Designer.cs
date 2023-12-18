@@ -58,44 +58,47 @@ namespace Celikoor_FunnyTix
             // comboBoxCinema
             // 
             this.comboBoxCinema.BackColor = System.Drawing.Color.NavajoWhite;
-            this.comboBoxCinema.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(131, 126);
+            this.comboBoxCinema.Location = new System.Drawing.Point(116, 101);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(414, 41);
+            this.comboBoxCinema.Size = new System.Drawing.Size(368, 33);
             this.comboBoxCinema.TabIndex = 0;
             // 
             // comboBoxStudio
             // 
             this.comboBoxStudio.BackColor = System.Drawing.Color.NavajoWhite;
-            this.comboBoxStudio.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStudio.ForeColor = System.Drawing.Color.Maroon;
             this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(624, 126);
+            this.comboBoxStudio.Location = new System.Drawing.Point(555, 101);
+            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(121, 41);
+            this.comboBoxStudio.Size = new System.Drawing.Size(108, 33);
             this.comboBoxStudio.TabIndex = 1;
             // 
             // textBoxNamaBioskop
             // 
             this.textBoxNamaBioskop.BackColor = System.Drawing.Color.Maroon;
             this.textBoxNamaBioskop.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNamaBioskop.Font = new System.Drawing.Font("Montserrat Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNamaBioskop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaBioskop.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxNamaBioskop.Location = new System.Drawing.Point(131, 228);
+            this.textBoxNamaBioskop.Location = new System.Drawing.Point(116, 182);
+            this.textBoxNamaBioskop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNamaBioskop.Name = "textBoxNamaBioskop";
-            this.textBoxNamaBioskop.Size = new System.Drawing.Size(251, 40);
+            this.textBoxNamaBioskop.Size = new System.Drawing.Size(223, 31);
             this.textBoxNamaBioskop.TabIndex = 2;
             // 
             // labelHargaWeekday
             // 
             this.labelHargaWeekday.AutoSize = true;
             this.labelHargaWeekday.BackColor = System.Drawing.Color.NavajoWhite;
-            this.labelHargaWeekday.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHargaWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHargaWeekday.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHargaWeekday.Location = new System.Drawing.Point(610, 255);
+            this.labelHargaWeekday.Location = new System.Drawing.Point(542, 204);
             this.labelHargaWeekday.Name = "labelHargaWeekday";
-            this.labelHargaWeekday.Size = new System.Drawing.Size(32, 33);
+            this.labelHargaWeekday.Size = new System.Drawing.Size(24, 25);
             this.labelHargaWeekday.TabIndex = 4;
             this.labelHargaWeekday.Text = "0";
             // 
@@ -103,11 +106,11 @@ namespace Celikoor_FunnyTix
             // 
             this.labelHargaWeekend.AutoSize = true;
             this.labelHargaWeekend.BackColor = System.Drawing.Color.NavajoWhite;
-            this.labelHargaWeekend.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHargaWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHargaWeekend.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHargaWeekend.Location = new System.Drawing.Point(612, 308);
+            this.labelHargaWeekend.Location = new System.Drawing.Point(544, 246);
             this.labelHargaWeekend.Name = "labelHargaWeekend";
-            this.labelHargaWeekend.Size = new System.Drawing.Size(32, 33);
+            this.labelHargaWeekend.Size = new System.Drawing.Size(24, 25);
             this.labelHargaWeekend.TabIndex = 5;
             this.labelHargaWeekend.Text = "0";
             // 
@@ -115,33 +118,36 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxJudul.BackColor = System.Drawing.Color.Maroon;
             this.textBoxJudul.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxJudul.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxJudul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxJudul.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxJudul.Location = new System.Drawing.Point(187, 435);
+            this.textBoxJudul.Location = new System.Drawing.Point(166, 348);
+            this.textBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJudul.Name = "textBoxJudul";
-            this.textBoxJudul.Size = new System.Drawing.Size(518, 35);
+            this.textBoxJudul.Size = new System.Drawing.Size(460, 27);
             this.textBoxJudul.TabIndex = 6;
             // 
             // textBoxTanggal
             // 
             this.textBoxTanggal.BackColor = System.Drawing.Color.Maroon;
             this.textBoxTanggal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTanggal.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTanggal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTanggal.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxTanggal.Location = new System.Drawing.Point(187, 540);
+            this.textBoxTanggal.Location = new System.Drawing.Point(166, 432);
+            this.textBoxTanggal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTanggal.Name = "textBoxTanggal";
-            this.textBoxTanggal.Size = new System.Drawing.Size(371, 35);
+            this.textBoxTanggal.Size = new System.Drawing.Size(330, 27);
             this.textBoxTanggal.TabIndex = 7;
             // 
             // textBoxJam
             // 
             this.textBoxJam.BackColor = System.Drawing.Color.Maroon;
             this.textBoxJam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxJam.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxJam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxJam.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxJam.Location = new System.Drawing.Point(187, 651);
+            this.textBoxJam.Location = new System.Drawing.Point(166, 521);
+            this.textBoxJam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJam.Name = "textBoxJam";
-            this.textBoxJam.Size = new System.Drawing.Size(308, 35);
+            this.textBoxJam.Size = new System.Drawing.Size(274, 27);
             this.textBoxJam.TabIndex = 8;
             // 
             // dataGridViewHasil
@@ -150,19 +156,21 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHasil.GridColor = System.Drawing.Color.NavajoWhite;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(61, 789);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(54, 631);
+            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.RowHeadersWidth = 62;
             this.dataGridViewHasil.RowTemplate.Height = 28;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(1837, 380);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(1633, 304);
             this.dataGridViewHasil.TabIndex = 9;
             // 
             // pictureBoxCover
             // 
             this.pictureBoxCover.BackColor = System.Drawing.Color.NavajoWhite;
-            this.pictureBoxCover.Location = new System.Drawing.Point(849, 58);
+            this.pictureBoxCover.Location = new System.Drawing.Point(755, 46);
+            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(539, 684);
+            this.pictureBoxCover.Size = new System.Drawing.Size(479, 547);
             this.pictureBoxCover.TabIndex = 10;
             this.pictureBoxCover.TabStop = false;
             // 
@@ -170,11 +178,12 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxKapasitas.BackColor = System.Drawing.Color.Maroon;
             this.textBoxKapasitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxKapasitas.Font = new System.Drawing.Font("Montserrat Medium", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKapasitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKapasitas.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxKapasitas.Location = new System.Drawing.Point(131, 320);
+            this.textBoxKapasitas.Location = new System.Drawing.Point(116, 256);
+            this.textBoxKapasitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKapasitas.Name = "textBoxKapasitas";
-            this.textBoxKapasitas.Size = new System.Drawing.Size(251, 40);
+            this.textBoxKapasitas.Size = new System.Drawing.Size(223, 31);
             this.textBoxKapasitas.TabIndex = 12;
             // 
             // richTextBoxSinopsis
@@ -182,89 +191,96 @@ namespace Celikoor_FunnyTix
             this.richTextBoxSinopsis.BackColor = System.Drawing.Color.NavajoWhite;
             this.richTextBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxSinopsis.ForeColor = System.Drawing.Color.Maroon;
-            this.richTextBoxSinopsis.Location = new System.Drawing.Point(1468, 166);
+            this.richTextBoxSinopsis.Location = new System.Drawing.Point(1305, 133);
+            this.richTextBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBoxSinopsis.Name = "richTextBoxSinopsis";
-            this.richTextBoxSinopsis.Size = new System.Drawing.Size(725, 321);
+            this.richTextBoxSinopsis.Size = new System.Drawing.Size(644, 257);
             this.richTextBoxSinopsis.TabIndex = 14;
             this.richTextBoxSinopsis.Text = "";
             // 
             // textBoxDurasi
             // 
             this.textBoxDurasi.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxDurasi.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDurasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDurasi.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxDurasi.Location = new System.Drawing.Point(1630, 526);
+            this.textBoxDurasi.Location = new System.Drawing.Point(1449, 421);
+            this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDurasi.Name = "textBoxDurasi";
-            this.textBoxDurasi.Size = new System.Drawing.Size(162, 37);
+            this.textBoxDurasi.Size = new System.Drawing.Size(144, 30);
             this.textBoxDurasi.TabIndex = 15;
             // 
             // textBoxGenre
             // 
             this.textBoxGenre.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxGenre.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGenre.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxGenre.Location = new System.Drawing.Point(2003, 526);
+            this.textBoxGenre.Location = new System.Drawing.Point(1780, 421);
+            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(162, 37);
+            this.textBoxGenre.Size = new System.Drawing.Size(144, 30);
             this.textBoxGenre.TabIndex = 17;
             // 
             // textBoxAktor
             // 
             this.textBoxAktor.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxAktor.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAktor.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxAktor.Location = new System.Drawing.Point(1719, 618);
+            this.textBoxAktor.Location = new System.Drawing.Point(1528, 494);
+            this.textBoxAktor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAktor.Name = "textBoxAktor";
-            this.textBoxAktor.Size = new System.Drawing.Size(397, 37);
+            this.textBoxAktor.Size = new System.Drawing.Size(353, 30);
             this.textBoxAktor.TabIndex = 18;
             // 
             // labelKelompok
             // 
             this.labelKelompok.AutoSize = true;
             this.labelKelompok.BackColor = System.Drawing.Color.NavajoWhite;
-            this.labelKelompok.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKelompok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKelompok.ForeColor = System.Drawing.Color.Maroon;
-            this.labelKelompok.Location = new System.Drawing.Point(2097, 113);
+            this.labelKelompok.Location = new System.Drawing.Point(1864, 90);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(54, 33);
+            this.labelKelompok.Size = new System.Drawing.Size(49, 25);
             this.labelKelompok.TabIndex = 19;
             this.labelKelompok.Text = "17+";
             // 
             // buttonTambah
             // 
             this.buttonTambah.BackColor = System.Drawing.Color.Transparent;
-            this.buttonTambah.Location = new System.Drawing.Point(595, 634);
+            this.buttonTambah.Location = new System.Drawing.Point(529, 507);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(146, 61);
+            this.buttonTambah.Size = new System.Drawing.Size(130, 49);
             this.buttonTambah.TabIndex = 22;
             this.buttonTambah.TabStop = false;
             // 
             // buttonSimpan
             // 
             this.buttonSimpan.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSimpan.Location = new System.Drawing.Point(1975, 824);
+            this.buttonSimpan.Location = new System.Drawing.Point(1756, 659);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(176, 52);
+            this.buttonSimpan.Size = new System.Drawing.Size(156, 42);
             this.buttonSimpan.TabIndex = 23;
             this.buttonSimpan.TabStop = false;
             // 
             // buttonKeluar
             // 
             this.buttonKeluar.BackColor = System.Drawing.Color.Transparent;
-            this.buttonKeluar.Location = new System.Drawing.Point(1975, 939);
+            this.buttonKeluar.Location = new System.Drawing.Point(1756, 751);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(176, 52);
+            this.buttonKeluar.Size = new System.Drawing.Size(156, 42);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.TabStop = false;
             // 
             // FormPenjadwalan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPenjadwalan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2140, 1291);
+            this.ClientSize = new System.Drawing.Size(1710, 844);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonTambah);
@@ -286,6 +302,7 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.comboBoxCinema);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPenjadwalan";
             this.Text = "FormPenjadwalan";
             this.Load += new System.EventHandler(this.FormPenjadwalan_Load);

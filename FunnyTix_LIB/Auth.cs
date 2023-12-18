@@ -112,7 +112,7 @@ namespace FunnyTix_LIB
                             hasil.GetValue(7).ToString(),
                             hasil.GetValue(8).ToString()
                         );
-
+                    konsumen.ID = hasil.GetInt32(0);
                     return konsumen;
                 }
                 else
@@ -145,7 +145,7 @@ namespace FunnyTix_LIB
                             hasil.GetValue(4).ToString(),
                             hasil.GetValue(5).ToString()
                         );
-
+                    pegawai.ID = hasil.GetInt32(0);
                     return pegawai;
                 }
                 else

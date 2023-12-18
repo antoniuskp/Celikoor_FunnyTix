@@ -53,6 +53,7 @@
     <Compile Include="Film.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="GenreFilm.cs" />
+    <Compile Include="History.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="JadwalFilm.cs" />
     <Compile Include="JenisStudio.cs" />

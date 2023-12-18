@@ -308,6 +308,7 @@ namespace Celikoor_FunnyTix
 
         private void panelHistory_Click(object sender, EventArgs e)
         {
+            form.OpenChild(new FormHistoryPembelian());
 
         }
         #endregion
@@ -326,8 +327,7 @@ namespace Celikoor_FunnyTix
                 frm.Close();
             }
         }
+
         #endregion
-
-
     }
 }

@@ -423,3 +423,37 @@ C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe.config
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormDataTransaksi.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormHistoryPembelian.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormJadwalFilm.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUpdateInvoice.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLaporan.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLogin.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterCinema.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKonsumen.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPemesanan.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPenjadwalan.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormValidasiInvoice.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CoreCompileInputs.cache
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
+C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
