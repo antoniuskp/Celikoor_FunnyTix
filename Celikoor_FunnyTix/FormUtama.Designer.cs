@@ -30,53 +30,64 @@
         {
             this.labelNama = new System.Windows.Forms.Label();
             this.panelPIlihan = new System.Windows.Forms.Panel();
-            this.panelLogout = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panelDataTransaksi = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelPegawaiOperator = new System.Windows.Forms.Panel();
+            this.panelUpdateStatus = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panelKonsumen = new System.Windows.Forms.Panel();
             this.panelHistory = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panelProfil = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelJadwalFilm = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelMaster = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.panelPegawaiKasir = new System.Windows.Forms.Panel();
             this.panelInvoice = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.panelUpdateStatus = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.panelLogout = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panelPegawaiAdmin = new System.Windows.Forms.Panel();
+            this.panelDataTransaksi = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panelPenjadwalan = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelMaster = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.panelJadwalFilm = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelListMaster = new System.Windows.Forms.Panel();
-            this.panelGenre = new System.Windows.Forms.Panel();
+            this.panelMasterGenre = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.panelAktor = new System.Windows.Forms.Panel();
+            this.panelMasterAktor = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.panelKelompok = new System.Windows.Forms.Panel();
+            this.panelMasterKelompok = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.panelCinema = new System.Windows.Forms.Panel();
+            this.panelMasterCinema = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.panelKonsumen = new System.Windows.Forms.Panel();
+            this.panelMasterKonsumen = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.panelPegawai = new System.Windows.Forms.Panel();
+            this.panelMasterPegawai = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
-            this.panelLogout.SuspendLayout();
-            this.panelDataTransaksi.SuspendLayout();
+            this.panelPegawaiOperator.SuspendLayout();
+            this.panelUpdateStatus.SuspendLayout();
+            this.panelKonsumen.SuspendLayout();
             this.panelHistory.SuspendLayout();
             this.panelProfil.SuspendLayout();
-            this.panelJadwalFilm.SuspendLayout();
-            this.panelMaster.SuspendLayout();
+            this.panelPegawaiKasir.SuspendLayout();
             this.panelInvoice.SuspendLayout();
-            this.panelUpdateStatus.SuspendLayout();
+            this.panelLogout.SuspendLayout();
+            this.panelPegawaiAdmin.SuspendLayout();
+            this.panelDataTransaksi.SuspendLayout();
+            this.panelPenjadwalan.SuspendLayout();
+            this.panelMaster.SuspendLayout();
+            this.panelJadwalFilm.SuspendLayout();
             this.panelListMaster.SuspendLayout();
-            this.panelGenre.SuspendLayout();
-            this.panelAktor.SuspendLayout();
-            this.panelKelompok.SuspendLayout();
-            this.panelCinema.SuspendLayout();
-            this.panelKonsumen.SuspendLayout();
-            this.panelPegawai.SuspendLayout();
+            this.panelMasterGenre.SuspendLayout();
+            this.panelMasterAktor.SuspendLayout();
+            this.panelMasterKelompok.SuspendLayout();
+            this.panelMasterCinema.SuspendLayout();
+            this.panelMasterKonsumen.SuspendLayout();
+            this.panelMasterPegawai.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNama
@@ -93,83 +104,71 @@
             // 
             // panelPIlihan
             // 
-            this.panelPIlihan.BackColor = System.Drawing.Color.Transparent;
+            this.panelPIlihan.BackColor = System.Drawing.Color.Maroon;
+            this.panelPIlihan.Controls.Add(this.panelPegawaiOperator);
+            this.panelPIlihan.Controls.Add(this.panelKonsumen);
+            this.panelPIlihan.Controls.Add(this.panelPegawaiKasir);
             this.panelPIlihan.Controls.Add(this.panelLogout);
-            this.panelPIlihan.Controls.Add(this.panelDataTransaksi);
+            this.panelPIlihan.Controls.Add(this.panelPegawaiAdmin);
             this.panelPIlihan.Controls.Add(this.labelNama);
             this.panelPIlihan.Controls.Add(this.panelHeader);
-            this.panelPIlihan.Controls.Add(this.panelHistory);
-            this.panelPIlihan.Controls.Add(this.panelProfil);
             this.panelPIlihan.Location = new System.Drawing.Point(1, 1);
             this.panelPIlihan.Name = "panelPIlihan";
             this.panelPIlihan.Size = new System.Drawing.Size(523, 1034);
             this.panelPIlihan.TabIndex = 15;
             // 
-            // panelLogout
+            // panelPegawaiOperator
             // 
-            this.panelLogout.BackColor = System.Drawing.Color.Transparent;
-            this.panelLogout.Controls.Add(this.label26);
-            this.panelLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelLogout.Location = new System.Drawing.Point(-1, 981);
-            this.panelLogout.Name = "panelLogout";
-            this.panelLogout.Size = new System.Drawing.Size(523, 50);
-            this.panelLogout.TabIndex = 20;
+            this.panelPegawaiOperator.Controls.Add(this.panelUpdateStatus);
+            this.panelPegawaiOperator.Location = new System.Drawing.Point(1, 361);
+            this.panelPegawaiOperator.Name = "panelPegawaiOperator";
+            this.panelPegawaiOperator.Size = new System.Drawing.Size(523, 102);
+            this.panelPegawaiOperator.TabIndex = 26;
             // 
-            // label26
+            // panelUpdateStatus
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(38, 13);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(121, 29);
-            this.label26.TabIndex = 17;
-            this.label26.Text = "LOGOUT";
+            this.panelUpdateStatus.BackColor = System.Drawing.Color.Transparent;
+            this.panelUpdateStatus.Controls.Add(this.label12);
+            this.panelUpdateStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelUpdateStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelUpdateStatus.Location = new System.Drawing.Point(0, 1);
+            this.panelUpdateStatus.Name = "panelUpdateStatus";
+            this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
+            this.panelUpdateStatus.TabIndex = 23;
+            this.panelUpdateStatus.Click += new System.EventHandler(this.panelUpdateStatus_Click);
             // 
-            // panelDataTransaksi
+            // label12
             // 
-            this.panelDataTransaksi.BackColor = System.Drawing.Color.Transparent;
-            this.panelDataTransaksi.Controls.Add(this.label8);
-            this.panelDataTransaksi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDataTransaksi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDataTransaksi.Location = new System.Drawing.Point(0, 683);
-            this.panelDataTransaksi.Name = "panelDataTransaksi";
-            this.panelDataTransaksi.Size = new System.Drawing.Size(523, 100);
-            this.panelDataTransaksi.TabIndex = 20;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(35, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(420, 38);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "UPDATE STATUS HADIR";
             // 
-            // label8
+            // panelKonsumen
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(35, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(314, 38);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "DATA TRANSAKSI";
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.Transparent;
-            this.panelHeader.Location = new System.Drawing.Point(522, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1395, 184);
-            this.panelHeader.TabIndex = 9;
+            this.panelKonsumen.Controls.Add(this.panelHistory);
+            this.panelKonsumen.Controls.Add(this.panelProfil);
+            this.panelKonsumen.Controls.Add(this.panelJadwalFilm);
+            this.panelKonsumen.Location = new System.Drawing.Point(0, 360);
+            this.panelKonsumen.Name = "panelKonsumen";
+            this.panelKonsumen.Size = new System.Drawing.Size(523, 303);
+            this.panelKonsumen.TabIndex = 27;
             // 
             // panelHistory
             // 
             this.panelHistory.BackColor = System.Drawing.Color.Transparent;
             this.panelHistory.Controls.Add(this.label5);
             this.panelHistory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelHistory.Location = new System.Drawing.Point(0, 482);
+            this.panelHistory.Location = new System.Drawing.Point(1, 202);
             this.panelHistory.Name = "panelHistory";
             this.panelHistory.Size = new System.Drawing.Size(523, 100);
-            this.panelHistory.TabIndex = 8;
-            this.panelHistory.MouseLeave += new System.EventHandler(this.panelHistry_MouseLeave);
-            this.panelHistory.MouseHover += new System.EventHandler(this.panelHistry_MouseHover);
+            this.panelHistory.TabIndex = 19;
+            this.panelHistory.Click += new System.EventHandler(this.panelHistory_Click);
             // 
             // label5
             // 
@@ -189,13 +188,11 @@
             this.panelProfil.Controls.Add(this.label2);
             this.panelProfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelProfil.Location = new System.Drawing.Point(0, 381);
+            this.panelProfil.Location = new System.Drawing.Point(1, 1);
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(523, 100);
-            this.panelProfil.TabIndex = 7;
+            this.panelProfil.TabIndex = 8;
             this.panelProfil.Click += new System.EventHandler(this.panelProfil_Click);
-            this.panelProfil.MouseLeave += new System.EventHandler(this.panelProfil_MouseLeave);
-            this.panelProfil.MouseHover += new System.EventHandler(this.panelProfil_MouseHover);
             // 
             // label2
             // 
@@ -209,53 +206,13 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "PROFIL";
             // 
-            // panelJadwalFilm
+            // panelPegawaiKasir
             // 
-            this.panelJadwalFilm.BackColor = System.Drawing.Color.Transparent;
-            this.panelJadwalFilm.Controls.Add(this.label4);
-            this.panelJadwalFilm.Location = new System.Drawing.Point(1, 495);
-            this.panelJadwalFilm.Name = "panelJadwalFilm";
-            this.panelJadwalFilm.Size = new System.Drawing.Size(523, 85);
-            this.panelJadwalFilm.TabIndex = 8;
-            this.panelJadwalFilm.MouseLeave += new System.EventHandler(this.panelJadwalFilm_MouseLeave);
-            this.panelJadwalFilm.MouseHover += new System.EventHandler(this.panelJadwalFilm_MouseHover);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(35, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 38);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "JADWAL FILM";
-            // 
-            // panelMaster
-            // 
-            this.panelMaster.BackColor = System.Drawing.Color.Transparent;
-            this.panelMaster.Controls.Add(this.label6);
-            this.panelMaster.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMaster.Location = new System.Drawing.Point(1, 584);
-            this.panelMaster.Name = "panelMaster";
-            this.panelMaster.Size = new System.Drawing.Size(523, 100);
-            this.panelMaster.TabIndex = 19;
-            this.panelMaster.Click += new System.EventHandler(this.panelMaster_Click);
-            this.panelMaster.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaster_Paint);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(35, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 38);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "MASTER";
+            this.panelPegawaiKasir.Controls.Add(this.panelInvoice);
+            this.panelPegawaiKasir.Location = new System.Drawing.Point(3, 360);
+            this.panelPegawaiKasir.Name = "panelPegawaiKasir";
+            this.panelPegawaiKasir.Size = new System.Drawing.Size(523, 102);
+            this.panelPegawaiKasir.TabIndex = 25;
             // 
             // panelInvoice
             // 
@@ -263,10 +220,11 @@
             this.panelInvoice.Controls.Add(this.label10);
             this.panelInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelInvoice.Location = new System.Drawing.Point(1, 784);
+            this.panelInvoice.Location = new System.Drawing.Point(0, 1);
             this.panelInvoice.Name = "panelInvoice";
             this.panelInvoice.Size = new System.Drawing.Size(523, 100);
-            this.panelInvoice.TabIndex = 21;
+            this.panelInvoice.TabIndex = 22;
+            this.panelInvoice.Click += new System.EventHandler(this.panelInvoice_Click);
             // 
             // label10
             // 
@@ -280,55 +238,171 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "INVOICE";
             // 
-            // panelUpdateStatus
+            // panelLogout
             // 
-            this.panelUpdateStatus.BackColor = System.Drawing.Color.Transparent;
-            this.panelUpdateStatus.Controls.Add(this.label12);
-            this.panelUpdateStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelUpdateStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelUpdateStatus.Location = new System.Drawing.Point(1, 884);
-            this.panelUpdateStatus.Name = "panelUpdateStatus";
-            this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
-            this.panelUpdateStatus.TabIndex = 21;
+            this.panelLogout.BackColor = System.Drawing.Color.Transparent;
+            this.panelLogout.Controls.Add(this.label26);
+            this.panelLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelLogout.Location = new System.Drawing.Point(-1, 981);
+            this.panelLogout.Name = "panelLogout";
+            this.panelLogout.Size = new System.Drawing.Size(523, 50);
+            this.panelLogout.TabIndex = 20;
+            this.panelLogout.Click += new System.EventHandler(this.panelLogout_Click);
             // 
-            // label12
+            // label26
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(35, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(420, 38);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "UPDATE STATUS HADIR";
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(38, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(121, 29);
+            this.label26.TabIndex = 17;
+            this.label26.Text = "LOGOUT";
+            // 
+            // panelPegawaiAdmin
+            // 
+            this.panelPegawaiAdmin.Controls.Add(this.panelDataTransaksi);
+            this.panelPegawaiAdmin.Controls.Add(this.panelPenjadwalan);
+            this.panelPegawaiAdmin.Controls.Add(this.panelMaster);
+            this.panelPegawaiAdmin.Location = new System.Drawing.Point(3, 359);
+            this.panelPegawaiAdmin.Name = "panelPegawaiAdmin";
+            this.panelPegawaiAdmin.Size = new System.Drawing.Size(523, 297);
+            this.panelPegawaiAdmin.TabIndex = 22;
+            // 
+            // panelDataTransaksi
+            // 
+            this.panelDataTransaksi.BackColor = System.Drawing.Color.Transparent;
+            this.panelDataTransaksi.Controls.Add(this.label8);
+            this.panelDataTransaksi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDataTransaksi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelDataTransaksi.Location = new System.Drawing.Point(0, 202);
+            this.panelDataTransaksi.Name = "panelDataTransaksi";
+            this.panelDataTransaksi.Size = new System.Drawing.Size(523, 100);
+            this.panelDataTransaksi.TabIndex = 22;
+            this.panelDataTransaksi.Click += new System.EventHandler(this.panelDataTransaksi_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(35, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(314, 38);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "DATA TRANSAKSI";
+            // 
+            // panelPenjadwalan
+            // 
+            this.panelPenjadwalan.BackColor = System.Drawing.Color.Transparent;
+            this.panelPenjadwalan.Controls.Add(this.label1);
+            this.panelPenjadwalan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelPenjadwalan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelPenjadwalan.Location = new System.Drawing.Point(0, 102);
+            this.panelPenjadwalan.Name = "panelPenjadwalan";
+            this.panelPenjadwalan.Size = new System.Drawing.Size(523, 100);
+            this.panelPenjadwalan.TabIndex = 21;
+            this.panelPenjadwalan.Click += new System.EventHandler(this.panelPenjadwalan_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(35, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 38);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "PENJADWALAN";
+            // 
+            // panelMaster
+            // 
+            this.panelMaster.BackColor = System.Drawing.Color.Transparent;
+            this.panelMaster.Controls.Add(this.label6);
+            this.panelMaster.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMaster.Location = new System.Drawing.Point(0, 3);
+            this.panelMaster.Name = "panelMaster";
+            this.panelMaster.Size = new System.Drawing.Size(523, 100);
+            this.panelMaster.TabIndex = 20;
+            this.panelMaster.Click += new System.EventHandler(this.panelMaster_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(35, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 38);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "MASTER";
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.Transparent;
+            this.panelHeader.Location = new System.Drawing.Point(522, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1395, 184);
+            this.panelHeader.TabIndex = 9;
+            // 
+            // panelJadwalFilm
+            // 
+            this.panelJadwalFilm.BackColor = System.Drawing.Color.Transparent;
+            this.panelJadwalFilm.Controls.Add(this.label4);
+            this.panelJadwalFilm.Location = new System.Drawing.Point(0, 104);
+            this.panelJadwalFilm.Name = "panelJadwalFilm";
+            this.panelJadwalFilm.Size = new System.Drawing.Size(523, 100);
+            this.panelJadwalFilm.TabIndex = 8;
+            this.panelJadwalFilm.Click += new System.EventHandler(this.panelJadwalFilm_Click);
+            this.panelJadwalFilm.MouseLeave += new System.EventHandler(this.panelJadwalFilm_MouseLeave);
+            this.panelJadwalFilm.MouseHover += new System.EventHandler(this.panelJadwalFilm_MouseHover);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(35, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(244, 38);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "JADWAL FILM";
             // 
             // panelListMaster
             // 
             this.panelListMaster.BackColor = System.Drawing.Color.Maroon;
-            this.panelListMaster.Controls.Add(this.panelGenre);
-            this.panelListMaster.Controls.Add(this.panelAktor);
-            this.panelListMaster.Controls.Add(this.panelKelompok);
-            this.panelListMaster.Controls.Add(this.panelCinema);
-            this.panelListMaster.Controls.Add(this.panelKonsumen);
-            this.panelListMaster.Controls.Add(this.panelPegawai);
+            this.panelListMaster.Controls.Add(this.panelMasterGenre);
+            this.panelListMaster.Controls.Add(this.panelMasterAktor);
+            this.panelListMaster.Controls.Add(this.panelMasterKelompok);
+            this.panelListMaster.Controls.Add(this.panelMasterCinema);
+            this.panelListMaster.Controls.Add(this.panelMasterKonsumen);
+            this.panelListMaster.Controls.Add(this.panelMasterPegawai);
             this.panelListMaster.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelListMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelListMaster.Location = new System.Drawing.Point(524, 584);
+            this.panelListMaster.Location = new System.Drawing.Point(523, 364);
             this.panelListMaster.Name = "panelListMaster";
             this.panelListMaster.Size = new System.Drawing.Size(523, 300);
             this.panelListMaster.TabIndex = 20;
             // 
-            // panelGenre
+            // panelMasterGenre
             // 
-            this.panelGenre.BackColor = System.Drawing.Color.Transparent;
-            this.panelGenre.Controls.Add(this.label22);
-            this.panelGenre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelGenre.Location = new System.Drawing.Point(1, 249);
-            this.panelGenre.Name = "panelGenre";
-            this.panelGenre.Size = new System.Drawing.Size(523, 50);
-            this.panelGenre.TabIndex = 24;
+            this.panelMasterGenre.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterGenre.Controls.Add(this.label22);
+            this.panelMasterGenre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterGenre.Location = new System.Drawing.Point(1, 249);
+            this.panelMasterGenre.Name = "panelMasterGenre";
+            this.panelMasterGenre.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterGenre.TabIndex = 24;
+            this.panelMasterGenre.Click += new System.EventHandler(this.panelMasterGenre_Click);
             // 
             // label22
             // 
@@ -342,16 +416,17 @@
             this.label22.TabIndex = 17;
             this.label22.Text = "GENRE";
             // 
-            // panelAktor
+            // panelMasterAktor
             // 
-            this.panelAktor.BackColor = System.Drawing.Color.Transparent;
-            this.panelAktor.Controls.Add(this.label24);
-            this.panelAktor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelAktor.Location = new System.Drawing.Point(1, 199);
-            this.panelAktor.Name = "panelAktor";
-            this.panelAktor.Size = new System.Drawing.Size(523, 50);
-            this.panelAktor.TabIndex = 23;
+            this.panelMasterAktor.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterAktor.Controls.Add(this.label24);
+            this.panelMasterAktor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterAktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterAktor.Location = new System.Drawing.Point(1, 199);
+            this.panelMasterAktor.Name = "panelMasterAktor";
+            this.panelMasterAktor.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterAktor.TabIndex = 23;
+            this.panelMasterAktor.Click += new System.EventHandler(this.panelMasterAktor_Click);
             // 
             // label24
             // 
@@ -365,16 +440,17 @@
             this.label24.TabIndex = 17;
             this.label24.Text = "AKTOR";
             // 
-            // panelKelompok
+            // panelMasterKelompok
             // 
-            this.panelKelompok.BackColor = System.Drawing.Color.Transparent;
-            this.panelKelompok.Controls.Add(this.label18);
-            this.panelKelompok.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelKelompok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelKelompok.Location = new System.Drawing.Point(1, 151);
-            this.panelKelompok.Name = "panelKelompok";
-            this.panelKelompok.Size = new System.Drawing.Size(523, 50);
-            this.panelKelompok.TabIndex = 22;
+            this.panelMasterKelompok.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterKelompok.Controls.Add(this.label18);
+            this.panelMasterKelompok.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterKelompok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterKelompok.Location = new System.Drawing.Point(1, 151);
+            this.panelMasterKelompok.Name = "panelMasterKelompok";
+            this.panelMasterKelompok.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterKelompok.TabIndex = 22;
+            this.panelMasterKelompok.Click += new System.EventHandler(this.panelMasterKelompok_Click);
             // 
             // label18
             // 
@@ -388,16 +464,17 @@
             this.label18.TabIndex = 17;
             this.label18.Text = "KELOMPOK";
             // 
-            // panelCinema
+            // panelMasterCinema
             // 
-            this.panelCinema.BackColor = System.Drawing.Color.Transparent;
-            this.panelCinema.Controls.Add(this.label16);
-            this.panelCinema.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCinema.Location = new System.Drawing.Point(1, 51);
-            this.panelCinema.Name = "panelCinema";
-            this.panelCinema.Size = new System.Drawing.Size(523, 50);
-            this.panelCinema.TabIndex = 20;
+            this.panelMasterCinema.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterCinema.Controls.Add(this.label16);
+            this.panelMasterCinema.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterCinema.Location = new System.Drawing.Point(1, 51);
+            this.panelMasterCinema.Name = "panelMasterCinema";
+            this.panelMasterCinema.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterCinema.TabIndex = 20;
+            this.panelMasterCinema.Click += new System.EventHandler(this.panelMasterCinema_Click);
             // 
             // label16
             // 
@@ -411,16 +488,17 @@
             this.label16.TabIndex = 17;
             this.label16.Text = "CINEMA";
             // 
-            // panelKonsumen
+            // panelMasterKonsumen
             // 
-            this.panelKonsumen.BackColor = System.Drawing.Color.Transparent;
-            this.panelKonsumen.Controls.Add(this.label14);
-            this.panelKonsumen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelKonsumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelKonsumen.Location = new System.Drawing.Point(0, 1);
-            this.panelKonsumen.Name = "panelKonsumen";
-            this.panelKonsumen.Size = new System.Drawing.Size(523, 50);
-            this.panelKonsumen.TabIndex = 19;
+            this.panelMasterKonsumen.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterKonsumen.Controls.Add(this.label14);
+            this.panelMasterKonsumen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterKonsumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterKonsumen.Location = new System.Drawing.Point(0, 1);
+            this.panelMasterKonsumen.Name = "panelMasterKonsumen";
+            this.panelMasterKonsumen.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterKonsumen.TabIndex = 19;
+            this.panelMasterKonsumen.Click += new System.EventHandler(this.panelMasterKonsumen_Click);
             // 
             // label14
             // 
@@ -434,16 +512,17 @@
             this.label14.TabIndex = 17;
             this.label14.Text = "KONSUMEN";
             // 
-            // panelPegawai
+            // panelMasterPegawai
             // 
-            this.panelPegawai.BackColor = System.Drawing.Color.Transparent;
-            this.panelPegawai.Controls.Add(this.label20);
-            this.panelPegawai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelPegawai.Location = new System.Drawing.Point(1, 101);
-            this.panelPegawai.Name = "panelPegawai";
-            this.panelPegawai.Size = new System.Drawing.Size(523, 50);
-            this.panelPegawai.TabIndex = 21;
+            this.panelMasterPegawai.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterPegawai.Controls.Add(this.label20);
+            this.panelMasterPegawai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterPegawai.Location = new System.Drawing.Point(1, 101);
+            this.panelMasterPegawai.Name = "panelMasterPegawai";
+            this.panelMasterPegawai.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterPegawai.TabIndex = 21;
+            this.panelMasterPegawai.Click += new System.EventHandler(this.panelMasterPegawai_Click);
             // 
             // label20
             // 
@@ -473,52 +552,53 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
-            this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.ai_FormMasterUtama_12;
+            this.BackColor = System.Drawing.Color.NavajoWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panelListMaster);
-            this.Controls.Add(this.panelUpdateStatus);
-            this.Controls.Add(this.panelInvoice);
-            this.Controls.Add(this.panelMaster);
             this.Controls.Add(this.panelPIlihan);
-            this.Controls.Add(this.panelJadwalFilm);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormUtama";
-            this.Text = "FunnyTix";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.FormUtama_Load);
             this.panelPIlihan.ResumeLayout(false);
             this.panelPIlihan.PerformLayout();
-            this.panelLogout.ResumeLayout(false);
-            this.panelLogout.PerformLayout();
-            this.panelDataTransaksi.ResumeLayout(false);
-            this.panelDataTransaksi.PerformLayout();
+            this.panelPegawaiOperator.ResumeLayout(false);
+            this.panelUpdateStatus.ResumeLayout(false);
+            this.panelUpdateStatus.PerformLayout();
+            this.panelKonsumen.ResumeLayout(false);
             this.panelHistory.ResumeLayout(false);
             this.panelHistory.PerformLayout();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
-            this.panelJadwalFilm.ResumeLayout(false);
-            this.panelJadwalFilm.PerformLayout();
-            this.panelMaster.ResumeLayout(false);
-            this.panelMaster.PerformLayout();
+            this.panelPegawaiKasir.ResumeLayout(false);
             this.panelInvoice.ResumeLayout(false);
             this.panelInvoice.PerformLayout();
-            this.panelUpdateStatus.ResumeLayout(false);
-            this.panelUpdateStatus.PerformLayout();
+            this.panelLogout.ResumeLayout(false);
+            this.panelLogout.PerformLayout();
+            this.panelPegawaiAdmin.ResumeLayout(false);
+            this.panelDataTransaksi.ResumeLayout(false);
+            this.panelDataTransaksi.PerformLayout();
+            this.panelPenjadwalan.ResumeLayout(false);
+            this.panelPenjadwalan.PerformLayout();
+            this.panelMaster.ResumeLayout(false);
+            this.panelMaster.PerformLayout();
+            this.panelJadwalFilm.ResumeLayout(false);
+            this.panelJadwalFilm.PerformLayout();
             this.panelListMaster.ResumeLayout(false);
-            this.panelGenre.ResumeLayout(false);
-            this.panelGenre.PerformLayout();
-            this.panelAktor.ResumeLayout(false);
-            this.panelAktor.PerformLayout();
-            this.panelKelompok.ResumeLayout(false);
-            this.panelKelompok.PerformLayout();
-            this.panelCinema.ResumeLayout(false);
-            this.panelCinema.PerformLayout();
-            this.panelKonsumen.ResumeLayout(false);
-            this.panelKonsumen.PerformLayout();
-            this.panelPegawai.ResumeLayout(false);
-            this.panelPegawai.PerformLayout();
+            this.panelMasterGenre.ResumeLayout(false);
+            this.panelMasterGenre.PerformLayout();
+            this.panelMasterAktor.ResumeLayout(false);
+            this.panelMasterAktor.PerformLayout();
+            this.panelMasterKelompok.ResumeLayout(false);
+            this.panelMasterKelompok.PerformLayout();
+            this.panelMasterCinema.ResumeLayout(false);
+            this.panelMasterCinema.PerformLayout();
+            this.panelMasterKonsumen.ResumeLayout(false);
+            this.panelMasterKonsumen.PerformLayout();
+            this.panelMasterPegawai.ResumeLayout(false);
+            this.panelMasterPegawai.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -526,37 +606,43 @@
         #endregion
         private System.Windows.Forms.Label labelNama;
         private System.Windows.Forms.Panel panelPIlihan;
-        private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelJadwalFilm;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panelHistory;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.Panel panelMaster;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panelDataTransaksi;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panelInvoice;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panelUpdateStatus;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panelListMaster;
-        private System.Windows.Forms.Panel panelKonsumen;
+        private System.Windows.Forms.Panel panelMasterKonsumen;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panelCinema;
+        private System.Windows.Forms.Panel panelMasterCinema;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panelGenre;
+        private System.Windows.Forms.Panel panelMasterGenre;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panelAktor;
+        private System.Windows.Forms.Panel panelMasterAktor;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Panel panelKelompok;
+        private System.Windows.Forms.Panel panelMasterKelompok;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panelPegawai;
+        private System.Windows.Forms.Panel panelMasterPegawai;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panelLogout;
         //private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panelPegawaiAdmin;
+        private System.Windows.Forms.Panel panelMaster;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelPenjadwalan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelDataTransaksi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panelPegawaiKasir;
+        private System.Windows.Forms.Panel panelInvoice;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panelPegawaiOperator;
+        private System.Windows.Forms.Panel panelUpdateStatus;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panelKonsumen;
+        private System.Windows.Forms.Panel panelHistory;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelProfil;
+        private System.Windows.Forms.Label label2;
     }
 }

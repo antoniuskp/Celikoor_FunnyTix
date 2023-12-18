@@ -156,5 +156,12 @@ namespace FunnyTix_LIB
 
             throw new Exception("Error!");
         }
+        public static void LogOut()
+        {
+            Auth.USERNAME = null;
+            Auth.ROLE = null;
+            Auth.PASSWORD = null;
+            Auth.STATUS = false;
+        }
     }
 }

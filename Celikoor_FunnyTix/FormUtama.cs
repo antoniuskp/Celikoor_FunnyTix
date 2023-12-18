@@ -26,28 +26,44 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                if(role == "ADMIN")
+                foreach (Control c in FormUtama.form.Controls)
                 {
-                    foreach (Control c in FormUtama.form.Controls)
+                    if (c is Panel)
                     {
-                        if (c is Panel)
-                        {
-                            c.Visible = true;
-                            c.BackColor = Color.Maroon;
-                        }
+                        c.Visible = true;
+                        c.BackColor = Color.Maroon;
                     }
+                }
+
+                if (!(form.ACTIVE_CHILD is null))
+                {
+                    form.ACTIVE_CHILD.Close();
+                    form.ACTIVE_CHILD = null;
+                }
+
+                if (role == "ADMIN")
+                {
+                    form.panelPegawaiAdmin.Visible = true;
+                    form.panelPegawaiKasir.Visible = false;
+                    form.panelPegawaiOperator.Visible = false;
+                    form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
-                    form.panelHistory.Visible = false;
-                    form.OpenChild(new FormMasterPegawai());
                 }
                 else if(role=="OPERATOR")
                 {
-
-                    form.OpenChild(new FormOperator());
+                    form.panelPegawaiAdmin.Visible = false;
+                    form.panelPegawaiKasir.Visible = false;
+                    form.panelPegawaiOperator.Visible = true;
+                    form.panelKonsumen.Visible = false;
+                    form.panelListMaster.Visible = false;
                 }
                 else if (role == "KASIR")
                 {
-
+                    form.panelPegawaiAdmin.Visible = false;
+                    form.panelPegawaiKasir.Visible = true;
+                    form.panelPegawaiOperator.Visible = false;
+                    form.panelKonsumen.Visible = false;
+                    form.panelListMaster.Visible = false;
                 }
                 form.labelNama.Text = $"Welcome, {Auth.GetPegawai().Nama}";
             }
@@ -69,13 +85,19 @@ namespace Celikoor_FunnyTix
                         c.BackColor = Color.Maroon;
                     }
                 }
-                form.panelListMaster.Visible = false;
-                form.panelMaster.Visible = false;
-                form.panelDataTransaksi.Visible = false;
-                form.panelInvoice.Visible = false;
-                form.panelUpdateStatus.Visible = false;
 
-                form.OpenChild(new FormMasterKonsumen());
+                if (!(form.ACTIVE_CHILD is null))
+                {
+                    form.ACTIVE_CHILD.Close();
+                    form.ACTIVE_CHILD = null;
+                }
+                form.panelPegawaiAdmin.Visible = false;
+                form.panelPegawaiKasir.Visible = false;
+                form.panelPegawaiOperator.Visible = false;
+                form.panelKonsumen.Visible = true;
+
+                form.panelListMaster.Visible = false;
+
                 form.labelNama.Text = $"Welcome, {Auth.GetKonsumen().Nama}";
             }
             catch (Exception x)
@@ -144,11 +166,7 @@ namespace Celikoor_FunnyTix
 
         public void OpenChild(Form form)
         {
-            if (!(ACTIVE_CHILD is null))
-            {
-                ACTIVE_CHILD.Close();
-                ACTIVE_CHILD = null;
-            }
+
 
             ACTIVE_CHILD = form;
             form.MdiParent = this;
@@ -195,18 +213,9 @@ namespace Celikoor_FunnyTix
 
         }
         #endregion
-
+        #region Panel
+        #region Panel Pegawai Admin
         bool visiblePanelList = false;
-        private void panelMaster_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void panelProfil_Click(object sender, EventArgs e)
-        {
-            OpenChild(new FormProfile());
-        }
-
         private void panelMaster_Click(object sender, EventArgs e)
         {
             if (visiblePanelList == false)
@@ -220,5 +229,105 @@ namespace Celikoor_FunnyTix
                 visiblePanelList = false;
             }
         }
+
+        private void panelPenjadwalan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormPenjadwalan());
+        }
+
+        private void panelDataTransaksi_Click(object sender, EventArgs e)
+        {
+
+        }
+        #region List Panel Master
+        private void panelMasterKonsumen_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterKonsumen());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelMasterCinema_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterCinema());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelMasterPegawai_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterPegawai());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelMasterKelompok_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterKelompok());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelMasterAktor_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterAktor());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelMasterGenre_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterGenre());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        #endregion
+        #region Panel Pegawai Kasir
+        private void panelInvoice_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormValidasiInvoice());
+        }
+        #endregion
+        #region Panel Pegawai Operator
+        private void panelUpdateStatus_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormUpdateInvoice());
+        }
+        #endregion
+        #region Panel Konsumen
+        private void panelProfil_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormProfile());
+        }
+
+        private void panelJadwalFilm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+        private void panelLogout_Click(object sender, EventArgs e)
+        {
+            statusLogin = false;
+            form.ACTIVE_CHILD = null;
+            form.CloseAllForm();
+            Auth.LogOut();
+            FormUtama_Load(this,e);
+        }
+        private void CloseAllForm()
+        {
+            foreach(Form frm in form.MdiChildren)
+            {
+                frm.Close();
+            }
+        }
+        #endregion
+
+
     }
 }

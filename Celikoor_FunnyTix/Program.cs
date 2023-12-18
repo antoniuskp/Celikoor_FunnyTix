@@ -16,7 +16,7 @@ namespace Celikoor_FunnyTix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLaporan());
+            Application.Run(new FormUtama());
         }
     }
 }

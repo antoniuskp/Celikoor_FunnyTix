@@ -56,12 +56,12 @@ namespace Celikoor_FunnyTix
                 if(isPegawai==true)
                 {
                     bool status;
-                    Auth.Attempt(textBoxUsername.Text, textBoxPassword.Text,Role.PEGAWAI,out status);
+                    Auth.Attempt(textBoxUsername.Text, textBoxPassword.Text, Role.PEGAWAI, out status);
                     if(status)
                     {
                         FormUtama.statusLogin = true;
-                        FormUtama.CURRENT_ROLE = Role.PEGAWAI;
                         FormUtama.PegawaiInit(Auth.GetPegawai().Roles);
+                        FormUtama.CURRENT_ROLE = Role.PEGAWAI;
                         this.Close();
                     }
                     else

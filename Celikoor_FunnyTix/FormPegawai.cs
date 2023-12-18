@@ -29,7 +29,7 @@ namespace Celikoor_FunnyTix
 
         private void invoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormInvoice frmInvoice = new FormInvoice();
+            FormUpdateInvoice frmInvoice = new FormUpdateInvoice();
             frmInvoice.Owner = this;
             frmInvoice.ShowDialog();
         }

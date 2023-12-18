@@ -51,11 +51,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
-    <Compile Include="FormInvoice.cs">
+    <Compile Include="FormUpdateInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInvoice.Designer.cs">
-      <DependentUpon>FormInvoice.cs</DependentUpon>
+    <Compile Include="FormUpdateInvoice.Designer.cs">
+      <DependentUpon>FormUpdateInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLaporan.cs">
       <SubType>Form</SubType>
@@ -159,10 +159,16 @@
     <Compile Include="FormUtama.Designer.cs">
       <DependentUpon>FormUtama.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormValidasiInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormValidasiInvoice.Designer.cs">
+      <DependentUpon>FormValidasiInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormInvoice.resx">
-      <DependentUpon>FormInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="FormUpdateInvoice.resx">
+      <DependentUpon>FormUpdateInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLaporan.resx">
       <DependentUpon>FormLaporan.cs</DependentUpon>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormValidasiInvoice.resx">
+      <DependentUpon>FormValidasiInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

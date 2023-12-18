@@ -81,3 +81,11 @@ C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\FunnyTix_LIB.pdb
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\MySql.Data.dll
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.CopyComplete
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
