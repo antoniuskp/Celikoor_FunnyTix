@@ -335,5 +335,10 @@ namespace Celikoor_FunnyTix
             var frm = new FormPemesanan();
             frm.ShowDialog();
         }
+
+        private void panelMasterKonsumen_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

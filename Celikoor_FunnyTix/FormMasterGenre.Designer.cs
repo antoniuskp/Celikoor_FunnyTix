@@ -33,7 +33,7 @@ namespace Celikoor_FunnyTix
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonCari = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@ namespace Celikoor_FunnyTix
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.buttonCari);
+            this.panel1.Controls.Add(this.buttonClear);
             this.panel1.Controls.Add(this.textBox);
             this.panel1.Controls.Add(this.comboBox);
             this.panel1.Controls.Add(this.label2);
@@ -92,17 +92,18 @@ namespace Celikoor_FunnyTix
             this.panel1.Size = new System.Drawing.Size(1488, 86);
             this.panel1.TabIndex = 12;
             // 
-            // buttonCari
+            // buttonClear
             // 
-            this.buttonCari.BackColor = System.Drawing.Color.Maroon;
-            this.buttonCari.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
-            this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(1296, 22);
-            this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(170, 51);
-            this.buttonCari.TabIndex = 3;
-            this.buttonCari.Text = "Cari";
-            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonClear.BackColor = System.Drawing.Color.Maroon;
+            this.buttonClear.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonClear.ForeColor = System.Drawing.Color.White;
+            this.buttonClear.Location = new System.Drawing.Point(1296, 22);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(170, 51);
+            this.buttonClear.TabIndex = 3;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // textBox
             // 
@@ -112,14 +113,15 @@ namespace Celikoor_FunnyTix
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(667, 40);
             this.textBox.TabIndex = 2;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // comboBox
             // 
             this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
-            "KodeKategori",
-            "Nama"});
+            "Nama",
+            "Deskripsi"});
             this.comboBox.Location = new System.Drawing.Point(321, 29);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox.Name = "comboBox";
@@ -133,7 +135,7 @@ namespace Celikoor_FunnyTix
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(27, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(288, 37);
+            this.label2.Size = new System.Drawing.Size(291, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
@@ -176,7 +178,7 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonCari;
+        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;

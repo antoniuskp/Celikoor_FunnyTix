@@ -44,7 +44,7 @@ namespace FunnyTix_LIB
             try
             {
                 List<Aktor> listAktor = new List<Aktor>();
-                string cmd = (filter == String.Empty) ? $"SELECT * FROM aktors;" : $"select * from aktors where {filter} = '{val}';";
+                string cmd = (filter == String.Empty) ? $"SELECT * FROM aktors;" : $"select * from aktors where {filter} like '%{val}%';";
 
                 MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
                 while (res.Read() == true)
