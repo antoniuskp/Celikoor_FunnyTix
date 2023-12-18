@@ -92,6 +92,11 @@ namespace FunnyTix_LIB
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }*/
+
+        public override string ToString()
+        {
+            return Konsumen.ID.ToString();
+        }
         #endregion
 
     }

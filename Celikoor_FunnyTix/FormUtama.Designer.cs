@@ -38,6 +38,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panelProfil = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelJadwalFilm = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelPegawaiKasir = new System.Windows.Forms.Panel();
             this.panelInvoice = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.panelMaster = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.panelJadwalFilm = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelListMaster = new System.Windows.Forms.Panel();
             this.panelMasterGenre = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             this.panelKonsumen.SuspendLayout();
             this.panelHistory.SuspendLayout();
             this.panelProfil.SuspendLayout();
+            this.panelJadwalFilm.SuspendLayout();
             this.panelPegawaiKasir.SuspendLayout();
             this.panelInvoice.SuspendLayout();
             this.panelLogout.SuspendLayout();
@@ -80,7 +81,6 @@
             this.panelDataTransaksi.SuspendLayout();
             this.panelPenjadwalan.SuspendLayout();
             this.panelMaster.SuspendLayout();
-            this.panelJadwalFilm.SuspendLayout();
             this.panelListMaster.SuspendLayout();
             this.panelMasterGenre.SuspendLayout();
             this.panelMasterAktor.SuspendLayout();
@@ -98,7 +98,7 @@
             this.labelNama.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelNama.Location = new System.Drawing.Point(101, 300);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(295, 32);
+            this.labelNama.Size = new System.Drawing.Size(294, 32);
             this.labelNama.TabIndex = 6;
             this.labelNama.Text = "Welcome, namaUser";
             // 
@@ -205,6 +205,30 @@
             this.label2.Size = new System.Drawing.Size(141, 38);
             this.label2.TabIndex = 17;
             this.label2.Text = "PROFIL";
+            // 
+            // panelJadwalFilm
+            // 
+            this.panelJadwalFilm.BackColor = System.Drawing.Color.Transparent;
+            this.panelJadwalFilm.Controls.Add(this.label4);
+            this.panelJadwalFilm.Location = new System.Drawing.Point(0, 104);
+            this.panelJadwalFilm.Name = "panelJadwalFilm";
+            this.panelJadwalFilm.Size = new System.Drawing.Size(523, 100);
+            this.panelJadwalFilm.TabIndex = 8;
+            this.panelJadwalFilm.Click += new System.EventHandler(this.panelJadwalFilm_Click);
+            this.panelJadwalFilm.MouseLeave += new System.EventHandler(this.panelJadwalFilm_MouseLeave);
+            this.panelJadwalFilm.MouseHover += new System.EventHandler(this.panelJadwalFilm_MouseHover);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(35, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(244, 38);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "JADWAL FILM";
             // 
             // panelPegawaiKasir
             // 
@@ -351,30 +375,6 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1395, 184);
             this.panelHeader.TabIndex = 9;
-            // 
-            // panelJadwalFilm
-            // 
-            this.panelJadwalFilm.BackColor = System.Drawing.Color.Transparent;
-            this.panelJadwalFilm.Controls.Add(this.label4);
-            this.panelJadwalFilm.Location = new System.Drawing.Point(0, 104);
-            this.panelJadwalFilm.Name = "panelJadwalFilm";
-            this.panelJadwalFilm.Size = new System.Drawing.Size(523, 100);
-            this.panelJadwalFilm.TabIndex = 8;
-            this.panelJadwalFilm.Click += new System.EventHandler(this.panelJadwalFilm_Click);
-            this.panelJadwalFilm.MouseLeave += new System.EventHandler(this.panelJadwalFilm_MouseLeave);
-            this.panelJadwalFilm.MouseHover += new System.EventHandler(this.panelJadwalFilm_MouseHover);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(35, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 38);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "JADWAL FILM";
             // 
             // panelListMaster
             // 
@@ -572,6 +572,8 @@
             this.panelHistory.PerformLayout();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
+            this.panelJadwalFilm.ResumeLayout(false);
+            this.panelJadwalFilm.PerformLayout();
             this.panelPegawaiKasir.ResumeLayout(false);
             this.panelInvoice.ResumeLayout(false);
             this.panelInvoice.PerformLayout();
@@ -584,8 +586,6 @@
             this.panelPenjadwalan.PerformLayout();
             this.panelMaster.ResumeLayout(false);
             this.panelMaster.PerformLayout();
-            this.panelJadwalFilm.ResumeLayout(false);
-            this.panelJadwalFilm.PerformLayout();
             this.panelListMaster.ResumeLayout(false);
             this.panelMasterGenre.ResumeLayout(false);
             this.panelMasterGenre.PerformLayout();

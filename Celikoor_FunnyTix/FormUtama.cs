@@ -237,7 +237,7 @@ namespace Celikoor_FunnyTix
 
         private void panelDataTransaksi_Click(object sender, EventArgs e)
         {
-
+            form.OpenChild(new FormDataTransaksi());
         }
         #region List Panel Master
         private void panelMasterKonsumen_Click(object sender, EventArgs e)
@@ -303,7 +303,7 @@ namespace Celikoor_FunnyTix
 
         private void panelJadwalFilm_Click(object sender, EventArgs e)
         {
-
+            form.OpenChild(new FormJadwalFilm());
         }
 
         private void panelHistory_Click(object sender, EventArgs e)

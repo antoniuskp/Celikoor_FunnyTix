@@ -357,7 +357,6 @@ C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\Fu
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.SuggestedBindingRedirects.cache
-C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormInvoice.resources
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterKelompok.resources
@@ -382,10 +381,6 @@ C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.exe
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Celikoor_FunnyTix.pdb
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
-C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Memory.dll
-C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.CopyComplete
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLaporan.resources
@@ -420,3 +415,11 @@ C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyT
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.exe
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.pdb
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUpdateInvoice.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormValidasiInvoice.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormDataTransaksi.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormJadwalFilm.resources
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Memory.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
