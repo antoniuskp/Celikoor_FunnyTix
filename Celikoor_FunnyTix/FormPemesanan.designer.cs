@@ -42,7 +42,6 @@
             this.textBoxSisa = new System.Windows.Forms.TextBox();
             this.textBoxNamaBioskop = new System.Windows.Forms.TextBox();
             this.textBoxKapasitas = new System.Windows.Forms.TextBox();
-            this.textBoxCinema = new System.Windows.Forms.TextBox();
             this.textBoxStudio = new System.Windows.Forms.TextBox();
             this.panelA = new System.Windows.Forms.Panel();
             this.listBoxSinopsis = new System.Windows.Forms.ListBox();
@@ -51,6 +50,9 @@
             this.panelB = new System.Windows.Forms.Panel();
             this.panelC = new System.Windows.Forms.Panel();
             this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.comboBoxJamPemutaran = new System.Windows.Forms.ComboBox();
+            this.comboBoxCinema = new System.Windows.Forms.ComboBox();
+            this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).BeginInit();
             this.SuspendLayout();
@@ -58,9 +60,10 @@
             // pictureBoxKonfirmasiPembayaran
             // 
             this.pictureBoxKonfirmasiPembayaran.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxKonfirmasiPembayaran.Location = new System.Drawing.Point(1287, 872);
+            this.pictureBoxKonfirmasiPembayaran.Location = new System.Drawing.Point(1287, 871);
+            this.pictureBoxKonfirmasiPembayaran.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxKonfirmasiPembayaran.Name = "pictureBoxKonfirmasiPembayaran";
-            this.pictureBoxKonfirmasiPembayaran.Size = new System.Drawing.Size(414, 64);
+            this.pictureBoxKonfirmasiPembayaran.Size = new System.Drawing.Size(413, 64);
             this.pictureBoxKonfirmasiPembayaran.TabIndex = 0;
             this.pictureBoxKonfirmasiPembayaran.TabStop = false;
             // 
@@ -68,6 +71,7 @@
             // 
             this.pictureBoxKeluar.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxKeluar.Location = new System.Drawing.Point(1780, 865);
+            this.pictureBoxKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxKeluar.Name = "pictureBoxKeluar";
             this.pictureBoxKeluar.Size = new System.Drawing.Size(188, 64);
             this.pictureBoxKeluar.TabIndex = 1;
@@ -80,6 +84,7 @@
             this.textBoxSaldo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSaldo.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxSaldo.Location = new System.Drawing.Point(1727, 770);
+            this.textBoxSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSaldo.Name = "textBoxSaldo";
             this.textBoxSaldo.Size = new System.Drawing.Size(203, 25);
             this.textBoxSaldo.TabIndex = 2;
@@ -91,6 +96,7 @@
             this.textBoxAktorUtama.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAktorUtama.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxAktorUtama.Location = new System.Drawing.Point(1545, 407);
+            this.textBoxAktorUtama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAktorUtama.Name = "textBoxAktorUtama";
             this.textBoxAktorUtama.Size = new System.Drawing.Size(360, 25);
             this.textBoxAktorUtama.TabIndex = 3;
@@ -102,6 +108,7 @@
             this.textBoxDiskon.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiskon.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxDiskon.Location = new System.Drawing.Point(1469, 686);
+            this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDiskon.Name = "textBoxDiskon";
             this.textBoxDiskon.Size = new System.Drawing.Size(159, 25);
             this.textBoxDiskon.TabIndex = 4;
@@ -113,6 +120,7 @@
             this.textBoxTotal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotal.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxTotal.Location = new System.Drawing.Point(1469, 615);
+            this.textBoxTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.Size = new System.Drawing.Size(159, 25);
             this.textBoxTotal.TabIndex = 5;
@@ -124,6 +132,7 @@
             this.textBoxTotalAkhir.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTotalAkhir.ForeColor = System.Drawing.Color.DarkRed;
             this.textBoxTotalAkhir.Location = new System.Drawing.Point(1703, 649);
+            this.textBoxTotalAkhir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTotalAkhir.Name = "textBoxTotalAkhir";
             this.textBoxTotalAkhir.Size = new System.Drawing.Size(159, 33);
             this.textBoxTotalAkhir.TabIndex = 6;
@@ -135,6 +144,7 @@
             this.textBoxKursi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKursi.ForeColor = System.Drawing.Color.DarkRed;
             this.textBoxKursi.Location = new System.Drawing.Point(1455, 554);
+            this.textBoxKursi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKursi.Name = "textBoxKursi";
             this.textBoxKursi.Size = new System.Drawing.Size(159, 25);
             this.textBoxKursi.TabIndex = 7;
@@ -146,6 +156,7 @@
             this.textBoxDurasi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDurasi.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxDurasi.Location = new System.Drawing.Point(1445, 331);
+            this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDurasi.Name = "textBoxDurasi";
             this.textBoxDurasi.Size = new System.Drawing.Size(159, 25);
             this.textBoxDurasi.TabIndex = 8;
@@ -157,6 +168,7 @@
             this.textBoxGenre.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGenre.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxGenre.Location = new System.Drawing.Point(1773, 331);
+            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxGenre.Name = "textBoxGenre";
             this.textBoxGenre.Size = new System.Drawing.Size(159, 25);
             this.textBoxGenre.TabIndex = 9;
@@ -168,6 +180,7 @@
             this.textBoxHarga.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHarga.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxHarga.Location = new System.Drawing.Point(451, 348);
+            this.textBoxHarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxHarga.Name = "textBoxHarga";
             this.textBoxHarga.Size = new System.Drawing.Size(159, 25);
             this.textBoxHarga.TabIndex = 10;
@@ -179,6 +192,7 @@
             this.textBoxSisa.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSisa.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxSisa.Location = new System.Drawing.Point(451, 422);
+            this.textBoxSisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSisa.Name = "textBoxSisa";
             this.textBoxSisa.Size = new System.Drawing.Size(159, 25);
             this.textBoxSisa.TabIndex = 11;
@@ -190,6 +204,7 @@
             this.textBoxNamaBioskop.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaBioskop.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxNamaBioskop.Location = new System.Drawing.Point(129, 350);
+            this.textBoxNamaBioskop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNamaBioskop.Name = "textBoxNamaBioskop";
             this.textBoxNamaBioskop.Size = new System.Drawing.Size(159, 25);
             this.textBoxNamaBioskop.TabIndex = 12;
@@ -201,20 +216,10 @@
             this.textBoxKapasitas.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKapasitas.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxKapasitas.Location = new System.Drawing.Point(129, 420);
+            this.textBoxKapasitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKapasitas.Name = "textBoxKapasitas";
-            this.textBoxKapasitas.Size = new System.Drawing.Size(182, 25);
+            this.textBoxKapasitas.Size = new System.Drawing.Size(181, 25);
             this.textBoxKapasitas.TabIndex = 13;
-            // 
-            // textBoxCinema
-            // 
-            this.textBoxCinema.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxCinema.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCinema.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCinema.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBoxCinema.Location = new System.Drawing.Point(120, 275);
-            this.textBoxCinema.Name = "textBoxCinema";
-            this.textBoxCinema.Size = new System.Drawing.Size(299, 25);
-            this.textBoxCinema.TabIndex = 16;
             // 
             // textBoxStudio
             // 
@@ -223,16 +228,18 @@
             this.textBoxStudio.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxStudio.ForeColor = System.Drawing.Color.DarkRed;
             this.textBoxStudio.Location = new System.Drawing.Point(501, 273);
+            this.textBoxStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxStudio.Name = "textBoxStudio";
-            this.textBoxStudio.Size = new System.Drawing.Size(106, 25);
+            this.textBoxStudio.Size = new System.Drawing.Size(107, 25);
             this.textBoxStudio.TabIndex = 17;
             // 
             // panelA
             // 
             this.panelA.BackColor = System.Drawing.Color.NavajoWhite;
             this.panelA.Location = new System.Drawing.Point(91, 670);
+            this.panelA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelA.Name = "panelA";
-            this.panelA.Size = new System.Drawing.Size(182, 252);
+            this.panelA.Size = new System.Drawing.Size(181, 252);
             this.panelA.TabIndex = 18;
             // 
             // listBoxSinopsis
@@ -243,7 +250,8 @@
             this.listBoxSinopsis.ForeColor = System.Drawing.Color.DarkRed;
             this.listBoxSinopsis.FormattingEnabled = true;
             this.listBoxSinopsis.ItemHeight = 27;
-            this.listBoxSinopsis.Location = new System.Drawing.Point(1296, 125);
+            this.listBoxSinopsis.Location = new System.Drawing.Point(1296, 126);
+            this.listBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxSinopsis.Name = "listBoxSinopsis";
             this.listBoxSinopsis.Size = new System.Drawing.Size(669, 189);
             this.listBoxSinopsis.TabIndex = 19;
@@ -255,9 +263,11 @@
             this.comboBoxJudul.ForeColor = System.Drawing.Color.DarkRed;
             this.comboBoxJudul.FormattingEnabled = true;
             this.comboBoxJudul.Location = new System.Drawing.Point(131, 100);
+            this.comboBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJudul.Name = "comboBoxJudul";
             this.comboBoxJudul.Size = new System.Drawing.Size(476, 35);
             this.comboBoxJudul.TabIndex = 20;
+            this.comboBoxJudul.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudul_SelectedIndexChanged);
             // 
             // dateTimePickerTambah
             // 
@@ -266,15 +276,18 @@
             this.dateTimePickerTambah.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
             this.dateTimePickerTambah.CalendarTrailingForeColor = System.Drawing.Color.RosyBrown;
             this.dateTimePickerTambah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerTambah.Location = new System.Drawing.Point(122, 182);
+            this.dateTimePickerTambah.Location = new System.Drawing.Point(123, 182);
+            this.dateTimePickerTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerTambah.Name = "dateTimePickerTambah";
             this.dateTimePickerTambah.Size = new System.Drawing.Size(327, 28);
             this.dateTimePickerTambah.TabIndex = 21;
+            this.dateTimePickerTambah.ValueChanged += new System.EventHandler(this.dateTimePickerTambah_ValueChanged);
             // 
             // panelB
             // 
             this.panelB.BackColor = System.Drawing.Color.NavajoWhite;
             this.panelB.Location = new System.Drawing.Point(311, 670);
+            this.panelB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelB.Name = "panelB";
             this.panelB.Size = new System.Drawing.Size(189, 252);
             this.panelB.TabIndex = 19;
@@ -283,6 +296,7 @@
             // 
             this.panelC.BackColor = System.Drawing.Color.NavajoWhite;
             this.panelC.Location = new System.Drawing.Point(523, 670);
+            this.panelC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelC.Name = "panelC";
             this.panelC.Size = new System.Drawing.Size(195, 252);
             this.panelC.TabIndex = 19;
@@ -291,13 +305,44 @@
             // 
             this.textBoxAge.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAge.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAge.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBoxAge.Location = new System.Drawing.Point(1842, 87);
+            this.textBoxAge.Location = new System.Drawing.Point(1843, 87);
+            this.textBoxAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(66, 37);
+            this.textBoxAge.Size = new System.Drawing.Size(67, 34);
             this.textBoxAge.TabIndex = 22;
             this.textBoxAge.Text = "SU";
+            // 
+            // comboBoxJamPemutaran
+            // 
+            this.comboBoxJamPemutaran.FormattingEnabled = true;
+            this.comboBoxJamPemutaran.Location = new System.Drawing.Point(387, 165);
+            this.comboBoxJamPemutaran.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxJamPemutaran.Name = "comboBoxJamPemutaran";
+            this.comboBoxJamPemutaran.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxJamPemutaran.TabIndex = 23;
+            // 
+            // comboBoxCinema
+            // 
+            this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCinema.FormattingEnabled = true;
+            this.comboBoxCinema.Location = new System.Drawing.Point(123, 292);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxCinema.Name = "comboBoxCinema";
+            this.comboBoxCinema.Size = new System.Drawing.Size(297, 24);
+            this.comboBoxCinema.TabIndex = 24;
+            this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
+            // 
+            // comboBoxStudio
+            // 
+            this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStudio.FormattingEnabled = true;
+            this.comboBoxStudio.Location = new System.Drawing.Point(473, 292);
+            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxStudio.Name = "comboBoxStudio";
+            this.comboBoxStudio.Size = new System.Drawing.Size(250, 24);
+            this.comboBoxStudio.TabIndex = 25;
             // 
             // FormPemesanan
             // 
@@ -305,7 +350,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1906, 1037);
+            this.ClientSize = new System.Drawing.Size(1540, 846);
+            this.Controls.Add(this.comboBoxStudio);
+            this.Controls.Add(this.comboBoxCinema);
+            this.Controls.Add(this.comboBoxJamPemutaran);
             this.Controls.Add(this.textBoxAge);
             this.Controls.Add(this.panelC);
             this.Controls.Add(this.panelB);
@@ -314,7 +362,6 @@
             this.Controls.Add(this.listBoxSinopsis);
             this.Controls.Add(this.panelA);
             this.Controls.Add(this.textBoxStudio);
-            this.Controls.Add(this.textBoxCinema);
             this.Controls.Add(this.textBoxKapasitas);
             this.Controls.Add(this.textBoxNamaBioskop);
             this.Controls.Add(this.textBoxSisa);
@@ -329,6 +376,7 @@
             this.Controls.Add(this.textBoxSaldo);
             this.Controls.Add(this.pictureBoxKeluar);
             this.Controls.Add(this.pictureBoxKonfirmasiPembayaran);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPemesanan";
             this.Text = "Z";
             this.Load += new System.EventHandler(this.FormPemesanan_Load);
@@ -355,7 +403,6 @@
         private System.Windows.Forms.TextBox textBoxSisa;
         private System.Windows.Forms.TextBox textBoxNamaBioskop;
         private System.Windows.Forms.TextBox textBoxKapasitas;
-        private System.Windows.Forms.TextBox textBoxCinema;
         private System.Windows.Forms.TextBox textBoxStudio;
         private System.Windows.Forms.Panel panelA;
         private System.Windows.Forms.ListBox listBoxSinopsis;
@@ -364,5 +411,8 @@
         private System.Windows.Forms.Panel panelB;
         private System.Windows.Forms.Panel panelC;
         private System.Windows.Forms.TextBox textBoxAge;
+        private System.Windows.Forms.ComboBox comboBoxJamPemutaran;
+        private System.Windows.Forms.ComboBox comboBoxCinema;
+        private System.Windows.Forms.ComboBox comboBoxStudio;
     }
 }

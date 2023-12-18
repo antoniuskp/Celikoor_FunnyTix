@@ -30,7 +30,7 @@ namespace FunnyTix_LIB
         #region METHODS
         public static List<Kelompok> BacaData(string filter = "", string val = "")
         {
-            string cmd = (filter == "") ? $"SELECT * FROM kelompoks" : $"SELECT * FROM WHERE {filter} LIKE '%{val}%';";
+            string cmd = (filter == "") ? $"SELECT * FROM kelompoks" : $"SELECT * FROM kelompoks WHERE {filter} LIKE '%{val}%';";
 
             MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
 

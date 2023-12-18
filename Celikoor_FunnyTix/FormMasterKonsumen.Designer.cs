@@ -30,7 +30,6 @@ namespace Celikoor_FunnyTix
         private void InitializeComponent()
         {
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCari = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@ namespace Celikoor_FunnyTix
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonTambah = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,36 +47,25 @@ namespace Celikoor_FunnyTix
             this.buttonKeluar.BackColor = System.Drawing.Color.NavajoWhite;
             this.buttonKeluar.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
             this.buttonKeluar.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonKeluar.Location = new System.Drawing.Point(12, 954);
+            this.buttonKeluar.Location = new System.Drawing.Point(9, 775);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(170, 51);
+            this.buttonKeluar.Size = new System.Drawing.Size(128, 41);
             this.buttonKeluar.TabIndex = 15;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
-            // 
-            // buttonTambah
-            // 
-            this.buttonTambah.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonTambah.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
-            this.buttonTambah.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonTambah.Location = new System.Drawing.Point(1330, 954);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(170, 51);
-            this.buttonTambah.TabIndex = 14;
-            this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.UseVisualStyleBackColor = false;
             // 
             // dataGridViewHasil
             // 
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(12, 190);
-            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(9, 154);
+            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.RowHeadersWidth = 51;
             this.dataGridViewHasil.RowTemplate.Height = 24;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(1116, 604);
             this.dataGridViewHasil.TabIndex = 13;
             // 
             // panel1
@@ -86,10 +75,10 @@ namespace Celikoor_FunnyTix
             this.panel1.Controls.Add(this.textBox);
             this.panel1.Controls.Add(this.comboBox);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 91);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(9, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1488, 86);
+            this.panel1.Size = new System.Drawing.Size(1116, 70);
             this.panel1.TabIndex = 12;
             // 
             // buttonCari
@@ -97,9 +86,10 @@ namespace Celikoor_FunnyTix
             this.buttonCari.BackColor = System.Drawing.Color.Maroon;
             this.buttonCari.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
             this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(1296, 22);
+            this.buttonCari.Location = new System.Drawing.Point(972, 18);
+            this.buttonCari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(170, 51);
+            this.buttonCari.Size = new System.Drawing.Size(128, 41);
             this.buttonCari.TabIndex = 3;
             this.buttonCari.Text = "Cari";
             this.buttonCari.UseVisualStyleBackColor = false;
@@ -107,10 +97,10 @@ namespace Celikoor_FunnyTix
             // textBox
             // 
             this.textBox.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(611, 29);
-            this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox.Location = new System.Drawing.Point(458, 24);
+            this.textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(667, 40);
+            this.textBox.Size = new System.Drawing.Size(501, 34);
             this.textBox.TabIndex = 2;
             // 
             // comboBox
@@ -120,10 +110,10 @@ namespace Celikoor_FunnyTix
             this.comboBox.Items.AddRange(new object[] {
             "KodeKategori",
             "Nama"});
-            this.comboBox.Location = new System.Drawing.Point(321, 29);
-            this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox.Location = new System.Drawing.Point(241, 24);
+            this.comboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 39);
+            this.comboBox.Size = new System.Drawing.Size(203, 34);
             this.comboBox.TabIndex = 1;
             // 
             // label2
@@ -131,9 +121,10 @@ namespace Celikoor_FunnyTix
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(27, 28);
+            this.label2.Location = new System.Drawing.Point(20, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(288, 37);
+            this.label2.Size = new System.Drawing.Size(240, 30);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
@@ -142,24 +133,39 @@ namespace Celikoor_FunnyTix
             this.label1.BackColor = System.Drawing.Color.NavajoWhite;
             this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1488, 65);
+            this.label1.Size = new System.Drawing.Size(1116, 53);
             this.label1.TabIndex = 11;
             this.label1.Text = "MASTER KONSUMEN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonTambah
+            // 
+            this.buttonTambah.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonTambah.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonTambah.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonTambah.Location = new System.Drawing.Point(998, 775);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTambah.Name = "buttonTambah";
+            this.buttonTambah.Size = new System.Drawing.Size(128, 41);
+            this.buttonTambah.TabIndex = 14;
+            this.buttonTambah.Text = "Tambah";
+            this.buttonTambah.UseVisualStyleBackColor = false;
+            // 
             // FormMasterKonsumen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(1518, 1033);
+            this.ClientSize = new System.Drawing.Size(1138, 839);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMasterKonsumen";
             this.Text = "FormMasterKonsumen";
             this.Load += new System.EventHandler(this.FormMasterKonsumen_Load);
@@ -173,7 +179,6 @@ namespace Celikoor_FunnyTix
         #endregion
 
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonCari;
@@ -181,5 +186,6 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonTambah;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FunnyTix_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,9 @@ namespace Celikoor_FunnyTix
     {
         private const int Rows = 7;
         private const int Columns = 4;
+        private List<Film> daftarFilm;
+        private DataTable daftarCinema;
+        private DataTable daftarStudio;
 
         private CheckBox[,] checkBoxArray;
         public FormPemesanan()
@@ -27,6 +31,9 @@ namespace Celikoor_FunnyTix
             InitializeCheckBoxArray("A");
             InitializeCheckBoxArray("B");
             InitializeCheckBoxArray("C");
+            daftarFilm = Film.BacaData();
+            comboBoxJudul.DataSource = daftarFilm;
+            comboBoxJudul.DisplayMember = "Judul";
         }
 
         private void InitializeCheckBoxArray(string huruf)
@@ -141,6 +148,76 @@ namespace Celikoor_FunnyTix
         {
             pictureBoxKeluar.BackColor = Color.LightSalmon;
 
+        }
+
+        private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxCinema != null)
+                {
+                    comboBoxCinema.ValueMember = "nama_cabang";
+                    Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
+                    //Film filmId = Film.BacaData(selectedFilm.Id.ToString())[0];
+                    string selectedCinema = (string)comboBoxCinema.SelectedValue;
+                    Cinema cinema = Cinema.BacaData("nama_cabang", selectedCinema)[0];
+
+                    //Studio studio = Studio.BacaData("cinemas_id", cinema.ID.ToString())[0];
+                    var ds = new DataTable();
+                    ds = Film.CariStudio(selectedFilm.Id, dateTimePickerTambah.Value, cinema);
+
+                    if (ds.Rows.Count == 0)
+                    {
+                        MessageBox.Show("KOSONG");
+                    }
+                    comboBoxStudio.DataSource = ds;
+                    comboBoxStudio.DisplayMember = "Studio";
+                    comboBoxStudio.ValueMember = "Studio";
+                }
+            } 
+            catch(Exception x)
+            {
+                MessageBox.Show(x.Message);
+                Environment.Exit(0);
+            }
+        }
+
+        private void comboBoxJudul_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
+            //Film filmId = Film.BacaData(selectedFilm.Id.ToString())[0];
+            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value);
+
+            if (daftarCinema.Rows.Count > 0)
+            {
+                comboBoxCinema.DataSource = daftarCinema;
+                comboBoxCinema.DisplayMember = "nama_cabang";
+                comboBoxCinema.ValueMember = "nama_cabang";
+                //comboBoxCinema.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxCinema.DataSource = null;
+            }
+        }
+
+        private void dateTimePickerTambah_ValueChanged(object sender, EventArgs e)
+        {
+            Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
+            //Film filmId = Film.BacaData(selectedFilm.Id.ToString())[0];
+            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value);
+
+            if (daftarCinema.Rows.Count > 0)
+            {
+                comboBoxCinema.DataSource = daftarCinema;
+                comboBoxCinema.DisplayMember = "nama_cabang";
+                comboBoxCinema.ValueMember = "nama_cabang";
+                //comboBoxCinema.SelectedIndex = 0;
+            } 
+            else
+            {
+                comboBoxCinema.DataSource = null;
+            }
         }
     }
 }

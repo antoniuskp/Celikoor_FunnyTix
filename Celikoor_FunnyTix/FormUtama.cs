@@ -329,5 +329,11 @@ namespace Celikoor_FunnyTix
         }
 
         #endregion
+
+        private void panelBeliTiket_Click(object sender, EventArgs e)
+        {
+            var frm = new FormPemesanan();
+            frm.ShowDialog();
+        }
     }
 }

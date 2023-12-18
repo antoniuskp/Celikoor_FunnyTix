@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,8 +67,61 @@ namespace FunnyTix_LIB
         public double Diskon { get => diskon; set => diskon = value; }
 
         #endregion
-
         #region METHODS
+
+        public static DataTable CariCinema(int fid, DateTime tgl)
+        {
+            var data = new DataTable("Daftar Cinema");
+            data.Columns.Add("nama_cabang", typeof(string));
+
+            string cmd = $"select distinct c.nama_cabang " +
+                $"from jadwal_films as jf " +
+                $"inner  join sesi_films as sf on jf.id = sf.jadwal_film_id " +
+                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
+                $"inner join films as f on fs.films_id = f.id " +
+                $"inner join studios as s on fs.studios_id = s.id " +
+                $"inner join cinemas as c on s.cinemas_id = c.id " +
+                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+
+            while (hasil.Read() == true)
+            {
+                DataRow row = data.NewRow();
+                row["nama_cabang"] = hasil.GetValue(0).ToString();
+                data.Rows.Add(row);
+            }
+
+            return data;
+        }
+
+        public static DataTable CariStudio(int fid, DateTime tgl, Cinema cinema)
+        {
+            var data = new DataTable("Daftar Studio");
+            data.Columns.Add("Studio", typeof(string));
+
+            string cmd = $"select distinct s.nama " +
+                $"from jadwal_films as jf " +
+                $"inner  join sesi_films as sf on jf.id = sf.jadwal_film_id " +
+                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
+                $"inner join films as f on fs.films_id = f.id " +
+                $"inner join studios as s on fs.studios_id = s.id " +
+                $"inner join cinemas as c on s.cinemas_id = c.id " +
+                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema.NamaCabang}';";
+
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+
+            while (hasil.Read() == true)
+            {
+                DataRow row = data.NewRow();
+                row["Studio"] = hasil.GetValue(0).ToString();
+                data.Rows.Add(row);
+            }
+
+            return data;
+        }
+
         public static List<Film> BacaData(string value = "")
         {
             string query = "SELECT * FROM films;";
