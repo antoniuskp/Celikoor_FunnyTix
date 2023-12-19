@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,7 @@ namespace FunnyTix_LIB
             this.HargaWeekend = 100000;
         }
         #endregion
+
         #region METHODS
         public static List<Studio> BacaData(string filter = "", string value = "")
         {
@@ -100,6 +102,32 @@ namespace FunnyTix_LIB
             return this.Nama;
         }
 
+        public static DataTable CariJenisStudio(string nama)
+        {
+            var data = new DataTable("Daftar Jenis Studio");
+            data.Columns.Add("jenis_studio", typeof(string));
+            data.Columns.Add("harga_weekday", typeof(int));
+            data.Columns.Add("harga_weekend", typeof(int));
+            data.Columns.Add("kapasitas", typeof(int));
+
+
+
+            string cmd = $"SELECT js.nama, s.harga_weekday, s.harga_weekend, s.kapasitas FROM studios s INNER JOIN jenis_studios js on s.jenis_studios_id = js.id where s.nama = '{nama}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+
+            while (hasil.Read() == true)
+            {
+                DataRow row = data.NewRow();
+                row["jenis_studio"] = hasil.GetValue(0).ToString();
+                row["harga_weekday"] = hasil.GetValue(1).ToString();
+                row["harga_weekend"] = hasil.GetValue(2).ToString();
+                row["kapasitas"] = hasil.GetValue(3).ToString();
+                data.Rows.Add(row);
+            }
+
+            return data;
+        }
         #endregion
 
     }

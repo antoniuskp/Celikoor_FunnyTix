@@ -67,9 +67,10 @@ namespace FunnyTix_LIB
         public double Diskon { get => diskon; set => diskon = value; }
 
         #endregion
+
         #region METHODS
 
-        public static DataTable CariCinema(int fid, DateTime tgl)
+        public static DataTable CariCinema(int fid, string tgl)
         {
             var data = new DataTable("Daftar Cinema");
             data.Columns.Add("nama_cabang", typeof(string));
@@ -81,7 +82,7 @@ namespace FunnyTix_LIB
                 $"inner join films as f on fs.films_id = f.id " +
                 $"inner join studios as s on fs.studios_id = s.id " +
                 $"inner join cinemas as c on s.cinemas_id = c.id " +
-                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}';";
+                $"where f.id = '{fid}' and jf.tanggal = '{tgl}';";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
 
@@ -100,14 +101,7 @@ namespace FunnyTix_LIB
             var data = new DataTable("Daftar Studio");
             data.Columns.Add("Studio", typeof(string));
 
-            string cmd = $"select distinct s.nama " +
-                $"from jadwal_films as jf " +
-                $"inner  join sesi_films as sf on jf.id = sf.jadwal_film_id " +
-                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
-                $"inner join films as f on fs.films_id = f.id " +
-                $"inner join studios as s on fs.studios_id = s.id " +
-                $"inner join cinemas as c on s.cinemas_id = c.id " +
-                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema.NamaCabang}';";
+            string cmd = $"SELECT DISTINCT s.nama FROM jadwal_films as jf INNER JOIN sesi_films AS sf ON jf.id = sf.jadwal_film_id INNER JOIN film_studio AS fs ON sf.films_id = fs.films_id INNER JOIN films as f on fs.films_id = f.id INNER JOIN studios as s on fs.studios_id = s.id INNER JOIN cinemas as c on s.cinemas_id = c.id WHERE f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' AND c.nama_cabang = '{cinema.NamaCabang}';";
 
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
@@ -151,6 +145,25 @@ namespace FunnyTix_LIB
             }
             return listFilm;
         }
+
+        public static List<Genre> ListGenreFilm(Film f)
+        {
+            string query = $"SELECT g.nama FROM genres AS g INNER JOIN genre_film gf on gf.genres_id = g.id INNER JOIN films f ON f.id = gf.films_id WHERE f.id = '{f.Id}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            List<Genre> listGenre = new List<Genre>();
+
+            while(hasil.Read() == true)
+            {
+                Genre g = new Genre();
+                g.Nama = hasil.GetValue(0).ToString();
+
+                listGenre.Add(g);
+            }
+            return listGenre;
+        }
+
 
         public static void TambahData(Film film)
         {

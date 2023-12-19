@@ -101,7 +101,7 @@
             this.labelNama.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelNama.Location = new System.Drawing.Point(103, 299);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(294, 32);
+            this.labelNama.Size = new System.Drawing.Size(295, 32);
             this.labelNama.TabIndex = 6;
             this.labelNama.Text = "Welcome, namaUser";
             // 

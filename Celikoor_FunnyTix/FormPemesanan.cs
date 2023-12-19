@@ -17,7 +17,8 @@ namespace Celikoor_FunnyTix
         private const int Columns = 4;
         private List<Film> daftarFilm;
         private DataTable daftarCinema;
-        private DataTable daftarStudio;
+        //private DataTable daftarStudio;
+        
 
         private CheckBox[,] checkBoxArray;
         public FormPemesanan()
@@ -34,6 +35,7 @@ namespace Celikoor_FunnyTix
             daftarFilm = Film.BacaData();
             comboBoxJudul.DataSource = daftarFilm;
             comboBoxJudul.DisplayMember = "Judul";
+            comboBoxJudul.SelectedIndex = 0;
         }
 
         private void InitializeCheckBoxArray(string huruf)
@@ -150,6 +152,7 @@ namespace Celikoor_FunnyTix
 
         }
 
+        
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -185,8 +188,25 @@ namespace Celikoor_FunnyTix
         private void comboBoxJudul_SelectedIndexChanged(object sender, EventArgs e)
         {
             Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
-            //Film filmId = Film.BacaData(selectedFilm.Id.ToString())[0];
-            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value);
+            listBoxSinopsis.Items.Clear();
+            listBoxSinopsis.Items.Add(selectedFilm.Sinopsis);
+            textBoxDurasi.Text = selectedFilm.Durasi.ToString();
+            List<Genre> listGenre = Film.ListGenreFilm(selectedFilm);
+            if(listGenre.Count > 0)
+            {
+                for (int i = 0; i < listGenre.Count; i++)
+                {
+                    if(i >= 0 && i < 2)
+                    {
+                        textBoxGenre.Text = $"{listGenre[i].Nama},";
+                    }
+                }
+                textBoxGenre.Text += "...";
+            }
+            
+            
+            //Film film = Film.BacaData(selectedFilm.Id.ToString())[0];
+            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value.ToString("yyyy-MM-dd"));
 
             if (daftarCinema.Rows.Count > 0)
             {
@@ -194,6 +214,8 @@ namespace Celikoor_FunnyTix
                 comboBoxCinema.DisplayMember = "nama_cabang";
                 comboBoxCinema.ValueMember = "nama_cabang";
                 //comboBoxCinema.SelectedIndex = 0;
+                
+                
             }
             else
             {
@@ -205,8 +227,7 @@ namespace Celikoor_FunnyTix
         {
             Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
             //Film filmId = Film.BacaData(selectedFilm.Id.ToString())[0];
-            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value);
-
+            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value.ToString("yyyy-MM-dd"));
             if (daftarCinema.Rows.Count > 0)
             {
                 comboBoxCinema.DataSource = daftarCinema;
@@ -218,6 +239,49 @@ namespace Celikoor_FunnyTix
             {
                 comboBoxCinema.DataSource = null;
             }
+        }
+
+        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxStudio != null)
+                {
+                    string day = dateTimePickerTambah.Value.DayOfWeek.ToString();
+                    string namaStudio = comboBoxStudio.Text;
+                    var jenisStudio = Studio.CariJenisStudio(namaStudio);
+                    if (jenisStudio.Rows.Count > 0)
+                    {                               
+                        textBoxJenisStudio.Text = jenisStudio.Rows[0][0].ToString();
+                        if (day == "Sunday" || day == "Saturday")
+                        {
+                            string price = jenisStudio.Rows[0][2].ToString();
+                            textBoxHarga.Text = price;
+                        }
+                        else
+                        {
+                            string price = jenisStudio.Rows[0][1].ToString();
+                            textBoxHarga.Text = price;
+                        }
+                        textBoxKapasitas.Text = jenisStudio.Rows[0][3].ToString();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Studio Kosong");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void listBoxSinopsis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

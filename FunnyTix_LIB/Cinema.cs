@@ -50,8 +50,19 @@ namespace FunnyTix_LIB
         //TODO : Read
         public static List<Cinema> BacaData(string filter="", string val="")
         {
-            string cmd = (filter == "") ? $"SELECT * FROM cinemas;" : $"SELECT * FROM cinemas WHERE {filter} LIKE '%{val}%';";
-
+            string cmd = "";
+            if(filter == "")
+            {
+                cmd = $"SELECT * FROM cinemas;";
+            }
+            else if(filter == "nama_cabang")
+            {
+                cmd = $"SELECT * FROM cinemas WHERE nama_cabang = '{val}';";
+            }
+            else
+            {
+                cmd = $"SELECT * FROM cinemas WHERE {filter} LIKE '%{val}%';";
+            }
             MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
 
             var listCinema = new List<Cinema>();
