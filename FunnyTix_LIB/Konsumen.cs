@@ -132,11 +132,11 @@ namespace FunnyTix_LIB
         }
 
         //TODO: Delete
-        public static void DeleteData(Konsumen konsumen)
+        public static void DeleteData(string kodeHapus)
         {
             try
             {
-                string cmd = $"DELETE FROM konsumens WHERE id = '{konsumen.ID}';";
+                string cmd = $"DELETE FROM konsumens WHERE id = '{kodeHapus}';";
 
                 Koneksi.JalankanPerintahNonQuery(cmd);
             }

@@ -42,7 +42,7 @@ namespace FunnyTix_LIB
         //TODO : Create
         public static void TambahData(Cinema cinema)
         {
-            string cmd = $"INSERT INTO cinemas(nama_cabang, alamat, tgl_dibuka, kota) VALUES ('{cinema.NamaCabang}', '{cinema.Alamat}','{cinema.Tgl_Buka}', '{cinema.Kota}');";
+            string cmd = $"INSERT INTO cinemas(nama_cabang, alamat, tgl_dibuka, kota) VALUES ('{cinema.NamaCabang}', '{cinema.Alamat}','{cinema.Tgl_Buka.ToString("yyyy-MM-dd")}', '{cinema.Kota}');";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
@@ -72,11 +72,11 @@ namespace FunnyTix_LIB
         }
 
         //TODO : Delete
-        public static void DeleteData(Cinema cinema)
+        public static void DeleteData(string kodeHapus)
         {
             try
             {
-                string cmd = $"DELETE FROM cinemas WHERE id = '{cinema.ID}';";
+                string cmd = $"DELETE FROM cinemas WHERE id = '{kodeHapus}';";
 
                 Koneksi.JalankanPerintahNonQuery(cmd);
             }

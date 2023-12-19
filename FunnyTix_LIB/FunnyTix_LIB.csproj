@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program\Database\WEEK8A_160422065_Antonius\JualBeli_LIB\bin\Debug\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\c#\E_160422078_week8A\SIJualBeli\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

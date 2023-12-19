@@ -38,6 +38,7 @@ namespace FunnyTix_LIB
             while (res.Read() == true)
             {
                 Kelompok k = new Kelompok(res.GetValue(1).ToString());
+                k.ID = int.Parse(res.GetValue(0).ToString());
 
                 lstKelompok.Add(k);
             }
@@ -49,9 +50,9 @@ namespace FunnyTix_LIB
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
-        public static void DeleteData(Kelompok k)
+        public static void DeleteData(string kodeHapus)
         {
-            string cmd = $"DELETE FROM kelompoks WHERE id = '{k.ID}';";
+            string cmd = $"DELETE FROM kelompoks WHERE id = '{kodeHapus}';";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }

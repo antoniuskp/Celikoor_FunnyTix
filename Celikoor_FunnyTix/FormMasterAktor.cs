@@ -56,16 +56,10 @@ namespace Celikoor_FunnyTix
             }
         }
 
-
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBox.Text = "";
             comboBox.SelectedIndex = 0;
-        }
-
-        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
@@ -104,6 +98,73 @@ namespace Celikoor_FunnyTix
             for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
             {
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            panelTambahAktor.Visible = true;
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            panelTambahAktor.Visible = false;
+            textBoxNama.Clear();
+            textBoxNegara.Clear();
+            dateTimePickerTglLahir.Value = DateTime.Now;
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            string nama = textBoxNama.Text;
+            DateTime tglLahir = dateTimePickerTglLahir.Value;
+            string gender = comboBoxGender.Text;
+            string negara = textBoxNegara.Text;
+
+            Aktor act = new Aktor();
+            act.Nama = nama;
+            act.Tgl_Lahir = tglLahir;
+            act.Gender = gender;
+            act.Negara_Asal = negara;   
+
+            Aktor.TambahData(act);
+
+            panelTambahAktor.Visible = false;
+            textBoxNama.Clear();
+            textBoxNegara.Clear();
+            dateTimePickerTglLahir.Value = DateTime.Now;
+
+            FormMasterAktor_Load(this, e);
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus aktor " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if(confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Aktor.DeleteData(kode);
+
+                        FormMasterAktor_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
             }
         }
     }

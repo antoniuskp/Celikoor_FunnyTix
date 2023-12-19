@@ -105,5 +105,36 @@ namespace Celikoor_FunnyTix
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus konsumen " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Konsumen.DeleteData(kode);
+
+                        FormMasterKonsumen_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }

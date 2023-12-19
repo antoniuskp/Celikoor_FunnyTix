@@ -61,17 +61,17 @@ namespace FunnyTix_LIB
             }
             catch(Exception ex)
             {
-                throw new Exception("Unsuccess!");
+                throw new Exception("Unsuccess!" + ex.Message);
             }
             
         }
         
         //Method DELETE
-        public static void DeleteData(Aktor act)
+        public static void DeleteData(string kodeHapus)
         {
             try
             {
-                string cmd = $"DELETE FROM aktors where id = {act.ID};";
+                string cmd = $"DELETE FROM aktors where id = '{kodeHapus}';";
 
                 Koneksi.JalankanPerintahNonQuery(cmd);
             }
@@ -85,7 +85,7 @@ namespace FunnyTix_LIB
         public static void TambahData(Aktor act)
         {
             string cmd = $"INSERT INTO aktors(nama, tgl_lahir, gender, negara_asal) VALUES('{act.Nama}', " +
-                $"{act.Tgl_Lahir.ToString("yyyy-MM-dd")}, '{act.Gender}', '{act.Negara_Asal}'); ";
+                $"'{act.Tgl_Lahir.ToString("yyyy-MM-dd")}', '{act.Gender}', '{act.Negara_Asal}'); ";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }

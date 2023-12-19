@@ -80,11 +80,11 @@ namespace FunnyTix_LIB
         }
 
         //TODO Delete
-        public static void DeleteData(Pegawai pegawai)
+        public static void DeleteData(string kodeHapus)
         {
             try
             {
-                string cmd = $"DELETE FROM pegawais WHERE id = '{pegawai.ID}';";
+                string cmd = $"DELETE FROM pegawais WHERE id = '{kodeHapus}';";
 
                 Koneksi.JalankanPerintahNonQuery(cmd);
             }

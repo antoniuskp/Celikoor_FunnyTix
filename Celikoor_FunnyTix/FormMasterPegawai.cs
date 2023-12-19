@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -66,7 +67,7 @@ namespace Celikoor_FunnyTix
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-
+            panelTambahPegawai.Visible = true;
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
@@ -117,6 +118,66 @@ namespace Celikoor_FunnyTix
         {
             comboBox.SelectedIndex = 0;
             textBox.Text = "";
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            panelTambahPegawai.Visible = false;
+            textBoxEmail.Clear();   
+            textBoxNama.Clear();    
+            textBoxPassword.Clear();    
+            textBoxUsername.Clear();
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            string nama = textBoxNama.Text;
+            string email = textBoxEmail.Text;   
+            string username = textBoxUsername.Text; 
+            string pwd = textBoxPassword.Text;  
+            string roles = comboBoxRoles.Text;
+
+            Pegawai pegawai = new Pegawai(nama, email, username, pwd, roles);
+            Pegawai.TambahData(pegawai);
+
+            panelTambahPegawai.Visible = false;
+            textBoxEmail.Clear();
+            textBoxNama.Clear();
+            textBoxPassword.Clear();
+            textBoxUsername.Clear();
+
+            FormMasterPegawai_Load(this, e);
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus pegawai " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Pegawai.DeleteData(kode);
+
+                        FormMasterPegawai_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

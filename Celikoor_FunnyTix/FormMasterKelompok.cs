@@ -51,7 +51,7 @@ namespace Celikoor_FunnyTix
         }
         public void ShowDataGrid()
         {
-            if (dataGridViewHasil.ColumnCount == 3)
+            if (dataGridViewHasil.ColumnCount == 2)
             {
                 DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
 
@@ -77,6 +77,61 @@ namespace Celikoor_FunnyTix
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBox.Text = "";
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            panelTambahKelompok.Visible = true;    
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            panelTambahKelompok.Visible = false;
+            textBoxBatasanUsia.Clear();
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            string batasanUsia = textBoxBatasanUsia.Text;
+
+            Kelompok kel = new Kelompok(batasanUsia);
+            Kelompok.TambahData(kel);
+
+            panelTambahKelompok.Visible = false;
+            textBoxBatasanUsia.Clear();
+
+            FormMasterKelompok_Load(this, e);
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus kelompok " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Kelompok.DeleteData(kode);
+
+                        FormMasterKelompok_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

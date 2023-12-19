@@ -89,5 +89,63 @@ namespace Celikoor_FunnyTix
             textBox.Text = "";
             comboBox.SelectedIndex = 0;
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            panelTambahGenre.Visible = true;
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            panelTambahGenre.Visible = false;
+            textBoxDeskripsi.Clear();
+            textBoxNama.Clear();
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            string nama = textBoxNama.Text;
+            string desc = textBoxDeskripsi.Text;
+
+            Genre genre = new Genre(nama,desc);
+            Genre.TambahData(genre);
+
+            panelTambahGenre.Visible = false;
+            textBoxDeskripsi.Clear();
+            textBoxNama.Clear();
+
+            FormMasterGenre_Load(this, e);
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus genre " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Genre.DeleteData(kode);
+
+                        FormMasterGenre_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }

@@ -54,9 +54,9 @@ namespace FunnyTix_LIB
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
-        public static void DeleteData(Genre g)
+        public static void DeleteData(string kodeHapus)
         {
-            string cmd = $"DELETE FROM genres WHERE id = '{g.ID}';";
+            string cmd = $"DELETE FROM genres WHERE id = '{kodeHapus}';";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
