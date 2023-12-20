@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
@@ -90,6 +91,32 @@ namespace FunnyTix_LIB
             {
                 DataRow row = data.NewRow();
                 row["nama_cabang"] = hasil.GetValue(0).ToString();
+                data.Rows.Add(row);
+            }
+
+            return data;
+        }
+
+        public static DataTable CariJadwalPemutaran(int fid, DateTime tgl, string cinema, string studio)
+        {
+            var data = new DataTable("Daftar Jam Pemutaran");
+            data.Columns.Add("Jam Pemutaran", typeof(string));
+
+            string cmd = $"select distinct jf.jam_pemutaran " +
+                $"from jadwal_films as jf " +
+                $"inner join sesi_films as sf on jf.id = sf.jadwal_film_id " +
+                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
+                $"inner join films as f on fs.films_id = f.id " +
+                $"inner join studios as s on fs.studios_id = s.id " +
+                $"inner join cinemas as c on s.cinemas_id = c.id " +
+                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema}' and s.nama = '{studio}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+
+            while (hasil.Read() == true)
+            {
+                DataRow row = data.NewRow();
+                row["Jam Pemutaran"] = hasil.GetValue(0).ToString();
                 data.Rows.Add(row);
             }
 

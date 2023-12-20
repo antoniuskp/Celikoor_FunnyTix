@@ -17,6 +17,7 @@ namespace Celikoor_FunnyTix
         private const int Columns = 4;
         private List<Film> daftarFilm;
         private DataTable daftarCinema;
+        private List<string> userSelection = new List<string>();
         //private DataTable daftarStudio;
         
 
@@ -54,6 +55,7 @@ namespace Celikoor_FunnyTix
                         // Set its properties
                         checkBox.Text = $"{i + 1}";
                         checkBox.AutoSize = true;
+                        checkBox.Tag = $"{huruf}{i + 1}";
                         i++;
 
                         // Add it to the form
@@ -81,6 +83,7 @@ namespace Celikoor_FunnyTix
                         // Set its properties
                         checkBox.Text = $"{i + 1}";
                         checkBox.AutoSize = true;
+                        checkBox.Tag = $"{huruf}{i + 1}";
                         i++;
 
                         // Add it to the form
@@ -108,6 +111,7 @@ namespace Celikoor_FunnyTix
                         // Set its properties
                         checkBox.Text = $"{i + 1}";
                         checkBox.AutoSize = true;
+                        checkBox.Tag = $"{huruf}{i + 1}";
                         i++;
 
                         // Add it to the form
@@ -124,6 +128,7 @@ namespace Celikoor_FunnyTix
             }
         }
 
+        #region PANEL HOVER
         private void panelA_MouseHover(object sender, EventArgs e)
         {
             panelA.BackColor = Color.LightSalmon;
@@ -151,8 +156,9 @@ namespace Celikoor_FunnyTix
             pictureBoxKeluar.BackColor = Color.LightSalmon;
 
         }
+        #endregion
 
-        
+
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -264,6 +270,25 @@ namespace Celikoor_FunnyTix
                             textBoxHarga.Text = price;
                         }
                         textBoxKapasitas.Text = jenisStudio.Rows[0][3].ToString();
+                    }
+
+                    //* Add jam pemutaran
+                    Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
+                    DateTime selectedDate = dateTimePickerTambah.Value;
+                    string cinema = comboBoxCinema.Text;
+
+                    var daftarJamPemutaran = Film.CariJadwalPemutaran(selectedFilm.Id, selectedDate, cinema, namaStudio);
+
+                    if (daftarJamPemutaran.Rows.Count > 0)
+                    {
+                        comboBoxJamPemutaran.DataSource = daftarJamPemutaran;
+                        comboBoxJamPemutaran.DisplayMember = "Jam Pemutaran";
+                        comboBoxJamPemutaran.ValueMember = "Jam Pemutaran";
+                        //comboBoxCinema.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        comboBoxJamPemutaran.DataSource = null;
                     }
 
                 }
