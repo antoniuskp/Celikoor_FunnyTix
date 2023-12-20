@@ -52,6 +52,37 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+        public static Invoice CariInvoice(int id, string noKursi)
+        {
+            string query = $"SELECT i.* FROM invoices i INNER JOIN tikets t on t.invoices_id = i.id WHERE t.nomor_kursi = '{noKursi}' and i.id = '{id}';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            if (hasil.Read() == true)
+            {
+                Invoice i = new Invoice();
+                i.id = int.Parse(hasil.GetValue(0).ToString());
+                i.tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                i.GrandTotal = int.Parse(hasil.GetValue(2).ToString());
+                i.DiskonNominal = int.Parse(hasil.GetValue(3).ToString());
+
+                Konsumen k = new Konsumen();
+                k.ID = int.Parse(hasil.GetValue(4).ToString());
+                i.Konsumen = k;
+
+                Pegawai p = new Pegawai();
+                p.ID = int.Parse(hasil.GetValue(5).ToString());
+                i.Kasir = p;
+
+                i.Status = hasil.GetValue(6).ToString();
+
+                return i;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         public static List<Invoice> BacaData(string value = "")
         {
             string query = "SELECT * FROM invoices;";

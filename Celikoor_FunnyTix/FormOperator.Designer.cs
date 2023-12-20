@@ -99,11 +99,11 @@
             // 
             this.textBoxStudio.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxStudio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxStudio.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStudio.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxStudio.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxStudio.Location = new System.Drawing.Point(1106, 521);
+            this.textBoxStudio.Location = new System.Drawing.Point(1087, 566);
             this.textBoxStudio.Name = "textBoxStudio";
-            this.textBoxStudio.Size = new System.Drawing.Size(177, 41);
+            this.textBoxStudio.Size = new System.Drawing.Size(212, 25);
             this.textBoxStudio.TabIndex = 12;
             // 
             // textBoxTime

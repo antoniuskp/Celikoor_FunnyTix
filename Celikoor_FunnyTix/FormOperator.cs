@@ -32,28 +32,48 @@ namespace Celikoor_FunnyTix
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            string noInv = (textBoxNoTiket.Text).Substring(0, 3);
-            Tiket.UpdateKehadiran(noInv);
+            try
+            {
+                int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
+                Tiket.UpdateKehadiran(noInv.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal Mengubah Status. Data Tidak Ditemukan!", "DANGER");
+            }
+            
         }
 
         private void textBoxNoTiket_TextChanged(object sender, EventArgs e)
         {
-            string noInv = textBoxNoTiket.Text.Substring(0, 3);
-            listTiket = Tiket.BacaData("invoices_id", noInv);
-            if(listTiket[2].ToString() == "true")
+            if (textBoxNoTiket.Text.Length == 6)
             {
-                textBoxStatus.Text = "Checked in";
-                buttonUpdate.Enabled = false;
-            }
-            else
-            {
-                textBoxStatus.Text = "Not checked in";
-            }
+                string noKursi = textBoxNoTiket.Text.Substring(3, 3);
+                int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
+                MessageBox.Show(noInv.ToString());
+                Tiket ticket = Tiket.CariTiket(noInv, noKursi);
 
-            string harga = listTiket[4].ToString();
-            textBoxNoKursi.Text = listTiket[0].ToString();
-
-            //Tiket t = Tiket.BacaData("invoices_id", noTiket)[5];
+                if (ticket != null)
+                {
+                    if (ticket.Status == true)
+                    {
+                        textBoxStatus.Text = "Checked in";
+                        buttonUpdate.Enabled = false;
+                    }
+                    else
+                    {
+                        textBoxStatus.Text = "Not checked in";
+                        buttonUpdate.Enabled = true;
+                    }
+                    textBoxKursi.Text = ticket.NoKursi;
+                    textBoxHarga.Text = ticket.Harga.ToString();
+                    textBoxID.Text = ticket.Operators.ID.ToString();
+                    dateTimePicker.Value = Invoice.CariInvoice(noInv, noKursi).Tanggal;
+                    textBoxJudul.Text = Tiket.CariFilm(noInv, noKursi).Judul;
+                    textBoxTime.Text = Tiket.CariFilm(noInv, noKursi).Durasi.ToString();
+                    textBoxStudio.Text = Tiket.CariStudio(noInv, noKursi).Nama;
+                }
+            }
 
         }
 

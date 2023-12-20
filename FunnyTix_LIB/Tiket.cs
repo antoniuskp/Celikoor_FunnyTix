@@ -9,16 +9,27 @@ using MySql.Data.MySqlClient;
 namespace FunnyTix_LIB
 {
     public class Tiket
-    {        
+    {
+        #region DATA MEMBERS
+        string noKursi;
+        Invoice idInvoice;
+        bool status;
+        Pegawai operators;
+        double harga;
+        Studio studio;
+        Film film;
+        JadwalFilm jadwalFilm;
+        #endregion
+
         #region PROPERTIES
-        private string NoKursi { get; set; }
-        private Invoice IdInvoice { get; set; }
-        private bool Status { get; set; }
-        private Pegawai Operators { get; set; }
-        private double Harga { get; set; }
-        private Studio Studio { get; set; }
-        private Film Film { get; set; }
-        private JadwalFilm JadwalFilm {get; set;}
+        public string NoKursi { get => noKursi; set => noKursi = value; }
+        public Invoice IdInvoice { get => idInvoice; set => idInvoice = value; }
+        public bool Status { get => status; set => status = value; }
+        public Pegawai Operators { get => operators; set => operators = value; }
+        public double Harga { get => harga; set => harga = value; }
+        public Studio Studio { get => studio; set => studio = value; }
+        public Film Film { get => film; set => film = value; }
+        public JadwalFilm JadwalFilm { get => jadwalFilm; set => jadwalFilm = value; }
         #endregion
 
         #region CONSTRUCTORS
@@ -49,6 +60,98 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+        public static Studio CariStudio(int invId, string noKursi)
+        {
+            string query = $"SELECT DISTINCT fs.studios_id FROM tikets t INNER JOIN sesi_films sf on sf.films_id = t.films_id INNER JOIN film_studio fs on fs.films_id = t.films_id WHERE t.nomor_kursi = '{noKursi}' AND t.invoices_id = '{invId}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            if (hasil.Read() == true)
+            {
+                Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
+                if (s != null)
+                {
+                    return s;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static Film CariFilm(int invId, string noKursi)
+        {
+            string query = $"SELECT DISTINCT fs.films_id FROM tikets t INNER JOIN sesi_films sf on sf.films_id = t.films_id INNER JOIN film_studio fs on fs.films_id = t.films_id WHERE t.nomor_kursi = '{noKursi}' AND t.invoices_id = '{invId}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            
+            if(hasil.Read() == true)
+            {
+                Film f = Film.BacaData(hasil.GetValue(0).ToString())[0];
+                if(f != null)
+                {
+                    return f;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            } 
+        }
+
+        public static Tiket CariTiket(int invId, string noKursi)
+        {
+            string query = $"SELECT t.* FROM tikets t WHERE t.nomor_kursi = '{noKursi}' AND t.invoices_id = '{invId}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            if(hasil.Read() == true)
+            {
+                Tiket t = new Tiket();
+                t.NoKursi = hasil.GetValue(1).ToString();
+                Invoice i = new Invoice();
+                i.Id = int.Parse(hasil.GetValue(0).ToString());
+                t.IdInvoice = i;
+                t.Status = false;
+
+                if (hasil.GetValue(2).ToString() == "1")
+                {
+                    t.Status = true;
+                }
+
+                Pegawai p = new Pegawai();
+                p.ID = int.Parse(hasil.GetValue(3).ToString());
+                t.Operators = p;
+
+                t.Harga = Double.Parse(hasil.GetValue(4).ToString());
+
+                JadwalFilm j = new JadwalFilm();
+                j.ID = int.Parse(hasil.GetValue(5).ToString());
+                t.JadwalFilm = j;
+
+                Studio s = new Studio();
+                s.ID = int.Parse(hasil.GetValue(6).ToString());
+                t.Studio = s;
+
+                Film f = new Film();
+                f.Id = int.Parse(hasil.GetValue(7).ToString());
+                t.Film = f;
+
+                return t;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public static List<string> CariNomorKursi(int fid, DateTime tgl, string cinema, string studio, string jamPemutaran)
         {
             List<string> nomorKursi = new List<string>();
