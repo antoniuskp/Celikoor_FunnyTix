@@ -18,6 +18,8 @@ namespace Celikoor_FunnyTix
         private List<Film> daftarFilm;
         private DataTable daftarCinema;
         private List<string> userSelection = new List<string>();
+        private bool jamPemutaranIsLoaded = false;
+        private List<string> chairTaken = new List<string>();
         //private DataTable daftarStudio;
         
 
@@ -56,6 +58,8 @@ namespace Celikoor_FunnyTix
                         checkBox.Text = $"{i + 1}";
                         checkBox.AutoSize = true;
                         checkBox.Tag = $"{huruf}{i + 1}";
+                        checkBox.CheckedChanged += InputKursi;
+                        checkBox.Enabled = false;
                         i++;
 
                         // Add it to the form
@@ -84,6 +88,8 @@ namespace Celikoor_FunnyTix
                         checkBox.Text = $"{i + 1}";
                         checkBox.AutoSize = true;
                         checkBox.Tag = $"{huruf}{i + 1}";
+                        checkBox.CheckedChanged += InputKursi;
+                        checkBox.Enabled = false;
                         i++;
 
                         // Add it to the form
@@ -112,6 +118,8 @@ namespace Celikoor_FunnyTix
                         checkBox.Text = $"{i + 1}";
                         checkBox.AutoSize = true;
                         checkBox.Tag = $"{huruf}{i + 1}";
+                        checkBox.CheckedChanged += InputKursi;
+                        checkBox.Enabled = false;
                         i++;
 
                         // Add it to the form
@@ -284,6 +292,7 @@ namespace Celikoor_FunnyTix
                         comboBoxJamPemutaran.DataSource = daftarJamPemutaran;
                         comboBoxJamPemutaran.DisplayMember = "Jam Pemutaran";
                         comboBoxJamPemutaran.ValueMember = "Jam Pemutaran";
+                        jamPemutaranIsLoaded = true;
                         //comboBoxCinema.SelectedIndex = 0;
                     }
                     else
@@ -304,9 +313,106 @@ namespace Celikoor_FunnyTix
             
         }
 
+        private void InputKursi(object sender, EventArgs e)
+        {
+            CheckBox cb = (CheckBox)sender;
+
+            if (cb.Enabled && jamPemutaranIsLoaded)
+            {
+                if (cb.Checked)
+                {
+                    userSelection.Add((string)cb.Tag);
+                }
+                else
+                {
+                    userSelection.Remove((string)cb.Tag);
+                }
+                labelUserSelection.Text = String.Join(", ", userSelection);
+            }
+        }
+
         private void listBoxSinopsis_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxJamPemutaran_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string namaStudio = comboBoxStudio.Text;
+                Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
+                DateTime selectedDate = dateTimePickerTambah.Value;
+                string cinema = comboBoxCinema.Text;
+                string jamPemutaran = comboBoxJamPemutaran.Text;
+
+                chairTaken = Tiket.CariNomorKursi(selectedFilm.Id, selectedDate, cinema, namaStudio, jamPemutaran);
+
+
+                //* Cek nomor kursi apa saja yg telah dibeli
+                // Ubah Enabled dlu biar di Method InputKursi tidak dijalankan
+                // Method InputKursi hanya dijalankan ketika user yg memilih, bukan sistem
+                foreach (Control control in panelA.Controls)
+                {
+                    if (control is CheckBox)
+                    {
+                        CheckBox checkBox = (CheckBox)control;
+                        if (chairTaken.Contains((string)checkBox.Tag))
+                        {
+                            checkBox.Enabled = false;
+                            checkBox.Checked = true;
+                            checkBox.ForeColor = Color.Black;
+                        } 
+                        else
+                        {
+                            checkBox.Enabled = true;
+                            checkBox.Checked = false;
+                        }
+                    }
+                }
+
+                foreach (Control control in panelB.Controls)
+                {
+                    if (control is CheckBox)
+                    {
+                        CheckBox checkBox = (CheckBox)control;
+                        if (chairTaken.Contains((string)checkBox.Tag))
+                        {
+                            checkBox.Enabled = false;
+                            checkBox.Checked = true;
+                            checkBox.ForeColor = Color.Black;
+                        }
+                        else
+                        {
+                            checkBox.Enabled = true;
+                            checkBox.Checked = false;
+                        }
+                    }
+                }
+
+                foreach (Control control in panelC.Controls)
+                {
+                    if (control is CheckBox)
+                    {
+                        CheckBox checkBox = (CheckBox)control;
+                        if (chairTaken.Contains((string)checkBox.Tag))
+                        {
+                            checkBox.Enabled = false;
+                            checkBox.Checked = true;
+                            checkBox.ForeColor = Color.Black;
+                        }
+                        else
+                        {
+                            checkBox.Enabled = true;
+                            checkBox.Checked = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
         }
     }
 }
