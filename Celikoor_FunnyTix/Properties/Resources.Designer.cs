@@ -213,6 +213,16 @@ namespace Celikoor_FunnyTix.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap operatorForm {
+            get {
+                object obj = ResourceManager.GetObject("operatorForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap visibleHide {
             get {
                 object obj = ResourceManager.GetObject("visibleHide", resourceCulture);

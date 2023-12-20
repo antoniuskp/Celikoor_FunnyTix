@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FunnyTix_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,12 @@ namespace Celikoor_FunnyTix
 
         private void FormInvoice_Load(object sender, EventArgs e)
         {
-            FormPegawai frmPegawai = (FormPegawai)this.Owner;
+            FormUtama frmUtama = (FormUtama)this.Owner;
+        }
+
+        private void textBoxNoInv_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

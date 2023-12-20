@@ -57,7 +57,7 @@ namespace FunnyTix_LIB
             }
             else
             {
-                query = $"SELECT * FROM tikets where {filter} == '{value}'";
+                query = $"SELECT * FROM tikets where {filter} = '{value}'";
             }
 
             List<Tiket> listTiket = new List<Tiket>();
@@ -110,6 +110,11 @@ namespace FunnyTix_LIB
             }
             string cmd = $"INSERT INTO tikets (invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id) " +
                 $"values ({t.IdInvoice}, '{t.NoKursi}', '{res}', '{t.Operators.ID}', '{t.Harga}', '{t.JadwalFilm.ID}', '{t.Studio.ID}', '{t.Film.Id}';";
+            Koneksi.JalankanPerintahNonQuery(cmd);
+        }
+        public static void UpdateKehadiran(string noInvoice)
+        {
+            string cmd = $"UPDATE tikets set status_hadir = 1 WHERE invoices_id = '{noInvoice}';";
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 

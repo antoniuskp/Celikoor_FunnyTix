@@ -35,6 +35,8 @@
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.textBoxNoInv = new System.Windows.Forms.TextBox();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxNama
@@ -53,6 +55,7 @@
             this.dateTimePicker.CalendarMonthBackground = System.Drawing.Color.White;
             this.dateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.Highlight;
+            this.dateTimePicker.Enabled = false;
             this.dateTimePicker.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.Location = new System.Drawing.Point(284, 242);
             this.dateTimePicker.Name = "dateTimePicker";
@@ -63,6 +66,7 @@
             // 
             this.textBoxDiskon.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxDiskon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDiskon.Enabled = false;
             this.textBoxDiskon.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiskon.Location = new System.Drawing.Point(141, 468);
             this.textBoxDiskon.Name = "textBoxDiskon";
@@ -73,6 +77,7 @@
             // 
             this.textBoxGrandTotal.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxGrandTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGrandTotal.Enabled = false;
             this.textBoxGrandTotal.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGrandTotal.Location = new System.Drawing.Point(141, 607);
             this.textBoxGrandTotal.Name = "textBoxGrandTotal";
@@ -85,6 +90,10 @@
             this.comboBoxStatus.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStatus.ForeColor = System.Drawing.Color.Maroon;
             this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
+            "PENDING",
+            "VALIDASI",
+            "TERBAYAR"});
             this.comboBoxStatus.Location = new System.Drawing.Point(515, 444);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(272, 40);
@@ -112,8 +121,32 @@
             this.textBoxNoInv.Name = "textBoxNoInv";
             this.textBoxNoInv.Size = new System.Drawing.Size(249, 29);
             this.textBoxNoInv.TabIndex = 6;
+            this.textBoxNoInv.TextChanged += new System.EventHandler(this.textBoxNoInv_TextChanged);
             // 
-            // FormInvoice
+            // textBoxId
+            // 
+            this.textBoxId.BackColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxId.Enabled = false;
+            this.textBoxId.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxId.Location = new System.Drawing.Point(310, 121);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(85, 29);
+            this.textBoxId.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkRed;
+            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label1.Location = new System.Drawing.Point(102, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Operator Id";
+            // 
+            // FormUpdateInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,6 +154,8 @@
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.formInvoiceKasirValidasi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1508, 792);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.textBoxNoInv);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.comboBoxStatus);
@@ -130,7 +165,7 @@
             this.Controls.Add(this.textBoxNama);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormInvoice";
+            this.Name = "FormUpdateInvoice";
             this.Text = "FormInvoice";
             this.Load += new System.EventHandler(this.FormInvoice_Load);
             this.ResumeLayout(false);
@@ -147,5 +182,7 @@
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.TextBox textBoxNoInv;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Label label1;
     }
 }

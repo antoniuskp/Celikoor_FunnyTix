@@ -292,7 +292,7 @@ namespace Celikoor_FunnyTix
         #region Panel Pegawai Operator
         private void panelUpdateStatus_Click(object sender, EventArgs e)
         {
-            form.OpenChild(new FormUpdateInvoice());
+            form.OpenChild(new FormOperator());
         }
         #endregion
         #region Panel Konsumen
@@ -337,6 +337,16 @@ namespace Celikoor_FunnyTix
         }
 
         private void panelMasterKonsumen_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelUpdateStatus_Paint(object sender, PaintEventArgs e)
         {
 
         }

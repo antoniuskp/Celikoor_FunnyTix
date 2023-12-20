@@ -101,7 +101,7 @@
             this.labelNama.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelNama.Location = new System.Drawing.Point(103, 299);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(295, 32);
+            this.labelNama.Size = new System.Drawing.Size(294, 32);
             this.labelNama.TabIndex = 6;
             this.labelNama.Text = "Welcome, namaUser";
             // 
@@ -142,6 +142,7 @@
             this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
             this.panelUpdateStatus.TabIndex = 23;
             this.panelUpdateStatus.Click += new System.EventHandler(this.panelUpdateStatus_Click);
+            this.panelUpdateStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUpdateStatus_Paint);
             // 
             // label12
             // 
@@ -154,6 +155,7 @@
             this.label12.Size = new System.Drawing.Size(420, 38);
             this.label12.TabIndex = 17;
             this.label12.Text = "UPDATE STATUS HADIR";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panelKonsumen
             // 

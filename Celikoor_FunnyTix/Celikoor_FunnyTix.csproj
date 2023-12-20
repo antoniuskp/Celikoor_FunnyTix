@@ -330,5 +330,8 @@
   <ItemGroup>
     <None Include="Resources\FormPemesanan.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\operatorForm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

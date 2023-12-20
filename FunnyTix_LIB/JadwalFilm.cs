@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
@@ -68,8 +69,28 @@ namespace FunnyTix_LIB
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
-        #endregion
 
+        public static string DefineJam(string sesi)
+        {
+            string jam = "";
+            switch (sesi)
+            {
+                case "I":
+                    jam = "12.00 - 15.00 WIB";
+                    break;
+                case "II":
+                    jam = "15.30 - 18.30 WIB";
+                    break;
+                case "III":
+                    jam = "19.00 - 22.00 WIB";
+                    break;
+                case "IV":
+                    jam = "22.30 - 01.30 WIB";
+                    break;
+            }
+            return jam;
+            #endregion
+        }
 
     }
 }
