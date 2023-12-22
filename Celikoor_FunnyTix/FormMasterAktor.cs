@@ -38,7 +38,7 @@ namespace Celikoor_FunnyTix
 
                     bcol.HeaderText = "Aksi";
                     bcol.Text = "Ubah";
-                    bcol.Name = "btnUbahGrid";
+                    bcol.Name = "buttonUbahGrid";
                     bcol.UseColumnTextForButtonValue = true;
                     dataGridViewHasil.Columns.Add(bcol);
 
@@ -148,7 +148,25 @@ namespace Celikoor_FunnyTix
             string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
 
 
-            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonUbahGrid"].Index)
+            {
+                Aktor aktor = Aktor.BacaData("id", kode)[0];
+                labelID.Text = kode;
+                textBoxNamaUbah.Text = nama;
+                dateTimePickerUbah.Value = aktor.Tgl_Lahir;
+                if(aktor.Gender == "L")
+                {
+                    comboBoxGenderUbah.SelectedIndex = 0;
+                }
+                else
+                {
+                    comboBoxGenderUbah.SelectedIndex = 1;
+                }
+                textBoxNegaraAsalUbah.Text = aktor.Negara_Asal;
+
+                panelUbah.Visible = true;
+            }
+            else if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
             {
                 DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus aktor " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -166,6 +184,21 @@ namespace Celikoor_FunnyTix
                     }
                 }
             }
+        }
+
+        private void buttonBatalUbah_Click(object sender, EventArgs e)
+        {
+            panelUbah.Visible = false;
+        }
+
+        private void buttonSimpanUbah_Click(object sender, EventArgs e)
+        {
+            Aktor aktor = new Aktor(textBoxNamaUbah.Text, dateTimePickerUbah.Value, comboBoxGenderUbah.Text, textBoxNegaraAsalUbah.Text);
+            aktor.ID = int.Parse(labelID.Text);
+            Aktor.UpdateData(aktor);
+            panelUbah.Visible = false;
+
+            FormMasterAktor_Load(this, e);
         }
     }
 }

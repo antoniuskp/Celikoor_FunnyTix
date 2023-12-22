@@ -38,14 +38,14 @@ namespace Celikoor_FunnyTix
                 {
                     if (dataGridViewHasil.ColumnCount <8)
                     {
-                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+                        /*DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
 
                         bcol.HeaderText = "Aksi";
                         bcol.Text = "Ubah";
-                        bcol.Name = "btnUbahGrid";
+                        bcol.Name = "buttonUbahGrid";
                         bcol.UseColumnTextForButtonValue = true;
                         dataGridViewHasil.Columns.Add(bcol);
-
+*/
                         DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
                         bcol2.HeaderText = "Aksi";
                         bcol2.Text = "Hapus";
@@ -178,6 +178,18 @@ namespace Celikoor_FunnyTix
                     }
                 }
             }
-        }
+            /*else if (e.ColumnIndex == dataGridViewHasil.Columns["buttonUbahGrid"].Index)
+            {
+                Pegawai pegawai = Pegawai.BacaData("id", kode)[0];
+                panelUbahPegawai.Visible = true;
+                labelID.Text = kode;
+                textBoxNamaUbah.Text = nama;
+                textBoxEmailUbah.Text = pegawai.Email;
+                textBoxPasswordUbah.Text = pegawai.Password;
+                textBoxUsernameUbah.Text = pegawai.Username;
+                
+
+            }*/
+        }    
     }
 }

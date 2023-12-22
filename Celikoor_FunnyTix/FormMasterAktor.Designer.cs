@@ -51,10 +51,27 @@ namespace Celikoor_FunnyTix
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.panelUbah = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxGenderUbah = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerUbah = new System.Windows.Forms.DateTimePicker();
+            this.textBoxNegaraAsalUbah = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxNamaUbah = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.buttonBatalUbah = new System.Windows.Forms.Button();
+            this.buttonSimpanUbah = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahAktor.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panelUbah.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonKeluar
@@ -155,7 +172,7 @@ namespace Celikoor_FunnyTix
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(27, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 32);
+            this.label2.Size = new System.Drawing.Size(276, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
@@ -326,12 +343,194 @@ namespace Celikoor_FunnyTix
             this.label5.Text = "T A M B A H  A K T O R";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelUbah
+            // 
+            this.panelUbah.Controls.Add(this.groupBox2);
+            this.panelUbah.Controls.Add(this.buttonBatalUbah);
+            this.panelUbah.Controls.Add(this.buttonSimpanUbah);
+            this.panelUbah.Controls.Add(this.label12);
+            this.panelUbah.Location = new System.Drawing.Point(471, 206);
+            this.panelUbah.Name = "panelUbah";
+            this.panelUbah.Size = new System.Drawing.Size(549, 451);
+            this.panelUbah.TabIndex = 22;
+            this.panelUbah.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.labelID);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.comboBoxGenderUbah);
+            this.groupBox2.Controls.Add(this.dateTimePickerUbah);
+            this.groupBox2.Controls.Add(this.textBoxNegaraAsalUbah);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.textBoxNamaUbah);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Location = new System.Drawing.Point(34, 95);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(480, 252);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            // 
+            // comboBoxGenderUbah
+            // 
+            this.comboBoxGenderUbah.FormattingEnabled = true;
+            this.comboBoxGenderUbah.Items.AddRange(new object[] {
+            "L",
+            "P"});
+            this.comboBoxGenderUbah.Location = new System.Drawing.Point(170, 149);
+            this.comboBoxGenderUbah.Name = "comboBoxGenderUbah";
+            this.comboBoxGenderUbah.Size = new System.Drawing.Size(263, 24);
+            this.comboBoxGenderUbah.TabIndex = 11;
+            // 
+            // dateTimePickerUbah
+            // 
+            this.dateTimePickerUbah.Location = new System.Drawing.Point(170, 109);
+            this.dateTimePickerUbah.Name = "dateTimePickerUbah";
+            this.dateTimePickerUbah.Size = new System.Drawing.Size(263, 22);
+            this.dateTimePickerUbah.TabIndex = 10;
+            // 
+            // textBoxNegaraAsalUbah
+            // 
+            this.textBoxNegaraAsalUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNegaraAsalUbah.Location = new System.Drawing.Point(170, 193);
+            this.textBoxNegaraAsalUbah.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNegaraAsalUbah.Name = "textBoxNegaraAsalUbah";
+            this.textBoxNegaraAsalUbah.Size = new System.Drawing.Size(263, 30);
+            this.textBoxNegaraAsalUbah.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label4.Location = new System.Drawing.Point(26, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Negara Asal : ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label9.Location = new System.Drawing.Point(69, 149);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 25);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Gender : ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label10.Location = new System.Drawing.Point(14, 107);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 25);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Tanggal Lahir : ";
+            // 
+            // textBoxNamaUbah
+            // 
+            this.textBoxNamaUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNamaUbah.Location = new System.Drawing.Point(170, 61);
+            this.textBoxNamaUbah.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNamaUbah.Name = "textBoxNamaUbah";
+            this.textBoxNamaUbah.Size = new System.Drawing.Size(263, 30);
+            this.textBoxNamaUbah.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label11.Location = new System.Drawing.Point(82, 64);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 25);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Nama : ";
+            // 
+            // buttonBatalUbah
+            // 
+            this.buttonBatalUbah.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonBatalUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBatalUbah.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonBatalUbah.Location = new System.Drawing.Point(34, 368);
+            this.buttonBatalUbah.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBatalUbah.Name = "buttonBatalUbah";
+            this.buttonBatalUbah.Size = new System.Drawing.Size(160, 43);
+            this.buttonBatalUbah.TabIndex = 21;
+            this.buttonBatalUbah.Text = "BATAL";
+            this.buttonBatalUbah.UseVisualStyleBackColor = false;
+            this.buttonBatalUbah.Click += new System.EventHandler(this.buttonBatalUbah_Click);
+            // 
+            // buttonSimpanUbah
+            // 
+            this.buttonSimpanUbah.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonSimpanUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimpanUbah.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonSimpanUbah.Location = new System.Drawing.Point(354, 368);
+            this.buttonSimpanUbah.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSimpanUbah.Name = "buttonSimpanUbah";
+            this.buttonSimpanUbah.Size = new System.Drawing.Size(160, 43);
+            this.buttonSimpanUbah.TabIndex = 20;
+            this.buttonSimpanUbah.Text = "SIMPAN";
+            this.buttonSimpanUbah.UseVisualStyleBackColor = false;
+            this.buttonSimpanUbah.Click += new System.EventHandler(this.buttonSimpanUbah_Click);
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.NavajoWhite;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Maroon;
+            this.label12.Location = new System.Drawing.Point(35, 45);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(479, 47);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "U B A H  A K T O R";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label13.Location = new System.Drawing.Point(114, 30);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 25);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "ID : ";
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelID.Location = new System.Drawing.Point(169, 30);
+            this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(82, 25);
+            this.labelID.TabIndex = 13;
+            this.labelID.Text = "ID Aktor";
+            // 
             // FormMasterAktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1520, 1029);
+            this.Controls.Add(this.panelUbah);
             this.Controls.Add(this.panelTambahAktor);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
@@ -339,7 +538,7 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "FormMasterAktor";
-            this.Text = "A";
+            this.Text = "FormMasterAktor";
             this.Load += new System.EventHandler(this.FormMasterAktor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -347,6 +546,9 @@ namespace Celikoor_FunnyTix
             this.panelTambahAktor.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelUbah.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +577,20 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.DateTimePicker dateTimePickerTglLahir;
+        private System.Windows.Forms.Panel panelUbah;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBoxGenderUbah;
+        private System.Windows.Forms.DateTimePicker dateTimePickerUbah;
+        private System.Windows.Forms.TextBox textBoxNegaraAsalUbah;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxNamaUbah;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button buttonBatalUbah;
+        private System.Windows.Forms.Button buttonSimpanUbah;
+        private System.Windows.Forms.Label label12;
     }
 }

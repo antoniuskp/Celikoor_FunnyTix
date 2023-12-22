@@ -40,6 +40,10 @@ namespace Celikoor_FunnyTix
             this.label1 = new System.Windows.Forms.Label();
             this.panelTambahPegawai = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxRoles = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,10 +53,6 @@ namespace Celikoor_FunnyTix
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxRoles = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahPegawai.SuspendLayout();
@@ -158,7 +158,7 @@ namespace Celikoor_FunnyTix
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(27, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 32);
+            this.label2.Size = new System.Drawing.Size(276, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
@@ -205,6 +205,48 @@ namespace Celikoor_FunnyTix
             this.groupBox1.Size = new System.Drawing.Size(480, 268);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBoxRoles
+            // 
+            this.comboBoxRoles.FormattingEnabled = true;
+            this.comboBoxRoles.Items.AddRange(new object[] {
+            "ADMIN",
+            "KASIR",
+            "OPERATOR"});
+            this.comboBoxRoles.Location = new System.Drawing.Point(170, 216);
+            this.comboBoxRoles.Name = "comboBoxRoles";
+            this.comboBoxRoles.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxRoles.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label4.Location = new System.Drawing.Point(82, 216);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Roles : ";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(170, 126);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(263, 30);
+            this.textBoxUsername.TabIndex = 13;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(170, 82);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(263, 30);
+            this.textBoxEmail.TabIndex = 12;
             // 
             // textBoxPassword
             // 
@@ -312,48 +354,6 @@ namespace Celikoor_FunnyTix
             this.label5.TabIndex = 19;
             this.label5.Text = "T A M B A H  P E G A W A I";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(170, 82);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(263, 30);
-            this.textBoxEmail.TabIndex = 12;
-            // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(170, 126);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(263, 30);
-            this.textBoxUsername.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label4.Location = new System.Drawing.Point(82, 216);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Roles : ";
-            // 
-            // comboBoxRoles
-            // 
-            this.comboBoxRoles.FormattingEnabled = true;
-            this.comboBoxRoles.Items.AddRange(new object[] {
-            "ADMIN",
-            "KASIR",
-            "OPERATOR"});
-            this.comboBoxRoles.Location = new System.Drawing.Point(170, 216);
-            this.comboBoxRoles.Name = "comboBoxRoles";
-            this.comboBoxRoles.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxRoles.TabIndex = 15;
             // 
             // FormMasterPegawai
             // 

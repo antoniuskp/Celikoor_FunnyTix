@@ -85,13 +85,13 @@ namespace Celikoor_FunnyTix
         {
             if (dataGridViewHasil.ColumnCount == 9)
             {
-                DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+                /*DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
 
                 bcol.HeaderText = "Aksi";
                 bcol.Text = "Ubah";
                 bcol.Name = "btnUbahGrid";
                 bcol.UseColumnTextForButtonValue = true;
-                dataGridViewHasil.Columns.Add(bcol);
+                dataGridViewHasil.Columns.Add(bcol);*/
 
                 DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
                 bcol2.HeaderText = "Aksi";

@@ -56,6 +56,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelListMaster = new System.Windows.Forms.Panel();
+            this.panelMasterKonsumen = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panelJenisStudio = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panelStudio = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panelMasterGenre = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.panelMasterAktor = new System.Windows.Forms.Panel();
@@ -64,8 +70,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panelMasterCinema = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.panelMasterKonsumen = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.panelMasterPegawai = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -85,11 +89,13 @@
             this.panelPenjadwalan.SuspendLayout();
             this.panelMaster.SuspendLayout();
             this.panelListMaster.SuspendLayout();
+            this.panelMasterKonsumen.SuspendLayout();
+            this.panelJenisStudio.SuspendLayout();
+            this.panelStudio.SuspendLayout();
             this.panelMasterGenre.SuspendLayout();
             this.panelMasterAktor.SuspendLayout();
             this.panelMasterKelompok.SuspendLayout();
             this.panelMasterCinema.SuspendLayout();
-            this.panelMasterKonsumen.SuspendLayout();
             this.panelMasterPegawai.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +107,7 @@
             this.labelNama.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelNama.Location = new System.Drawing.Point(103, 299);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(294, 32);
+            this.labelNama.Size = new System.Drawing.Size(295, 32);
             this.labelNama.TabIndex = 6;
             this.labelNama.Text = "Welcome, namaUser";
             // 
@@ -142,7 +148,6 @@
             this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
             this.panelUpdateStatus.TabIndex = 23;
             this.panelUpdateStatus.Click += new System.EventHandler(this.panelUpdateStatus_Click);
-            this.panelUpdateStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUpdateStatus_Paint);
             // 
             // label12
             // 
@@ -155,7 +160,6 @@
             this.label12.Size = new System.Drawing.Size(420, 38);
             this.label12.TabIndex = 17;
             this.label12.Text = "UPDATE STATUS HADIR";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panelKonsumen
             // 
@@ -424,19 +428,96 @@
             // panelListMaster
             // 
             this.panelListMaster.BackColor = System.Drawing.Color.Maroon;
+            this.panelListMaster.Controls.Add(this.panelMasterKonsumen);
+            this.panelListMaster.Controls.Add(this.panelJenisStudio);
+            this.panelListMaster.Controls.Add(this.panelStudio);
             this.panelListMaster.Controls.Add(this.panelMasterGenre);
             this.panelListMaster.Controls.Add(this.panelMasterAktor);
             this.panelListMaster.Controls.Add(this.panelMasterKelompok);
             this.panelListMaster.Controls.Add(this.panelMasterCinema);
-            this.panelListMaster.Controls.Add(this.panelMasterKonsumen);
             this.panelListMaster.Controls.Add(this.panelMasterPegawai);
             this.panelListMaster.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelListMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelListMaster.Location = new System.Drawing.Point(523, 364);
             this.panelListMaster.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelListMaster.Name = "panelListMaster";
-            this.panelListMaster.Size = new System.Drawing.Size(523, 300);
+            this.panelListMaster.Size = new System.Drawing.Size(523, 400);
             this.panelListMaster.TabIndex = 20;
+            // 
+            // panelMasterKonsumen
+            // 
+            this.panelMasterKonsumen.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterKonsumen.Controls.Add(this.label14);
+            this.panelMasterKonsumen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterKonsumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterKonsumen.Location = new System.Drawing.Point(0, 0);
+            this.panelMasterKonsumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMasterKonsumen.Name = "panelMasterKonsumen";
+            this.panelMasterKonsumen.Size = new System.Drawing.Size(523, 50);
+            this.panelMasterKonsumen.TabIndex = 19;
+            this.panelMasterKonsumen.Click += new System.EventHandler(this.panelMasterKonsumen_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(19, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(161, 29);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "KONSUMEN";
+            // 
+            // panelJenisStudio
+            // 
+            this.panelJenisStudio.BackColor = System.Drawing.Color.Transparent;
+            this.panelJenisStudio.Controls.Add(this.label9);
+            this.panelJenisStudio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelJenisStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelJenisStudio.Location = new System.Drawing.Point(1, 347);
+            this.panelJenisStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelJenisStudio.Name = "panelJenisStudio";
+            this.panelJenisStudio.Size = new System.Drawing.Size(523, 50);
+            this.panelJenisStudio.TabIndex = 24;
+            this.panelJenisStudio.Click += new System.EventHandler(this.panelJenisStudio_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(19, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(190, 29);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "JENIS STUDIO";
+            // 
+            // panelStudio
+            // 
+            this.panelStudio.BackColor = System.Drawing.Color.Transparent;
+            this.panelStudio.Controls.Add(this.label7);
+            this.panelStudio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelStudio.Location = new System.Drawing.Point(1, 100);
+            this.panelStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelStudio.Name = "panelStudio";
+            this.panelStudio.Size = new System.Drawing.Size(523, 50);
+            this.panelStudio.TabIndex = 23;
+            this.panelStudio.Click += new System.EventHandler(this.panelStudio_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(19, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 29);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "STUDIO";
             // 
             // panelMasterGenre
             // 
@@ -519,7 +600,7 @@
             this.panelMasterCinema.Controls.Add(this.label16);
             this.panelMasterCinema.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMasterCinema.Location = new System.Drawing.Point(1, 50);
+            this.panelMasterCinema.Location = new System.Drawing.Point(0, 297);
             this.panelMasterCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMasterCinema.Name = "panelMasterCinema";
             this.panelMasterCinema.Size = new System.Drawing.Size(523, 50);
@@ -538,39 +619,13 @@
             this.label16.TabIndex = 17;
             this.label16.Text = "CINEMA";
             // 
-            // panelMasterKonsumen
-            // 
-            this.panelMasterKonsumen.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterKonsumen.Controls.Add(this.label14);
-            this.panelMasterKonsumen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMasterKonsumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMasterKonsumen.Location = new System.Drawing.Point(0, 1);
-            this.panelMasterKonsumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMasterKonsumen.Name = "panelMasterKonsumen";
-            this.panelMasterKonsumen.Size = new System.Drawing.Size(523, 50);
-            this.panelMasterKonsumen.TabIndex = 19;
-            this.panelMasterKonsumen.Click += new System.EventHandler(this.panelMasterKonsumen_Click);
-            this.panelMasterKonsumen.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMasterKonsumen_Paint);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(19, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(161, 29);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "KONSUMEN";
-            // 
             // panelMasterPegawai
             // 
             this.panelMasterPegawai.BackColor = System.Drawing.Color.Transparent;
             this.panelMasterPegawai.Controls.Add(this.label20);
             this.panelMasterPegawai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMasterPegawai.Location = new System.Drawing.Point(1, 101);
+            this.panelMasterPegawai.Location = new System.Drawing.Point(0, 50);
             this.panelMasterPegawai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMasterPegawai.Name = "panelMasterPegawai";
             this.panelMasterPegawai.Size = new System.Drawing.Size(523, 50);
@@ -643,6 +698,12 @@
             this.panelMaster.ResumeLayout(false);
             this.panelMaster.PerformLayout();
             this.panelListMaster.ResumeLayout(false);
+            this.panelMasterKonsumen.ResumeLayout(false);
+            this.panelMasterKonsumen.PerformLayout();
+            this.panelJenisStudio.ResumeLayout(false);
+            this.panelJenisStudio.PerformLayout();
+            this.panelStudio.ResumeLayout(false);
+            this.panelStudio.PerformLayout();
             this.panelMasterGenre.ResumeLayout(false);
             this.panelMasterGenre.PerformLayout();
             this.panelMasterAktor.ResumeLayout(false);
@@ -651,8 +712,6 @@
             this.panelMasterKelompok.PerformLayout();
             this.panelMasterCinema.ResumeLayout(false);
             this.panelMasterCinema.PerformLayout();
-            this.panelMasterKonsumen.ResumeLayout(false);
-            this.panelMasterKonsumen.PerformLayout();
             this.panelMasterPegawai.ResumeLayout(false);
             this.panelMasterPegawai.PerformLayout();
             this.ResumeLayout(false);
@@ -702,5 +761,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelBeliTiket;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelJenisStudio;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panelStudio;
+        private System.Windows.Forms.Label label7;
     }
 }

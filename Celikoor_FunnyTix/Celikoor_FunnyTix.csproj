@@ -69,6 +69,18 @@
     <Compile Include="FormJadwalFilm.Designer.cs">
       <DependentUpon>FormJadwalFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterJenisStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterJenisStudio.Designer.cs">
+      <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterStudio.Designer.cs">
+      <DependentUpon>FormMasterStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormJadwalFilm.resx">
       <DependentUpon>FormJadwalFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterJenisStudio.resx">
+      <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterStudio.resx">
+      <DependentUpon>FormMasterStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateInvoice.resx">
       <DependentUpon>FormUpdateInvoice.cs</DependentUpon>

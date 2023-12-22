@@ -21,9 +21,9 @@ namespace FunnyTix_LIB
         #endregion
 
         #region CONSTRUCTORS
-        public Studio(int id, string nama, int kapasitas, JenisStudio j, Cinema c, int hargaWeekday, int hargaWeekend)
+        public Studio(string nama, int kapasitas, JenisStudio j, Cinema c, int hargaWeekday, int hargaWeekend)
         {
-            this.ID = id;
+            this.ID = 0;
             this.Nama = nama;
             this.Kapasitas = kapasitas;
             this.JenisStudio = j;
@@ -67,9 +67,10 @@ namespace FunnyTix_LIB
                 Cinema c = new Cinema();
                 c.ID = int.Parse(hasil.GetValue(4).ToString());
 
-                Studio s = new Studio(int.Parse(hasil.GetValue(0).ToString()), hasil.GetValue(1).ToString(),
+                Studio s = new Studio(hasil.GetValue(1).ToString(),
                     int.Parse(hasil.GetValue(2).ToString()), j, c, int.Parse(hasil.GetValue(5).ToString()),
                     int.Parse(hasil.GetValue(6).ToString()));
+                s.ID = int.Parse(hasil.GetValue(0).ToString());
                 listJadwalFilm.Add(s);
             }
             return listJadwalFilm;

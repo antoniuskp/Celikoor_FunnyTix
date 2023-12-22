@@ -97,6 +97,10 @@ namespace FunnyTix_LIB
             }
         }
 
+        public override string ToString()
+        {
+            return NamaCabang;
+        }
         #endregion
     }
 }

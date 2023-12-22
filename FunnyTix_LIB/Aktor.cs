@@ -92,7 +92,8 @@ namespace FunnyTix_LIB
 
         public static void UpdateData(Aktor act)
         {
-            string cmd = $"UPDATE aktors SET negara_asal = '{act.Negara_Asal}' WHERE id = {act.ID};";
+            string cmd = $"UPDATE aktors SET nama = '{act.Nama}', tgl_lahir = '{act.Tgl_Lahir.ToString("yyyy-MM-dd")}'," +
+                $" gender = '{act.Gender}', negara_asal = '{act.Negara_Asal}' WHERE id = {act.ID};";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }

@@ -17,9 +17,9 @@ namespace FunnyTix_LIB
         #endregion
 
         #region CONSTRUCTORS
-        public JenisStudio(int id, string nama, string deskripsi)
+        public JenisStudio(string nama, string deskripsi)
         {
-            this.Id = id;
+            this.Id = 0;
             this.Nama = nama;
             this.Deskripsi = deskripsi;
         }
@@ -38,13 +38,13 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
-        public static List<JenisStudio> BacaData(string value = "")
+        public static List<JenisStudio> BacaData(string filter = "", string value = "")
         {
             string query = "SELECT * FROM jenis_studios;";
             if(value!= "")
             {
                 int kode = int.Parse(value);
-                query = $"SELECT * FROM jenis_studios where id = {kode};";
+                query = $"SELECT * FROM jenis_studios where {filter} = '{kode}';";
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<JenisStudio> listJenisStudio = new List<JenisStudio>();
@@ -52,10 +52,9 @@ namespace FunnyTix_LIB
             while(hasil.Read() == true)
             {
                 JenisStudio jS = new JenisStudio(
-                    int.Parse(hasil.GetValue(0).ToString()), 
                     hasil.GetValue(1).ToString(), 
                     hasil.GetValue(2).ToString());
-
+                jS.Id = int.Parse(hasil.GetValue(0).ToString());
                 listJenisStudio.Add(jS);
             }
             return listJenisStudio;
@@ -74,7 +73,13 @@ namespace FunnyTix_LIB
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
+
+        public override string ToString()
+        {
+            return Nama;
+        }
         #endregion
+
 
     }
 }

@@ -281,6 +281,21 @@ namespace Celikoor_FunnyTix
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
+
+        private void panelStudio_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterStudio());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelJenisStudio_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterJenisStudio());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
         #endregion
         #endregion
         #region Panel Pegawai Kasir
@@ -296,6 +311,12 @@ namespace Celikoor_FunnyTix
         }
         #endregion
         #region Panel Konsumen
+        private void panelBeliTiket_Click(object sender, EventArgs e)
+        {
+            var frm = new FormPemesanan();
+            frm.ShowDialog();
+        }
+
         private void panelProfil_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormProfile());
@@ -329,26 +350,5 @@ namespace Celikoor_FunnyTix
         }
 
         #endregion
-
-        private void panelBeliTiket_Click(object sender, EventArgs e)
-        {
-            var frm = new FormPemesanan();
-            frm.ShowDialog();
-        }
-
-        private void panelMasterKonsumen_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelUpdateStatus_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
