@@ -19,9 +19,13 @@ namespace Celikoor_FunnyTix
             InitializeComponent();
         }
 
-        
+        Studio selectedStudio;
+        Film selectedFilm;
+        Cinema selectedCinema;
+
         private void FormPenjadwalan_Load(object sender, EventArgs e)
         {
+            dataGridViewHasil.DefaultCellStyle.ForeColor = Color.Black;
             this.WindowState = FormWindowState.Maximized;
             List<Cinema> listCinema = Cinema.BacaData();
             comboBoxCinema.SelectedIndex = -1;
@@ -33,13 +37,13 @@ namespace Celikoor_FunnyTix
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cinema selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
+            selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
             List<Studio> listStudio = Studio.BacaData("cinemas_id", selectedCinema.ID.ToString());
             comboBoxStudio.DataSource = listStudio;
             comboBoxStudio.DisplayMember = "nama";
         }
 
-        Studio selectedStudio;
+        
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedStudio = (Studio)comboBoxStudio.SelectedItem;
@@ -51,7 +55,7 @@ namespace Celikoor_FunnyTix
             comboBoxJudulFilm.DataSource = Film.CariFilmTanpaStudio(selectedStudio);
             comboBoxJudulFilm.DisplayMember = "judul";
         }
-        Film selectedFilm;
+        
         private void comboBoxJudulFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBoxDurasi.Clear();
@@ -62,8 +66,8 @@ namespace Celikoor_FunnyTix
             richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
             textBoxDurasi.Text = selectedFilm.Durasi.ToString();
             textBoxKelompok.Text = selectedFilm.Kelompok.Nama;
-            Film.BacaAktorFilm(selectedFilm);
-            Film.BacaGenreFilm(selectedFilm);
+            selectedFilm.BacaAktorFilm(selectedFilm);
+            selectedFilm.BacaGenreFilm(selectedFilm);
             for(int i = 0; i < selectedFilm.ListAktor.Count; i++)
             {
                 if(selectedFilm.ListAktor.Count == 1)
@@ -100,16 +104,94 @@ namespace Celikoor_FunnyTix
             {
                 textBoxGenre.Text += ",...";
             }
-
-            Film.JadwalKosong(selectedFilm, selectedStudio);
-
-
-
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
+            if(checkBoxI.Checked == true)
+            {
+                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
+            }
+            if (checkBoxII.Checked == true)
+            {
+                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "II");
+            }
+            if (checkBoxIII.Checked == true)
+            {
+                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "III");
+            }
+            if (checkBoxIV.Checked == true)
+            {
+                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
+            }
+
+            if(dataGridViewHasil.Columns.Count == 5)
+            {
+                //button hapus
+                DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
+                btnHapus.Name = "Aksi"; //nama objek button
+                btnHapus.Text = "Hapus";//text yang muncul di 
+                btnHapus.UseColumnTextForButtonValue = true;//agar tulisan muncul di button
+                dataGridViewHasil.Columns.Add(btnHapus);//menambahkan button ke grid
+            }
+            
+
+
+        }
+
+        private void dataGridViewHasil_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = dataGridViewHasil.CurrentRow.Index;
+            string sesi = dataGridViewHasil.CurrentRow.Cells["columnJam"].Value.ToString(); //mengambil kode yang akan diubah oleh user
+            if (e.ColumnIndex == dataGridViewHasil.Columns["Aksi"].Index)
+            {
+                DialogResult result = MessageBox.Show($"Apakah setuju untuk membatalkan pemutaran film {selectedFilm.Judul} pada Studio {selectedStudio.Nama} sesi {sesi}", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    dataGridViewHasil.Rows.RemoveAt(idx);
+                }
+
+            }
+
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<JadwalFilm> listJadwal = new List<JadwalFilm>();
+                if (dataGridViewHasil != null)
+                {
+                    for (int i = 0; i < dataGridViewHasil.Rows.Count-1; i++)
+                    {
+                        string tanggal = dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString();
+                        MessageBox.Show(tanggal);
+                        JadwalFilm jf = new JadwalFilm();
+                        jf.Tanggal = DateTime.Parse(dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString());
+                        jf.JamPemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
+                        listJadwal.Add(jf);
+                    }
+                    selectedFilm.TambahSesiFilm(selectedStudio, selectedFilm, listJadwal);
+                    Film.TambahDataSesiFilm(selectedFilm);
+                    MessageBox.Show("Data Berhasil Ditambahkan");
+                }
+                else
+                {
+                    MessageBox.Show("Tidak Ada Data yang Ditambahkan");
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Penambahan Data Gagal " + ex.Message);
+            }
 
         }
     }
+    
 }

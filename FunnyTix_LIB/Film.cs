@@ -24,6 +24,7 @@ namespace FunnyTix_LIB
         private double diskon;
         private List<AktorFilm> listAktor;
         private List<GenreFilm> listGenre;
+        private List<FilmStudio> listFilmStudio;
         private List<SesiFilm> listSesiFilm;
 
         #endregion
@@ -44,6 +45,7 @@ namespace FunnyTix_LIB
             this.ListAktor = new List<AktorFilm>();
             this.ListGenre = new List<GenreFilm>();
             this.ListSesiFilm = new List<SesiFilm>();
+            this.ListFilmStudio = new List<FilmStudio>();
         }
 
         public Film()
@@ -60,6 +62,7 @@ namespace FunnyTix_LIB
             this.Diskon = 0;
             this.ListAktor = new List<AktorFilm>();
             this.ListGenre = new List<GenreFilm>();
+            this.ListFilmStudio = new List<FilmStudio>();
             this.ListSesiFilm = new List<SesiFilm>();
         }
         #endregion
@@ -77,14 +80,17 @@ namespace FunnyTix_LIB
         public double Diskon { get => diskon; set => diskon = value; }
         public List<AktorFilm> ListAktor { get => listAktor; set => listAktor = value; }
         public List<GenreFilm> ListGenre { get => listGenre; set => listGenre = value; }
+        public List<FilmStudio> ListFilmStudio { get => listFilmStudio; set => listFilmStudio = value; }
         public List<SesiFilm> ListSesiFilm { get => listSesiFilm; set => listSesiFilm = value; }
 
         #endregion
 
         #region METHODS
+
+        #region select
         public static List<Film> CariFilmTanpaStudio(Studio s)
         {
-            string query = $"SELECT f.*  FROM films f LEFT JOIN film_studio fs on fs.films_id = f.id AND fs.studios_id = '{s.ID}' IS NULL;";
+            string query = $"SELECT f.* FROM films f LEFT JOIN film_studio fs ON f.id = fs.films_id AND fs.studios_id = '{s.ID}' WHERE fs.films_id IS NULL;";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
             List<Film> listFilm = new List<Film>();
@@ -110,7 +116,7 @@ namespace FunnyTix_LIB
             return listFilm;
         }
 
-        public static void BacaGenreFilm(Film f)
+        public void BacaGenreFilm(Film f)
         {
             string query = $"SELECT DISTINCT genres_id FROM genre_film WHERE films_id = '{f.Id}';";
 
@@ -124,7 +130,7 @@ namespace FunnyTix_LIB
             }
         }
 
-        public static void BacaAktorFilm(Film f)
+        public void BacaAktorFilm(Film f)
         {
             string query = $"SELECT * FROM aktor_film WHERE films_id = {f.Id};";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
@@ -138,19 +144,19 @@ namespace FunnyTix_LIB
             
         }
 
-        public static void JadwalKosong(Film f, Studio s)
-        {
-            string query = $"SELECT DISTINCT jf.* FROM jadwal_films jf LEFT JOIN sesi_films sf on sf.jadwal_film_id = jf.id WHERE sf.films_id = '{f.Id}' is null AND sf.studios_id = '{s.ID}' is null; ";
+        //public void CariJadwalKosong(Film f, Studio s)
+        //{
+        //    string query = $"SELECT DISTINCT jf.* FROM jadwal_films jf LEFT JOIN sesi_films sf on sf.jadwal_film_id = jf.id WHERE sf.films_id = '{f.Id}' is null AND sf.studios_id = '{s.ID}' is null; ";
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
-            while (hasil.Read() == true)
-            {
-                SesiFilm sf = new SesiFilm();
-                sf.JadwalFilm = JadwalFilm.BacaData(hasil.GetValue(0).ToString())[0];
-                f.ListSesiFilm.Add(sf);
-            }
-        }
+        //    while (hasil.Read() == true)
+        //    {
+        //        SesiFilm sf = new SesiFilm();
+        //        sf.JadwalFilm = JadwalFilm.BacaData(hasil.GetValue(0).ToString())[0];
+        //        f.ListSesiFilm.Add(sf);
+        //    }
+        //}
 
 
         public static DataTable CariCinema(int fid, string tgl)
@@ -273,20 +279,73 @@ namespace FunnyTix_LIB
             return listGenre;
         }
 
+        #endregion
 
+        #region 
+        public void TambahSesiFilm(Studio s, Film f, List<JadwalFilm> listJadwal)
+        {
+            FilmStudio fs = new FilmStudio();
+            fs.Studio = s;
+            fs.Film = f;
+            ListFilmStudio.Add(fs);
+            for(int i = 0; i < listJadwal.Count; i++)
+            {
+                SesiFilm sf = new SesiFilm();
+                sf.FilmStudio = fs;
+                sf.JadwalFilm = listJadwal[i];
+                ListSesiFilm.Add(sf);
+            }
+        }
+
+
+        public static void TambahDataSesiFilm(Film f)
+        {
+            //tambah Data ke film studio
+            for (int i = 0; i < f.ListFilmStudio.Count; i++)
+            {
+                string query = $"INSERT INTO film_studio (studios_id, films_id) VALUES ('{f.ListFilmStudio[i].Studio.ID}','{f.ListFilmStudio[i].Film.Id}');";
+                Koneksi.JalankanPerintahNonQuery(query);
+
+                //Tambah data ke sesi films
+                for (int j = 0; j < f.ListSesiFilm.Count; j++)
+                {
+                    //Pengecekan Jadwal Film 
+                    string tanggal = f.ListSesiFilm[j].JadwalFilm.Tanggal.ToString("yyyy-MM-dd");
+                    string jam = f.ListSesiFilm[j].JadwalFilm.JamPemutaran;
+                    JadwalFilm jf = f.ListSesiFilm[j].JadwalFilm;
+                    List<JadwalFilm> cari = JadwalFilm.BacaData("tanggal", tanggal, jam);
+                    if (cari.Count == 0)
+                    {
+                        JadwalFilm.TambahData(jf);
+                    }
+                    Film.TambahDataSesiFilm(f.ListSesiFilm[j]);
+                }
+            }
+        }
+            
+
+        public static void TambahDataSesiFilm(SesiFilm sf)
+        {
+            JadwalFilm jf = JadwalFilm.BacaData("tanggal", sf.JadwalFilm.Tanggal.ToString("yyyy-MM-dd"))[0];
+            string query = $"INSERT INTO sesi_films (jadwal_film_id, studios_id, films_id) VALUES ('{jf.Id}', '{sf.FilmStudio.Studio.ID}', '{sf.FilmStudio.Film.Id}');";
+            Koneksi.JalankanPerintahNonQuery(query);
+        }
         public static void TambahData(Film film)
         {
             string cmd = $"INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, cover_image, diskon_nominal) values ('{film.Id}', '{film.Judul}','{film.Sinopsis}','{film.Tahun}','{film.Durasi}','{film.Kelompok.ID}','{film.Bahasa}','{film.IsSubIndo}','{film.CoverImange}','{film.Diskon}');";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
+        #endregion
 
+        #region DELETE
         public static void DeleteData(Film film)
         {
             string cmd = $"UPDATE films set judul = '{film.Judul}', sinopsis = '{film.Sinopsis}', tahun = '{film.Tahun}', durasi = '{film.Durasi}', kelompoks_id = '{film.Kelompok.ID}', bahasa = '{film.Bahasa}', is_sub_indo = '{film.IsSubIndo}', cover_image = '{film.CoverImange}', diskon_nominal = '{film.Diskon}' where id = '{film.Id}';";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
+        #endregion
         #endregion
 
     }

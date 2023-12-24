@@ -51,6 +51,11 @@ namespace Celikoor_FunnyTix
             this.checkBoxIV = new System.Windows.Forms.CheckBox();
             this.textBoxKelompok = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.columnJudul = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnCinema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnJam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonTambah)).BeginInit();
@@ -124,7 +129,13 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.GridColor = System.Drawing.Color.NavajoWhite;
+            this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnJudul,
+            this.columnCinema,
+            this.columnStudio,
+            this.columnTanggal,
+            this.columnJam});
+            this.dataGridViewHasil.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridViewHasil.Location = new System.Drawing.Point(54, 628);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
@@ -132,6 +143,8 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.RowTemplate.Height = 28;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1633, 307);
             this.dataGridViewHasil.TabIndex = 9;
+            this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
+            this.dataGridViewHasil.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridViewHasil_ColumnAdded);
             // 
             // pictureBoxCover
             // 
@@ -224,6 +237,7 @@ namespace Celikoor_FunnyTix
             this.buttonSimpan.Size = new System.Drawing.Size(156, 42);
             this.buttonSimpan.TabIndex = 23;
             this.buttonSimpan.TabStop = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonKeluar
             // 
@@ -318,6 +332,41 @@ namespace Celikoor_FunnyTix
             this.dateTimePicker1.Size = new System.Drawing.Size(343, 28);
             this.dateTimePicker1.TabIndex = 32;
             // 
+            // columnJudul
+            // 
+            this.columnJudul.HeaderText = "Judul";
+            this.columnJudul.MinimumWidth = 6;
+            this.columnJudul.Name = "columnJudul";
+            this.columnJudul.Width = 125;
+            // 
+            // columnCinema
+            // 
+            this.columnCinema.HeaderText = "Cinema";
+            this.columnCinema.MinimumWidth = 6;
+            this.columnCinema.Name = "columnCinema";
+            this.columnCinema.Width = 125;
+            // 
+            // columnStudio
+            // 
+            this.columnStudio.HeaderText = "Studio";
+            this.columnStudio.MinimumWidth = 6;
+            this.columnStudio.Name = "columnStudio";
+            this.columnStudio.Width = 125;
+            // 
+            // columnTanggal
+            // 
+            this.columnTanggal.HeaderText = "Tanggal";
+            this.columnTanggal.MinimumWidth = 6;
+            this.columnTanggal.Name = "columnTanggal";
+            this.columnTanggal.Width = 125;
+            // 
+            // columnJam
+            // 
+            this.columnJam.HeaderText = "Jam";
+            this.columnJam.MinimumWidth = 6;
+            this.columnJam.Name = "columnJam";
+            this.columnJam.Width = 125;
+            // 
             // FormPenjadwalan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -388,5 +437,10 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.CheckBox checkBoxIV;
         private System.Windows.Forms.TextBox textBoxKelompok;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnJudul;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnCinema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnStudio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnTanggal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnJam;
     }
 }

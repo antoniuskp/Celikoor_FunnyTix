@@ -74,13 +74,16 @@ namespace FunnyTix_LIB
             }
             return jam;
         }
-        public static List<JadwalFilm> BacaData(string value = "")
+        public static List<JadwalFilm> BacaData(string filter = "", string value = "", string jam = "")
         {
             string query = "SELECT * FROM jadwal_films;";
-            if (value != "")
+            if (filter != "")
             {
-                int kode = int.Parse(value);
-                query = $"SELECT * FROM jadwal_films where id = {kode};";
+                query = $"SELECT * FROM jadwal_films where {filter} = '{value}';";
+            }
+            if (filter == "tanggal" && jam != "")
+            {
+                query = $"SELECT * FROM `jadwal_films` WHERE jam_pemutaran = '{jam}' AND tanggal = '{value}';";
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<JadwalFilm> listJadwalFilm = new List<JadwalFilm>();

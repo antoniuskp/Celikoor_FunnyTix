@@ -51,6 +51,7 @@
     <Compile Include="Auth.cs" />
     <Compile Include="Cinema.cs" />
     <Compile Include="Film.cs" />
+    <Compile Include="FilmStudio.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="GenreFilm.cs" />
     <Compile Include="History.cs" />
