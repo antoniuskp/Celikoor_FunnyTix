@@ -326,7 +326,7 @@ namespace FunnyTix_LIB
 
         public static void TambahDataSesiFilm(SesiFilm sf)
         {
-            JadwalFilm jf = JadwalFilm.BacaData("tanggal", sf.JadwalFilm.Tanggal.ToString("yyyy-MM-dd"))[0];
+            JadwalFilm jf = JadwalFilm.BacaData("tanggal", sf.JadwalFilm.Tanggal.ToString("yyyy-MM-dd"), sf.JadwalFilm.JamPemutaran)[0];
             string query = $"INSERT INTO sesi_films (jadwal_film_id, studios_id, films_id) VALUES ('{jf.Id}', '{sf.FilmStudio.Studio.ID}', '{sf.FilmStudio.Film.Id}');";
             Koneksi.JalankanPerintahNonQuery(query);
         }
