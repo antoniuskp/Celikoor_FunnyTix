@@ -10,62 +10,46 @@ namespace FunnyTix_LIB
 {
     public class JadwalFilm
     {
-        #region PROPERTIES
-        public int ID { get; set; }
-        public DateTime Tanggal { get; set; }
-        public string Jam_Pemutaran { get; set; }
+        #region Data Members
+        private int id;
+        private DateTime tanggal;
+        private string jamPemutaran;
         #endregion
 
-        #region CONSTRUCTORS 
-        public JadwalFilm(int id, DateTime tanggal, string jam)
+        #region Contructors
+        public JadwalFilm(int id, DateTime tanggal, string jamPemutaran)
         {
-            this.ID = id;
-            this.Tanggal = tanggal;
-            this.Jam_Pemutaran = jam;
+            this.id = id;
+            this.tanggal = tanggal;
+            this.jamPemutaran = jamPemutaran;
         }
+
         public JadwalFilm()
         {
-            this.ID = 0;
+            this.Id = 0;
             this.Tanggal = DateTime.Now;
-            this.Jam_Pemutaran = "";
+            this.JamPemutaran = "";
         }
         #endregion
 
-        #region METHODS
-        public static List<JadwalFilm> BacaData(string value = "")
-        {
-            string query = "SELECT * FROM jadwal_films;";
-            if (value != "")
-            {
-                int kode = int.Parse(value);
-                query = $"SELECT * FROM jadwal_films where id = {kode};";
-            }
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
-            List<JadwalFilm> listJadwalFilm = new List<JadwalFilm>();
+        #region properties
+        public int Id { get => id; set => id = value; }
+        public DateTime Tanggal { get => tanggal; set => tanggal = value; }
+        public string JamPemutaran { get => jamPemutaran; set => jamPemutaran = value; }
+        #endregion
 
-            while (hasil.Read() == true)
-            {
-                JadwalFilm jS = new JadwalFilm(
-                    int.Parse(hasil.GetValue(0).ToString()), DateTime.Parse(
-                    hasil.GetValue(1).ToString()),
-                    hasil.GetValue(2).ToString());
-
-                listJadwalFilm.Add(jS);
-            }
-            return listJadwalFilm;
-        }
-
+        #region methods
         public static void TambahData(JadwalFilm jf)
         {
             string cmd = $"INSERT INTO jadwal_films (tanggal, jam_pemutaran) " +
-                $"values ('{jf.Tanggal.ToString("yyyy-MM-dd")}', '{jf.Jam_Pemutaran}');";
+                $"values ('{jf.Tanggal.ToString("yyyy-MM-dd")}', '{jf.JamPemutaran}');";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 
         public static void DeleteData(JadwalFilm jf)
         {
-            string cmd = $"DELETE from jadwal_films where id = {jf.ID};";
+            string cmd = $"DELETE from jadwal_films where id = {jf.Id};";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
@@ -89,8 +73,30 @@ namespace FunnyTix_LIB
                     break;
             }
             return jam;
-            #endregion
         }
+        public static List<JadwalFilm> BacaData(string value = "")
+        {
+            string query = "SELECT * FROM jadwal_films;";
+            if (value != "")
+            {
+                int kode = int.Parse(value);
+                query = $"SELECT * FROM jadwal_films where id = {kode};";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<JadwalFilm> listJadwalFilm = new List<JadwalFilm>();
+
+            while (hasil.Read() == true)
+            {
+                var js = new JadwalFilm();
+                js.Id = int.Parse(hasil.GetValue(0).ToString());
+                js.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                js.JamPemutaran = hasil.GetValue(2).ToString();
+
+                listJadwalFilm.Add(js);
+            }
+            return listJadwalFilm;
+        }
+        #endregion
 
     }
 }

@@ -38,6 +38,26 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+        public static JenisStudio CariJenisStudio(Studio s)
+        {
+            string query = $"SELECT js.* FROM jenis_studios js INNER JOIN studios s on s.jenis_studios_id = js.id WHERE s.id = '{s.ID}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            if(hasil.Read() == true)
+            {
+                JenisStudio js = new JenisStudio();
+                js.Id = int.Parse(hasil.GetValue(0).ToString());
+                js.Nama = hasil.GetValue(1).ToString();
+                js.Deskripsi = hasil.GetValue(2).ToString();
+                return js;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public static List<JenisStudio> BacaData(string filter = "", string value = "")
         {
             string query = "SELECT * FROM jenis_studios;";

@@ -45,6 +45,7 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+
         public static List<Studio> BacaData(string filter = "", string value = "")
         {
             string query = "";

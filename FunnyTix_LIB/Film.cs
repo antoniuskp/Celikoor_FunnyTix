@@ -20,8 +20,11 @@ namespace FunnyTix_LIB
         private Kelompok kelompok;
         private string bahasa;
         private int isSubIndo;
-        private string coverImange;
+        private string coverImage;
         private double diskon;
+        private List<AktorFilm> listAktor;
+        private List<GenreFilm> listGenre;
+        private List<SesiFilm> listSesiFilm;
 
         #endregion
 
@@ -38,6 +41,9 @@ namespace FunnyTix_LIB
             this.IsSubIndo = isSubIndo;
             this.CoverImange = coverImange;
             this.Diskon = diskon;
+            this.ListAktor = new List<AktorFilm>();
+            this.ListGenre = new List<GenreFilm>();
+            this.ListSesiFilm = new List<SesiFilm>();
         }
 
         public Film()
@@ -52,6 +58,9 @@ namespace FunnyTix_LIB
             this.IsSubIndo = 0;
             this.CoverImange = "";
             this.Diskon = 0;
+            this.ListAktor = new List<AktorFilm>();
+            this.ListGenre = new List<GenreFilm>();
+            this.ListSesiFilm = new List<SesiFilm>();
         }
         #endregion
 
@@ -64,12 +73,85 @@ namespace FunnyTix_LIB
         public Kelompok Kelompok { get => kelompok; set => kelompok = value; }
         public string Bahasa { get => bahasa; set => bahasa = value; }
         public int IsSubIndo { get => isSubIndo; set => isSubIndo = value; }
-        public string CoverImange { get => coverImange; set => coverImange = value; }
+        public string CoverImange { get => coverImage; set => coverImage = value; }
         public double Diskon { get => diskon; set => diskon = value; }
+        public List<AktorFilm> ListAktor { get => listAktor; set => listAktor = value; }
+        public List<GenreFilm> ListGenre { get => listGenre; set => listGenre = value; }
+        public List<SesiFilm> ListSesiFilm { get => listSesiFilm; set => listSesiFilm = value; }
 
         #endregion
 
         #region METHODS
+        public static List<Film> CariFilmTanpaStudio(Studio s)
+        {
+            string query = $"SELECT f.*  FROM films f LEFT JOIN film_studio fs on fs.films_id = f.id AND fs.studios_id = '{s.ID}' IS NULL;";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            List<Film> listFilm = new List<Film>();
+            while(hasil.Read() == true)
+            {
+                Film f = new Film();
+                f.Id = int.Parse(hasil.GetValue(0).ToString());
+                f.Judul = hasil.GetValue(1).ToString();
+                f.Sinopsis = hasil.GetValue(2).ToString();
+                f.Tahun = int.Parse(hasil.GetValue(3).ToString());
+                f.Durasi = int.Parse(hasil.GetValue(4).ToString());
+
+                Kelompok k = new Kelompok();
+                k.ID = int.Parse(hasil.GetValue(5).ToString());
+
+                f.Kelompok = k;
+                f.Bahasa = hasil.GetValue(6).ToString();
+                f.IsSubIndo = int.Parse(hasil.GetValue(7).ToString());
+                f.coverImage = hasil.GetValue(8).ToString();
+                f.Diskon = int.Parse(hasil.GetValue(9).ToString());
+                listFilm.Add(f);
+            }
+            return listFilm;
+        }
+
+        public static void BacaGenreFilm(Film f)
+        {
+            string query = $"SELECT DISTINCT genres_id FROM genre_film WHERE films_id = '{f.Id}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            while (hasil.Read() == true)
+            {
+                GenreFilm gf = new GenreFilm();
+                gf.Genre = Genre.BacaData("id", hasil.GetValue(0).ToString())[0];
+                f.ListGenre.Add(gf);
+            }
+        }
+
+        public static void BacaAktorFilm(Film f)
+        {
+            string query = $"SELECT * FROM aktor_film WHERE films_id = {f.Id};";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            while(hasil.Read() == true)
+            {
+                AktorFilm af = new AktorFilm();
+                af.Aktor = Aktor.BacaData("id", hasil.GetValue(0).ToString())[0];
+                f.ListAktor.Add(af);
+            }
+            
+        }
+
+        public static void JadwalKosong(Film f, Studio s)
+        {
+            string query = $"SELECT DISTINCT jf.* FROM jadwal_films jf LEFT JOIN sesi_films sf on sf.jadwal_film_id = jf.id WHERE sf.films_id = '{f.Id}' is null AND sf.studios_id = '{s.ID}' is null; ";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            while (hasil.Read() == true)
+            {
+                SesiFilm sf = new SesiFilm();
+                sf.JadwalFilm = JadwalFilm.BacaData(hasil.GetValue(0).ToString())[0];
+                f.ListSesiFilm.Add(sf);
+            }
+        }
+
 
         public static DataTable CariCinema(int fid, string tgl)
         {

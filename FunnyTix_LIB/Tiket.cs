@@ -134,7 +134,7 @@ namespace FunnyTix_LIB
                 t.Harga = Double.Parse(hasil.GetValue(4).ToString());
 
                 JadwalFilm j = new JadwalFilm();
-                j.ID = int.Parse(hasil.GetValue(5).ToString());
+                j.Id = int.Parse(hasil.GetValue(5).ToString());
                 t.JadwalFilm = j;
 
                 Studio s = new Studio();
@@ -212,7 +212,7 @@ namespace FunnyTix_LIB
                 t.Harga = Double.Parse(hasil.GetValue(4).ToString());
 
                 JadwalFilm j = new JadwalFilm();
-                j.ID = int.Parse(hasil.GetValue(5).ToString());
+                j.Id = int.Parse(hasil.GetValue(5).ToString());
                 t.JadwalFilm = j;
 
                 Studio s = new Studio();
@@ -237,7 +237,7 @@ namespace FunnyTix_LIB
                 res = 1;
             }
             string cmd = $"INSERT INTO tikets (invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id) " +
-                $"values ({t.IdInvoice}, '{t.NoKursi}', '{res}', '{t.Operators.ID}', '{t.Harga}', '{t.JadwalFilm.ID}', '{t.Studio.ID}', '{t.Film.Id}';";
+                $"values ({t.IdInvoice}, '{t.NoKursi}', '{res}', '{t.Operators.ID}', '{t.Harga}', '{t.JadwalFilm.Id}', '{t.Studio.ID}', '{t.Film.Id}';";
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
         public static void UpdateKehadiran(string noInvoice)

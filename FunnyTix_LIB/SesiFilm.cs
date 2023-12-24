@@ -39,13 +39,13 @@ namespace FunnyTix_LIB
         #region METHOD
         public static void TambahData(SesiFilm sesiFilm)
         {
-            if (SesiFilm.BacaData(sesiFilm.JadwalFilm.ID.ToString(), sesiFilm.Studio.ID.ToString(), sesiFilm.Film.Id.ToString()).Count > 0)
+            if (SesiFilm.BacaData(sesiFilm.JadwalFilm.Id.ToString(), sesiFilm.Studio.ID.ToString(), sesiFilm.Film.Id.ToString()).Count > 0)
             {
                 throw new Exception("Credentials have taken!");
             }
 
             string cmd = $"INSERT INTO SESI_FILMS (jadwal_film_id, studios_id, films_id) VALUES " +
-                $"('{sesiFilm.JadwalFilm.ID}', '{sesiFilm.Studio.ID}', '{sesiFilm.Film.Id}');";
+                $"('{sesiFilm.JadwalFilm.Id}', '{sesiFilm.Studio.ID}', '{sesiFilm.Film.Id}');";
 
             Koneksi.JalankanPerintahNonQuery(cmd);  //! Masukkan data ke Tabel Konsumen
         }
@@ -76,7 +76,7 @@ namespace FunnyTix_LIB
         {
             try
             {
-                string cmd = $"DELETE FROM SESI_FILMS WHERE jadwal_film_id LIKE '%{sesiFilm.jadwalFilm.ID}%' AND studios_id LIKE '%{sesiFilm.Studio.ID}%' AND films_id LIKE '%{sesiFilm.Film.Id}%';";
+                string cmd = $"DELETE FROM SESI_FILMS WHERE jadwal_film_id LIKE '%{sesiFilm.jadwalFilm.Id}%' AND studios_id LIKE '%{sesiFilm.Studio.ID}%' AND films_id LIKE '%{sesiFilm.Film.Id}%';";
 
                 Koneksi.JalankanPerintahNonQuery(cmd);
             }

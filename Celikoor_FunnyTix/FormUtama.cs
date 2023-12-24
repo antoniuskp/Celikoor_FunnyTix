@@ -232,7 +232,10 @@ namespace Celikoor_FunnyTix
 
         private void panelPenjadwalan_Click(object sender, EventArgs e)
         {
-            form.OpenChild(new FormPenjadwalan());
+            //form.OpenChild(new FormPenjadwalan());
+            FormPenjadwalan frm = new FormPenjadwalan();
+            frm.Owner = this;
+            frm.ShowDialog();
         }
 
         private void panelDataTransaksi_Click(object sender, EventArgs e)
