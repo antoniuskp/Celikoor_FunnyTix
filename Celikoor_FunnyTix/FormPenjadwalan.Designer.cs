@@ -35,6 +35,11 @@ namespace Celikoor_FunnyTix
             this.labelHargaWeekday = new System.Windows.Forms.Label();
             this.labelHargaWeekend = new System.Windows.Forms.Label();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.columnJudul = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnCinema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnJam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.textBoxKapasitas = new System.Windows.Forms.TextBox();
             this.richTextBoxSinopsis = new System.Windows.Forms.RichTextBox();
@@ -51,11 +56,6 @@ namespace Celikoor_FunnyTix
             this.checkBoxIV = new System.Windows.Forms.CheckBox();
             this.textBoxKelompok = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.columnJudul = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnCinema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnJam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonTambah)).BeginInit();
@@ -146,6 +146,41 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             this.dataGridViewHasil.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridViewHasil_ColumnAdded);
             // 
+            // columnJudul
+            // 
+            this.columnJudul.HeaderText = "Judul";
+            this.columnJudul.MinimumWidth = 6;
+            this.columnJudul.Name = "columnJudul";
+            this.columnJudul.Width = 125;
+            // 
+            // columnCinema
+            // 
+            this.columnCinema.HeaderText = "Cinema";
+            this.columnCinema.MinimumWidth = 6;
+            this.columnCinema.Name = "columnCinema";
+            this.columnCinema.Width = 125;
+            // 
+            // columnStudio
+            // 
+            this.columnStudio.HeaderText = "Studio";
+            this.columnStudio.MinimumWidth = 6;
+            this.columnStudio.Name = "columnStudio";
+            this.columnStudio.Width = 125;
+            // 
+            // columnTanggal
+            // 
+            this.columnTanggal.HeaderText = "Tanggal";
+            this.columnTanggal.MinimumWidth = 6;
+            this.columnTanggal.Name = "columnTanggal";
+            this.columnTanggal.Width = 125;
+            // 
+            // columnJam
+            // 
+            this.columnJam.HeaderText = "Jam";
+            this.columnJam.MinimumWidth = 6;
+            this.columnJam.Name = "columnJam";
+            this.columnJam.Width = 125;
+            // 
             // pictureBoxCover
             // 
             this.pictureBoxCover.BackColor = System.Drawing.Color.Sienna;
@@ -172,7 +207,7 @@ namespace Celikoor_FunnyTix
             // 
             this.richTextBoxSinopsis.BackColor = System.Drawing.Color.NavajoWhite;
             this.richTextBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxSinopsis.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxSinopsis.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxSinopsis.ForeColor = System.Drawing.Color.Maroon;
             this.richTextBoxSinopsis.Location = new System.Drawing.Point(1293, 128);
             this.richTextBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -248,6 +283,7 @@ namespace Celikoor_FunnyTix
             this.buttonKeluar.Size = new System.Drawing.Size(156, 42);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.TabStop = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // comboBoxJudulFilm
             // 
@@ -331,41 +367,6 @@ namespace Celikoor_FunnyTix
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(343, 28);
             this.dateTimePicker1.TabIndex = 32;
-            // 
-            // columnJudul
-            // 
-            this.columnJudul.HeaderText = "Judul";
-            this.columnJudul.MinimumWidth = 6;
-            this.columnJudul.Name = "columnJudul";
-            this.columnJudul.Width = 125;
-            // 
-            // columnCinema
-            // 
-            this.columnCinema.HeaderText = "Cinema";
-            this.columnCinema.MinimumWidth = 6;
-            this.columnCinema.Name = "columnCinema";
-            this.columnCinema.Width = 125;
-            // 
-            // columnStudio
-            // 
-            this.columnStudio.HeaderText = "Studio";
-            this.columnStudio.MinimumWidth = 6;
-            this.columnStudio.Name = "columnStudio";
-            this.columnStudio.Width = 125;
-            // 
-            // columnTanggal
-            // 
-            this.columnTanggal.HeaderText = "Tanggal";
-            this.columnTanggal.MinimumWidth = 6;
-            this.columnTanggal.Name = "columnTanggal";
-            this.columnTanggal.Width = 125;
-            // 
-            // columnJam
-            // 
-            this.columnJam.HeaderText = "Jam";
-            this.columnJam.MinimumWidth = 6;
-            this.columnJam.Name = "columnJam";
-            this.columnJam.Width = 125;
             // 
             // FormPenjadwalan
             // 

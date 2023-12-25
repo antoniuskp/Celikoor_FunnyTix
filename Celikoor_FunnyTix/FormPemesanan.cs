@@ -20,8 +20,9 @@ namespace Celikoor_FunnyTix
         private List<string> userSelection = new List<string>();
         private bool jamPemutaranIsLoaded = false;
         private List<string> chairTaken = new List<string>();
+        Film selectedFilm;
         //private DataTable daftarStudio;
-        
+
 
         private CheckBox[,] checkBoxArray;
         public FormPemesanan()
@@ -38,7 +39,6 @@ namespace Celikoor_FunnyTix
             daftarFilm = Film.BacaData();
             comboBoxJudul.DataSource = daftarFilm;
             comboBoxJudul.DisplayMember = "Judul";
-            comboBoxJudul.SelectedIndex = 0;
         }
 
         private void InitializeCheckBoxArray(string huruf)
@@ -196,44 +196,6 @@ namespace Celikoor_FunnyTix
             {
                 MessageBox.Show(x.Message);
                 Environment.Exit(0);
-            }
-        }
-
-        private void comboBoxJudul_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
-            listBoxSinopsis.Items.Clear();
-            listBoxSinopsis.Items.Add(selectedFilm.Sinopsis);
-            textBoxDurasi.Text = selectedFilm.Durasi.ToString();
-            List<Genre> listGenre = Film.ListGenreFilm(selectedFilm);
-            if(listGenre.Count > 0)
-            {
-                for (int i = 0; i < listGenre.Count; i++)
-                {
-                    if(i >= 0 && i < 2)
-                    {
-                        textBoxGenre.Text = $"{listGenre[i].Nama},";
-                    }
-                }
-                textBoxGenre.Text += "...";
-            }
-            
-            
-            //Film film = Film.BacaData(selectedFilm.Id.ToString())[0];
-            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value.ToString("yyyy-MM-dd"));
-
-            if (daftarCinema.Rows.Count > 0)
-            {
-                comboBoxCinema.DataSource = daftarCinema;
-                comboBoxCinema.DisplayMember = "nama_cabang";
-                comboBoxCinema.ValueMember = "nama_cabang";
-                //comboBoxCinema.SelectedIndex = 0;
-                
-                
-            }
-            else
-            {
-                comboBoxCinema.DataSource = null;
             }
         }
 
@@ -412,6 +374,48 @@ namespace Celikoor_FunnyTix
             catch (Exception x)
             {
                 MessageBox.Show(x.Message);
+            }
+        }
+
+        private void comboBoxJudul_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            
+            selectedFilm = (Film)comboBoxJudul.SelectedItem;
+            richTextBoxSinopsis.Clear();
+            richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
+            textBoxDurasi.Text = selectedFilm.Durasi.ToString() + " menit";
+            selectedFilm.BacaGenreFilm(selectedFilm);
+            textBoxGenre.Clear();
+            for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
+            {
+                if (selectedFilm.ListGenre.Count == 1)
+                {
+                    textBoxGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
+
+                }
+                else if (i >= 0 && i < 2)
+                {
+                    if (i == selectedFilm.ListGenre.Count - 1) textBoxGenre.Text += $"{selectedFilm.ListGenre[i].Genre.Nama}";
+                    else textBoxGenre.Text += $"{selectedFilm.ListGenre[i].Genre.Nama},";
+                }
+            }
+            if (selectedFilm.ListGenre.Count > 2)
+            {
+                textBoxGenre.Text += ",...";
+            }
+
+            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value.ToString("yyyy-MM-dd"));
+
+            if (daftarCinema != null)
+            {
+                comboBoxCinema.DataSource = daftarCinema;
+                comboBoxCinema.DisplayMember = "nama_cabang";
+                comboBoxCinema.ValueMember = "nama_cabang";
+                //comboBoxCinema.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxCinema.DataSource = null;
             }
         }
     }

@@ -32,5 +32,6 @@ namespace FunnyTix_LIB
         public Film Film { get => film; set => film = value; }
         public Studio Studio { get => studio; set => studio = value; }
         #endregion
+
     }
 }

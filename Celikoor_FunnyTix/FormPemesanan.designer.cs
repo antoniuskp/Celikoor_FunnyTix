@@ -52,8 +52,8 @@
             this.comboBoxJamPemutaran = new System.Windows.Forms.ComboBox();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
-            this.listBoxSinopsis = new System.Windows.Forms.ListBox();
             this.labelUserSelection = new System.Windows.Forms.Label();
+            this.richTextBoxSinopsis = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +87,7 @@
             this.textBoxSaldo.Location = new System.Drawing.Point(1727, 770);
             this.textBoxSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSaldo.Name = "textBoxSaldo";
-            this.textBoxSaldo.Size = new System.Drawing.Size(203, 20);
+            this.textBoxSaldo.Size = new System.Drawing.Size(203, 25);
             this.textBoxSaldo.TabIndex = 2;
             // 
             // textBoxAktorUtama
@@ -99,7 +99,7 @@
             this.textBoxAktorUtama.Location = new System.Drawing.Point(1545, 407);
             this.textBoxAktorUtama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAktorUtama.Name = "textBoxAktorUtama";
-            this.textBoxAktorUtama.Size = new System.Drawing.Size(360, 20);
+            this.textBoxAktorUtama.Size = new System.Drawing.Size(360, 25);
             this.textBoxAktorUtama.TabIndex = 3;
             // 
             // textBoxDiskon
@@ -111,7 +111,7 @@
             this.textBoxDiskon.Location = new System.Drawing.Point(1469, 686);
             this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDiskon.Name = "textBoxDiskon";
-            this.textBoxDiskon.Size = new System.Drawing.Size(159, 20);
+            this.textBoxDiskon.Size = new System.Drawing.Size(159, 25);
             this.textBoxDiskon.TabIndex = 4;
             // 
             // textBoxTotal
@@ -123,7 +123,7 @@
             this.textBoxTotal.Location = new System.Drawing.Point(1469, 615);
             this.textBoxTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(159, 20);
+            this.textBoxTotal.Size = new System.Drawing.Size(159, 25);
             this.textBoxTotal.TabIndex = 5;
             // 
             // textBoxTotalAkhir
@@ -135,7 +135,7 @@
             this.textBoxTotalAkhir.Location = new System.Drawing.Point(1703, 649);
             this.textBoxTotalAkhir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTotalAkhir.Name = "textBoxTotalAkhir";
-            this.textBoxTotalAkhir.Size = new System.Drawing.Size(159, 27);
+            this.textBoxTotalAkhir.Size = new System.Drawing.Size(159, 33);
             this.textBoxTotalAkhir.TabIndex = 6;
             // 
             // textBoxKursi
@@ -147,7 +147,7 @@
             this.textBoxKursi.Location = new System.Drawing.Point(1455, 554);
             this.textBoxKursi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKursi.Name = "textBoxKursi";
-            this.textBoxKursi.Size = new System.Drawing.Size(159, 20);
+            this.textBoxKursi.Size = new System.Drawing.Size(159, 25);
             this.textBoxKursi.TabIndex = 7;
             // 
             // textBoxDurasi
@@ -159,7 +159,7 @@
             this.textBoxDurasi.Location = new System.Drawing.Point(1445, 331);
             this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDurasi.Name = "textBoxDurasi";
-            this.textBoxDurasi.Size = new System.Drawing.Size(159, 20);
+            this.textBoxDurasi.Size = new System.Drawing.Size(159, 25);
             this.textBoxDurasi.TabIndex = 8;
             // 
             // textBoxGenre
@@ -171,7 +171,7 @@
             this.textBoxGenre.Location = new System.Drawing.Point(1760, 331);
             this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(145, 20);
+            this.textBoxGenre.Size = new System.Drawing.Size(145, 25);
             this.textBoxGenre.TabIndex = 9;
             // 
             // textBoxHarga
@@ -183,7 +183,7 @@
             this.textBoxHarga.Location = new System.Drawing.Point(451, 348);
             this.textBoxHarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxHarga.Name = "textBoxHarga";
-            this.textBoxHarga.Size = new System.Drawing.Size(159, 20);
+            this.textBoxHarga.Size = new System.Drawing.Size(159, 25);
             this.textBoxHarga.TabIndex = 10;
             // 
             // textBoxSisa
@@ -195,7 +195,7 @@
             this.textBoxSisa.Location = new System.Drawing.Point(451, 422);
             this.textBoxSisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSisa.Name = "textBoxSisa";
-            this.textBoxSisa.Size = new System.Drawing.Size(159, 20);
+            this.textBoxSisa.Size = new System.Drawing.Size(159, 25);
             this.textBoxSisa.TabIndex = 11;
             // 
             // textBoxJenisStudio
@@ -207,7 +207,7 @@
             this.textBoxJenisStudio.Location = new System.Drawing.Point(129, 350);
             this.textBoxJenisStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJenisStudio.Name = "textBoxJenisStudio";
-            this.textBoxJenisStudio.Size = new System.Drawing.Size(159, 20);
+            this.textBoxJenisStudio.Size = new System.Drawing.Size(159, 25);
             this.textBoxJenisStudio.TabIndex = 12;
             // 
             // textBoxKapasitas
@@ -219,7 +219,7 @@
             this.textBoxKapasitas.Location = new System.Drawing.Point(129, 420);
             this.textBoxKapasitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKapasitas.Name = "textBoxKapasitas";
-            this.textBoxKapasitas.Size = new System.Drawing.Size(181, 20);
+            this.textBoxKapasitas.Size = new System.Drawing.Size(181, 25);
             this.textBoxKapasitas.TabIndex = 13;
             // 
             // textBoxStudio
@@ -231,7 +231,7 @@
             this.textBoxStudio.Location = new System.Drawing.Point(501, 273);
             this.textBoxStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxStudio.Name = "textBoxStudio";
-            this.textBoxStudio.Size = new System.Drawing.Size(107, 20);
+            this.textBoxStudio.Size = new System.Drawing.Size(107, 25);
             this.textBoxStudio.TabIndex = 17;
             // 
             // panelA
@@ -252,9 +252,9 @@
             this.comboBoxJudul.Location = new System.Drawing.Point(131, 100);
             this.comboBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJudul.Name = "comboBoxJudul";
-            this.comboBoxJudul.Size = new System.Drawing.Size(476, 30);
+            this.comboBoxJudul.Size = new System.Drawing.Size(476, 36);
             this.comboBoxJudul.TabIndex = 20;
-            this.comboBoxJudul.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudul_SelectedIndexChanged);
+            this.comboBoxJudul.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudul_SelectedIndexChanged_1);
             // 
             // dateTimePickerTambah
             // 
@@ -266,7 +266,7 @@
             this.dateTimePickerTambah.Location = new System.Drawing.Point(123, 182);
             this.dateTimePickerTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerTambah.Name = "dateTimePickerTambah";
-            this.dateTimePickerTambah.Size = new System.Drawing.Size(327, 24);
+            this.dateTimePickerTambah.Size = new System.Drawing.Size(327, 28);
             this.dateTimePickerTambah.TabIndex = 21;
             this.dateTimePickerTambah.ValueChanged += new System.EventHandler(this.dateTimePickerTambah_ValueChanged);
             // 
@@ -297,7 +297,7 @@
             this.textBoxAge.Location = new System.Drawing.Point(1843, 87);
             this.textBoxAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(67, 28);
+            this.textBoxAge.Size = new System.Drawing.Size(67, 34);
             this.textBoxAge.TabIndex = 22;
             this.textBoxAge.Text = "SU";
             // 
@@ -308,7 +308,7 @@
             this.comboBoxJamPemutaran.Location = new System.Drawing.Point(473, 182);
             this.comboBoxJamPemutaran.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxJamPemutaran.Name = "comboBoxJamPemutaran";
-            this.comboBoxJamPemutaran.Size = new System.Drawing.Size(89, 22);
+            this.comboBoxJamPemutaran.Size = new System.Drawing.Size(89, 26);
             this.comboBoxJamPemutaran.TabIndex = 23;
             this.comboBoxJamPemutaran.SelectedIndexChanged += new System.EventHandler(this.comboBoxJamPemutaran_SelectedIndexChanged);
             // 
@@ -320,7 +320,7 @@
             this.comboBoxCinema.Location = new System.Drawing.Point(123, 272);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(297, 22);
+            this.comboBoxCinema.Size = new System.Drawing.Size(297, 26);
             this.comboBoxCinema.TabIndex = 24;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
@@ -332,33 +332,30 @@
             this.comboBoxStudio.Location = new System.Drawing.Point(501, 272);
             this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(94, 22);
+            this.comboBoxStudio.Size = new System.Drawing.Size(94, 26);
             this.comboBoxStudio.TabIndex = 25;
             this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
-            // 
-            // listBoxSinopsis
-            // 
-            this.listBoxSinopsis.BackColor = System.Drawing.Color.NavajoWhite;
-            this.listBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBoxSinopsis.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxSinopsis.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBoxSinopsis.FormattingEnabled = true;
-            this.listBoxSinopsis.ItemHeight = 22;
-            this.listBoxSinopsis.Location = new System.Drawing.Point(1296, 126);
-            this.listBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxSinopsis.Name = "listBoxSinopsis";
-            this.listBoxSinopsis.Size = new System.Drawing.Size(669, 154);
-            this.listBoxSinopsis.TabIndex = 19;
-            this.listBoxSinopsis.SelectedIndexChanged += new System.EventHandler(this.listBoxSinopsis_SelectedIndexChanged);
             // 
             // labelUserSelection
             // 
             this.labelUserSelection.AutoSize = true;
             this.labelUserSelection.Location = new System.Drawing.Point(1452, 536);
             this.labelUserSelection.Name = "labelUserSelection";
-            this.labelUserSelection.Size = new System.Drawing.Size(44, 16);
+            this.labelUserSelection.Size = new System.Drawing.Size(46, 17);
             this.labelUserSelection.TabIndex = 26;
             this.labelUserSelection.Text = "label1";
+            // 
+            // richTextBoxSinopsis
+            // 
+            this.richTextBoxSinopsis.BackColor = System.Drawing.Color.NavajoWhite;
+            this.richTextBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxSinopsis.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxSinopsis.ForeColor = System.Drawing.Color.Maroon;
+            this.richTextBoxSinopsis.Location = new System.Drawing.Point(1296, 126);
+            this.richTextBoxSinopsis.Name = "richTextBoxSinopsis";
+            this.richTextBoxSinopsis.Size = new System.Drawing.Size(653, 172);
+            this.richTextBoxSinopsis.TabIndex = 27;
+            this.richTextBoxSinopsis.Text = "";
             // 
             // FormPemesanan
             // 
@@ -366,7 +363,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 846);
+            this.ClientSize = new System.Drawing.Size(1994, 846);
+            this.Controls.Add(this.richTextBoxSinopsis);
             this.Controls.Add(this.labelUserSelection);
             this.Controls.Add(this.comboBoxStudio);
             this.Controls.Add(this.comboBoxCinema);
@@ -376,7 +374,6 @@
             this.Controls.Add(this.panelB);
             this.Controls.Add(this.dateTimePickerTambah);
             this.Controls.Add(this.comboBoxJudul);
-            this.Controls.Add(this.listBoxSinopsis);
             this.Controls.Add(this.panelA);
             this.Controls.Add(this.textBoxStudio);
             this.Controls.Add(this.textBoxKapasitas);
@@ -430,7 +427,7 @@
         private System.Windows.Forms.ComboBox comboBoxJamPemutaran;
         private System.Windows.Forms.ComboBox comboBoxCinema;
         private System.Windows.Forms.ComboBox comboBoxStudio;
-        private System.Windows.Forms.ListBox listBoxSinopsis;
         private System.Windows.Forms.Label labelUserSelection;
+        private System.Windows.Forms.RichTextBox richTextBoxSinopsis;
     }
 }
