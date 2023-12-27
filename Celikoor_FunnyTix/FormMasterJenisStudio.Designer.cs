@@ -31,7 +31,6 @@ namespace Celikoor_FunnyTix
         {
             this.panelTambahJenisStudio = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxDeskripsi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace Celikoor_FunnyTix
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelTambahJenisStudio.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
@@ -67,7 +67,7 @@ namespace Celikoor_FunnyTix
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxDeskripsi);
+            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBoxNama);
             this.groupBox1.Controls.Add(this.label3);
@@ -79,21 +79,12 @@ namespace Celikoor_FunnyTix
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
-            // textBoxDeskripsi
-            // 
-            this.textBoxDeskripsi.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeskripsi.Location = new System.Drawing.Point(161, 171);
-            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxDeskripsi.Name = "textBoxDeskripsi";
-            this.textBoxDeskripsi.Size = new System.Drawing.Size(263, 28);
-            this.textBoxDeskripsi.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label6.Location = new System.Drawing.Point(44, 169);
+            this.label6.Location = new System.Drawing.Point(41, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 27);
@@ -103,10 +94,11 @@ namespace Celikoor_FunnyTix
             // textBoxNama
             // 
             this.textBoxNama.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNama.Location = new System.Drawing.Point(160, 73);
+            this.textBoxNama.ForeColor = System.Drawing.Color.Maroon;
+            this.textBoxNama.Location = new System.Drawing.Point(160, 47);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(263, 28);
+            this.textBoxNama.Size = new System.Drawing.Size(283, 28);
             this.textBoxNama.TabIndex = 4;
             // 
             // label3
@@ -114,7 +106,7 @@ namespace Celikoor_FunnyTix
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label3.Location = new System.Drawing.Point(72, 71);
+            this.label3.Location = new System.Drawing.Point(72, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 27);
@@ -231,6 +223,7 @@ namespace Celikoor_FunnyTix
             // textBox
             // 
             this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.ForeColor = System.Drawing.Color.Maroon;
             this.textBox.Location = new System.Drawing.Point(611, 29);
             this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
@@ -241,6 +234,7 @@ namespace Celikoor_FunnyTix
             // comboBox
             // 
             this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.ForeColor = System.Drawing.Color.Maroon;
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Nama",
@@ -273,6 +267,17 @@ namespace Celikoor_FunnyTix
             this.label1.TabIndex = 18;
             this.label1.Text = "MASTER JENIS STUDIO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.listBox1.ForeColor = System.Drawing.Color.Maroon;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(162, 94);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(281, 130);
+            this.listBox1.TabIndex = 13;
             // 
             // FormMasterJenisStudio
             // 
@@ -315,9 +320,9 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxDeskripsi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

@@ -13,10 +13,11 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormUtama : Form
     {
-        public static bool statusLogin=false;
+        public static bool statusLogin = false;
         public Konsumen konsumen;
         public static string CURRENT_ROLE;
         public Form ACTIVE_CHILD = null;
+
         public FormUtama()
         {
             InitializeComponent();
@@ -48,22 +49,28 @@ namespace Celikoor_FunnyTix
                     form.panelPegawaiOperator.Visible = false;
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
+                    form.panelLogout.Visible = true;
                 }
-                else if(role=="OPERATOR")
+                else if (role == "OPERATOR")
                 {
+                    form.OpenChild(new FormOperator());
                     form.panelPegawaiAdmin.Visible = false;
                     form.panelPegawaiKasir.Visible = false;
                     form.panelPegawaiOperator.Visible = true;
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
+                    form.panelLogout.Visible = true;    
                 }
                 else if (role == "KASIR")
                 {
+                    form.OpenChild(new FormValidasiInvoice());
                     form.panelPegawaiAdmin.Visible = false;
                     form.panelPegawaiKasir.Visible = true;
+                    form.panelInvoice.Visible = true;
                     form.panelPegawaiOperator.Visible = false;
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
+                    form.panelLogout.Visible = true;
                 }
                 form.textBox1.Text = Auth.GetPegawai().Nama;
             }
@@ -72,7 +79,6 @@ namespace Celikoor_FunnyTix
                 MessageBox.Show(x.Message);
             }
         }
-
         public static void KonsumenInit()
         {
             try
@@ -98,7 +104,7 @@ namespace Celikoor_FunnyTix
 
                 form.panelListMaster.Visible = false;
 
-                form.textBox1.Text = $"Welcome, {Auth.GetKonsumen().Nama}";
+                form.textBox1.Text = Auth.GetKonsumen().Nama;
             }
             catch (Exception x)
             {
@@ -109,7 +115,7 @@ namespace Celikoor_FunnyTix
         {
             form = this;
             panelPIlihan.Dock = DockStyle.Left;
-            if(statusLogin==false)
+            if (statusLogin == false)
             {
                 this.WindowState = FormWindowState.Maximized;
                 this.IsMdiContainer = true;
@@ -122,17 +128,6 @@ namespace Celikoor_FunnyTix
                     }
                 }
                 form.OpenChild(new FormMenu());
-                /*
-                FormMenu form = new FormMenu();
-                form.MdiParent = this;
-                form.Dock = DockStyle.Fill;
-                form.TopLevel = false;
-                form.AutoScroll = true;
-                form.ControlBox = false;
-                form.FormBorderStyle = FormBorderStyle.None;
-                form.BringToFront();
-                form.Show();
-                */
             }
             else
             {
@@ -144,30 +139,9 @@ namespace Celikoor_FunnyTix
                     }
                 }
             }
-            
-            /*
-            this.WindowState = FormWindowState.Maximized;
-            this.IsMdiContainer = true;
-            
-            var form = new FormMenu();
-            form.TopLevel = false;
-            form.AutoScroll = true;
-            //panelForm.Visible = true;
-            form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
-            form.Dock = DockStyle.Fill;
-            form.ControlBox = false;
-            form.BringToFront();
-            form.Show();
-            */
-
-            //label1.Text = "Welcome, " + konsumen.Nama;
         }
-
         public void OpenChild(Form form)
         {
-
-
             ACTIVE_CHILD = form;
             form.MdiParent = this;
             form.TopLevel = false;
@@ -213,9 +187,10 @@ namespace Celikoor_FunnyTix
 
         }
         #endregion
-        #region Panel
+
         #region Panel Pegawai Admin
         bool visiblePanelList = false;
+        #region Panel Master
         private void panelMaster_Click(object sender, EventArgs e)
         {
             if (visiblePanelList == false)
@@ -229,62 +204,112 @@ namespace Celikoor_FunnyTix
                 visiblePanelList = false;
             }
         }
-
-        private void panelPenjadwalan_Click(object sender, EventArgs e)
+        private void labelMaster_Click(object sender, EventArgs e)
         {
-            //form.OpenChild(new FormPenjadwalan());
-            FormPenjadwalan frm = new FormPenjadwalan();
-            frm.Owner = this;
-            frm.ShowDialog();
+            if (visiblePanelList == false)
+            {
+                form.panelListMaster.Visible = true;
+                visiblePanelList = true;
+            }
+            else
+            {
+                form.panelListMaster.Visible = false;
+                visiblePanelList = false;
+            }
         }
-
-        private void panelDataTransaksi_Click(object sender, EventArgs e)
-        {
-            form.OpenChild(new FormDataTransaksi());
-        }
-        #region List Panel Master
+        #endregion
+        //List SubPanel Master
+        #region Konsumen
         private void panelMasterKonsumen_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterKonsumen());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
-
+        private void label14_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterKonsumen());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        #region Cinema
         private void panelMasterCinema_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterCinema());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
-
+        private void label16_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterCinema());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        #region Pegawai
         private void panelMasterPegawai_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterPegawai());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
-
+        private void label20_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterPegawai());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        #region Kelompok
+        private void label18_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterKelompok());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
         private void panelMasterKelompok_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterKelompok());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
-
+        #endregion
+        #region Aktor
         private void panelMasterAktor_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterAktor());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
-
+        private void label24_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterAktor());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        #region Genre
         private void panelMasterGenre_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterGenre());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
-
+        private void label22_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterGenre());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        #region Studio
+        private void label7_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterStudio());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
         private void panelStudio_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterStudio());
@@ -292,33 +317,87 @@ namespace Celikoor_FunnyTix
             visiblePanelList = false;
         }
 
+        #endregion
+        #region Jenis Studio
         private void panelJenisStudio_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterJenisStudio());
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
+        private void label9_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterJenisStudio());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
+        //
 
+        #region Penjadwalan
+        private void panelPenjadwalan_Click(object sender, EventArgs e)
+        {
+            FormPenjadwalan frm = new FormPenjadwalan();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+            FormPenjadwalan frm = new FormPenjadwalan();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+        #endregion
+        #region Data Transaksi
+        private void panelDataTransaksi_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormDataTransaksi());
+        }
+        private void labelDataTransaksi_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormDataTransaksi());
+
+        }
         #endregion
         #endregion
+
         #region Panel Pegawai Kasir
         private void panelInvoice_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormValidasiInvoice());
         }
+        private void label10_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormValidasiInvoice());
+        }
         #endregion
+
         #region Panel Pegawai Operator
         private void panelUpdateStatus_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormOperator());
         }
+
+        //label update status hadir
+        private void label12_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormOperator());
+        }
         #endregion
+
         #region Panel Konsumen
         private void panelBeliTiket_Click(object sender, EventArgs e)
         {
             var frm = new FormPemesanan();
             frm.ShowDialog();
         }
+        //label beli tiket
+        private void label3_Click(object sender, EventArgs e)
+        {
+            var frm = new FormPemesanan();
+            frm.ShowDialog();
+        }
+
 
         private void panelProfil_Click(object sender, EventArgs e)
         {
@@ -330,28 +409,58 @@ namespace Celikoor_FunnyTix
             form.OpenChild(new FormJadwalFilm());
         }
 
+        //label Jadwal Film
+        private void label4_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormJadwalFilm());
+        }
+
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormHistoryPembelian());
+        }
+
+        //label history
         private void panelHistory_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormHistoryPembelian());
 
         }
+
+
         #endregion
+
+        #region Panel Log Out
         private void panelLogout_Click(object sender, EventArgs e)
         {
             statusLogin = false;
             form.ACTIVE_CHILD = null;
             form.CloseAllForm();
             Auth.LogOut();
-            FormUtama_Load(this,e);
+            FormUtama_Load(this, e);
         }
         private void CloseAllForm()
         {
-            foreach(Form frm in form.MdiChildren)
+            foreach (Form frm in form.MdiChildren)
             {
                 frm.Close();
             }
         }
 
+        private void label26_Click(object sender, EventArgs e)
+        {
+            statusLogin = false;
+            form.ACTIVE_CHILD = null;
+            form.CloseAllForm();
+            Auth.LogOut();
+            FormUtama_Load(this, e);
+        }
         #endregion
+
+        private void panelUpdateStatus_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

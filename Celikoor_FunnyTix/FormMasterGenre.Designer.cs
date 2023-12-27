@@ -132,6 +132,7 @@ namespace Celikoor_FunnyTix
             // comboBox
             // 
             this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.ForeColor = System.Drawing.Color.Maroon;
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Nama",
@@ -184,9 +185,9 @@ namespace Celikoor_FunnyTix
             this.groupBox1.Controls.Add(this.textBoxNama);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(34, 107);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Size = new System.Drawing.Size(480, 166);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -195,7 +196,7 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxDeskripsi.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDeskripsi.Location = new System.Drawing.Point(168, 100);
-            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDeskripsi.Name = "textBoxDeskripsi";
             this.textBoxDeskripsi.Size = new System.Drawing.Size(263, 28);
             this.textBoxDeskripsi.TabIndex = 11;
@@ -216,7 +217,7 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxNama.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNama.Location = new System.Drawing.Point(167, 42);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(263, 28);
             this.textBoxNama.TabIndex = 4;
@@ -239,7 +240,7 @@ namespace Celikoor_FunnyTix
             this.buttonBatal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBatal.ForeColor = System.Drawing.Color.Maroon;
             this.buttonBatal.Location = new System.Drawing.Point(34, 296);
-            this.buttonBatal.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBatal.Name = "buttonBatal";
             this.buttonBatal.Size = new System.Drawing.Size(160, 43);
             this.buttonBatal.TabIndex = 21;
@@ -253,7 +254,7 @@ namespace Celikoor_FunnyTix
             this.buttonSimpan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.Maroon;
             this.buttonSimpan.Location = new System.Drawing.Point(354, 296);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(160, 43);
             this.buttonSimpan.TabIndex = 20;
@@ -279,13 +280,14 @@ namespace Celikoor_FunnyTix
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(1511, 1033);
+            this.ClientSize = new System.Drawing.Size(1517, 1033);
             this.Controls.Add(this.panelTambahGenre);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Maroon;
             this.Name = "FormMasterGenre";
             this.Text = "FormMasterGenre";
             this.Load += new System.EventHandler(this.FormMasterGenre_Load);

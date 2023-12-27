@@ -73,7 +73,7 @@
             this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(18, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 41);
+            this.label1.Size = new System.Drawing.Size(225, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Profile Name";
             // 
@@ -108,6 +108,7 @@
             this.labelEditNama.Size = new System.Drawing.Size(40, 20);
             this.labelEditNama.TabIndex = 2;
             this.labelEditNama.Text = "edit";
+            this.labelEditNama.Click += new System.EventHandler(this.labelEditNama_Click);
             // 
             // groupBox2
             // 
@@ -362,7 +363,7 @@
             this.label5.ForeColor = System.Drawing.Color.Moccasin;
             this.label5.Location = new System.Drawing.Point(789, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(450, 111);
+            this.label5.Size = new System.Drawing.Size(449, 111);
             this.label5.TabIndex = 11;
             this.label5.Text = "FunnyTix.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -375,7 +376,7 @@
             this.label10.ForeColor = System.Drawing.Color.Moccasin;
             this.label10.Location = new System.Drawing.Point(930, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 27);
+            this.label10.Size = new System.Drawing.Size(169, 27);
             this.label10.TabIndex = 12;
             this.label10.Text = "Halaman Profil";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;

@@ -21,5 +21,10 @@ namespace Celikoor_FunnyTix
         {
 
         }
+
+        private void labelEditNama_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

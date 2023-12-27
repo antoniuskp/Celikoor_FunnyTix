@@ -436,7 +436,7 @@ namespace Celikoor_FunnyTix
             this.label4.Location = new System.Drawing.Point(26, 196);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 25);
+            this.label4.Size = new System.Drawing.Size(136, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Negara Asal : ";
             // 

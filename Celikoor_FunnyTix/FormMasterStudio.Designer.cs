@@ -358,6 +358,7 @@ namespace Celikoor_FunnyTix
             // textBox
             // 
             this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.ForeColor = System.Drawing.Color.Maroon;
             this.textBox.Location = new System.Drawing.Point(611, 29);
             this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
@@ -368,6 +369,7 @@ namespace Celikoor_FunnyTix
             // comboBox
             // 
             this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.ForeColor = System.Drawing.Color.Maroon;
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Nama",

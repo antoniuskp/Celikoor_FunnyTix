@@ -34,47 +34,47 @@
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panelPegawaiOperator = new System.Windows.Forms.Panel();
             this.panelUpdateStatus = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.labelUpdate = new System.Windows.Forms.Label();
             this.panelKonsumen = new System.Windows.Forms.Panel();
             this.panelInvoice = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelInvoice = new System.Windows.Forms.Label();
             this.panelBeliTiket = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelBeliTiket = new System.Windows.Forms.Label();
             this.panelHistory = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelHistory = new System.Windows.Forms.Label();
             this.panelProfil = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelProfil = new System.Windows.Forms.Label();
             this.panelJadwalFilm = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelJadwalFilm = new System.Windows.Forms.Label();
             this.panelPegawaiKasir = new System.Windows.Forms.Panel();
             this.panelLogout = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
+            this.labelLogOut = new System.Windows.Forms.Label();
             this.panelPegawaiAdmin = new System.Windows.Forms.Panel();
             this.panelDataTransaksi = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelDataTransaksi = new System.Windows.Forms.Label();
             this.panelPenjadwalan = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPenjadwalan = new System.Windows.Forms.Label();
             this.panelMaster = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelMaster = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panelListMaster = new System.Windows.Forms.Panel();
             this.panelMasterKonsumen = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelKonsumen = new System.Windows.Forms.Label();
             this.panelJenisStudio = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelJenisStudio = new System.Windows.Forms.Label();
             this.panelStudio = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelStudio = new System.Windows.Forms.Label();
             this.panelMasterGenre = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
+            this.labelGenre = new System.Windows.Forms.Label();
             this.panelMasterAktor = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
+            this.labelAktor = new System.Windows.Forms.Label();
             this.panelMasterKelompok = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.labelKelompok = new System.Windows.Forms.Label();
             this.panelMasterCinema = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
+            this.labelCinema = new System.Windows.Forms.Label();
             this.panelMasterPegawai = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.labelPegawai = new System.Windows.Forms.Label();
+            this.labelProfile = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelPegawaiOperator.SuspendLayout();
@@ -122,13 +122,12 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Maroon;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.textBox1.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(-2, 309);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 27);
-            this.textBox1.TabIndex = 29;
+            this.textBox1.Size = new System.Drawing.Size(526, 29);
+            this.textBox1.TabIndex = 35;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBoxProfile
@@ -153,27 +152,29 @@
             // panelUpdateStatus
             // 
             this.panelUpdateStatus.BackColor = System.Drawing.Color.Transparent;
-            this.panelUpdateStatus.Controls.Add(this.label12);
+            this.panelUpdateStatus.Controls.Add(this.labelUpdate);
             this.panelUpdateStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelUpdateStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelUpdateStatus.Location = new System.Drawing.Point(0, 1);
             this.panelUpdateStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelUpdateStatus.Name = "panelUpdateStatus";
             this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
-            this.panelUpdateStatus.TabIndex = 23;
+            this.panelUpdateStatus.TabIndex = 1;
             this.panelUpdateStatus.Click += new System.EventHandler(this.panelUpdateStatus_Click);
+            this.panelUpdateStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUpdateStatus_Paint);
             // 
-            // label12
+            // labelUpdate
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(35, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(426, 46);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "UPDATE STATUS HADIR";
+            this.labelUpdate.AutoSize = true;
+            this.labelUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.labelUpdate.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelUpdate.Location = new System.Drawing.Point(35, 28);
+            this.labelUpdate.Name = "labelUpdate";
+            this.labelUpdate.Size = new System.Drawing.Size(426, 46);
+            this.labelUpdate.TabIndex = 17;
+            this.labelUpdate.Text = "UPDATE STATUS HADIR";
+            this.labelUpdate.Click += new System.EventHandler(this.label12_Click);
             // 
             // panelKonsumen
             // 
@@ -191,7 +192,7 @@
             // panelInvoice
             // 
             this.panelInvoice.BackColor = System.Drawing.Color.Transparent;
-            this.panelInvoice.Controls.Add(this.label10);
+            this.panelInvoice.Controls.Add(this.labelInvoice);
             this.panelInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelInvoice.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelInvoice.Location = new System.Drawing.Point(1, 0);
@@ -201,22 +202,23 @@
             this.panelInvoice.TabIndex = 22;
             this.panelInvoice.Click += new System.EventHandler(this.panelInvoice_Click);
             // 
-            // label10
+            // labelInvoice
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(35, 28);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 46);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "INVOICE";
+            this.labelInvoice.AutoSize = true;
+            this.labelInvoice.BackColor = System.Drawing.Color.Transparent;
+            this.labelInvoice.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold);
+            this.labelInvoice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelInvoice.Location = new System.Drawing.Point(35, 28);
+            this.labelInvoice.Name = "labelInvoice";
+            this.labelInvoice.Size = new System.Drawing.Size(167, 46);
+            this.labelInvoice.TabIndex = 17;
+            this.labelInvoice.Text = "INVOICE";
+            this.labelInvoice.Click += new System.EventHandler(this.label10_Click);
             // 
             // panelBeliTiket
             // 
             this.panelBeliTiket.BackColor = System.Drawing.Color.Transparent;
-            this.panelBeliTiket.Controls.Add(this.label3);
+            this.panelBeliTiket.Controls.Add(this.labelBeliTiket);
             this.panelBeliTiket.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelBeliTiket.Location = new System.Drawing.Point(3, 302);
             this.panelBeliTiket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -225,22 +227,23 @@
             this.panelBeliTiket.TabIndex = 21;
             this.panelBeliTiket.Click += new System.EventHandler(this.panelBeliTiket_Click);
             // 
-            // label3
+            // labelBeliTiket
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(35, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 46);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "BELI TIKET";
+            this.labelBeliTiket.AutoSize = true;
+            this.labelBeliTiket.BackColor = System.Drawing.Color.Transparent;
+            this.labelBeliTiket.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBeliTiket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelBeliTiket.Location = new System.Drawing.Point(35, 27);
+            this.labelBeliTiket.Name = "labelBeliTiket";
+            this.labelBeliTiket.Size = new System.Drawing.Size(204, 46);
+            this.labelBeliTiket.TabIndex = 20;
+            this.labelBeliTiket.Text = "BELI TIKET";
+            this.labelBeliTiket.Click += new System.EventHandler(this.label3_Click);
             // 
             // panelHistory
             // 
             this.panelHistory.BackColor = System.Drawing.Color.Transparent;
-            this.panelHistory.Controls.Add(this.label5);
+            this.panelHistory.Controls.Add(this.labelHistory);
             this.panelHistory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelHistory.Location = new System.Drawing.Point(1, 202);
             this.panelHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -249,22 +252,23 @@
             this.panelHistory.TabIndex = 19;
             this.panelHistory.Click += new System.EventHandler(this.panelHistory_Click);
             // 
-            // label5
+            // labelHistory
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(35, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 46);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "HISTORY";
+            this.labelHistory.AutoSize = true;
+            this.labelHistory.BackColor = System.Drawing.Color.Transparent;
+            this.labelHistory.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHistory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelHistory.Location = new System.Drawing.Point(35, 30);
+            this.labelHistory.Name = "labelHistory";
+            this.labelHistory.Size = new System.Drawing.Size(173, 46);
+            this.labelHistory.TabIndex = 20;
+            this.labelHistory.Text = "HISTORY";
+            this.labelHistory.Click += new System.EventHandler(this.label5_Click);
             // 
             // panelProfil
             // 
             this.panelProfil.BackColor = System.Drawing.Color.Transparent;
-            this.panelProfil.Controls.Add(this.label2);
+            this.panelProfil.Controls.Add(this.labelProfil);
             this.panelProfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelProfil.Location = new System.Drawing.Point(1, 1);
@@ -274,42 +278,43 @@
             this.panelProfil.TabIndex = 8;
             this.panelProfil.Click += new System.EventHandler(this.panelProfil_Click);
             // 
-            // label2
+            // labelProfil
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(35, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 38);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "PROFIL";
+            this.labelProfil.AutoSize = true;
+            this.labelProfil.BackColor = System.Drawing.Color.Transparent;
+            this.labelProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelProfil.Location = new System.Drawing.Point(35, 28);
+            this.labelProfil.Name = "labelProfil";
+            this.labelProfil.Size = new System.Drawing.Size(141, 38);
+            this.labelProfil.TabIndex = 17;
+            this.labelProfil.Text = "PROFIL";
             // 
             // panelJadwalFilm
             // 
             this.panelJadwalFilm.BackColor = System.Drawing.Color.Transparent;
-            this.panelJadwalFilm.Controls.Add(this.label4);
+            this.panelJadwalFilm.Controls.Add(this.labelJadwalFilm);
             this.panelJadwalFilm.Location = new System.Drawing.Point(0, 103);
             this.panelJadwalFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelJadwalFilm.Name = "panelJadwalFilm";
             this.panelJadwalFilm.Size = new System.Drawing.Size(523, 100);
-            this.panelJadwalFilm.TabIndex = 8;
+            this.panelJadwalFilm.TabIndex = 2;
             this.panelJadwalFilm.Click += new System.EventHandler(this.panelJadwalFilm_Click);
             this.panelJadwalFilm.MouseLeave += new System.EventHandler(this.panelJadwalFilm_MouseLeave);
             this.panelJadwalFilm.MouseHover += new System.EventHandler(this.panelJadwalFilm_MouseHover);
             // 
-            // label4
+            // labelJadwalFilm
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(35, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(264, 46);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "JADWAL FILM";
+            this.labelJadwalFilm.AutoSize = true;
+            this.labelJadwalFilm.BackColor = System.Drawing.Color.Transparent;
+            this.labelJadwalFilm.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJadwalFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelJadwalFilm.Location = new System.Drawing.Point(35, 30);
+            this.labelJadwalFilm.Name = "labelJadwalFilm";
+            this.labelJadwalFilm.Size = new System.Drawing.Size(264, 46);
+            this.labelJadwalFilm.TabIndex = 19;
+            this.labelJadwalFilm.Text = "JADWAL FILM";
+            this.labelJadwalFilm.Click += new System.EventHandler(this.label4_Click);
             // 
             // panelPegawaiKasir
             // 
@@ -322,7 +327,7 @@
             // panelLogout
             // 
             this.panelLogout.BackColor = System.Drawing.Color.Transparent;
-            this.panelLogout.Controls.Add(this.label26);
+            this.panelLogout.Controls.Add(this.labelLogOut);
             this.panelLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLogout.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold);
             this.panelLogout.Location = new System.Drawing.Point(-1, 981);
@@ -332,17 +337,18 @@
             this.panelLogout.TabIndex = 20;
             this.panelLogout.Click += new System.EventHandler(this.panelLogout_Click);
             // 
-            // label26
+            // labelLogOut
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(37, 14);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(123, 32);
-            this.label26.TabIndex = 17;
-            this.label26.Text = "LOG OUT";
+            this.labelLogOut.AutoSize = true;
+            this.labelLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogOut.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelLogOut.Location = new System.Drawing.Point(37, 14);
+            this.labelLogOut.Name = "labelLogOut";
+            this.labelLogOut.Size = new System.Drawing.Size(123, 32);
+            this.labelLogOut.TabIndex = 17;
+            this.labelLogOut.Text = "LOG OUT";
+            this.labelLogOut.Click += new System.EventHandler(this.label26_Click);
             // 
             // panelPegawaiAdmin
             // 
@@ -358,7 +364,7 @@
             // panelDataTransaksi
             // 
             this.panelDataTransaksi.BackColor = System.Drawing.Color.Transparent;
-            this.panelDataTransaksi.Controls.Add(this.label8);
+            this.panelDataTransaksi.Controls.Add(this.labelDataTransaksi);
             this.panelDataTransaksi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelDataTransaksi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelDataTransaksi.Location = new System.Drawing.Point(0, 202);
@@ -368,22 +374,23 @@
             this.panelDataTransaksi.TabIndex = 22;
             this.panelDataTransaksi.Click += new System.EventHandler(this.panelDataTransaksi_Click);
             // 
-            // label8
+            // labelDataTransaksi
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(35, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(314, 38);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "DATA TRANSAKSI";
+            this.labelDataTransaksi.AutoSize = true;
+            this.labelDataTransaksi.BackColor = System.Drawing.Color.Transparent;
+            this.labelDataTransaksi.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataTransaksi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelDataTransaksi.Location = new System.Drawing.Point(35, 28);
+            this.labelDataTransaksi.Name = "labelDataTransaksi";
+            this.labelDataTransaksi.Size = new System.Drawing.Size(295, 41);
+            this.labelDataTransaksi.TabIndex = 17;
+            this.labelDataTransaksi.Text = "DATA TRANSAKSI";
+            this.labelDataTransaksi.Click += new System.EventHandler(this.labelDataTransaksi_Click);
             // 
             // panelPenjadwalan
             // 
             this.panelPenjadwalan.BackColor = System.Drawing.Color.Transparent;
-            this.panelPenjadwalan.Controls.Add(this.label1);
+            this.panelPenjadwalan.Controls.Add(this.labelPenjadwalan);
             this.panelPenjadwalan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelPenjadwalan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelPenjadwalan.Location = new System.Drawing.Point(0, 102);
@@ -393,22 +400,23 @@
             this.panelPenjadwalan.TabIndex = 21;
             this.panelPenjadwalan.Click += new System.EventHandler(this.panelPenjadwalan_Click);
             // 
-            // label1
+            // labelPenjadwalan
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(35, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 38);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "PENJADWALAN";
+            this.labelPenjadwalan.AutoSize = true;
+            this.labelPenjadwalan.BackColor = System.Drawing.Color.Transparent;
+            this.labelPenjadwalan.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
+            this.labelPenjadwalan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPenjadwalan.Location = new System.Drawing.Point(35, 28);
+            this.labelPenjadwalan.Name = "labelPenjadwalan";
+            this.labelPenjadwalan.Size = new System.Drawing.Size(269, 41);
+            this.labelPenjadwalan.TabIndex = 17;
+            this.labelPenjadwalan.Text = "PENJADWALAN";
+            this.labelPenjadwalan.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelMaster
             // 
             this.panelMaster.BackColor = System.Drawing.Color.Transparent;
-            this.panelMaster.Controls.Add(this.label6);
+            this.panelMaster.Controls.Add(this.labelMaster);
             this.panelMaster.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMaster.Location = new System.Drawing.Point(0, 2);
@@ -418,17 +426,18 @@
             this.panelMaster.TabIndex = 20;
             this.panelMaster.Click += new System.EventHandler(this.panelMaster_Click);
             // 
-            // label6
+            // labelMaster
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(35, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 38);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "MASTER";
+            this.labelMaster.AutoSize = true;
+            this.labelMaster.BackColor = System.Drawing.Color.Transparent;
+            this.labelMaster.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
+            this.labelMaster.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelMaster.Location = new System.Drawing.Point(35, 28);
+            this.labelMaster.Name = "labelMaster";
+            this.labelMaster.Size = new System.Drawing.Size(150, 41);
+            this.labelMaster.TabIndex = 17;
+            this.labelMaster.Text = "MASTER";
+            this.labelMaster.Click += new System.EventHandler(this.labelMaster_Click);
             // 
             // panelHeader
             // 
@@ -461,7 +470,7 @@
             // panelMasterKonsumen
             // 
             this.panelMasterKonsumen.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterKonsumen.Controls.Add(this.label14);
+            this.panelMasterKonsumen.Controls.Add(this.labelKonsumen);
             this.panelMasterKonsumen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterKonsumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMasterKonsumen.Location = new System.Drawing.Point(0, 0);
@@ -471,22 +480,23 @@
             this.panelMasterKonsumen.TabIndex = 19;
             this.panelMasterKonsumen.Click += new System.EventHandler(this.panelMasterKonsumen_Click);
             // 
-            // label14
+            // labelKonsumen
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(19, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 32);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "KONSUMEN";
+            this.labelKonsumen.AutoSize = true;
+            this.labelKonsumen.BackColor = System.Drawing.Color.Transparent;
+            this.labelKonsumen.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKonsumen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelKonsumen.Location = new System.Drawing.Point(19, 11);
+            this.labelKonsumen.Name = "labelKonsumen";
+            this.labelKonsumen.Size = new System.Drawing.Size(157, 32);
+            this.labelKonsumen.TabIndex = 17;
+            this.labelKonsumen.Text = "KONSUMEN";
+            this.labelKonsumen.Click += new System.EventHandler(this.label14_Click);
             // 
             // panelJenisStudio
             // 
             this.panelJenisStudio.BackColor = System.Drawing.Color.Transparent;
-            this.panelJenisStudio.Controls.Add(this.label9);
+            this.panelJenisStudio.Controls.Add(this.labelJenisStudio);
             this.panelJenisStudio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelJenisStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelJenisStudio.Location = new System.Drawing.Point(1, 347);
@@ -496,22 +506,23 @@
             this.panelJenisStudio.TabIndex = 24;
             this.panelJenisStudio.Click += new System.EventHandler(this.panelJenisStudio_Click);
             // 
-            // label9
+            // labelJenisStudio
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(19, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 32);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "JENIS STUDIO";
+            this.labelJenisStudio.AutoSize = true;
+            this.labelJenisStudio.BackColor = System.Drawing.Color.Transparent;
+            this.labelJenisStudio.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJenisStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelJenisStudio.Location = new System.Drawing.Point(19, 11);
+            this.labelJenisStudio.Name = "labelJenisStudio";
+            this.labelJenisStudio.Size = new System.Drawing.Size(183, 32);
+            this.labelJenisStudio.TabIndex = 17;
+            this.labelJenisStudio.Text = "JENIS STUDIO";
+            this.labelJenisStudio.Click += new System.EventHandler(this.label9_Click);
             // 
             // panelStudio
             // 
             this.panelStudio.BackColor = System.Drawing.Color.Transparent;
-            this.panelStudio.Controls.Add(this.label7);
+            this.panelStudio.Controls.Add(this.labelStudio);
             this.panelStudio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelStudio.Location = new System.Drawing.Point(1, 100);
@@ -521,22 +532,23 @@
             this.panelStudio.TabIndex = 23;
             this.panelStudio.Click += new System.EventHandler(this.panelStudio_Click);
             // 
-            // label7
+            // labelStudio
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(19, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 32);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "STUDIO";
+            this.labelStudio.AutoSize = true;
+            this.labelStudio.BackColor = System.Drawing.Color.Transparent;
+            this.labelStudio.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelStudio.Location = new System.Drawing.Point(19, 11);
+            this.labelStudio.Name = "labelStudio";
+            this.labelStudio.Size = new System.Drawing.Size(107, 32);
+            this.labelStudio.TabIndex = 17;
+            this.labelStudio.Text = "STUDIO";
+            this.labelStudio.Click += new System.EventHandler(this.label7_Click);
             // 
             // panelMasterGenre
             // 
             this.panelMasterGenre.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterGenre.Controls.Add(this.label22);
+            this.panelMasterGenre.Controls.Add(this.labelGenre);
             this.panelMasterGenre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMasterGenre.Location = new System.Drawing.Point(1, 249);
@@ -546,22 +558,23 @@
             this.panelMasterGenre.TabIndex = 24;
             this.panelMasterGenre.Click += new System.EventHandler(this.panelMasterGenre_Click);
             // 
-            // label22
+            // labelGenre
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.Location = new System.Drawing.Point(19, 11);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 32);
-            this.label22.TabIndex = 17;
-            this.label22.Text = "GENRE";
+            this.labelGenre.AutoSize = true;
+            this.labelGenre.BackColor = System.Drawing.Color.Transparent;
+            this.labelGenre.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelGenre.Location = new System.Drawing.Point(19, 11);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(98, 32);
+            this.labelGenre.TabIndex = 17;
+            this.labelGenre.Text = "GENRE";
+            this.labelGenre.Click += new System.EventHandler(this.label22_Click);
             // 
             // panelMasterAktor
             // 
             this.panelMasterAktor.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterAktor.Controls.Add(this.label24);
+            this.panelMasterAktor.Controls.Add(this.labelAktor);
             this.panelMasterAktor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterAktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMasterAktor.Location = new System.Drawing.Point(1, 199);
@@ -571,22 +584,23 @@
             this.panelMasterAktor.TabIndex = 23;
             this.panelMasterAktor.Click += new System.EventHandler(this.panelMasterAktor_Click);
             // 
-            // label24
+            // labelAktor
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Location = new System.Drawing.Point(19, 11);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(98, 32);
-            this.label24.TabIndex = 17;
-            this.label24.Text = "AKTOR";
+            this.labelAktor.AutoSize = true;
+            this.labelAktor.BackColor = System.Drawing.Color.Transparent;
+            this.labelAktor.Font = new System.Drawing.Font("Montserrat", 13F, System.Drawing.FontStyle.Bold);
+            this.labelAktor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelAktor.Location = new System.Drawing.Point(19, 11);
+            this.labelAktor.Name = "labelAktor";
+            this.labelAktor.Size = new System.Drawing.Size(94, 30);
+            this.labelAktor.TabIndex = 17;
+            this.labelAktor.Text = "AKTOR";
+            this.labelAktor.Click += new System.EventHandler(this.label24_Click);
             // 
             // panelMasterKelompok
             // 
             this.panelMasterKelompok.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterKelompok.Controls.Add(this.label18);
+            this.panelMasterKelompok.Controls.Add(this.labelKelompok);
             this.panelMasterKelompok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterKelompok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMasterKelompok.Location = new System.Drawing.Point(1, 151);
@@ -596,22 +610,23 @@
             this.panelMasterKelompok.TabIndex = 22;
             this.panelMasterKelompok.Click += new System.EventHandler(this.panelMasterKelompok_Click);
             // 
-            // label18
+            // labelKelompok
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(19, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(154, 32);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "KELOMPOK";
+            this.labelKelompok.AutoSize = true;
+            this.labelKelompok.BackColor = System.Drawing.Color.Transparent;
+            this.labelKelompok.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKelompok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelKelompok.Location = new System.Drawing.Point(19, 11);
+            this.labelKelompok.Name = "labelKelompok";
+            this.labelKelompok.Size = new System.Drawing.Size(154, 32);
+            this.labelKelompok.TabIndex = 17;
+            this.labelKelompok.Text = "KELOMPOK";
+            this.labelKelompok.Click += new System.EventHandler(this.label18_Click);
             // 
             // panelMasterCinema
             // 
             this.panelMasterCinema.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterCinema.Controls.Add(this.label16);
+            this.panelMasterCinema.Controls.Add(this.labelCinema);
             this.panelMasterCinema.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMasterCinema.Location = new System.Drawing.Point(0, 297);
@@ -621,22 +636,23 @@
             this.panelMasterCinema.TabIndex = 20;
             this.panelMasterCinema.Click += new System.EventHandler(this.panelMasterCinema_Click);
             // 
-            // label16
+            // labelCinema
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(19, 11);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(113, 32);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "CINEMA";
+            this.labelCinema.AutoSize = true;
+            this.labelCinema.BackColor = System.Drawing.Color.Transparent;
+            this.labelCinema.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCinema.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelCinema.Location = new System.Drawing.Point(19, 11);
+            this.labelCinema.Name = "labelCinema";
+            this.labelCinema.Size = new System.Drawing.Size(113, 32);
+            this.labelCinema.TabIndex = 17;
+            this.labelCinema.Text = "CINEMA";
+            this.labelCinema.Click += new System.EventHandler(this.label16_Click);
             // 
             // panelMasterPegawai
             // 
             this.panelMasterPegawai.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterPegawai.Controls.Add(this.label20);
+            this.panelMasterPegawai.Controls.Add(this.labelPegawai);
             this.panelMasterPegawai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelMasterPegawai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelMasterPegawai.Location = new System.Drawing.Point(0, 50);
@@ -646,29 +662,30 @@
             this.panelMasterPegawai.TabIndex = 21;
             this.panelMasterPegawai.Click += new System.EventHandler(this.panelMasterPegawai_Click);
             // 
-            // label20
+            // labelPegawai
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(19, 11);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(133, 32);
-            this.label20.TabIndex = 17;
-            this.label20.Text = "PEGAWAI";
+            this.labelPegawai.AutoSize = true;
+            this.labelPegawai.BackColor = System.Drawing.Color.Transparent;
+            this.labelPegawai.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPegawai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPegawai.Location = new System.Drawing.Point(19, 11);
+            this.labelPegawai.Name = "labelPegawai";
+            this.labelPegawai.Size = new System.Drawing.Size(133, 32);
+            this.labelPegawai.TabIndex = 17;
+            this.labelPegawai.Text = "PEGAWAI";
+            this.labelPegawai.Click += new System.EventHandler(this.label20_Click);
             // 
-            // label25
+            // labelProfile
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(35, 28);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(116, 38);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "Profile";
+            this.labelProfile.AutoSize = true;
+            this.labelProfile.BackColor = System.Drawing.Color.Transparent;
+            this.labelProfile.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
+            this.labelProfile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelProfile.Location = new System.Drawing.Point(35, 28);
+            this.labelProfile.Name = "labelProfile";
+            this.labelProfile.Size = new System.Drawing.Size(116, 38);
+            this.labelProfile.TabIndex = 17;
+            this.labelProfile.Text = "Profile";
             // 
             // FormUtama
             // 
@@ -736,49 +753,49 @@
         #endregion
         private System.Windows.Forms.Panel panelPIlihan;
         private System.Windows.Forms.Panel panelJadwalFilm;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelJadwalFilm;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Panel panelListMaster;
         private System.Windows.Forms.Panel panelMasterKonsumen;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelKonsumen;
         private System.Windows.Forms.Panel panelMasterCinema;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labelCinema;
         private System.Windows.Forms.Panel panelMasterGenre;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.Panel panelMasterAktor;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label labelAktor;
         private System.Windows.Forms.Panel panelMasterKelompok;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label labelKelompok;
         private System.Windows.Forms.Panel panelMasterPegawai;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label labelPegawai;
         private System.Windows.Forms.Panel panelLogout;
         //private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label labelProfile;
+        private System.Windows.Forms.Label labelLogOut;
         private System.Windows.Forms.Panel panelPegawaiAdmin;
         private System.Windows.Forms.Panel panelMaster;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelMaster;
         private System.Windows.Forms.Panel panelPenjadwalan;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPenjadwalan;
         private System.Windows.Forms.Panel panelDataTransaksi;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelDataTransaksi;
         private System.Windows.Forms.Panel panelPegawaiKasir;
         private System.Windows.Forms.Panel panelInvoice;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelInvoice;
         private System.Windows.Forms.Panel panelPegawaiOperator;
         private System.Windows.Forms.Panel panelUpdateStatus;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelUpdate;
         private System.Windows.Forms.Panel panelKonsumen;
         private System.Windows.Forms.Panel panelHistory;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelHistory;
         private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelProfil;
         private System.Windows.Forms.Panel panelBeliTiket;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelBeliTiket;
         private System.Windows.Forms.Panel panelJenisStudio;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelJenisStudio;
         private System.Windows.Forms.Panel panelStudio;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelStudio;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.TextBox textBox1;
     }

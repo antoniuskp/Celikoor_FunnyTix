@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.pictureBoxPegawai = new System.Windows.Forms.PictureBox();
             this.pictureBoxKonsumen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPegawai)).BeginInit();
@@ -65,6 +66,7 @@
             this.Controls.Add(this.pictureBoxKonsumen);
             this.Controls.Add(this.pictureBoxPegawai);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.Text = "FunnyTix";
             this.Load += new System.EventHandler(this.FormMenu_Load);

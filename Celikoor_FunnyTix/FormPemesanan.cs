@@ -232,12 +232,12 @@ namespace Celikoor_FunnyTix
                         if (day == "Sunday" || day == "Saturday")
                         {
                             string price = jenisStudio.Rows[0][2].ToString();
-                            textBoxHarga.Text = price;
+                            textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", price.ToString());
                         }
                         else
                         {
                             string price = jenisStudio.Rows[0][1].ToString();
-                            textBoxHarga.Text = price;
+                            textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", price.ToString());
                         }
                         textBoxKapasitas.Text = jenisStudio.Rows[0][3].ToString();
                     }

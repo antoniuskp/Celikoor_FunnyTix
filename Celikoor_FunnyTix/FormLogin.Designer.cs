@@ -29,6 +29,7 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictBoxHide = new System.Windows.Forms.PictureBox();
@@ -123,6 +124,7 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPassword);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FunnyTix";

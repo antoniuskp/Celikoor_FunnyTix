@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
+
 namespace FunnyTix_LIB
 {
     public class Invoice
@@ -83,13 +85,12 @@ namespace FunnyTix_LIB
         }
 
 
-        public static List<Invoice> BacaData(string value = "")
+        public static List<Invoice> BacaData(string filter = "", string value = "")
         {
             string query = "SELECT * FROM invoices;";
             if (value != "")
             {
-                int kode = int.Parse(value);
-                query = $"SELECT * FROM invoices where id = {kode};";
+                query = $"SELECT * FROM invoices where {filter} like '%{value}%';";
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Invoice> listInvoice = new List<Invoice>();
@@ -116,16 +117,18 @@ namespace FunnyTix_LIB
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 
-        /*public static void DeleteData(Invoice invoice)
+        public static void UpdateInvoice(Invoice invoice)
         {
-            string cmd = $"UPDATE invoices set tanggal = '{invoice.Tanggal}', grand_total = '{invoice.GrandTotal}', diskon_nominal = '{invoice.DiskonNominal}', konsumen_id = '{invoice.Konsumen.ID}', kasir_id = '{invoice.Kasir.ID}', status = '{invoice.Status}';";
+            string cmd = $"UPDATE invoices set status = '{invoice.Status}' where invoices.id = '{invoice.Id}';";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
-        }*/
+        }
 
         public override string ToString()
         {
-            return Konsumen.ID.ToString();
+            return
+            Konsumen.ID.ToString();
+            Kasir.ID.ToString();
         }
         #endregion
 

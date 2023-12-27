@@ -33,10 +33,10 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -96,19 +96,10 @@ namespace Celikoor_FunnyTix
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // textBox
-            // 
-            this.textBox.Font = new System.Drawing.Font("MS Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(611, 30);
-            this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(667, 30);
-            this.textBox.TabIndex = 2;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            // 
             // comboBox
             // 
-            this.comboBox.Font = new System.Drawing.Font("MS Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.ForeColor = System.Drawing.Color.Maroon;
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Nama",
@@ -121,7 +112,7 @@ namespace Celikoor_FunnyTix
             this.comboBox.Location = new System.Drawing.Point(321, 30);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 31);
+            this.comboBox.Size = new System.Drawing.Size(269, 35);
             this.comboBox.TabIndex = 1;
             // 
             // label2
@@ -147,6 +138,17 @@ namespace Celikoor_FunnyTix
             this.label1.Text = "MASTER KONSUMEN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox
+            // 
+            this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.textBox.ForeColor = System.Drawing.Color.Maroon;
+            this.textBox.Location = new System.Drawing.Point(611, 30);
+            this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(667, 36);
+            this.textBox.TabIndex = 2;
+            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            // 
             // FormMasterKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -157,6 +159,7 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Maroon;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMasterKonsumen";
             this.Text = "FormMasterKonsumen";
@@ -174,9 +177,9 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox;
     }
 }

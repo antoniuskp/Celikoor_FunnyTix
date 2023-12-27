@@ -221,8 +221,9 @@ namespace Celikoor_FunnyTix
                 textBoxKapasitasUbah.Text = studio.Kapasitas.ToString();
                 comboBoxJenisStudioUbah.SelectedText = studio.JenisStudio.Nama;
                 comboBoxCinemaUbah.SelectedText = studio.Cinema.NamaCabang;
-                textBoxHargaWeekdayUbah.Text = studio.HargaWeekday.ToString();
-                textBoxHargaWeekendUbah.Text = studio.HargaWeekend.ToString();
+
+                textBoxHargaWeekdayUbah.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", studio.HargaWeekday.ToString());
+                textBoxHargaWeekendUbah.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", studio.HargaWeekend.ToString());
 
                 panelUbahStudio.Visible = true;
             }

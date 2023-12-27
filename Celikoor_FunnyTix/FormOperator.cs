@@ -30,6 +30,7 @@ namespace Celikoor_FunnyTix
             textBoxID.Text = $"{Auth.GetPegawai().ID}";
             dateTimePicker.BackColor = Color.NavajoWhite;
             dateTimePicker.CalendarForeColor= Color.DarkRed;
+            textBoxNoTiket.Focus();
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace Celikoor_FunnyTix
             {
                 int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
                 Tiket.UpdateKehadiran(noInv.ToString());
+                MessageBox.Show($"Data berhasil diupdate", "INFORMATION");
             }
             catch (Exception ex)
             {
@@ -48,33 +50,39 @@ namespace Celikoor_FunnyTix
 
         private void textBoxNoTiket_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxNoTiket.Text.Length == 6)
+            try
             {
-                string noKursi = textBoxNoTiket.Text.Substring(3, 3);
-                int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
-                MessageBox.Show(noInv.ToString());
-                Tiket ticket = Tiket.CariTiket(noInv, noKursi);
-
-                if (ticket != null)
+                if (textBoxNoTiket.Text.Length == 6)
                 {
-                    if (ticket.Status == true)
+                    string noKursi = textBoxNoTiket.Text.Substring(3, 3);
+                    int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
+                    Tiket ticket = Tiket.CariTiket(noInv, noKursi);
+
+                    if (ticket != null)
                     {
-                        textBoxStatus.Text = "Checked in";
-                        buttonUpdate.Enabled = false;
+                        if (ticket.Status == true)
+                        {
+                            textBoxStatus.Text = "Checked in";
+                            buttonUpdate.Enabled = false;
+                        }
+                        else
+                        {
+                            textBoxStatus.Text = "Not checked in";
+                            buttonUpdate.Enabled = true;
+                        }
+                        textBoxKursi.Text = ticket.NoKursi;
+                        textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", ticket.Harga.ToString());
+                        textBoxID.Text = ticket.Operators.ID.ToString();
+                        dateTimePicker.Value = Invoice.CariInvoice(noInv, noKursi).Tanggal;
+                        textBoxJudul.Text = Tiket.CariFilm(noInv, noKursi).Judul;
+                        textBoxTime.Text = JadwalFilm.DefineJam(noInv, noKursi).ToString();
+                        textBoxStudio.Text = Tiket.CariStudio(noInv, noKursi).Nama;
                     }
-                    else
-                    {
-                        textBoxStatus.Text = "Not checked in";
-                        buttonUpdate.Enabled = true;
-                    }
-                    textBoxKursi.Text = ticket.NoKursi;
-                    textBoxHarga.Text = ticket.Harga.ToString();
-                    textBoxID.Text = ticket.Operators.ID.ToString();
-                    dateTimePicker.Value = Invoice.CariInvoice(noInv, noKursi).Tanggal;
-                    textBoxJudul.Text = Tiket.CariFilm(noInv, noKursi).Judul;
-                    textBoxTime.Text = JadwalFilm.DefineJam(noInv, noKursi).ToString();
-                    textBoxStudio.Text = Tiket.CariStudio(noInv, noKursi).Nama;
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }
