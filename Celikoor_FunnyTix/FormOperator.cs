@@ -28,6 +28,8 @@ namespace Celikoor_FunnyTix
         {
             FormUtama frmUtama = (FormUtama)this.Owner;
             textBoxID.Text = $"{Auth.GetPegawai().ID}";
+            dateTimePicker.BackColor = Color.NavajoWhite;
+            dateTimePicker.CalendarForeColor= Color.DarkRed;
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -70,7 +72,7 @@ namespace Celikoor_FunnyTix
                     textBoxID.Text = ticket.Operators.ID.ToString();
                     dateTimePicker.Value = Invoice.CariInvoice(noInv, noKursi).Tanggal;
                     textBoxJudul.Text = Tiket.CariFilm(noInv, noKursi).Judul;
-                    textBoxTime.Text = Tiket.CariFilm(noInv, noKursi).Durasi.ToString();
+                    textBoxTime.Text = JadwalFilm.DefineJam(noInv, noKursi).ToString();
                     textBoxStudio.Text = Tiket.CariStudio(noInv, noKursi).Nama;
                 }
             }

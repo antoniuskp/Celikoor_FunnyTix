@@ -65,7 +65,7 @@ namespace Celikoor_FunnyTix
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
                 }
-                form.labelNama.Text = $"Welcome, {Auth.GetPegawai().Nama}";
+                form.textBox1.Text = Auth.GetPegawai().Nama;
             }
             catch (Exception x)
             {
@@ -98,7 +98,7 @@ namespace Celikoor_FunnyTix
 
                 form.panelListMaster.Visible = false;
 
-                form.labelNama.Text = $"Welcome, {Auth.GetKonsumen().Nama}";
+                form.textBox1.Text = $"Welcome, {Auth.GetKonsumen().Nama}";
             }
             catch (Exception x)
             {

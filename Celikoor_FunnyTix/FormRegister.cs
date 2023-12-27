@@ -28,36 +28,20 @@ namespace Celikoor_FunnyTix
 
         private void textBoxFirstName_Enter(object sender, EventArgs e)
         {
-            if(textBoxFirstName.Text == "First")
-            {
-                textBoxFirstName.ForeColor = Color.DarkRed;
-                textBoxFirstName.Clear();
-            }
+            
         }
         private void textBoxFirstName_Leave(object sender, EventArgs e)
         {
-            if(textBoxFirstName.Text=="")
-            {
-                textBoxFirstName.ForeColor = Color.DarkGray;
-                textBoxFirstName.Text = "First";
-            }
+            
         }
         private void textBoxLastName_Enter(object sender, EventArgs e)
         {
-            if (textBoxLastName.Text == "Last")
-            {
-                textBoxLastName.ForeColor = Color.DarkRed;
-                textBoxLastName.Clear();
-            }
+           
         }
 
         private void textBoxLastName_Leave(object sender, EventArgs e)
         {
-            if (textBoxLastName.Text == "")
-            {
-                textBoxLastName.ForeColor = Color.DarkGray;
-                textBoxLastName.Text = "Last";
-            }
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -69,8 +53,7 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                string firstName = textBoxFirstName.Text;
-                string lastName = textBoxLastName.Text;
+                string name = textBoxFirstName.Text;
                 string email = textBoxEmail.Text;
                 string noHP = textBoxNoHp.Text;
                 string gender;
@@ -86,7 +69,7 @@ namespace Celikoor_FunnyTix
                 string username = textBoxUsername.Text;
                 string password = textBoxPassword.Text;
 
-                Konsumen konsumen = new Konsumen(firstName + " " + lastName, email, noHP, gender, tglLahir, 0, username, password);
+                Konsumen konsumen = new Konsumen(name, email, noHP, gender, tglLahir, 0, username, password);
 
                 Konsumen.TambahData(konsumen);
                 this.Close();
@@ -136,7 +119,7 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                string nama = textBoxFirstName.Text + " " + textBoxLastName.Text;
+                string nama = textBoxFirstName.Text;
                 string email = textBoxEmail.Text;
                 string no_hp = textBoxNoHp.Text;
                 string gender = (radioButtonMale.Checked) ? "L" : "F";

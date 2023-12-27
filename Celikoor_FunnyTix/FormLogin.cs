@@ -147,9 +147,6 @@ namespace Celikoor_FunnyTix
         {
             FormRegister form = new FormRegister();
             form.Owner = this;
-            form.ControlBox = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.StartPosition = FormStartPosition.CenterScreen;
             form.ShowDialog();
 
         }

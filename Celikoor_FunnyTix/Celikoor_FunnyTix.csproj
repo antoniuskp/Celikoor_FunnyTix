@@ -351,5 +351,8 @@
   <ItemGroup>
     <None Include="Resources\operatorForm.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

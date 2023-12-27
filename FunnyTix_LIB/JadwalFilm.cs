@@ -54,24 +54,37 @@ namespace FunnyTix_LIB
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 
-        public static string DefineJam(string sesi)
+        public static string DefineJam(int invId, string noKursi)
         {
             string jam = "";
-            switch (sesi)
+
+            string query = "select jf.jam_pemutaran from jadwal_films as jf " +
+                           " inner join sesi_films as sf on sf.jadwal_film_id = jf.id " +
+                           " inner join tikets as t on t.jadwal_film_id = sf.jadwal_film_id" +
+                           $" where t.invoices_id = {invId} and t.nomor_kursi = '{noKursi}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            while (hasil.Read() == true)
             {
-                case "I":
-                    jam = "12.00 - 15.00 WIB";
-                    break;
-                case "II":
-                    jam = "15.30 - 18.30 WIB";
-                    break;
-                case "III":
-                    jam = "19.00 - 22.00 WIB";
-                    break;
-                case "IV":
-                    jam = "22.30 - 01.30 WIB";
-                    break;
+                string sesi = hasil.GetValue(0).ToString();
+                switch (sesi)
+                {
+                    case "I":
+                        jam = "12.00 - 15.00 WIB";
+                        break;
+                    case "II":
+                        jam = "15.30 - 18.30 WIB";
+                        break;
+                    case "III":
+                        jam = "19.00 - 22.00 WIB";
+                        break;
+                    case "IV":
+                        jam = "22.30 - 01.30 WIB";
+                        break;
+                }
             }
+            
             return jam;
         }
         public static List<JadwalFilm> BacaData(string filter = "", string value = "", string jam = "")

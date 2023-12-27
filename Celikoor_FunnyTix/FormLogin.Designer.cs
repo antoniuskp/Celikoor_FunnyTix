@@ -42,7 +42,7 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.Maroon;
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxPassword.Location = new System.Drawing.Point(104, 287);
             this.textBoxPassword.Name = "textBoxPassword";
@@ -76,7 +76,7 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.Maroon;
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxUsername.Location = new System.Drawing.Point(103, 187);
             this.textBoxUsername.Name = "textBoxUsername";
@@ -99,11 +99,11 @@ namespace Celikoor_FunnyTix
             // labelRegister
             // 
             this.labelRegister.BackColor = System.Drawing.Color.Maroon;
-            this.labelRegister.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelRegister.Location = new System.Drawing.Point(294, 455);
+            this.labelRegister.Location = new System.Drawing.Point(280, 454);
             this.labelRegister.Name = "labelRegister";
-            this.labelRegister.Size = new System.Drawing.Size(105, 20);
+            this.labelRegister.Size = new System.Drawing.Size(134, 20);
             this.labelRegister.TabIndex = 28;
             this.labelRegister.Text = "Register Here";
             this.labelRegister.Click += new System.EventHandler(this.labelRegister_Click);
