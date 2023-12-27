@@ -153,6 +153,16 @@ namespace Celikoor_FunnyTix.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap formIsiSaldo {
+            get {
+                object obj = ResourceManager.GetObject("formIsiSaldo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap formLogin {
             get {
                 object obj = ResourceManager.GetObject("formLogin", resourceCulture);
@@ -206,6 +216,16 @@ namespace Celikoor_FunnyTix.Properties {
         internal static System.Drawing.Bitmap formRegister {
             get {
                 object obj = ResourceManager.GetObject("formRegister", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formTopUp {
+            get {
+                object obj = ResourceManager.GetObject("formTopUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

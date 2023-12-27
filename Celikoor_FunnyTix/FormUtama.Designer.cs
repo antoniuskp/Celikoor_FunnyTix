@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
             this.panelPIlihan = new System.Windows.Forms.Panel();
+            this.panelIsiSaldo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panelPegawaiOperator = new System.Windows.Forms.Panel();
@@ -76,6 +78,7 @@
             this.labelPegawai = new System.Windows.Forms.Label();
             this.labelProfile = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
+            this.panelIsiSaldo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelPegawaiOperator.SuspendLayout();
             this.panelUpdateStatus.SuspendLayout();
@@ -104,6 +107,7 @@
             // panelPIlihan
             // 
             this.panelPIlihan.BackColor = System.Drawing.Color.Maroon;
+            this.panelPIlihan.Controls.Add(this.panelIsiSaldo);
             this.panelPIlihan.Controls.Add(this.textBox1);
             this.panelPIlihan.Controls.Add(this.pictureBoxProfile);
             this.panelPIlihan.Controls.Add(this.panelPegawaiOperator);
@@ -117,6 +121,31 @@
             this.panelPIlihan.Name = "panelPIlihan";
             this.panelPIlihan.Size = new System.Drawing.Size(523, 1034);
             this.panelPIlihan.TabIndex = 15;
+            // 
+            // panelIsiSaldo
+            // 
+            this.panelIsiSaldo.BackColor = System.Drawing.Color.Transparent;
+            this.panelIsiSaldo.Controls.Add(this.label1);
+            this.panelIsiSaldo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelIsiSaldo.Location = new System.Drawing.Point(2, 764);
+            this.panelIsiSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelIsiSaldo.Name = "panelIsiSaldo";
+            this.panelIsiSaldo.Size = new System.Drawing.Size(523, 100);
+            this.panelIsiSaldo.TabIndex = 22;
+            this.panelIsiSaldo.Click += new System.EventHandler(this.panelIsiSaldo_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(35, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 46);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "ISI SALDO";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox1
             // 
@@ -161,7 +190,6 @@
             this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
             this.panelUpdateStatus.TabIndex = 1;
             this.panelUpdateStatus.Click += new System.EventHandler(this.panelUpdateStatus_Click);
-            this.panelUpdateStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUpdateStatus_Paint);
             // 
             // labelUpdate
             // 
@@ -705,6 +733,8 @@
             this.Load += new System.EventHandler(this.FormUtama_Load);
             this.panelPIlihan.ResumeLayout(false);
             this.panelPIlihan.PerformLayout();
+            this.panelIsiSaldo.ResumeLayout(false);
+            this.panelIsiSaldo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panelPegawaiOperator.ResumeLayout(false);
             this.panelUpdateStatus.ResumeLayout(false);
@@ -798,5 +828,7 @@
         private System.Windows.Forms.Label labelStudio;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panelIsiSaldo;
+        private System.Windows.Forms.Label label1;
     }
 }

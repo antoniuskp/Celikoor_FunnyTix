@@ -458,9 +458,17 @@ namespace Celikoor_FunnyTix
         }
         #endregion
 
-        private void panelUpdateStatus_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void panelIsiSaldo_Click(object sender, EventArgs e)
+        {
+            var frm = new FormIsiSaldo();
+            frm.ShowDialog();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            var frm = new FormIsiSaldo();
+            frm.ShowDialog();
         }
     }
 }

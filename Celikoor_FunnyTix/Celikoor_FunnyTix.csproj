@@ -63,6 +63,12 @@
     <Compile Include="FormHistoryPembelian.Designer.cs">
       <DependentUpon>FormHistoryPembelian.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormIsiSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIsiSaldo.Designer.cs">
+      <DependentUpon>FormIsiSaldo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormJadwalFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHistoryPembelian.resx">
       <DependentUpon>FormHistoryPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIsiSaldo.resx">
+      <DependentUpon>FormIsiSaldo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormJadwalFilm.resx">
       <DependentUpon>FormJadwalFilm.cs</DependentUpon>
@@ -338,6 +347,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formTopUp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formIsiSaldo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

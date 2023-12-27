@@ -121,7 +121,7 @@ namespace FunnyTix_LIB
                 {
                     throw new Exception("Saldo anda tidak cukup!");
                 }
-
+                
                 double currSaldo = konsumen.Saldo - val;
                 UbahData("saldo", currSaldo.ToString(), konsumen);
             }
@@ -129,6 +129,12 @@ namespace FunnyTix_LIB
             {
                 throw ex;
             }
+        }
+
+        public static void TopUp(double val, Konsumen konsumen)
+        {
+            double currSaldo = konsumen.Saldo + val;
+            UbahData("saldo", currSaldo.ToString(), konsumen);
         }
 
         //TODO: Delete

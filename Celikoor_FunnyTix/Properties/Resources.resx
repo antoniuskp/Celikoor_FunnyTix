@@ -133,11 +133,17 @@
   <data name="visibleHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\visibleHide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="profile-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="formPegawai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\formPegawai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ai_FormMasterUtama-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ai_FormMasterUtama-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formTopUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formTopUp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="formRegister" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\formRegister.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,7 +175,7 @@
   <data name="ai_FormProfileKonsumen_FormProfileKonsumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ai_FormProfileKonsumen_FormProfileKonsumen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profile-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="formIsiSaldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formIsiSaldo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
