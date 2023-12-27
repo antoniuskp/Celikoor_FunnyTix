@@ -179,6 +179,11 @@ namespace FunnyTix_LIB
             return null; //return null dijalankan kalo tidak masuk ke if
 
         }
+
+        public override string ToString()
+        {
+            return this.Nama;
+        }
         #endregion
 
     }

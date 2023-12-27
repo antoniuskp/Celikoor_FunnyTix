@@ -117,7 +117,10 @@ namespace Celikoor_FunnyTix
 
         private void buttonExport_Click(object sender, EventArgs e)
         {
+            Laporan.CetakLaporan(comboBoxChoose.Text, comboBoxChoose.SelectedIndex, listLaporan);
 
+            MessageBox.Show("Berhasil");
+            
         }
     }
 }

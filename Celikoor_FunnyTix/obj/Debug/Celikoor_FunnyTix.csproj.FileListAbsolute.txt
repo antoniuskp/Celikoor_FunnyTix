@@ -398,11 +398,9 @@ C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyT
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
-C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPemesanan.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPenjadwalan.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
-C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormValidasiInvoice.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
@@ -512,3 +510,5 @@ C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormProfile.resources

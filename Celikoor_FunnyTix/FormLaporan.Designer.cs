@@ -54,7 +54,7 @@
             this.label.ForeColor = System.Drawing.Color.DarkRed;
             this.label.Location = new System.Drawing.Point(805, 65);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(431, 65);
+            this.label.Size = new System.Drawing.Size(449, 66);
             this.label.TabIndex = 1;
             this.label.Text = "       LAPORAN     ";
             // 
@@ -102,6 +102,7 @@
             this.buttonExport.TabIndex = 26;
             this.buttonExport.Text = "Export";
             this.buttonExport.UseVisualStyleBackColor = false;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
             // FormLaporan
             // 

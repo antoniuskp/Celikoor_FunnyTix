@@ -36,7 +36,7 @@ namespace Celikoor_FunnyTix
 
                 if (listInvoice.Count > 0)
                 {
-                    if (dataGridViewHasil.ColumnCount < 8)
+                    if (dataGridViewHasil.ColumnCount == 7)
                     {
                         DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
                         bcol.HeaderText = "Aksi";
@@ -111,7 +111,7 @@ namespace Celikoor_FunnyTix
             }
             else
             {
-                dataGridViewHasil.DataSource = null;
+                dataGridViewHasil.DataSource = listInvoices;
                 MessageBox.Show("Tidak ada data yang cocok.");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;

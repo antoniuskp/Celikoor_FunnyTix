@@ -9,6 +9,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+using System.IO;
+
 namespace FunnyTix_LIB
 {
     public class Laporan
@@ -58,26 +60,27 @@ namespace FunnyTix_LIB
 
         public static List<Laporan> laporanA()
         {
-            string query = $" select f.judul, count(i.id) as jumlah_ditonton, month(i.tanggal) as Bulan" +
-                             " from invoices as i inner join tikets as t on i.id = t.invoices_id " +
-                             " inner join sesi_films as sf on t.jadwal_film_id = sf.jadwal_film_id and t.studios_id = sf.studios_id and t.films_id = sf.films_id " +
-                             " inner join film_studio as fs on sf.studios_id = fs.studios_id and sf.films_id = fs.films_id " +
-                             " inner join films as f on fs.films_id = f.id " +
-                             " where month(i.tanggal) = '11' " +
-                             " group by f.judul " +
-                             " order by jumlah_ditonton desc " +
-                             " limit 3;";
-
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Laporan> listLaporan = new List<Laporan>();
-
-            while (hasil.Read() == true)
+            for (int bulan=1; bulan<=12; bulan++)
             {
-                Laporan l = new Laporan();
-                l.JudulFilm = hasil.GetValue(0).ToString();
-                l.JumlahTonton = int.Parse(hasil.GetValue(1).ToString());
-                l.Bulan = int.Parse(hasil.GetValue(2).ToString());
-                listLaporan.Add(l);
+                string query = $" select f.judul, count(i.id) as jumlah_ditonton, month(i.tanggal) as Bulan" +
+                             $" from invoices as i inner join tikets as t on i.id = t.invoices_id " +
+                             $" inner join sesi_films as sf on t.jadwal_film_id = sf.jadwal_film_id and t.studios_id = sf.studios_id and t.films_id = sf.films_id " +
+                             $" inner join film_studio as fs on sf.studios_id = fs.studios_id and sf.films_id = fs.films_id " +
+                             $" inner join films as f on fs.films_id = f.id " +
+                             $" where month(i.tanggal) = '{bulan}' " +
+                             $" group by f.judul " +
+                             $" order by jumlah_ditonton desc " +
+                             $" limit 1;";
+                MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+                while (hasil.Read() == true)
+                {
+                    Laporan l = new Laporan();
+                    l.JudulFilm = hasil.GetValue(0).ToString();
+                    l.JumlahTonton = int.Parse(hasil.GetValue(1).ToString());
+                    l.Bulan = int.Parse(hasil.GetValue(2).ToString());
+                    listLaporan.Add(l);
+                }
             }
             return listLaporan;
         }
@@ -193,6 +196,105 @@ namespace FunnyTix_LIB
                 listLaporan.Add(l);
             }
             return listLaporan;
+        }
+
+        public static void CetakLaporan(string namaLaporan, int index, List<Laporan> listLaporan)
+        {
+            string nama = "Laporan_" + namaLaporan.Substring(0,70);
+            StreamWriter NamaFile = new StreamWriter(nama);
+            if(namaLaporan.Length>74)
+            {
+                NamaFile.WriteLine(namaLaporan.Substring(0, 74));
+                if(namaLaporan.Length>148)
+                {
+                    NamaFile.WriteLine(namaLaporan.Substring(74, 74));
+                    NamaFile.WriteLine(namaLaporan.Substring(148));
+                }
+                else
+                {
+                    NamaFile.WriteLine(namaLaporan.Substring(74));
+                }
+
+            }
+            else
+            {
+                NamaFile.WriteLine(namaLaporan);
+            }
+            NamaFile.WriteLine();
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
+            
+            switch(index)
+            {
+                case 0:
+                    NamaFile.WriteLine("Judul Film                     Jumlah Tonton Bulan");
+                    for (int i = 0; i < listLaporan.Count; i++)
+                    {
+                        string judulFilm = listLaporan[i].JudulFilm.PadRight(30,' ');
+                        string jumlahTonton = listLaporan[i].JumlahTonton.ToString().PadLeft(10,' ');
+                        string bulan = listLaporan[i].Bulan.ToString().PadLeft(2,' ');
+                        NamaFile.WriteLine(judulFilm + " | " + jumlahTonton + " | " + bulan);
+                    }
+                    break;
+
+                case 1:
+                    NamaFile.WriteLine("Grand Total       Cabang");
+                    for (int i = 0; i < listLaporan.Count; i++)
+                    {
+                        string grandTotal = listLaporan[i].GrandTotal.ToString().PadRight(15, ' ');
+                        string cabang = listLaporan[i].Cabang;
+
+                        NamaFile.WriteLine(grandTotal + " | " + cabang);
+                    }
+                    break;
+
+                case 2:
+                    NamaFile.WriteLine("Judul Film");
+                    for (int i = 0; i < listLaporan.Count; i++)
+                    {
+                        string judulFilm = listLaporan[i].JudulFilm;
+                        NamaFile.WriteLine(judulFilm);
+                    }
+                    break;
+
+                case 3:
+                    NamaFile.WriteLine("Cabang                      Nama Studio           Bulan  Tingkat Utilitas");
+                    for (int i = 0; i < listLaporan.Count; i++)
+                    {
+                        string cabang = listLaporan[i].Cabang.PadRight(25, ' ');
+                        string namaStudio = listLaporan[i].NamaStudio.PadRight(20, ' ');
+                        string bulan = listLaporan[i].Bulan.ToString().PadRight(4, ' ');
+                        string tingkatUtilitas = listLaporan[i].TingkatUtilitas.ToString();
+
+                        NamaFile.WriteLine(cabang + " | " + namaStudio + " | " + bulan + " | " + tingkatUtilitas);
+                    }
+                    break;
+
+                case 4:
+                    NamaFile.WriteLine("Nama Konsumen            Frekuensi");
+                    for (int i = 0; i < listLaporan.Count; i++)
+                    {
+                        string namaKonsumen = listLaporan[i].NamaKonsumen.PadRight(25, ' ');
+                        string frekuensi = listLaporan[i].Frekuensi.ToString();
+
+                        NamaFile.WriteLine(namaKonsumen + " | " + frekuensi);
+                    }
+                    break;
+
+                case 5:
+                    NamaFile.WriteLine("");
+                    for (int i = 0; i < listLaporan.Count; i++)
+                    {
+
+                    }
+                    break;
+            }
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
+            NamaFile.WriteLine();
+            NamaFile.WriteLine("Dicetak tanggal " + DateTime.Now.ToString("dd-MM-yyyy HH:mm"));
+            NamaFile.Close();
+
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.KirimPrinter();
         }
     }
 
