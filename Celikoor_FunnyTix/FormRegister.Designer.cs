@@ -51,19 +51,19 @@ namespace Celikoor_FunnyTix
             // textBoxFirstName
             // 
             this.textBoxFirstName.BackColor = System.Drawing.Color.Maroon;
-            this.textBoxFirstName.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBoxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxFirstName.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxFirstName.Location = new System.Drawing.Point(136, 238);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(431, 34);
+            this.textBoxFirstName.Size = new System.Drawing.Size(431, 32);
             this.textBoxFirstName.TabIndex = 1;
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker.Location = new System.Drawing.Point(138, 475);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(431, 34);
+            this.dateTimePicker.Size = new System.Drawing.Size(431, 32);
             this.dateTimePicker.TabIndex = 3;
             // 
             // radioButtonMale
@@ -98,22 +98,22 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxEmail.BackColor = System.Drawing.Color.Maroon;
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxEmail.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxEmail.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxEmail.Location = new System.Drawing.Point(138, 361);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(431, 27);
+            this.textBoxEmail.Size = new System.Drawing.Size(431, 25);
             this.textBoxEmail.TabIndex = 2;
             // 
             // textBoxNoHp
             // 
             this.textBoxNoHp.BackColor = System.Drawing.Color.Maroon;
             this.textBoxNoHp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNoHp.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBoxNoHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxNoHp.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxNoHp.Location = new System.Drawing.Point(207, 674);
             this.textBoxNoHp.Name = "textBoxNoHp";
-            this.textBoxNoHp.Size = new System.Drawing.Size(362, 27);
+            this.textBoxNoHp.Size = new System.Drawing.Size(362, 25);
             this.textBoxNoHp.TabIndex = 6;
             // 
             // textBox1
@@ -121,11 +121,11 @@ namespace Celikoor_FunnyTix
             this.textBox1.BackColor = System.Drawing.Color.Maroon;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox1.Location = new System.Drawing.Point(132, 673);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 27);
+            this.textBox1.Size = new System.Drawing.Size(63, 25);
             this.textBox1.TabIndex = 26;
             this.textBox1.Text = "+62";
             // 
@@ -133,28 +133,28 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxConfirmPassw.BackColor = System.Drawing.Color.Maroon;
             this.textBoxConfirmPassw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxConfirmPassw.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBoxConfirmPassw.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxConfirmPassw.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxConfirmPassw.Location = new System.Drawing.Point(696, 492);
             this.textBoxConfirmPassw.Name = "textBoxConfirmPassw";
-            this.textBoxConfirmPassw.Size = new System.Drawing.Size(401, 27);
+            this.textBoxConfirmPassw.Size = new System.Drawing.Size(401, 25);
             this.textBoxConfirmPassw.TabIndex = 9;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.Maroon;
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxPassword.Location = new System.Drawing.Point(696, 373);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(401, 27);
+            this.textBoxPassword.Size = new System.Drawing.Size(401, 25);
             this.textBoxPassword.TabIndex = 8;
             // 
             // buttonRegister
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegister.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.Color.Maroon;
             this.buttonRegister.Location = new System.Drawing.Point(644, 596);
             this.buttonRegister.Name = "buttonRegister";
@@ -181,11 +181,11 @@ namespace Celikoor_FunnyTix
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Maroon;
-            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(694, 694);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 24);
+            this.label1.Size = new System.Drawing.Size(279, 20);
             this.label1.TabIndex = 31;
             this.label1.Text = "  Already have an acoount?       ";
             // 
@@ -193,11 +193,11 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.Maroon;
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat SemiBold", 13F, System.Drawing.FontStyle.Bold);
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxUsername.Location = new System.Drawing.Point(696, 244);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(442, 27);
+            this.textBoxUsername.Size = new System.Drawing.Size(442, 25);
             this.textBoxUsername.TabIndex = 7;
             // 
             // pictBoxHidePwd

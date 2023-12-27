@@ -62,7 +62,7 @@ namespace Celikoor_FunnyTix
             // buttonKeluar
             // 
             this.buttonKeluar.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonKeluar.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.Maroon;
             this.buttonKeluar.Location = new System.Drawing.Point(12, 954);
             this.buttonKeluar.Name = "buttonKeluar";
@@ -75,7 +75,7 @@ namespace Celikoor_FunnyTix
             // buttonTambah
             // 
             this.buttonTambah.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonTambah.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.Maroon;
             this.buttonTambah.Location = new System.Drawing.Point(1330, 954);
             this.buttonTambah.Name = "buttonTambah";
@@ -115,7 +115,7 @@ namespace Celikoor_FunnyTix
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.Maroon;
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonClear.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
             this.buttonClear.Location = new System.Drawing.Point(1296, 22);
             this.buttonClear.Name = "buttonClear";
@@ -127,17 +127,17 @@ namespace Celikoor_FunnyTix
             // 
             // textBox
             // 
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(611, 29);
             this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(667, 38);
+            this.textBox.Size = new System.Drawing.Size(667, 36);
             this.textBox.TabIndex = 2;
             this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // comboBox
             // 
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Nama",
@@ -148,24 +148,24 @@ namespace Celikoor_FunnyTix
             this.comboBox.Location = new System.Drawing.Point(321, 29);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 39);
+            this.comboBox.Size = new System.Drawing.Size(269, 40);
             this.comboBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(27, 28);
+            this.label2.Location = new System.Drawing.Point(27, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 32);
+            this.label2.Size = new System.Drawing.Size(291, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
@@ -208,6 +208,7 @@ namespace Celikoor_FunnyTix
             // 
             // comboBoxRoles
             // 
+            this.comboBoxRoles.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRoles.FormattingEnabled = true;
             this.comboBoxRoles.Items.AddRange(new object[] {
             "ADMIN",
@@ -215,52 +216,52 @@ namespace Celikoor_FunnyTix
             "OPERATOR"});
             this.comboBoxRoles.Location = new System.Drawing.Point(170, 216);
             this.comboBoxRoles.Name = "comboBoxRoles";
-            this.comboBoxRoles.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxRoles.Size = new System.Drawing.Size(121, 32);
             this.comboBoxRoles.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label4.Location = new System.Drawing.Point(82, 216);
+            this.label4.Location = new System.Drawing.Point(85, 218);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 14;
             this.label4.Text = "Roles : ";
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.Location = new System.Drawing.Point(170, 126);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(263, 30);
+            this.textBoxUsername.Size = new System.Drawing.Size(263, 28);
             this.textBoxUsername.TabIndex = 13;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(170, 82);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(263, 30);
+            this.textBoxEmail.Size = new System.Drawing.Size(263, 28);
             this.textBoxEmail.TabIndex = 12;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.Location = new System.Drawing.Point(170, 171);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(263, 30);
+            this.textBoxPassword.Size = new System.Drawing.Size(263, 28);
             this.textBoxPassword.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label8.Location = new System.Drawing.Point(46, 174);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -272,52 +273,52 @@ namespace Celikoor_FunnyTix
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label7.Location = new System.Drawing.Point(44, 129);
+            this.label7.Location = new System.Drawing.Point(40, 129);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 25);
+            this.label7.Size = new System.Drawing.Size(120, 25);
             this.label7.TabIndex = 7;
             this.label7.Text = "Username : ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label6.Location = new System.Drawing.Point(86, 85);
+            this.label6.Location = new System.Drawing.Point(82, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 25);
+            this.label6.Size = new System.Drawing.Size(78, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "Email : ";
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNama.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNama.Location = new System.Drawing.Point(170, 39);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(263, 30);
+            this.textBoxNama.Size = new System.Drawing.Size(263, 28);
             this.textBoxNama.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label3.Location = new System.Drawing.Point(82, 42);
+            this.label3.Location = new System.Drawing.Point(78, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 25);
+            this.label3.Size = new System.Drawing.Size(82, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nama : ";
             // 
             // buttonBatal
             // 
             this.buttonBatal.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBatal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBatal.ForeColor = System.Drawing.Color.Maroon;
             this.buttonBatal.Location = new System.Drawing.Point(34, 396);
             this.buttonBatal.Margin = new System.Windows.Forms.Padding(4);
@@ -331,7 +332,7 @@ namespace Celikoor_FunnyTix
             // buttonSimpan
             // 
             this.buttonSimpan.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonSimpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimpan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.Maroon;
             this.buttonSimpan.Location = new System.Drawing.Point(354, 396);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
@@ -345,7 +346,7 @@ namespace Celikoor_FunnyTix
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Maroon;
             this.label5.Location = new System.Drawing.Point(35, 45);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);

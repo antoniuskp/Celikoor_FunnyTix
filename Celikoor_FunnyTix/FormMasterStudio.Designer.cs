@@ -31,6 +31,11 @@ namespace Celikoor_FunnyTix
         {
             this.panelTambahStudio = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxHargaWeekend = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxHargaWeekday = new System.Windows.Forms.TextBox();
+            this.comboBoxCinema = new System.Windows.Forms.ComboBox();
+            this.comboBoxJenisStudio = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxKapasitas = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,13 +55,10 @@ namespace Celikoor_FunnyTix
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxJenisStudio = new System.Windows.Forms.ComboBox();
-            this.comboBoxCinema = new System.Windows.Forms.ComboBox();
-            this.textBoxHargaWeekday = new System.Windows.Forms.TextBox();
-            this.textBoxHargaWeekend = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panelUbahStudio = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelID = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.textBoxHargaWeekendUbah = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxHargaWeekdayUbah = new System.Windows.Forms.TextBox();
@@ -72,8 +74,6 @@ namespace Celikoor_FunnyTix
             this.buttonBatalUbah = new System.Windows.Forms.Button();
             this.buttonSimpanUbah = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.labelID = new System.Windows.Forms.Label();
             this.panelTambahStudio.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
@@ -115,6 +115,60 @@ namespace Celikoor_FunnyTix
             this.groupBox1.Size = new System.Drawing.Size(480, 302);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            // 
+            // textBoxHargaWeekend
+            // 
+            this.textBoxHargaWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHargaWeekend.Location = new System.Drawing.Point(196, 242);
+            this.textBoxHargaWeekend.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxHargaWeekend.Name = "textBoxHargaWeekend";
+            this.textBoxHargaWeekend.Size = new System.Drawing.Size(263, 30);
+            this.textBoxHargaWeekend.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label9.Location = new System.Drawing.Point(18, 245);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(171, 25);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Harga Weekend : ";
+            // 
+            // textBoxHargaWeekday
+            // 
+            this.textBoxHargaWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHargaWeekday.Location = new System.Drawing.Point(196, 198);
+            this.textBoxHargaWeekday.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxHargaWeekday.Name = "textBoxHargaWeekday";
+            this.textBoxHargaWeekday.Size = new System.Drawing.Size(263, 30);
+            this.textBoxHargaWeekday.TabIndex = 18;
+            // 
+            // comboBoxCinema
+            // 
+            this.comboBoxCinema.FormattingEnabled = true;
+            this.comboBoxCinema.Items.AddRange(new object[] {
+            "ADMIN",
+            "KASIR",
+            "OPERATOR"});
+            this.comboBoxCinema.Location = new System.Drawing.Point(199, 162);
+            this.comboBoxCinema.Name = "comboBoxCinema";
+            this.comboBoxCinema.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCinema.TabIndex = 17;
+            // 
+            // comboBoxJenisStudio
+            // 
+            this.comboBoxJenisStudio.FormattingEnabled = true;
+            this.comboBoxJenisStudio.Items.AddRange(new object[] {
+            "ADMIN",
+            "KASIR",
+            "OPERATOR"});
+            this.comboBoxJenisStudio.Location = new System.Drawing.Point(199, 119);
+            this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
+            this.comboBoxJenisStudio.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxJenisStudio.TabIndex = 16;
             // 
             // label4
             // 
@@ -238,7 +292,7 @@ namespace Celikoor_FunnyTix
             // buttonKeluar
             // 
             this.buttonKeluar.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonKeluar.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.Maroon;
             this.buttonKeluar.Location = new System.Drawing.Point(16, 961);
             this.buttonKeluar.Name = "buttonKeluar";
@@ -251,7 +305,7 @@ namespace Celikoor_FunnyTix
             // buttonTambah
             // 
             this.buttonTambah.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonTambah.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.Maroon;
             this.buttonTambah.Location = new System.Drawing.Point(1334, 961);
             this.buttonTambah.Name = "buttonTambah";
@@ -291,7 +345,7 @@ namespace Celikoor_FunnyTix
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.Maroon;
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonClear.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ForeColor = System.Drawing.Color.White;
             this.buttonClear.Location = new System.Drawing.Point(1296, 22);
             this.buttonClear.Name = "buttonClear";
@@ -303,17 +357,17 @@ namespace Celikoor_FunnyTix
             // 
             // textBox
             // 
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(611, 29);
             this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(667, 38);
+            this.textBox.Size = new System.Drawing.Size(667, 36);
             this.textBox.TabIndex = 2;
             this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // comboBox
             // 
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "Nama",
@@ -322,27 +376,27 @@ namespace Celikoor_FunnyTix
             "Cinema",
             "Harga Weekday",
             "Harga Weekend"});
-            this.comboBox.Location = new System.Drawing.Point(321, 29);
+            this.comboBox.Location = new System.Drawing.Point(321, 27);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 39);
+            this.comboBox.Size = new System.Drawing.Size(269, 40);
             this.comboBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(27, 28);
+            this.label2.Location = new System.Drawing.Point(27, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 32);
+            this.label2.Size = new System.Drawing.Size(291, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(16, 16);
             this.label1.Name = "label1";
@@ -350,60 +404,6 @@ namespace Celikoor_FunnyTix
             this.label1.TabIndex = 18;
             this.label1.Text = "MASTER STUDIO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxJenisStudio
-            // 
-            this.comboBoxJenisStudio.FormattingEnabled = true;
-            this.comboBoxJenisStudio.Items.AddRange(new object[] {
-            "ADMIN",
-            "KASIR",
-            "OPERATOR"});
-            this.comboBoxJenisStudio.Location = new System.Drawing.Point(199, 119);
-            this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
-            this.comboBoxJenisStudio.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxJenisStudio.TabIndex = 16;
-            // 
-            // comboBoxCinema
-            // 
-            this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Items.AddRange(new object[] {
-            "ADMIN",
-            "KASIR",
-            "OPERATOR"});
-            this.comboBoxCinema.Location = new System.Drawing.Point(199, 162);
-            this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxCinema.TabIndex = 17;
-            // 
-            // textBoxHargaWeekday
-            // 
-            this.textBoxHargaWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHargaWeekday.Location = new System.Drawing.Point(196, 198);
-            this.textBoxHargaWeekday.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxHargaWeekday.Name = "textBoxHargaWeekday";
-            this.textBoxHargaWeekday.Size = new System.Drawing.Size(263, 30);
-            this.textBoxHargaWeekday.TabIndex = 18;
-            // 
-            // textBoxHargaWeekend
-            // 
-            this.textBoxHargaWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHargaWeekend.Location = new System.Drawing.Point(196, 242);
-            this.textBoxHargaWeekend.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxHargaWeekend.Name = "textBoxHargaWeekend";
-            this.textBoxHargaWeekend.Size = new System.Drawing.Size(263, 30);
-            this.textBoxHargaWeekend.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label9.Location = new System.Drawing.Point(18, 245);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 25);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Harga Weekend : ";
             // 
             // panelUbahStudio
             // 
@@ -441,142 +441,168 @@ namespace Celikoor_FunnyTix
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelID.Location = new System.Drawing.Point(198, 18);
+            this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(95, 25);
+            this.labelID.TabIndex = 22;
+            this.labelID.Text = "ID Studio";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label17.Location = new System.Drawing.Point(143, 18);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 25);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "ID : ";
+            // 
             // textBoxHargaWeekendUbah
             // 
-            this.textBoxHargaWeekendUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHargaWeekendUbah.Location = new System.Drawing.Point(196, 260);
+            this.textBoxHargaWeekendUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHargaWeekendUbah.Location = new System.Drawing.Point(199, 261);
             this.textBoxHargaWeekendUbah.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHargaWeekendUbah.Name = "textBoxHargaWeekendUbah";
-            this.textBoxHargaWeekendUbah.Size = new System.Drawing.Size(263, 30);
+            this.textBoxHargaWeekendUbah.Size = new System.Drawing.Size(263, 28);
             this.textBoxHargaWeekendUbah.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label10.Location = new System.Drawing.Point(18, 263);
+            this.label10.Location = new System.Drawing.Point(14, 263);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(171, 25);
+            this.label10.Size = new System.Drawing.Size(174, 25);
             this.label10.TabIndex = 19;
             this.label10.Text = "Harga Weekend : ";
             // 
             // textBoxHargaWeekdayUbah
             // 
-            this.textBoxHargaWeekdayUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHargaWeekdayUbah.Location = new System.Drawing.Point(196, 216);
+            this.textBoxHargaWeekdayUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHargaWeekdayUbah.Location = new System.Drawing.Point(199, 219);
             this.textBoxHargaWeekdayUbah.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHargaWeekdayUbah.Name = "textBoxHargaWeekdayUbah";
-            this.textBoxHargaWeekdayUbah.Size = new System.Drawing.Size(263, 30);
+            this.textBoxHargaWeekdayUbah.Size = new System.Drawing.Size(263, 28);
             this.textBoxHargaWeekdayUbah.TabIndex = 18;
             // 
             // comboBoxCinemaUbah
             // 
+            this.comboBoxCinemaUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinemaUbah.FormattingEnabled = true;
             this.comboBoxCinemaUbah.Items.AddRange(new object[] {
             "ADMIN",
             "KASIR",
             "OPERATOR"});
-            this.comboBoxCinemaUbah.Location = new System.Drawing.Point(199, 180);
+            this.comboBoxCinemaUbah.Location = new System.Drawing.Point(199, 173);
             this.comboBoxCinemaUbah.Name = "comboBoxCinemaUbah";
-            this.comboBoxCinemaUbah.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCinemaUbah.Size = new System.Drawing.Size(121, 32);
             this.comboBoxCinemaUbah.TabIndex = 17;
             // 
             // comboBoxJenisStudioUbah
             // 
+            this.comboBoxJenisStudioUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJenisStudioUbah.FormattingEnabled = true;
             this.comboBoxJenisStudioUbah.Items.AddRange(new object[] {
             "ADMIN",
             "KASIR",
             "OPERATOR"});
-            this.comboBoxJenisStudioUbah.Location = new System.Drawing.Point(199, 137);
+            this.comboBoxJenisStudioUbah.Location = new System.Drawing.Point(199, 130);
             this.comboBoxJenisStudioUbah.Name = "comboBoxJenisStudioUbah";
-            this.comboBoxJenisStudioUbah.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxJenisStudioUbah.Size = new System.Drawing.Size(121, 32);
             this.comboBoxJenisStudioUbah.TabIndex = 16;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label11.Location = new System.Drawing.Point(18, 219);
+            this.label11.Location = new System.Drawing.Point(16, 219);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(170, 25);
+            this.label11.Size = new System.Drawing.Size(172, 25);
             this.label11.TabIndex = 14;
             this.label11.Text = "Harga Weekday : ";
             // 
             // textBoxKapasitasUbah
             // 
-            this.textBoxKapasitasUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKapasitasUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKapasitasUbah.Location = new System.Drawing.Point(199, 89);
             this.textBoxKapasitasUbah.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKapasitasUbah.Name = "textBoxKapasitasUbah";
-            this.textBoxKapasitasUbah.Size = new System.Drawing.Size(263, 30);
+            this.textBoxKapasitasUbah.Size = new System.Drawing.Size(263, 28);
             this.textBoxKapasitasUbah.TabIndex = 12;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label12.Location = new System.Drawing.Point(93, 176);
+            this.label12.Location = new System.Drawing.Point(91, 176);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 25);
+            this.label12.Size = new System.Drawing.Size(97, 25);
             this.label12.TabIndex = 8;
             this.label12.Text = "Cinema : ";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label13.Location = new System.Drawing.Point(53, 133);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 25);
+            this.label13.Size = new System.Drawing.Size(135, 25);
             this.label13.TabIndex = 7;
             this.label13.Text = "Jenis Studio : ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label14.Location = new System.Drawing.Point(76, 92);
+            this.label14.Location = new System.Drawing.Point(74, 92);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 25);
+            this.label14.Size = new System.Drawing.Size(114, 25);
             this.label14.TabIndex = 6;
             this.label14.Text = "Kapasitas : ";
             // 
             // textBoxNamaUbah
             // 
-            this.textBoxNamaUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaUbah.Location = new System.Drawing.Point(199, 46);
+            this.textBoxNamaUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNamaUbah.Location = new System.Drawing.Point(199, 48);
             this.textBoxNamaUbah.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNamaUbah.Name = "textBoxNamaUbah";
-            this.textBoxNamaUbah.Size = new System.Drawing.Size(263, 30);
+            this.textBoxNamaUbah.Size = new System.Drawing.Size(263, 28);
             this.textBoxNamaUbah.TabIndex = 4;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label15.Location = new System.Drawing.Point(111, 49);
+            this.label15.Location = new System.Drawing.Point(106, 49);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 25);
+            this.label15.Size = new System.Drawing.Size(82, 25);
             this.label15.TabIndex = 3;
             this.label15.Text = "Nama : ";
             // 
             // buttonBatalUbah
             // 
             this.buttonBatalUbah.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonBatalUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBatalUbah.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBatalUbah.ForeColor = System.Drawing.Color.Maroon;
             this.buttonBatalUbah.Location = new System.Drawing.Point(34, 396);
             this.buttonBatalUbah.Margin = new System.Windows.Forms.Padding(4);
@@ -590,7 +616,7 @@ namespace Celikoor_FunnyTix
             // buttonSimpanUbah
             // 
             this.buttonSimpanUbah.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonSimpanUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimpanUbah.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpanUbah.ForeColor = System.Drawing.Color.Maroon;
             this.buttonSimpanUbah.Location = new System.Drawing.Point(354, 396);
             this.buttonSimpanUbah.Margin = new System.Windows.Forms.Padding(4);
@@ -604,7 +630,7 @@ namespace Celikoor_FunnyTix
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Maroon;
             this.label16.Location = new System.Drawing.Point(35, 23);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -613,30 +639,6 @@ namespace Celikoor_FunnyTix
             this.label16.TabIndex = 19;
             this.label16.Text = "U B A H  S T U D I O";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label17.Location = new System.Drawing.Point(143, 18);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(47, 25);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "ID : ";
-            // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.labelID.Location = new System.Drawing.Point(198, 18);
-            this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(92, 25);
-            this.labelID.TabIndex = 22;
-            this.labelID.Text = "ID Studio";
             // 
             // FormMasterStudio
             // 

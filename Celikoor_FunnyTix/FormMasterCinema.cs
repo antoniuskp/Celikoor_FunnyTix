@@ -21,7 +21,7 @@ namespace Celikoor_FunnyTix
 
         private void FormMasterCinema_Load(object sender, EventArgs e)
         {
-            FormPegawai frm =(FormPegawai)this.Owner;
+            FormUtama frm =(FormUtama)this.Owner;
             comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
             listCabang = Cinema.BacaData();

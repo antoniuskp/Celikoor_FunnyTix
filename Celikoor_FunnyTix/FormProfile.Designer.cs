@@ -30,27 +30,27 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxNama = new System.Windows.Forms.TextBox();
             this.labelEditNama = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelEditEmail = new System.Windows.Forms.Label();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNama = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxNoHp = new System.Windows.Forms.TextBox();
-            this.labelEditEmail = new System.Windows.Forms.Label();
             this.labelEditNoHp = new System.Windows.Forms.Label();
+            this.textBoxNoHp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxGender = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.labelEditTglLahir = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelEditTglLahir = new System.Windows.Forms.Label();
             this.labelEditUsername = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -73,7 +73,7 @@
             this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(18, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 41);
+            this.label1.Size = new System.Drawing.Size(223, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Profile Name";
             // 
@@ -89,14 +89,23 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // textBoxNama
+            // 
+            this.textBoxNama.Enabled = false;
+            this.textBoxNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNama.Location = new System.Drawing.Point(306, 18);
+            this.textBoxNama.Name = "textBoxNama";
+            this.textBoxNama.Size = new System.Drawing.Size(415, 41);
+            this.textBoxNama.TabIndex = 3;
+            // 
             // labelEditNama
             // 
             this.labelEditNama.AutoSize = true;
-            this.labelEditNama.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEditNama.ForeColor = System.Drawing.Color.Maroon;
             this.labelEditNama.Location = new System.Drawing.Point(735, 21);
             this.labelEditNama.Name = "labelEditNama";
-            this.labelEditNama.Size = new System.Drawing.Size(48, 24);
+            this.labelEditNama.Size = new System.Drawing.Size(40, 20);
             this.labelEditNama.TabIndex = 2;
             this.labelEditNama.Text = "edit";
             // 
@@ -111,6 +120,26 @@
             this.groupBox2.Size = new System.Drawing.Size(803, 75);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // labelEditEmail
+            // 
+            this.labelEditEmail.AutoSize = true;
+            this.labelEditEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditEmail.ForeColor = System.Drawing.Color.Maroon;
+            this.labelEditEmail.Location = new System.Drawing.Point(735, 21);
+            this.labelEditEmail.Name = "labelEditEmail";
+            this.labelEditEmail.Size = new System.Drawing.Size(40, 20);
+            this.labelEditEmail.TabIndex = 4;
+            this.labelEditEmail.Text = "edit";
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Enabled = false;
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(306, 18);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(415, 41);
+            this.textBoxEmail.TabIndex = 4;
             // 
             // label4
             // 
@@ -135,6 +164,26 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
+            // labelEditNoHp
+            // 
+            this.labelEditNoHp.AutoSize = true;
+            this.labelEditNoHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditNoHp.ForeColor = System.Drawing.Color.Maroon;
+            this.labelEditNoHp.Location = new System.Drawing.Point(735, 24);
+            this.labelEditNoHp.Name = "labelEditNoHp";
+            this.labelEditNoHp.Size = new System.Drawing.Size(40, 20);
+            this.labelEditNoHp.TabIndex = 5;
+            this.labelEditNoHp.Text = "edit";
+            // 
+            // textBoxNoHp
+            // 
+            this.textBoxNoHp.Enabled = false;
+            this.textBoxNoHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNoHp.Location = new System.Drawing.Point(306, 17);
+            this.textBoxNoHp.Name = "textBoxNoHp";
+            this.textBoxNoHp.Size = new System.Drawing.Size(415, 41);
+            this.textBoxNoHp.TabIndex = 5;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -145,55 +194,6 @@
             this.label3.Size = new System.Drawing.Size(258, 41);
             this.label3.TabIndex = 0;
             this.label3.Text = "Phone Number";
-            // 
-            // textBoxNama
-            // 
-            this.textBoxNama.Enabled = false;
-            this.textBoxNama.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNama.Location = new System.Drawing.Point(306, 18);
-            this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(415, 44);
-            this.textBoxNama.TabIndex = 3;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Enabled = false;
-            this.textBoxEmail.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(306, 18);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(415, 44);
-            this.textBoxEmail.TabIndex = 4;
-            // 
-            // textBoxNoHp
-            // 
-            this.textBoxNoHp.Enabled = false;
-            this.textBoxNoHp.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNoHp.Location = new System.Drawing.Point(306, 17);
-            this.textBoxNoHp.Name = "textBoxNoHp";
-            this.textBoxNoHp.Size = new System.Drawing.Size(415, 44);
-            this.textBoxNoHp.TabIndex = 5;
-            // 
-            // labelEditEmail
-            // 
-            this.labelEditEmail.AutoSize = true;
-            this.labelEditEmail.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditEmail.ForeColor = System.Drawing.Color.Maroon;
-            this.labelEditEmail.Location = new System.Drawing.Point(735, 21);
-            this.labelEditEmail.Name = "labelEditEmail";
-            this.labelEditEmail.Size = new System.Drawing.Size(48, 24);
-            this.labelEditEmail.TabIndex = 4;
-            this.labelEditEmail.Text = "edit";
-            // 
-            // labelEditNoHp
-            // 
-            this.labelEditNoHp.AutoSize = true;
-            this.labelEditNoHp.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEditNoHp.ForeColor = System.Drawing.Color.Maroon;
-            this.labelEditNoHp.Location = new System.Drawing.Point(735, 24);
-            this.labelEditNoHp.Name = "labelEditNoHp";
-            this.labelEditNoHp.Size = new System.Drawing.Size(48, 24);
-            this.labelEditNoHp.TabIndex = 5;
-            this.labelEditNoHp.Text = "edit";
             // 
             // groupBox5
             // 
@@ -209,10 +209,10 @@
             // textBoxGender
             // 
             this.textBoxGender.Enabled = false;
-            this.textBoxGender.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGender.Location = new System.Drawing.Point(306, 17);
             this.textBoxGender.Name = "textBoxGender";
-            this.textBoxGender.Size = new System.Drawing.Size(415, 44);
+            this.textBoxGender.Size = new System.Drawing.Size(415, 41);
             this.textBoxGender.TabIndex = 7;
             // 
             // label6
@@ -249,33 +249,33 @@
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(306, 17);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(415, 34);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
             // labelEditTglLahir
             // 
             this.labelEditTglLahir.AutoSize = true;
-            this.labelEditTglLahir.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditTglLahir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEditTglLahir.ForeColor = System.Drawing.Color.Maroon;
             this.labelEditTglLahir.Location = new System.Drawing.Point(735, 24);
             this.labelEditTglLahir.Name = "labelEditTglLahir";
-            this.labelEditTglLahir.Size = new System.Drawing.Size(48, 24);
+            this.labelEditTglLahir.Size = new System.Drawing.Size(40, 20);
             this.labelEditTglLahir.TabIndex = 7;
             this.labelEditTglLahir.Text = "edit";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(306, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(415, 36);
-            this.dateTimePicker1.TabIndex = 8;
             // 
             // labelEditUsername
             // 
             this.labelEditUsername.AutoSize = true;
-            this.labelEditUsername.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEditUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEditUsername.ForeColor = System.Drawing.Color.Maroon;
             this.labelEditUsername.Location = new System.Drawing.Point(735, 24);
             this.labelEditUsername.Name = "labelEditUsername";
-            this.labelEditUsername.Size = new System.Drawing.Size(48, 24);
+            this.labelEditUsername.Size = new System.Drawing.Size(40, 20);
             this.labelEditUsername.TabIndex = 7;
             this.labelEditUsername.Text = "edit";
             // 
@@ -291,6 +291,15 @@
             this.groupBox7.TabIndex = 9;
             this.groupBox7.TabStop = false;
             // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Enabled = false;
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(306, 16);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(415, 41);
+            this.textBoxUsername.TabIndex = 8;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -301,15 +310,6 @@
             this.label9.Size = new System.Drawing.Size(180, 41);
             this.label9.TabIndex = 0;
             this.label9.Text = "Username";
-            // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Enabled = false;
-            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(306, 16);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(415, 44);
-            this.textBoxUsername.TabIndex = 8;
             // 
             // label7
             // 
@@ -337,20 +337,20 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(306, 16);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(415, 44);
+            this.textBox1.Size = new System.Drawing.Size(415, 41);
             this.textBox1.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Maroon;
             this.label8.Location = new System.Drawing.Point(735, 24);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 24);
+            this.label8.Size = new System.Drawing.Size(40, 20);
             this.label8.TabIndex = 7;
             this.label8.Text = "edit";
             // 
@@ -358,11 +358,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat Alternates", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Moccasin;
             this.label5.Location = new System.Drawing.Point(789, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(457, 110);
+            this.label5.Size = new System.Drawing.Size(450, 111);
             this.label5.TabIndex = 11;
             this.label5.Text = "FunnyTix.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -371,11 +371,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Moccasin;
             this.label10.Location = new System.Drawing.Point(930, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(178, 27);
+            this.label10.Size = new System.Drawing.Size(168, 27);
             this.label10.TabIndex = 12;
             this.label10.Text = "Halaman Profil";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;

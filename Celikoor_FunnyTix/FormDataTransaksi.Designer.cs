@@ -105,24 +105,24 @@
             // 
             // textBox
             // 
-            this.textBox.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(611, 29);
             this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(667, 40);
+            this.textBox.Size = new System.Drawing.Size(667, 36);
             this.textBox.TabIndex = 2;
             // 
             // comboBox
             // 
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "KodeKategori",
             "Nama"});
-            this.comboBox.Location = new System.Drawing.Point(321, 29);
+            this.comboBox.Location = new System.Drawing.Point(321, 26);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 39);
+            this.comboBox.Size = new System.Drawing.Size(269, 40);
             this.comboBox.TabIndex = 1;
             // 
             // label2
@@ -130,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(27, 28);
+            this.label2.Location = new System.Drawing.Point(27, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(291, 39);
             this.label2.TabIndex = 0;

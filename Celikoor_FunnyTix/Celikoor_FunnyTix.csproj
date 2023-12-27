@@ -147,12 +147,6 @@
     <Compile Include="FormOperator.Designer.cs">
       <DependentUpon>FormOperator.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPegawai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPegawai.Designer.cs">
-      <DependentUpon>FormPegawai.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormPemesanan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,12 +170,6 @@
     </Compile>
     <Compile Include="FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormRolePegawai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRolePegawai.Designer.cs">
-      <DependentUpon>FormRolePegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
@@ -211,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterStudio.resx">
       <DependentUpon>FormMasterStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfile.resx">
+      <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateInvoice.resx">
       <DependentUpon>FormUpdateInvoice.cs</DependentUpon>
@@ -245,9 +236,6 @@
     <EmbeddedResource Include="FormOperator.resx">
       <DependentUpon>FormOperator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPegawai.resx">
-      <DependentUpon>FormPegawai.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPemesanan.resx">
       <DependentUpon>FormPemesanan.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,9 +244,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRolePegawai.resx">
-      <DependentUpon>FormRolePegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

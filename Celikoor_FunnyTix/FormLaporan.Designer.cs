@@ -50,17 +50,17 @@
             // 
             this.label.AutoSize = true;
             this.label.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label.Font = new System.Drawing.Font("Montserrat Alternates ExtraBold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Font = new System.Drawing.Font("Montserrat", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.DarkRed;
             this.label.Location = new System.Drawing.Point(805, 65);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(446, 65);
+            this.label.Size = new System.Drawing.Size(431, 65);
             this.label.TabIndex = 1;
             this.label.Text = "       LAPORAN     ";
             // 
             // comboBoxChoose
             // 
-            this.comboBoxChoose.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxChoose.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChoose.ForeColor = System.Drawing.Color.DarkRed;
             this.comboBoxChoose.FormattingEnabled = true;
             this.comboBoxChoose.Items.AddRange(new object[] {
@@ -75,7 +75,7 @@
                 "ihat dari frekuensi menonton film komedinya)"});
             this.comboBoxChoose.Location = new System.Drawing.Point(361, 221);
             this.comboBoxChoose.Name = "comboBoxChoose";
-            this.comboBoxChoose.Size = new System.Drawing.Size(1549, 35);
+            this.comboBoxChoose.Size = new System.Drawing.Size(1549, 40);
             this.comboBoxChoose.TabIndex = 2;
             this.comboBoxChoose.SelectedIndexChanged += new System.EventHandler(this.comboBoxChoose_SelectedIndexChanged);
             // 
@@ -83,24 +83,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(76, 217);
+            this.label1.Location = new System.Drawing.Point(76, 221);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 39);
+            this.label1.Size = new System.Drawing.Size(265, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "  Jenis Laporan   :";
             // 
             // buttonExport
             // 
-            this.buttonExport.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExport.Location = new System.Drawing.Point(1670, 901);
+            this.buttonExport.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonExport.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonExport.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonExport.Location = new System.Drawing.Point(1680, 914);
             this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(172, 47);
-            this.buttonExport.TabIndex = 4;
+            this.buttonExport.Size = new System.Drawing.Size(170, 51);
+            this.buttonExport.TabIndex = 26;
             this.buttonExport.Text = "Export";
-            this.buttonExport.UseVisualStyleBackColor = true;
-            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            this.buttonExport.UseVisualStyleBackColor = false;
             // 
             // FormLaporan
             // 

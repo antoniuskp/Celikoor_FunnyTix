@@ -42,11 +42,11 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.Maroon;
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassword.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxPassword.Location = new System.Drawing.Point(104, 287);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(268, 25);
+            this.textBoxPassword.Size = new System.Drawing.Size(268, 23);
             this.textBoxPassword.TabIndex = 2;
             // 
             // label1
@@ -76,17 +76,17 @@ namespace Celikoor_FunnyTix
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.Maroon;
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxUsername.Location = new System.Drawing.Point(103, 187);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(299, 25);
+            this.textBoxUsername.Size = new System.Drawing.Size(299, 23);
             this.textBoxUsername.TabIndex = 1;
             // 
             // buttonLogin
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.NavajoWhite;
-            this.buttonLogin.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Maroon;
             this.buttonLogin.Location = new System.Drawing.Point(62, 380);
             this.buttonLogin.Name = "buttonLogin";

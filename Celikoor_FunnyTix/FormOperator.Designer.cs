@@ -43,7 +43,7 @@
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.Maroon;
-            this.buttonUpdate.Font = new System.Drawing.Font("Montserrat SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.NavajoWhite;
             this.buttonUpdate.Location = new System.Drawing.Point(799, 671);
             this.buttonUpdate.Name = "buttonUpdate";
@@ -68,11 +68,11 @@
             this.textBoxJudul.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxJudul.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxJudul.Enabled = false;
-            this.textBoxJudul.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxJudul.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxJudul.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxJudul.Location = new System.Drawing.Point(204, 521);
             this.textBoxJudul.Name = "textBoxJudul";
-            this.textBoxJudul.Size = new System.Drawing.Size(529, 41);
+            this.textBoxJudul.Size = new System.Drawing.Size(529, 38);
             this.textBoxJudul.TabIndex = 10;
             // 
             // textBoxKursi
@@ -80,11 +80,11 @@
             this.textBoxKursi.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxKursi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxKursi.Enabled = false;
-            this.textBoxKursi.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKursi.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKursi.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxKursi.Location = new System.Drawing.Point(809, 529);
             this.textBoxKursi.Name = "textBoxKursi";
-            this.textBoxKursi.Size = new System.Drawing.Size(180, 41);
+            this.textBoxKursi.Size = new System.Drawing.Size(180, 38);
             this.textBoxKursi.TabIndex = 11;
             // 
             // textBoxStudio
@@ -92,11 +92,11 @@
             this.textBoxStudio.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxStudio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStudio.Enabled = false;
-            this.textBoxStudio.Font = new System.Drawing.Font("Montserrat SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxStudio.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxStudio.Location = new System.Drawing.Point(1091, 530);
             this.textBoxStudio.Name = "textBoxStudio";
-            this.textBoxStudio.Size = new System.Drawing.Size(212, 33);
+            this.textBoxStudio.Size = new System.Drawing.Size(212, 31);
             this.textBoxStudio.TabIndex = 12;
             // 
             // textBoxTime
@@ -104,11 +104,11 @@
             this.textBoxTime.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTime.Enabled = false;
-            this.textBoxTime.Font = new System.Drawing.Font("Montserrat SemiBold", 16.2F, System.Drawing.FontStyle.Bold);
+            this.textBoxTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.textBoxTime.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxTime.Location = new System.Drawing.Point(213, 704);
             this.textBoxTime.Name = "textBoxTime";
-            this.textBoxTime.Size = new System.Drawing.Size(199, 33);
+            this.textBoxTime.Size = new System.Drawing.Size(199, 31);
             this.textBoxTime.TabIndex = 13;
             // 
             // textBoxHarga
@@ -116,11 +116,11 @@
             this.textBoxHarga.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxHarga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxHarga.Enabled = false;
-            this.textBoxHarga.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHarga.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxHarga.Location = new System.Drawing.Point(495, 704);
             this.textBoxHarga.Name = "textBoxHarga";
-            this.textBoxHarga.Size = new System.Drawing.Size(225, 41);
+            this.textBoxHarga.Size = new System.Drawing.Size(225, 38);
             this.textBoxHarga.TabIndex = 15;
             // 
             // textBoxStatus
@@ -128,11 +128,11 @@
             this.textBoxStatus.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStatus.Enabled = false;
-            this.textBoxStatus.Font = new System.Drawing.Font("Montserrat SemiBold", 16.2F, System.Drawing.FontStyle.Bold);
+            this.textBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             this.textBoxStatus.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxStatus.Location = new System.Drawing.Point(1137, 345);
             this.textBoxStatus.Name = "textBoxStatus";
-            this.textBoxStatus.Size = new System.Drawing.Size(225, 33);
+            this.textBoxStatus.Size = new System.Drawing.Size(225, 31);
             this.textBoxStatus.TabIndex = 16;
             // 
             // textBoxID
@@ -140,22 +140,22 @@
             this.textBoxID.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxID.Enabled = false;
-            this.textBoxID.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxID.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxID.Location = new System.Drawing.Point(390, 183);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(140, 41);
+            this.textBoxID.Size = new System.Drawing.Size(140, 38);
             this.textBoxID.TabIndex = 17;
             // 
             // textBoxNoTiket
             // 
             this.textBoxNoTiket.BackColor = System.Drawing.Color.NavajoWhite;
             this.textBoxNoTiket.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNoTiket.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNoTiket.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNoTiket.ForeColor = System.Drawing.Color.Maroon;
             this.textBoxNoTiket.Location = new System.Drawing.Point(213, 343);
             this.textBoxNoTiket.Name = "textBoxNoTiket";
-            this.textBoxNoTiket.Size = new System.Drawing.Size(288, 41);
+            this.textBoxNoTiket.Size = new System.Drawing.Size(288, 38);
             this.textBoxNoTiket.TabIndex = 18;
             this.textBoxNoTiket.TextChanged += new System.EventHandler(this.textBoxNoTiket_TextChanged);
             this.textBoxNoTiket.MouseLeave += new System.EventHandler(this.textBoxNoTiket_MouseLeave);
