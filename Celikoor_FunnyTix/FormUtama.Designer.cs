@@ -88,6 +88,7 @@
             this.panelHistory.SuspendLayout();
             this.panelProfil.SuspendLayout();
             this.panelJadwalFilm.SuspendLayout();
+            this.panelPegawaiKasir.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelPegawaiAdmin.SuspendLayout();
             this.panelDataTransaksi.SuspendLayout();
@@ -107,7 +108,6 @@
             // panelPIlihan
             // 
             this.panelPIlihan.BackColor = System.Drawing.Color.Maroon;
-            this.panelPIlihan.Controls.Add(this.panelIsiSaldo);
             this.panelPIlihan.Controls.Add(this.textBox1);
             this.panelPIlihan.Controls.Add(this.pictureBoxProfile);
             this.panelPIlihan.Controls.Add(this.panelPegawaiOperator);
@@ -127,7 +127,7 @@
             this.panelIsiSaldo.BackColor = System.Drawing.Color.Transparent;
             this.panelIsiSaldo.Controls.Add(this.label1);
             this.panelIsiSaldo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelIsiSaldo.Location = new System.Drawing.Point(2, 764);
+            this.panelIsiSaldo.Location = new System.Drawing.Point(-1, 402);
             this.panelIsiSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelIsiSaldo.Name = "panelIsiSaldo";
             this.panelIsiSaldo.Size = new System.Drawing.Size(523, 100);
@@ -206,7 +206,7 @@
             // 
             // panelKonsumen
             // 
-            this.panelKonsumen.Controls.Add(this.panelInvoice);
+            this.panelKonsumen.Controls.Add(this.panelIsiSaldo);
             this.panelKonsumen.Controls.Add(this.panelBeliTiket);
             this.panelKonsumen.Controls.Add(this.panelHistory);
             this.panelKonsumen.Controls.Add(this.panelProfil);
@@ -214,7 +214,7 @@
             this.panelKonsumen.Location = new System.Drawing.Point(1, 358);
             this.panelKonsumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelKonsumen.Name = "panelKonsumen";
-            this.panelKonsumen.Size = new System.Drawing.Size(523, 405);
+            this.panelKonsumen.Size = new System.Drawing.Size(523, 506);
             this.panelKonsumen.TabIndex = 27;
             // 
             // panelInvoice
@@ -223,7 +223,7 @@
             this.panelInvoice.Controls.Add(this.labelInvoice);
             this.panelInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelInvoice.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelInvoice.Location = new System.Drawing.Point(1, 0);
+            this.panelInvoice.Location = new System.Drawing.Point(0, 0);
             this.panelInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelInvoice.Name = "panelInvoice";
             this.panelInvoice.Size = new System.Drawing.Size(523, 100);
@@ -248,7 +248,7 @@
             this.panelBeliTiket.BackColor = System.Drawing.Color.Transparent;
             this.panelBeliTiket.Controls.Add(this.labelBeliTiket);
             this.panelBeliTiket.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelBeliTiket.Location = new System.Drawing.Point(3, 302);
+            this.panelBeliTiket.Location = new System.Drawing.Point(0, 302);
             this.panelBeliTiket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBeliTiket.Name = "panelBeliTiket";
             this.panelBeliTiket.Size = new System.Drawing.Size(523, 100);
@@ -346,6 +346,7 @@
             // 
             // panelPegawaiKasir
             // 
+            this.panelPegawaiKasir.Controls.Add(this.panelInvoice);
             this.panelPegawaiKasir.Location = new System.Drawing.Point(4, 358);
             this.panelPegawaiKasir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelPegawaiKasir.Name = "panelPegawaiKasir";
@@ -373,7 +374,7 @@
             this.labelLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogOut.Location = new System.Drawing.Point(37, 14);
             this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(123, 32);
+            this.labelLogOut.Size = new System.Drawing.Size(129, 33);
             this.labelLogOut.TabIndex = 17;
             this.labelLogOut.Text = "LOG OUT";
             this.labelLogOut.Click += new System.EventHandler(this.label26_Click);
@@ -516,7 +517,7 @@
             this.labelKonsumen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKonsumen.Location = new System.Drawing.Point(19, 11);
             this.labelKonsumen.Name = "labelKonsumen";
-            this.labelKonsumen.Size = new System.Drawing.Size(157, 32);
+            this.labelKonsumen.Size = new System.Drawing.Size(163, 33);
             this.labelKonsumen.TabIndex = 17;
             this.labelKonsumen.Text = "KONSUMEN";
             this.labelKonsumen.Click += new System.EventHandler(this.label14_Click);
@@ -542,7 +543,7 @@
             this.labelJenisStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelJenisStudio.Location = new System.Drawing.Point(19, 11);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(183, 32);
+            this.labelJenisStudio.Size = new System.Drawing.Size(190, 33);
             this.labelJenisStudio.TabIndex = 17;
             this.labelJenisStudio.Text = "JENIS STUDIO";
             this.labelJenisStudio.Click += new System.EventHandler(this.label9_Click);
@@ -568,7 +569,7 @@
             this.labelStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelStudio.Location = new System.Drawing.Point(19, 11);
             this.labelStudio.Name = "labelStudio";
-            this.labelStudio.Size = new System.Drawing.Size(107, 32);
+            this.labelStudio.Size = new System.Drawing.Size(112, 33);
             this.labelStudio.TabIndex = 17;
             this.labelStudio.Text = "STUDIO";
             this.labelStudio.Click += new System.EventHandler(this.label7_Click);
@@ -594,7 +595,7 @@
             this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelGenre.Location = new System.Drawing.Point(19, 11);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(98, 32);
+            this.labelGenre.Size = new System.Drawing.Size(103, 33);
             this.labelGenre.TabIndex = 17;
             this.labelGenre.Text = "GENRE";
             this.labelGenre.Click += new System.EventHandler(this.label22_Click);
@@ -646,7 +647,7 @@
             this.labelKelompok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKelompok.Location = new System.Drawing.Point(19, 11);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(154, 32);
+            this.labelKelompok.Size = new System.Drawing.Size(162, 33);
             this.labelKelompok.TabIndex = 17;
             this.labelKelompok.Text = "KELOMPOK";
             this.labelKelompok.Click += new System.EventHandler(this.label18_Click);
@@ -672,7 +673,7 @@
             this.labelCinema.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCinema.Location = new System.Drawing.Point(19, 11);
             this.labelCinema.Name = "labelCinema";
-            this.labelCinema.Size = new System.Drawing.Size(113, 32);
+            this.labelCinema.Size = new System.Drawing.Size(117, 33);
             this.labelCinema.TabIndex = 17;
             this.labelCinema.Text = "CINEMA";
             this.labelCinema.Click += new System.EventHandler(this.label16_Click);
@@ -698,7 +699,7 @@
             this.labelPegawai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelPegawai.Location = new System.Drawing.Point(19, 11);
             this.labelPegawai.Name = "labelPegawai";
-            this.labelPegawai.Size = new System.Drawing.Size(133, 32);
+            this.labelPegawai.Size = new System.Drawing.Size(138, 33);
             this.labelPegawai.TabIndex = 17;
             this.labelPegawai.Text = "PEGAWAI";
             this.labelPegawai.Click += new System.EventHandler(this.label20_Click);
@@ -750,6 +751,7 @@
             this.panelProfil.PerformLayout();
             this.panelJadwalFilm.ResumeLayout(false);
             this.panelJadwalFilm.PerformLayout();
+            this.panelPegawaiKasir.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelLogout.PerformLayout();
             this.panelPegawaiAdmin.ResumeLayout(false);
