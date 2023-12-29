@@ -87,6 +87,12 @@
     <Compile Include="FormMasterStudio.Designer.cs">
       <DependentUpon>FormMasterStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahDetailFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahDetailFilm.Designer.cs">
+      <DependentUpon>FormTambahDetailFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahDetailFilm.resx">
+      <DependentUpon>FormTambahDetailFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahFilm.resx">
       <DependentUpon>FormTambahFilm.cs</DependentUpon>

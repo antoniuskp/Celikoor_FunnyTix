@@ -31,6 +31,23 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+        public static List<Genre> BacaGenreBelum(Film f)
+        {
+            string cmd = $"SELECT g.* FROM genres g LEFT JOIN genre_film gf ON g.id = gf.genres_id AND gf.films_id = '{f.Id}' WHERE gf.genres_id IS NULL;";
+
+            MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
+
+            var lstGenres = new List<Genre>();
+
+            while (res.Read() == true)
+            {
+                string idGenre = res.GetValue(0).ToString();
+                Genre g = Genre.BacaData("id", idGenre)[0];
+                lstGenres.Add(g);
+            }
+            return lstGenres;
+        }
+
         public static List<Genre> BacaData(string filter = "", string val = "")
         {
             string cmd = (filter == "") ? $"SELECT * FROM genres" : $"SELECT * FROM genres WHERE {filter} LIKE '%{val}%';";
@@ -54,6 +71,13 @@ namespace FunnyTix_LIB
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
+
+        public static void TambahGenreFilm(Film f, Genre g)
+        {
+            string query = $"INSERT INTO genre_film (films_id, genres_id) VALUES ('{f.Id}', '{g.ID}');";
+            Koneksi.JalankanPerintahNonQuery(query);
+        }
+
         public static void DeleteData(string kodeHapus)
         {
             string cmd = $"DELETE FROM genres WHERE id = '{kodeHapus}';";

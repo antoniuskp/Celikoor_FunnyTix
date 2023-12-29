@@ -39,12 +39,42 @@ namespace FunnyTix_LIB
         #region METHODS
 
         //Method SELECT
+
+        public static List<Aktor> BacaAktorBelum(Film f)
+        {
+            string query = $"SELECT a.* FROM aktors a LEFT JOIN aktor_film af ON a.id = af.aktors_id AND af.films_id = '{f.Id}' WHERE af.aktors_id IS NULL;";
+
+            MySqlDataReader res = Koneksi.JalankanPerintahSelect(query);
+
+            var lstAktor = new List<Aktor>();
+
+            while (res.Read() == true)
+            {
+                string idAktor = res.GetValue(0).ToString();
+                Aktor a = Aktor.BacaData("id", idAktor)[0];
+                lstAktor.Add(a);
+            }
+            return lstAktor;
+        }
+
         public static List<Aktor> BacaData(string filter="", string val ="")
         {
             try
             {
                 List<Aktor> listAktor = new List<Aktor>();
-                string cmd = (filter == String.Empty) ? $"SELECT * FROM aktors;" : $"select * from aktors where {filter} like '%{val}%';";
+                string cmd = "";
+                if (filter == String.Empty)
+                {
+                    cmd = $"SELECT * FROM aktors;";
+                }
+                else if(filter == "id")
+                {
+                    cmd = $"select * from aktors where {filter} = '{val}';";
+                }
+                else if (filter != "")
+                {
+                    cmd = $"select * from aktors where {filter} like '%{val}%';";
+                }
 
                 MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
                 while (res.Read() == true)
@@ -88,6 +118,11 @@ namespace FunnyTix_LIB
                 $"'{act.Tgl_Lahir.ToString("yyyy-MM-dd")}', '{act.Gender}', '{act.Negara_Asal}'); ";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
+        }
+        public static void TambahAktorFilm(Film f, Aktor a, string peran)
+        {
+            string query = $"INSERT INTO aktor_film (aktors_id, films_id, peran) VALUES ('{a.ID}', '{f.Id}', '{peran}');";
+            Koneksi.JalankanPerintahNonQuery(query);
         }
 
         public static void UpdateData(Aktor act)
