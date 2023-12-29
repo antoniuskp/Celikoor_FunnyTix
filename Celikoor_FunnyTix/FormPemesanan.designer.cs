@@ -31,7 +31,6 @@
             this.pictureBoxKonfirmasiPembayaran = new System.Windows.Forms.PictureBox();
             this.pictureBoxKeluar = new System.Windows.Forms.PictureBox();
             this.textBoxSaldo = new System.Windows.Forms.TextBox();
-            this.textBoxAktorUtama = new System.Windows.Forms.TextBox();
             this.textBoxDiskon = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.textBoxTotalAkhir = new System.Windows.Forms.TextBox();
@@ -54,8 +53,11 @@
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             this.labelUserSelection = new System.Windows.Forms.Label();
             this.richTextBoxSinopsis = new System.Windows.Forms.RichTextBox();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
+            this.textBoxAktor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxKonfirmasiPembayaran
@@ -89,18 +91,6 @@
             this.textBoxSaldo.Name = "textBoxSaldo";
             this.textBoxSaldo.Size = new System.Drawing.Size(203, 25);
             this.textBoxSaldo.TabIndex = 2;
-            // 
-            // textBoxAktorUtama
-            // 
-            this.textBoxAktorUtama.BackColor = System.Drawing.Color.DarkRed;
-            this.textBoxAktorUtama.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAktorUtama.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAktorUtama.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxAktorUtama.Location = new System.Drawing.Point(1545, 407);
-            this.textBoxAktorUtama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxAktorUtama.Name = "textBoxAktorUtama";
-            this.textBoxAktorUtama.Size = new System.Drawing.Size(360, 25);
-            this.textBoxAktorUtama.TabIndex = 3;
             // 
             // textBoxDiskon
             // 
@@ -339,11 +329,14 @@
             // labelUserSelection
             // 
             this.labelUserSelection.AutoSize = true;
-            this.labelUserSelection.Location = new System.Drawing.Point(1452, 536);
+            this.labelUserSelection.BackColor = System.Drawing.Color.NavajoWhite;
+            this.labelUserSelection.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserSelection.ForeColor = System.Drawing.Color.Maroon;
+            this.labelUserSelection.Location = new System.Drawing.Point(1450, 551);
             this.labelUserSelection.Name = "labelUserSelection";
-            this.labelUserSelection.Size = new System.Drawing.Size(46, 17);
+            this.labelUserSelection.Size = new System.Drawing.Size(60, 28);
             this.labelUserSelection.TabIndex = 26;
-            this.labelUserSelection.Text = "label1";
+            this.labelUserSelection.Text = "kursi";
             // 
             // richTextBoxSinopsis
             // 
@@ -357,6 +350,28 @@
             this.richTextBoxSinopsis.TabIndex = 27;
             this.richTextBoxSinopsis.Text = "";
             // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.BackColor = System.Drawing.Color.Sienna;
+            this.pictureBoxCover.Location = new System.Drawing.Point(745, 41);
+            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.Size = new System.Drawing.Size(464, 481);
+            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCover.TabIndex = 28;
+            this.pictureBoxCover.TabStop = false;
+            // 
+            // textBoxAktor
+            // 
+            this.textBoxAktor.BackColor = System.Drawing.Color.Maroon;
+            this.textBoxAktor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAktor.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAktor.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.textBoxAktor.Location = new System.Drawing.Point(1551, 402);
+            this.textBoxAktor.Name = "textBoxAktor";
+            this.textBoxAktor.Size = new System.Drawing.Size(354, 21);
+            this.textBoxAktor.TabIndex = 29;
+            // 
             // FormPemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,6 +379,8 @@
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1994, 846);
+            this.Controls.Add(this.textBoxAktor);
+            this.Controls.Add(this.pictureBoxCover);
             this.Controls.Add(this.richTextBoxSinopsis);
             this.Controls.Add(this.labelUserSelection);
             this.Controls.Add(this.comboBoxStudio);
@@ -386,7 +403,6 @@
             this.Controls.Add(this.textBoxTotalAkhir);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxDiskon);
-            this.Controls.Add(this.textBoxAktorUtama);
             this.Controls.Add(this.textBoxSaldo);
             this.Controls.Add(this.pictureBoxKeluar);
             this.Controls.Add(this.pictureBoxKonfirmasiPembayaran);
@@ -396,6 +412,7 @@
             this.Load += new System.EventHandler(this.FormPemesanan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,7 +423,6 @@
         private System.Windows.Forms.PictureBox pictureBoxKonfirmasiPembayaran;
         private System.Windows.Forms.PictureBox pictureBoxKeluar;
         private System.Windows.Forms.TextBox textBoxSaldo;
-        private System.Windows.Forms.TextBox textBoxAktorUtama;
         private System.Windows.Forms.TextBox textBoxDiskon;
         private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.TextBox textBoxTotalAkhir;
@@ -429,5 +445,7 @@
         private System.Windows.Forms.ComboBox comboBoxStudio;
         private System.Windows.Forms.Label labelUserSelection;
         private System.Windows.Forms.RichTextBox richTextBoxSinopsis;
+        private System.Windows.Forms.PictureBox pictureBoxCover;
+        private System.Windows.Forms.TextBox textBoxAktor;
     }
 }

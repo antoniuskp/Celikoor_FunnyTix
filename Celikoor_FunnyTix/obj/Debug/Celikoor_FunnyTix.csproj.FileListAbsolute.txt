@@ -343,10 +343,8 @@ C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\Fu
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterPegawai.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMenu.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormOperator.resources
-C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPegawai.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormPenjadwalan.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRegister.resources
-C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormRolePegawai.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUtama.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.Properties.Resources.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.GenerateResource.cache
@@ -495,9 +493,6 @@ C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyT
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterStudio.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterJenisStudio.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterStudio.resources
-C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Memory.dll
-C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterJenisStudio.resources
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterStudio.resources
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterJenisStudio.resources
@@ -512,3 +507,5 @@ C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormProfile.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormProfile.resources

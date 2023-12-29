@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -69,6 +71,7 @@ namespace Celikoor_FunnyTix
 
             //Display Films Attributes 
             selectedFilm = (Film)comboBoxJudulFilm.SelectedItem;
+            LoadImage(selectedFilm.CoverImage);
             textBoxDurasi.Text = selectedFilm.Durasi.ToString();
             richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
             textBoxKelompok.Text = selectedFilm.Kelompok.Nama;
@@ -114,33 +117,52 @@ namespace Celikoor_FunnyTix
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-            dataGridViewHasil.Rows.Clear();
-            if(checkBoxI.Checked == true)
+            try
             {
-                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
-            }
-            if (checkBoxII.Checked == true)
-            {
-                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "II");
-            }
-            if (checkBoxIII.Checked == true)
-            {
-                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "III");
-            }
-            if (checkBoxIV.Checked == true)
-            {
-                dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
-            }
+                if (checkBoxI.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
+                }
+                if (checkBoxII.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "II");
+                }
+                if (checkBoxIII.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "III");
+                }
+                if (checkBoxIV.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
+                }
 
-            if(dataGridViewHasil.Columns.Count == 5)
-            {
-                //button hapus
-                DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
-                btnHapus.Name = "Aksi"; //nama objek button
-                btnHapus.Text = "Hapus";//text yang muncul di 
-                btnHapus.UseColumnTextForButtonValue = true;//agar tulisan muncul di button
-                dataGridViewHasil.Columns.Add(btnHapus);//menambahkan button ke grid
+                if (dataGridViewHasil.Columns.Count == 5)
+                {
+                    //button hapus
+                    DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
+                    btnHapus.Name = "Aksi"; //nama objek button
+                    btnHapus.Text = "Hapus";//text yang muncul di 
+                    btnHapus.UseColumnTextForButtonValue = true;//agar tulisan muncul di button
+                    dataGridViewHasil.Columns.Add(btnHapus);//menambahkan button ke grid
+                }
+
+                List<JadwalFilm> listJadwal = new List<JadwalFilm>();
+                //Membuat Film
+                for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
+                {
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.Tanggal = DateTime.Parse(dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString());
+                    jf.JamPemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
+                    listJadwal.Add(jf);
+                }
+                selectedFilm.TambahSesiFilm(selectedFilm, selectedStudio, listJadwal);
+                ClearTambah();
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void ClearTambah()
@@ -194,17 +216,8 @@ namespace Celikoor_FunnyTix
                     DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
-                        List<JadwalFilm> listJadwal = new List<JadwalFilm>();
                         if (dataGridViewHasil != null)
                         {
-                            for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
-                            {
-                                JadwalFilm jf = new JadwalFilm();
-                                jf.Tanggal = DateTime.Parse(dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString());
-                                jf.JamPemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
-                                listJadwal.Add(jf);
-                            }
-                            selectedFilm.TambahSesiFilm(selectedStudio, selectedFilm, listJadwal);
                             try
                             {
                                 Film.TambahSesiFilm(selectedFilm);
@@ -233,11 +246,38 @@ namespace Celikoor_FunnyTix
             }
       
         //dataGridViewHasil.Rows.Clear();
-    }
+        }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void LoadImage(string url)
+        {
+            // Ambil URL gambar dari TextBox
+            string imageUrl = url;
+
+            try
+            {
+                // Download gambar dari URL
+                WebClient webClient = new WebClient();
+                byte[] imageData = webClient.DownloadData(imageUrl);
+                webClient.Dispose();
+
+                // Konversi data byte menjadi objek gambar
+                using (MemoryStream ms = new MemoryStream(imageData))
+                {
+                    Image loadedImage = Image.FromStream(ms);
+
+                    // Tampilkan gambar di PictureBox
+                    pictureBoxCover.Image = loadedImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     

@@ -263,14 +263,14 @@ namespace FunnyTix_LIB
         #endregion
 
         #region 
-        public void TambahSesiFilm(Studio s, Film f, List<JadwalFilm> listJadwal)
+        public void TambahSesiFilm(Film f, Studio s, List<JadwalFilm> listJadwal)
         {
-            this.ListFilmStudio = new List<FilmStudio>();
+            //this.ListFilmStudio = new List<FilmStudio>();
             FilmStudio fs = new FilmStudio();
             fs.Studio = s;
             fs.Film = f;
             ListFilmStudio.Add(fs);
-            this.ListSesiFilm = new List<SesiFilm>();
+
             for(int i = 0; i < listJadwal.Count; i++)
             {
                 SesiFilm sf = new SesiFilm();
@@ -329,6 +329,7 @@ namespace FunnyTix_LIB
                 
                 if (fs == null)
                 {
+                    //membuat filmstudio
                     string query = $"INSERT INTO film_studio (studios_id, films_id) VALUES ('{f.ListFilmStudio[i].Studio.ID}','{f.ListFilmStudio[i].Film.Id}');";
                     Koneksi.JalankanPerintahNonQuery(query);
                 }
@@ -337,7 +338,7 @@ namespace FunnyTix_LIB
                 for (int j = 0; j < f.ListSesiFilm.Count; j++)
                 {
                     bool cek = Film.CekJadwalFilmStudio(f.ListFilmStudio[i], f.ListSesiFilm[j].JadwalFilm);
-                    if (cek)
+                    if (cek == false)
                     {
                         //Cek Jadwal Sesi Film
                         string tanggal = f.ListSesiFilm[j].JadwalFilm.Tanggal.ToString("yyyy-MM-dd");
@@ -350,7 +351,7 @@ namespace FunnyTix_LIB
                         }
                         Film.TambahDataSesiFilm(f.ListSesiFilm[j]);
                     }
-                    else throw new Exception($"FIlm {f.ListFilmStudio[i].Film.Judul} " +
+                    else throw new Exception($"Film {f.ListFilmStudio[i].Film.Judul} " +
                         $"di Studio {f.ListFilmStudio[i].Studio.Nama} tanggal {f.ListSesiFilm[j].JadwalFilm.Tanggal.ToShortDateString()} " +
                         $"sesi {f.ListSesiFilm[j].JadwalFilm.JamPemutaran} sudah ada!");
                 }

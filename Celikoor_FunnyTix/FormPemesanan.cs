@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -381,11 +383,34 @@ namespace Celikoor_FunnyTix
         {
             
             selectedFilm = (Film)comboBoxJudul.SelectedItem;
+            LoadImage(selectedFilm.CoverImage);
             richTextBoxSinopsis.Clear();
             richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
             textBoxDurasi.Text = selectedFilm.Durasi.ToString() + " menit";
+            selectedFilm.BacaAktorFilm(selectedFilm);
             selectedFilm.BacaGenreFilm(selectedFilm);
             textBoxGenre.Clear();
+            textBoxAktor.Clear();
+            for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
+            {
+                if (selectedFilm.ListAktor.Count == 1)
+                {
+                    textBoxAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
+
+                }
+                else if (selectedFilm.ListAktor.Count > 1)
+                {
+                    if (i >= 0 && i <= 1)
+                    {
+                        textBoxAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
+                    }
+                }
+
+            }
+            if (selectedFilm.ListAktor.Count > 2)
+            {
+                textBoxAktor.Text += "...";
+            }
             for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
             {
                 if (selectedFilm.ListGenre.Count == 1)
@@ -395,8 +420,7 @@ namespace Celikoor_FunnyTix
                 }
                 else if (i >= 0 && i < 2)
                 {
-                    if (i == selectedFilm.ListGenre.Count - 1) textBoxGenre.Text += $"{selectedFilm.ListGenre[i].Genre.Nama}";
-                    else textBoxGenre.Text += $"{selectedFilm.ListGenre[i].Genre.Nama},";
+                    textBoxGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
                 }
             }
             if (selectedFilm.ListGenre.Count > 2)
@@ -404,7 +428,9 @@ namespace Celikoor_FunnyTix
                 textBoxGenre.Text += ",...";
             }
 
-            daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value.ToString("yyyy-MM-dd"));
+
+
+        daftarCinema = Film.CariCinema(selectedFilm.Id, dateTimePickerTambah.Value.ToString("yyyy-MM-dd"));
 
             if (daftarCinema != null)
             {
@@ -416,6 +442,32 @@ namespace Celikoor_FunnyTix
             else
             {
                 comboBoxCinema.DataSource = null;
+            }
+        }
+        public void LoadImage(string url)
+        {
+            // Ambil URL gambar dari TextBox
+            string imageUrl = url;
+
+            try
+            {
+                // Download gambar dari URL
+                WebClient webClient = new WebClient();
+                byte[] imageData = webClient.DownloadData(imageUrl);
+                webClient.Dispose();
+
+                // Konversi data byte menjadi objek gambar
+                using (MemoryStream ms = new MemoryStream(imageData))
+                {
+                    Image loadedImage = Image.FromStream(ms);
+
+                    // Tampilkan gambar di PictureBox
+                    pictureBoxCover.Image = loadedImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

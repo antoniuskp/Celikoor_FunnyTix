@@ -188,6 +188,7 @@ namespace Celikoor_FunnyTix
             this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCover.Name = "pictureBoxCover";
             this.pictureBoxCover.Size = new System.Drawing.Size(487, 553);
+            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCover.TabIndex = 10;
             this.pictureBoxCover.TabStop = false;
             // 
