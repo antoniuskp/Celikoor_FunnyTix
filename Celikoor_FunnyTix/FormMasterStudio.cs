@@ -29,14 +29,18 @@ namespace Celikoor_FunnyTix
             comboBox.SelectedIndex = 0;
 
             List<JenisStudio> listJenisStudio = JenisStudio.BacaData();
+            //panel tambah
             comboBoxJenisStudio.DataSource = listJenisStudio;
             comboBoxJenisStudio.DisplayMember = "Nama";
+            //panel ubah
             comboBoxJenisStudioUbah.DataSource = listJenisStudio;
             comboBoxJenisStudioUbah.DisplayMember = "Nama";
 
             List<Cinema> listCinema = Cinema.BacaData();
+            //panel tambah
             comboBoxCinema.DataSource = listCinema;
             comboBoxCinema.DisplayMember = "NamaCabang";
+            //panel ubah
             comboBoxCinemaUbah.DataSource = listCinema;
             comboBoxCinemaUbah.DisplayMember = "NamaCabang";
 
@@ -133,6 +137,11 @@ namespace Celikoor_FunnyTix
         private void buttonBatal_Click(object sender, EventArgs e)
         {
             panelTambahStudio.Visible = false;
+
+            textBoxHargaWeekday.Clear();
+            textBoxHargaWeekend.Clear();
+            textBoxKapasitas.Clear();
+            textBoxNama.Clear();
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
@@ -142,8 +151,9 @@ namespace Celikoor_FunnyTix
                 string nama = textBoxNama.Text;
                 int kapasitas = int.Parse(textBoxKapasitas.Text);
 
-                JenisStudio jenisStudio = JenisStudio.BacaData("nama", comboBoxJenisStudio.Text)[0];
-                Cinema cinema = Cinema.BacaData("nama_cabang", comboBoxCinema.Text)[0];
+                JenisStudio jenisStudio = JenisStudio.BacaData("Nama", comboBoxJenisStudio.Text)[0];
+                Cinema cinema = Cinema.BacaData("NamaCabang", comboBoxCinema.Text)[0];
+
 
                 int hargaWeekday = int.Parse(textBoxHargaWeekday.Text);
                 int hargaWeekend = int.Parse(textBoxHargaWeekend.Text);

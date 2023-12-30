@@ -67,7 +67,7 @@ namespace Celikoor_FunnyTix
                 {
                     try
                     {
-                        JenisStudio.DeleteData(JenisStudio.BacaData(kode)[0]);
+                        JenisStudio.DeleteData(kode);
 
                         FormMasterJenisStudio_Load(this, e);
                     }

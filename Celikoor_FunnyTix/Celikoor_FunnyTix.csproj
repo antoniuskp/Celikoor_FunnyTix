@@ -75,6 +75,12 @@
     <Compile Include="FormJadwalFilm.Designer.cs">
       <DependentUpon>FormJadwalFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterFilm.Designer.cs">
+      <DependentUpon>FormMasterFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMasterJenisStudio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormJadwalFilm.resx">
       <DependentUpon>FormJadwalFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterFilm.resx">
+      <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterJenisStudio.resx">
       <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>

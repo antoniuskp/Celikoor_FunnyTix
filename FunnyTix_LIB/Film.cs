@@ -390,11 +390,31 @@ namespace FunnyTix_LIB
         #endregion
 
         #region DELETE
-        public static void DeleteData(Film film)
+        public static void DeleteData(string kodeHapus)
         {
-            string cmd = $"UPDATE films set judul = '{film.Judul}', sinopsis = '{film.Sinopsis}', tahun = '{film.Tahun}', durasi = '{film.Durasi}', kelompoks_id = '{film.Kelompok.ID}', bahasa = '{film.Bahasa}', is_sub_indo = '{film.IsSubIndo}', cover_image = '{film.CoverImage}', diskon_nominal = '{film.Diskon}' where id = '{film.Id}';";
+            //string cmd = $"DELETE FROM actor_film as AF inner join films as F on AF.films_id = F.id " +
+            //    $"inner join genre_film as GF on F.id = GF.films_id " +
+            //    $"inner join film_studio as FS on F.id = FS.films_id" +
+            //    $"inner join sesi_films as SF on FS.films_id = SF.films_id " +
+            //    $"WHERE id = '{kodeHapus}';";
 
+            //Koneksi.JalankanPerintahNonQuery(cmd);
+
+            string cmd = $"DELETE FROM films WHERE id = '{kodeHapus}';";
             Koneksi.JalankanPerintahNonQuery(cmd);
+
+            //string cmdHapusAktor = $"DELETE FROM aktor_film WHERE id = '{kodeHapus}';";
+            //Koneksi.JalankanPerintahNonQuery(cmdHapusAktor);
+
+            //string cmdHapusGenre = $"DELETE FROM genre_film WHERE id = '{kodeHapus}';";
+            //Koneksi.JalankanPerintahNonQuery(cmdHapusGenre);
+
+            //string cmdHapusStudio = $"DELETE FROM film_studio WHERE id = '{kodeHapus}';";
+            //Koneksi.JalankanPerintahNonQuery(cmdHapusStudio); 
+
+            //string cmdHapusSesi = $"DELETE FROM sesi_films WHERE id = '{kodeHapus}';";
+            //Koneksi.JalankanPerintahNonQuery(cmdHapusSesi);
+
         }
         #endregion
         #endregion

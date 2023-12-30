@@ -62,17 +62,31 @@ namespace FunnyTix_LIB
 
             while (hasil.Read() == true)
             {
-                JenisStudio j = new JenisStudio();
-                j.Id = int.Parse(hasil.GetValue(3).ToString());
+                Studio tampung = new Studio();
+                tampung.ID = int.Parse(hasil.GetValue(0).ToString());
+                tampung.Nama = hasil.GetValue(1).ToString();
+                tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
+                tampung.HargaWeekday = int.Parse(hasil.GetValue(5).ToString());
+                tampung.HargaWeekend = int.Parse(hasil.GetValue(6).ToString());
 
-                Cinema c = new Cinema();
-                c.ID = int.Parse(hasil.GetValue(4).ToString());
+                List<JenisStudio> listJenisStudio = JenisStudio.BacaData("Id", hasil.GetValue(3).ToString());
+                tampung.JenisStudio = listJenisStudio[0];
 
-                Studio s = new Studio(hasil.GetValue(1).ToString(),
-                    int.Parse(hasil.GetValue(2).ToString()), j, c, int.Parse(hasil.GetValue(5).ToString()),
-                    int.Parse(hasil.GetValue(6).ToString()));
-                s.ID = int.Parse(hasil.GetValue(0).ToString());
-                listJadwalFilm.Add(s);
+                List<Cinema> listCinema = Cinema.BacaData("ID", hasil.GetValue(4).ToString());
+                tampung.Cinema = listCinema[0]; 
+
+                listJadwalFilm.Add(tampung);    
+                //JenisStudio j = new JenisStudio();
+                //j.Id = int.Parse(hasil.GetValue(3).ToString());
+
+                //Cinema c = new Cinema();
+                //c.ID = int.Parse(hasil.GetValue(4).ToString());
+
+                //Studio s = new Studio(hasil.GetValue(1).ToString(),
+                //    int.Parse(hasil.GetValue(2).ToString()), j, c, int.Parse(hasil.GetValue(5).ToString()),
+                //    int.Parse(hasil.GetValue(6).ToString()));
+                //s.ID = int.Parse(hasil.GetValue(0).ToString());
+                //listJadwalFilm.Add(s);
             }
             return listJadwalFilm;
         }

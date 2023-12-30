@@ -45,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBirth = new System.Windows.Forms.DateTimePicker();
             this.labelEditTglLahir = new System.Windows.Forms.Label();
             this.labelEditUsername = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -53,10 +53,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.buttonSimpan = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,7 +74,7 @@
             this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(18, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 41);
+            this.label1.Size = new System.Drawing.Size(223, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Profile Name";
             // 
@@ -132,6 +133,7 @@
             this.labelEditEmail.Size = new System.Drawing.Size(40, 20);
             this.labelEditEmail.TabIndex = 4;
             this.labelEditEmail.Text = "edit";
+            this.labelEditEmail.Click += new System.EventHandler(this.labelEditEmail_Click);
             // 
             // textBoxEmail
             // 
@@ -175,6 +177,7 @@
             this.labelEditNoHp.Size = new System.Drawing.Size(40, 20);
             this.labelEditNoHp.TabIndex = 5;
             this.labelEditNoHp.Text = "edit";
+            this.labelEditNoHp.Click += new System.EventHandler(this.labelEditNoHp_Click);
             // 
             // textBoxNoHp
             // 
@@ -241,7 +244,7 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.NavajoWhite;
-            this.groupBox6.Controls.Add(this.dateTimePicker1);
+            this.groupBox6.Controls.Add(this.dateTimePickerBirth);
             this.groupBox6.Controls.Add(this.labelEditTglLahir);
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Location = new System.Drawing.Point(597, 625);
@@ -250,13 +253,14 @@
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             // 
-            // dateTimePicker1
+            // dateTimePickerBirth
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(306, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(415, 34);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePickerBirth.Enabled = false;
+            this.dateTimePickerBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBirth.Location = new System.Drawing.Point(306, 17);
+            this.dateTimePickerBirth.Name = "dateTimePickerBirth";
+            this.dateTimePickerBirth.Size = new System.Drawing.Size(415, 34);
+            this.dateTimePickerBirth.TabIndex = 8;
             // 
             // labelEditTglLahir
             // 
@@ -268,6 +272,7 @@
             this.labelEditTglLahir.Size = new System.Drawing.Size(40, 20);
             this.labelEditTglLahir.TabIndex = 7;
             this.labelEditTglLahir.Text = "edit";
+            this.labelEditTglLahir.Click += new System.EventHandler(this.labelEditTglLahir_Click);
             // 
             // labelEditUsername
             // 
@@ -279,6 +284,7 @@
             this.labelEditUsername.Size = new System.Drawing.Size(40, 20);
             this.labelEditUsername.TabIndex = 7;
             this.labelEditUsername.Text = "edit";
+            this.labelEditUsername.Click += new System.EventHandler(this.labelEditUsername_Click);
             // 
             // groupBox7
             // 
@@ -326,7 +332,7 @@
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.NavajoWhite;
-            this.groupBox8.Controls.Add(this.textBox1);
+            this.groupBox8.Controls.Add(this.textBoxPassword);
             this.groupBox8.Controls.Add(this.label8);
             this.groupBox8.Controls.Add(this.label7);
             this.groupBox8.Location = new System.Drawing.Point(597, 787);
@@ -335,14 +341,14 @@
             this.groupBox8.TabIndex = 10;
             this.groupBox8.TabStop = false;
             // 
-            // textBox1
+            // textBoxPassword
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(306, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(415, 41);
-            this.textBox1.TabIndex = 8;
+            this.textBoxPassword.Enabled = false;
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(306, 16);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(415, 41);
+            this.textBoxPassword.TabIndex = 8;
             // 
             // label8
             // 
@@ -354,6 +360,7 @@
             this.label8.Size = new System.Drawing.Size(40, 20);
             this.label8.TabIndex = 7;
             this.label8.Text = "edit";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label5
             // 
@@ -363,7 +370,7 @@
             this.label5.ForeColor = System.Drawing.Color.Moccasin;
             this.label5.Location = new System.Drawing.Point(789, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(449, 111);
+            this.label5.Size = new System.Drawing.Size(450, 111);
             this.label5.TabIndex = 11;
             this.label5.Text = "FunnyTix.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -376,10 +383,23 @@
             this.label10.ForeColor = System.Drawing.Color.Moccasin;
             this.label10.Location = new System.Drawing.Point(930, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(169, 27);
+            this.label10.Size = new System.Drawing.Size(168, 27);
             this.label10.TabIndex = 12;
             this.label10.Text = "Halaman Profil";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // buttonSimpan
+            // 
+            this.buttonSimpan.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonSimpan.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimpan.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonSimpan.Location = new System.Drawing.Point(1590, 882);
+            this.buttonSimpan.Name = "buttonSimpan";
+            this.buttonSimpan.Size = new System.Drawing.Size(170, 51);
+            this.buttonSimpan.TabIndex = 15;
+            this.buttonSimpan.Text = "Simpan";
+            this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // FormProfile
             // 
@@ -387,6 +407,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox8);
@@ -399,6 +420,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormProfile";
             this.Text = "Profile";
+            this.Load += new System.EventHandler(this.FormProfile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -437,7 +459,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBirth;
         private System.Windows.Forms.Label labelEditTglLahir;
         private System.Windows.Forms.Label labelEditUsername;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -445,9 +467,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button buttonSimpan;
     }
 }

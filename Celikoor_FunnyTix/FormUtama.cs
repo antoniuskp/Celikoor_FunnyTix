@@ -72,7 +72,7 @@ namespace Celikoor_FunnyTix
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;
                 }
-                form.textBox1.Text = Auth.GetPegawai().Nama;
+                form.textBoxUserLogin.Text = Auth.GetPegawai().Nama;
             }
             catch (Exception x)
             {
@@ -104,7 +104,7 @@ namespace Celikoor_FunnyTix
 
                 form.panelListMaster.Visible = false;
 
-                form.textBox1.Text = Auth.GetKonsumen().Nama;
+                form.textBoxUserLogin.Text = Auth.GetKonsumen().Nama;
             }
             catch (Exception x)
             {
@@ -469,6 +469,13 @@ namespace Celikoor_FunnyTix
         {
             var frm = new FormIsiSaldo();
             frm.ShowDialog();
+        }
+
+        private void panelMasterFilm_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterFilm());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
         }
     }
 }

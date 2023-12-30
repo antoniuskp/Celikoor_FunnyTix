@@ -26,5 +26,10 @@ namespace Celikoor_FunnyTix
 
             dataGridViewHasil.DataSource = listInvoice;
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
     }
 }

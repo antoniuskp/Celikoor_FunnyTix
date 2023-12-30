@@ -22,8 +22,6 @@ namespace Celikoor_FunnyTix
         {
             this.WindowState = FormWindowState.Maximized;
 
-
-
             List<Kelompok> listKelompok = Kelompok.BacaData();
             comboBoxKelompokUmur.DataSource = listKelompok;
             comboBoxKelompokUmur.DisplayMember = "nama";

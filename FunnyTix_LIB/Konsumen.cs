@@ -31,7 +31,7 @@ namespace FunnyTix_LIB
             this.Email = email;
             this.No_Hp = no_hp;
             this.Gender = gender;
-            this.Tgl_lahir = tgl_lahir == null ?  DateTime.Now : tgl_lahir;
+            this.Tgl_lahir = tgl_lahir == null ? DateTime.Now : tgl_lahir;
             this.Saldo = saldo;
             this.Username = username;
             this.Password = password;
@@ -67,7 +67,7 @@ namespace FunnyTix_LIB
         }
 
         //TODO: Read
-        public static List<Konsumen> BacaData(string filter="", string val="")
+        public static List<Konsumen> BacaData(string filter = "", string val = "")
         {
 
             string cmd = (filter == "") ? $"SELECT * FROM konsumens;" : $"SELECT * FROM konsumens WHERE {filter} LIKE '%{val}%';";
@@ -102,10 +102,25 @@ namespace FunnyTix_LIB
         {
             try
             {
-                string cmd= $"UPDATE konsumens SET {param} = '{val}' WHERE id='{konsumen.ID}';";
-            
+                string cmd = $"UPDATE konsumens SET {param} = '{val}' WHERE id='{konsumen.ID}';";
+
 
                 Koneksi.JalankanPerintahNonQuery(cmd);  //! Kirim command
+            }
+            catch (Exception x)
+            {
+                throw new Exception("Error: " + x.Message);
+            }
+        }
+        public static void UbahProfil(Konsumen k)
+        {
+            try
+            {
+                string cmd = $"UPDATE konsumens SET nama='{k.Nama}', email='{k.Email}', no_hp='{k.No_Hp}', " +
+                    $"tgl_lahir='{k.Tgl_lahir.ToString("yyyy-MM-dd")}', username='{k.Username}', password='{k.Password}' " +
+                    $"WHERE id='{k.ID}';";
+
+                Koneksi.JalankanPerintahNonQuery(cmd);
             }
             catch (Exception x)
             {

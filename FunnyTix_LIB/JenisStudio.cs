@@ -87,9 +87,9 @@ namespace FunnyTix_LIB
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 
-        public static void DeleteData(JenisStudio js)
+        public static void DeleteData(string kodeHapus)
         {
-            string cmd = $"UPDATE jenis_studios set nama = '{js.Nama}', deskripsi = '{js.Deskripsi}' where id = {js.Id};";
+            string cmd = $"DELETE FROM jenis_studios WHERE id = '{kodeHapus}';";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }

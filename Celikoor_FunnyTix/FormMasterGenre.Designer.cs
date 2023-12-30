@@ -105,6 +105,7 @@ namespace Celikoor_FunnyTix
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1488, 86);
             this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // buttonClear
             // 
@@ -142,6 +143,7 @@ namespace Celikoor_FunnyTix
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(269, 40);
             this.comboBox.TabIndex = 1;
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -153,6 +155,7 @@ namespace Celikoor_FunnyTix
             this.label2.Size = new System.Drawing.Size(291, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -165,6 +168,7 @@ namespace Celikoor_FunnyTix
             this.label1.TabIndex = 11;
             this.label1.Text = "MASTER GENRE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelTambahGenre
             // 
@@ -177,6 +181,7 @@ namespace Celikoor_FunnyTix
             this.panelTambahGenre.Size = new System.Drawing.Size(549, 376);
             this.panelTambahGenre.TabIndex = 18;
             this.panelTambahGenre.Visible = false;
+            this.panelTambahGenre.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTambahGenre_Paint);
             // 
             // groupBox1
             // 
@@ -185,21 +190,23 @@ namespace Celikoor_FunnyTix
             this.groupBox1.Controls.Add(this.textBoxNama);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(34, 107);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(480, 166);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBoxDeskripsi
             // 
             this.textBoxDeskripsi.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDeskripsi.Location = new System.Drawing.Point(168, 100);
-            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDeskripsi.Name = "textBoxDeskripsi";
             this.textBoxDeskripsi.Size = new System.Drawing.Size(263, 28);
             this.textBoxDeskripsi.TabIndex = 11;
+            this.textBoxDeskripsi.TextChanged += new System.EventHandler(this.textBoxDeskripsi_TextChanged);
             // 
             // label7
             // 
@@ -212,15 +219,17 @@ namespace Celikoor_FunnyTix
             this.label7.Size = new System.Drawing.Size(110, 25);
             this.label7.TabIndex = 7;
             this.label7.Text = "Deskripsi : ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBoxNama
             // 
             this.textBoxNama.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNama.Location = new System.Drawing.Point(167, 42);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(263, 28);
             this.textBoxNama.TabIndex = 4;
+            this.textBoxNama.TextChanged += new System.EventHandler(this.textBoxNama_TextChanged);
             // 
             // label3
             // 
@@ -233,6 +242,7 @@ namespace Celikoor_FunnyTix
             this.label3.Size = new System.Drawing.Size(142, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nama Genre : ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // buttonBatal
             // 
@@ -240,7 +250,7 @@ namespace Celikoor_FunnyTix
             this.buttonBatal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBatal.ForeColor = System.Drawing.Color.Maroon;
             this.buttonBatal.Location = new System.Drawing.Point(34, 296);
-            this.buttonBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBatal.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBatal.Name = "buttonBatal";
             this.buttonBatal.Size = new System.Drawing.Size(160, 43);
             this.buttonBatal.TabIndex = 21;
@@ -254,7 +264,7 @@ namespace Celikoor_FunnyTix
             this.buttonSimpan.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.Maroon;
             this.buttonSimpan.Location = new System.Drawing.Point(354, 296);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(160, 43);
             this.buttonSimpan.TabIndex = 20;
@@ -274,6 +284,7 @@ namespace Celikoor_FunnyTix
             this.label5.TabIndex = 19;
             this.label5.Text = "T A M B A H  G E N R E";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FormMasterGenre
             // 

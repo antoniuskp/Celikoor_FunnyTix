@@ -16,7 +16,7 @@ namespace Celikoor_FunnyTix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTambahFilm());
+            Application.Run(new FormUtama());
         }
     }
 }
