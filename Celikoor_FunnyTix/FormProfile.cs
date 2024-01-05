@@ -100,6 +100,7 @@ namespace Celikoor_FunnyTix
                             Konsumen.UbahProfil(listKonsumen[i]);
 
                             FormProfile_Load(this, e);
+                            break;
                         }
                         else
                         {
