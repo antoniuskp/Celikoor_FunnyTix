@@ -152,7 +152,7 @@ namespace Celikoor_FunnyTix
                 {
                     JadwalFilm jf = new JadwalFilm();
                     jf.Tanggal = DateTime.Parse(dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString());
-                    jf.JamPemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
+                    jf.Jam_pemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
                     listJadwal.Add(jf);
                 }
                 selectedFilm.TambahSesiFilm(selectedFilm, selectedStudio, listJadwal);

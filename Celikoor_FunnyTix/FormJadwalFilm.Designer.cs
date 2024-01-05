@@ -30,6 +30,9 @@
         {
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.JadwalFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamaStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamaFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCari = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -57,6 +60,10 @@
             // 
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.JadwalFilm,
+            this.NamaStudio,
+            this.NamaFilm});
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(11, 199);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -65,6 +72,27 @@
             this.dataGridViewHasil.RowTemplate.Height = 24;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 18;
+            // 
+            // JadwalFilm
+            // 
+            this.JadwalFilm.HeaderText = "Jadwal";
+            this.JadwalFilm.MinimumWidth = 6;
+            this.JadwalFilm.Name = "JadwalFilm";
+            this.JadwalFilm.Width = 125;
+            // 
+            // NamaStudio
+            // 
+            this.NamaStudio.HeaderText = "Studio";
+            this.NamaStudio.MinimumWidth = 6;
+            this.NamaStudio.Name = "NamaStudio";
+            this.NamaStudio.Width = 125;
+            // 
+            // NamaFilm
+            // 
+            this.NamaFilm.HeaderText = "Film";
+            this.NamaFilm.MinimumWidth = 6;
+            this.NamaFilm.Name = "NamaFilm";
+            this.NamaFilm.Width = 125;
             // 
             // panel1
             // 
@@ -150,7 +178,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormJadwalFilm";
             this.Text = "FormJadwalFilm";
-            this.Load += new System.EventHandler(this.FormJadwalFilm_Load);
+            this.Load += new System.EventHandler(this.FormJadwalFilm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -168,5 +196,8 @@
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JadwalFilm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamaStudio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamaFilm;
     }
 }

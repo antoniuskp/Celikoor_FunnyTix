@@ -1,5 +1,4 @@
-﻿using FunnyTix_LIB;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FunnyTix_LIB;
 
 namespace Celikoor_FunnyTix
 {
@@ -18,13 +18,10 @@ namespace Celikoor_FunnyTix
             InitializeComponent();
         }
 
-        private void FormJadwalFilm_Load(object sender, EventArgs e)
+        List<SesiFilm> listFilm;
+        private void FormJadwalFilm_Load_1(object sender, EventArgs e)
         {
             FormUtama frm = (FormUtama)this.Owner;
-
-            List<JadwalFilm> listJadwalFilm = JadwalFilm.BacaData();
-
-            dataGridViewHasil.DataSource = listJadwalFilm;
         }
     }
 }
