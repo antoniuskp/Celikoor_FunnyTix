@@ -83,6 +83,7 @@
             this.Controls.Add(this.buttonBayar);
             this.Controls.Add(this.textBoxNominal);
             this.Name = "FormIsiSaldo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormIsiSaldo";
             this.Load += new System.EventHandler(this.FormIsiSaldo_Load);
             this.ResumeLayout(false);

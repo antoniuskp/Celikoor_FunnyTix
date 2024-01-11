@@ -50,6 +50,7 @@ namespace Celikoor_FunnyTix
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;
+                    form.panelLaporan.Visible = true;
                 }
                 else if (role == "OPERATOR")
                 {
@@ -60,6 +61,7 @@ namespace Celikoor_FunnyTix
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;    
+                    form.panelLaporan.Visible = false;
                 }
                 else if (role == "KASIR")
                 {
@@ -71,6 +73,7 @@ namespace Celikoor_FunnyTix
                     form.panelKonsumen.Visible = false;
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;
+                    form.panelLaporan.Visible =false;
                 }
                 form.textBoxUserLogin.Text = Auth.GetPegawai().Nama;
             }
@@ -331,6 +334,22 @@ namespace Celikoor_FunnyTix
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
+
+        #region Laporan
+        private void labelLaporan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormLaporan());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
+        private void panelLaporan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormLaporan());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
         #endregion
         //
 
@@ -477,5 +496,7 @@ namespace Celikoor_FunnyTix
             form.panelListMaster.Visible = false;
             visiblePanelList = false;
         }
+
+        
     }
 }

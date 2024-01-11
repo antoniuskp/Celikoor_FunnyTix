@@ -52,6 +52,11 @@ namespace Celikoor_FunnyTix
                 listLaporan = Laporan.laporanE();
                 SetupGridView(listLaporan, 4);
             }
+            else if (comboBoxChoose.SelectedIndex == 5)
+            {
+                listLaporan = Laporan.laporanBonus();
+                SetupGridView(listLaporan, 5);
+            }
         }
 
         private void SetupGridView(List<Laporan> lst, int index)
@@ -103,6 +108,15 @@ namespace Celikoor_FunnyTix
                     {
                         NamaKonsumen = item.NamaKonsumen,
                         Frekuensi = item.Frekuensi
+                    }).ToList();
+                    dataGridView.DataSource = data;
+                    dataGridView.Refresh();
+                    break;
+                case 5:
+                    data = lst.Select(item => new
+                    {
+                        Aktor = item.Aktor,
+                        JumlahFilm = item.JumlahFilm
                     }).ToList();
                     dataGridView.DataSource = data;
                     dataGridView.Refresh();

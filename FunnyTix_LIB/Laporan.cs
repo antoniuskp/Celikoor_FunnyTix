@@ -28,20 +28,26 @@ namespace FunnyTix_LIB
         private string namaKonsumen;
         private int frekuensi;
 
+        private string aktor;
+        private int jumlahFilm;
+
         public Laporan()
         {
-            judulFilm = "";
-            jumlahTonton = 0;
-            bulan= 0;
+            JudulFilm = "";
+            JumlahTonton = 0;
+            Bulan= 0;
 
-            cabang = "";
-            grandTotal = 0;
+            Cabang = "";
+            GrandTotal = 0;
 
-            namaStudio = "";
-            tingkatUtilitas= 0;
+            NamaStudio = "";
+            TingkatUtilitas= 0;
 
-            namaKonsumen = "";
+            NamaKonsumen = "";
             Frekuensi = 0;
+
+            Aktor = "";
+            JumlahFilm = 0;
         }
 
         public string JudulFilm { get => judulFilm; set => judulFilm = value; }
@@ -56,7 +62,8 @@ namespace FunnyTix_LIB
 
         public string NamaKonsumen { get => namaKonsumen; set => namaKonsumen = value; }
         public int Frekuensi { get => frekuensi; set => frekuensi = value; }
-
+        public int JumlahFilm { get => jumlahFilm; set => jumlahFilm = value; }
+        public string Aktor { get => aktor; set => aktor = value; }
 
         public static List<Laporan> laporanA()
         {
@@ -198,9 +205,32 @@ namespace FunnyTix_LIB
             return listLaporan;
         }
 
+        public static List<Laporan> laporanBonus()
+        {
+            string query = $" SELECT a.nama, COUNT(af.aktors_id) as jumlah_film " +
+                            " FROM aktors a " + 
+                            " INNER JOIN aktor_film af ON a.id = af.aktors_id " + 
+                            " GROUP BY a.nama " + 
+                            " HAVING COUNT(af.aktors_id) > (SELECT AVG(jumlah_film) FROM(SELECT COUNT(aktor_film.aktors_id) as jumlah_film" +
+                            " FROM aktor_film GROUP BY aktors_id) as avg_table);" ;
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<Laporan> listLaporan = new List<Laporan>();
+
+            while (hasil.Read() == true)
+            {
+                Laporan l = new Laporan();
+                l.Aktor = hasil.GetValue(0).ToString();
+                l.JumlahFilm = int.Parse(hasil.GetValue(1).ToString());
+
+                listLaporan.Add(l);
+            }
+            return listLaporan;
+        }
+
         public static void CetakLaporan(string namaLaporan, int index, List<Laporan> listLaporan)
         {
-            string nama = "Laporan_" + namaLaporan.Substring(0,70);
+            string nama = "Laporan_" + namaLaporan.Substring(0,20);
             StreamWriter NamaFile = new StreamWriter(nama);
             if(namaLaporan.Length>74)
             {
@@ -281,10 +311,13 @@ namespace FunnyTix_LIB
                     break;
 
                 case 5:
-                    NamaFile.WriteLine("");
+                    NamaFile.WriteLine("Nama Aktor             Jumlah Film");
                     for (int i = 0; i < listLaporan.Count; i++)
                     {
+                        string aktor = listLaporan[i].Aktor.PadRight(40, ' ');
+                        string jumlahFilm = listLaporan[i].JumlahFilm.ToString();
 
+                        NamaFile.WriteLine(aktor + " | " + jumlahFilm);
                     }
                     break;
             }

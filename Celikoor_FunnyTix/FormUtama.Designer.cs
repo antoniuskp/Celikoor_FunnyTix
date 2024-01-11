@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
             this.panelPIlihan = new System.Windows.Forms.Panel();
             this.textBoxUserLogin = new System.Windows.Forms.TextBox();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panelPegawaiOperator = new System.Windows.Forms.Panel();
             this.panelUpdateStatus = new System.Windows.Forms.Panel();
             this.labelUpdate = new System.Windows.Forms.Label();
@@ -61,6 +62,8 @@
             this.panelListMaster = new System.Windows.Forms.Panel();
             this.panelMasterKonsumen = new System.Windows.Forms.Panel();
             this.labelKonsumen = new System.Windows.Forms.Label();
+            this.panelMasterFilm = new System.Windows.Forms.Panel();
+            this.labelFilm = new System.Windows.Forms.Label();
             this.panelJenisStudio = new System.Windows.Forms.Panel();
             this.labelJenisStudio = new System.Windows.Forms.Label();
             this.panelStudio = new System.Windows.Forms.Panel();
@@ -76,10 +79,10 @@
             this.panelMasterPegawai = new System.Windows.Forms.Panel();
             this.labelPegawai = new System.Windows.Forms.Label();
             this.labelProfile = new System.Windows.Forms.Label();
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.panelMasterFilm = new System.Windows.Forms.Panel();
-            this.labelFilm = new System.Windows.Forms.Label();
+            this.panelLaporan = new System.Windows.Forms.Panel();
+            this.labelLaporan = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelPegawaiOperator.SuspendLayout();
             this.panelUpdateStatus.SuspendLayout();
             this.panelKonsumen.SuspendLayout();
@@ -97,6 +100,7 @@
             this.panelMaster.SuspendLayout();
             this.panelListMaster.SuspendLayout();
             this.panelMasterKonsumen.SuspendLayout();
+            this.panelMasterFilm.SuspendLayout();
             this.panelJenisStudio.SuspendLayout();
             this.panelStudio.SuspendLayout();
             this.panelMasterGenre.SuspendLayout();
@@ -104,8 +108,7 @@
             this.panelMasterKelompok.SuspendLayout();
             this.panelMasterCinema.SuspendLayout();
             this.panelMasterPegawai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
-            this.panelMasterFilm.SuspendLayout();
+            this.panelLaporan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPIlihan
@@ -137,6 +140,16 @@
             this.textBoxUserLogin.Size = new System.Drawing.Size(525, 29);
             this.textBoxUserLogin.TabIndex = 35;
             this.textBoxUserLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.Image = global::Celikoor_FunnyTix.Properties.Resources.profile_user;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(108, 43);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(282, 243);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 28;
+            this.pictureBoxProfile.TabStop = false;
             // 
             // panelPegawaiOperator
             // 
@@ -375,13 +388,14 @@
             // 
             // panelPegawaiAdmin
             // 
+            this.panelPegawaiAdmin.Controls.Add(this.panelLaporan);
             this.panelPegawaiAdmin.Controls.Add(this.panelDataTransaksi);
             this.panelPegawaiAdmin.Controls.Add(this.panelPenjadwalan);
             this.panelPegawaiAdmin.Controls.Add(this.panelMaster);
             this.panelPegawaiAdmin.Location = new System.Drawing.Point(4, 358);
             this.panelPegawaiAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelPegawaiAdmin.Name = "panelPegawaiAdmin";
-            this.panelPegawaiAdmin.Size = new System.Drawing.Size(523, 297);
+            this.panelPegawaiAdmin.Size = new System.Drawing.Size(523, 484);
             this.panelPegawaiAdmin.TabIndex = 22;
             // 
             // panelDataTransaksi
@@ -516,6 +530,31 @@
             this.labelKonsumen.TabIndex = 17;
             this.labelKonsumen.Text = "KONSUMEN";
             this.labelKonsumen.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // panelMasterFilm
+            // 
+            this.panelMasterFilm.BackColor = System.Drawing.Color.Transparent;
+            this.panelMasterFilm.Controls.Add(this.labelFilm);
+            this.panelMasterFilm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMasterFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMasterFilm.Location = new System.Drawing.Point(0, 397);
+            this.panelMasterFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMasterFilm.Name = "panelMasterFilm";
+            this.panelMasterFilm.Size = new System.Drawing.Size(359, 50);
+            this.panelMasterFilm.TabIndex = 25;
+            this.panelMasterFilm.Click += new System.EventHandler(this.panelMasterFilm_Click);
+            // 
+            // labelFilm
+            // 
+            this.labelFilm.AutoSize = true;
+            this.labelFilm.BackColor = System.Drawing.Color.Transparent;
+            this.labelFilm.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelFilm.Location = new System.Drawing.Point(19, 11);
+            this.labelFilm.Name = "labelFilm";
+            this.labelFilm.Size = new System.Drawing.Size(73, 32);
+            this.labelFilm.TabIndex = 17;
+            this.labelFilm.Text = "FILM";
             // 
             // panelJenisStudio
             // 
@@ -711,40 +750,31 @@
             this.labelProfile.TabIndex = 17;
             this.labelProfile.Text = "Profile";
             // 
-            // pictureBoxProfile
+            // panelLaporan
             // 
-            this.pictureBoxProfile.Image = global::Celikoor_FunnyTix.Properties.Resources.profile_user;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(108, 43);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(282, 243);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 28;
-            this.pictureBoxProfile.TabStop = false;
+            this.panelLaporan.BackColor = System.Drawing.Color.Transparent;
+            this.panelLaporan.Controls.Add(this.labelLaporan);
+            this.panelLaporan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLaporan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelLaporan.Location = new System.Drawing.Point(0, 305);
+            this.panelLaporan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLaporan.Name = "panelLaporan";
+            this.panelLaporan.Size = new System.Drawing.Size(523, 100);
+            this.panelLaporan.TabIndex = 21;
+            this.panelLaporan.Click += new System.EventHandler(this.panelLaporan_Click);
             // 
-            // panelMasterFilm
+            // labelLaporan
             // 
-            this.panelMasterFilm.BackColor = System.Drawing.Color.Transparent;
-            this.panelMasterFilm.Controls.Add(this.labelFilm);
-            this.panelMasterFilm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelMasterFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMasterFilm.Location = new System.Drawing.Point(0, 397);
-            this.panelMasterFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMasterFilm.Name = "panelMasterFilm";
-            this.panelMasterFilm.Size = new System.Drawing.Size(359, 50);
-            this.panelMasterFilm.TabIndex = 25;
-            this.panelMasterFilm.Click += new System.EventHandler(this.panelMasterFilm_Click);
-            // 
-            // labelFilm
-            // 
-            this.labelFilm.AutoSize = true;
-            this.labelFilm.BackColor = System.Drawing.Color.Transparent;
-            this.labelFilm.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelFilm.Location = new System.Drawing.Point(19, 11);
-            this.labelFilm.Name = "labelFilm";
-            this.labelFilm.Size = new System.Drawing.Size(73, 32);
-            this.labelFilm.TabIndex = 17;
-            this.labelFilm.Text = "FILM";
+            this.labelLaporan.AutoSize = true;
+            this.labelLaporan.BackColor = System.Drawing.Color.Transparent;
+            this.labelLaporan.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold);
+            this.labelLaporan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelLaporan.Location = new System.Drawing.Point(35, 28);
+            this.labelLaporan.Name = "labelLaporan";
+            this.labelLaporan.Size = new System.Drawing.Size(175, 41);
+            this.labelLaporan.TabIndex = 17;
+            this.labelLaporan.Text = "LAPORAN";
+            this.labelLaporan.Click += new System.EventHandler(this.labelLaporan_Click);
             // 
             // FormUtama
             // 
@@ -764,6 +794,7 @@
             this.Load += new System.EventHandler(this.FormUtama_Load);
             this.panelPIlihan.ResumeLayout(false);
             this.panelPIlihan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panelPegawaiOperator.ResumeLayout(false);
             this.panelUpdateStatus.ResumeLayout(false);
             this.panelUpdateStatus.PerformLayout();
@@ -793,6 +824,8 @@
             this.panelListMaster.ResumeLayout(false);
             this.panelMasterKonsumen.ResumeLayout(false);
             this.panelMasterKonsumen.PerformLayout();
+            this.panelMasterFilm.ResumeLayout(false);
+            this.panelMasterFilm.PerformLayout();
             this.panelJenisStudio.ResumeLayout(false);
             this.panelJenisStudio.PerformLayout();
             this.panelStudio.ResumeLayout(false);
@@ -807,9 +840,8 @@
             this.panelMasterCinema.PerformLayout();
             this.panelMasterPegawai.ResumeLayout(false);
             this.panelMasterPegawai.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
-            this.panelMasterFilm.ResumeLayout(false);
-            this.panelMasterFilm.PerformLayout();
+            this.panelLaporan.ResumeLayout(false);
+            this.panelLaporan.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -866,5 +898,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelMasterFilm;
         private System.Windows.Forms.Label labelFilm;
+        private System.Windows.Forms.Panel panelLaporan;
+        private System.Windows.Forms.Label labelLaporan;
     }
 }
