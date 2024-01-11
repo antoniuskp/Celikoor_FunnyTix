@@ -23,6 +23,10 @@ namespace Celikoor_FunnyTix
         private bool jamPemutaranIsLoaded = false;
         private List<string> chairTaken = new List<string>();
         Film selectedFilm;
+        private double TicketPrice;
+        private double CurrentPrice;
+        private double FilmDiscount;
+        private bool IsChange = true;
         //private DataTable daftarStudio;
 
 
@@ -197,7 +201,7 @@ namespace Celikoor_FunnyTix
             catch(Exception x)
             {
                 MessageBox.Show(x.Message);
-                Environment.Exit(0);
+                //Environment.Exit(0);
             }
         }
 
@@ -228,6 +232,7 @@ namespace Celikoor_FunnyTix
                     string day = dateTimePickerTambah.Value.DayOfWeek.ToString();
                     string namaStudio = comboBoxStudio.Text;
                     var jenisStudio = Studio.CariJenisStudio(namaStudio);
+
                     if (jenisStudio.Rows.Count > 0)
                     {                               
                         textBoxJenisStudio.Text = jenisStudio.Rows[0][0].ToString();
@@ -235,11 +240,13 @@ namespace Celikoor_FunnyTix
                         {
                             string price = jenisStudio.Rows[0][2].ToString();
                             textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", price.ToString());
+                            TicketPrice = double.Parse(price);
                         }
                         else
                         {
                             string price = jenisStudio.Rows[0][1].ToString();
                             textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", price.ToString());
+                            TicketPrice = double.Parse(price);
                         }
                         textBoxKapasitas.Text = jenisStudio.Rows[0][3].ToString();
                     }
@@ -264,6 +271,7 @@ namespace Celikoor_FunnyTix
                         comboBoxJamPemutaran.DataSource = null;
                     }
 
+                    
                 }
                 else
                 {
@@ -286,10 +294,28 @@ namespace Celikoor_FunnyTix
                 if (cb.Checked)
                 {
                     userSelection.Add((string)cb.Tag);
+                    if (comboBoxJamPemutaran.Items.Count > 0 && IsChange)
+                    {
+                        CurrentPrice += TicketPrice;
+                        textBoxTotal.Text = $"{CurrentPrice}";
+
+                        //double totalAkhir = CurrentPrice - ((CurrentPrice * (FilmDiscount / 100)) * userSelection.Count);
+                        double totalAkhir = CurrentPrice - (CurrentPrice * (FilmDiscount / 100));
+                        textBoxTotalAkhir.Text = $"{totalAkhir}";
+                    }  
                 }
                 else
                 {
                     userSelection.Remove((string)cb.Tag);
+                    if (comboBoxJamPemutaran.Items.Count > 0 && IsChange)
+                    {
+                        CurrentPrice -= TicketPrice;
+                        textBoxTotal.Text = $"{CurrentPrice}";
+
+                        //double totalAkhir = CurrentPrice - ((CurrentPrice * (FilmDiscount / 100)) * userSelection.Count);
+                        double totalAkhir = CurrentPrice - (CurrentPrice * (FilmDiscount / 100));
+                        textBoxTotalAkhir.Text = $"{totalAkhir}";
+                    }
                 }
                 labelUserSelection.Text = String.Join(", ", userSelection);
             }
@@ -312,7 +338,7 @@ namespace Celikoor_FunnyTix
 
                 chairTaken = Tiket.CariNomorKursi(selectedFilm.Id, selectedDate, cinema, namaStudio, jamPemutaran);
 
-
+                IsChange = false;
                 //* Cek nomor kursi apa saja yg telah dibeli
                 // Ubah Enabled dlu biar di Method InputKursi tidak dijalankan
                 // Method InputKursi hanya dijalankan ketika user yg memilih, bukan sistem
@@ -372,6 +398,14 @@ namespace Celikoor_FunnyTix
                         }
                     }
                 }
+
+                IsChange = true;
+                textBoxTotalAkhir.Text = "";
+                labelUserSelection.Text = "";
+                textBoxTotal.Text = "";
+                //FilmDiscount = 0;
+                CurrentPrice = 0;
+                textBoxTotal.Text = "";
             }
             catch (Exception x)
             {
@@ -391,6 +425,8 @@ namespace Celikoor_FunnyTix
             selectedFilm.BacaGenreFilm(selectedFilm);
             textBoxGenre.Clear();
             textBoxAktor.Clear();
+            FilmDiscount = selectedFilm.Diskon;
+            textBoxDiskon.Text = selectedFilm.Diskon.ToString();
             for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
             {
                 if (selectedFilm.ListAktor.Count == 1)

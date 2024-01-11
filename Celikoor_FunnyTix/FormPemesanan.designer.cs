@@ -34,7 +34,6 @@
             this.textBoxDiskon = new System.Windows.Forms.TextBox();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.textBoxTotalAkhir = new System.Windows.Forms.TextBox();
-            this.textBoxKursi = new System.Windows.Forms.TextBox();
             this.textBoxDurasi = new System.Windows.Forms.TextBox();
             this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.textBoxHarga = new System.Windows.Forms.TextBox();
@@ -127,18 +126,6 @@
             this.textBoxTotalAkhir.Name = "textBoxTotalAkhir";
             this.textBoxTotalAkhir.Size = new System.Drawing.Size(159, 33);
             this.textBoxTotalAkhir.TabIndex = 6;
-            // 
-            // textBoxKursi
-            // 
-            this.textBoxKursi.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxKursi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxKursi.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKursi.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBoxKursi.Location = new System.Drawing.Point(1455, 554);
-            this.textBoxKursi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxKursi.Name = "textBoxKursi";
-            this.textBoxKursi.Size = new System.Drawing.Size(159, 25);
-            this.textBoxKursi.TabIndex = 7;
             // 
             // textBoxDurasi
             // 
@@ -242,7 +229,7 @@
             this.comboBoxJudul.Location = new System.Drawing.Point(131, 100);
             this.comboBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJudul.Name = "comboBoxJudul";
-            this.comboBoxJudul.Size = new System.Drawing.Size(476, 36);
+            this.comboBoxJudul.Size = new System.Drawing.Size(476, 35);
             this.comboBoxJudul.TabIndex = 20;
             this.comboBoxJudul.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudul_SelectedIndexChanged_1);
             // 
@@ -334,7 +321,7 @@
             this.labelUserSelection.ForeColor = System.Drawing.Color.Maroon;
             this.labelUserSelection.Location = new System.Drawing.Point(1450, 551);
             this.labelUserSelection.Name = "labelUserSelection";
-            this.labelUserSelection.Size = new System.Drawing.Size(60, 28);
+            this.labelUserSelection.Size = new System.Drawing.Size(60, 27);
             this.labelUserSelection.TabIndex = 26;
             this.labelUserSelection.Text = "kursi";
             // 
@@ -378,7 +365,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1994, 846);
+            this.ClientSize = new System.Drawing.Size(1924, 846);
             this.Controls.Add(this.textBoxAktor);
             this.Controls.Add(this.pictureBoxCover);
             this.Controls.Add(this.richTextBoxSinopsis);
@@ -399,7 +386,6 @@
             this.Controls.Add(this.textBoxHarga);
             this.Controls.Add(this.textBoxGenre);
             this.Controls.Add(this.textBoxDurasi);
-            this.Controls.Add(this.textBoxKursi);
             this.Controls.Add(this.textBoxTotalAkhir);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.textBoxDiskon);
@@ -426,7 +412,6 @@
         private System.Windows.Forms.TextBox textBoxDiskon;
         private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.TextBox textBoxTotalAkhir;
-        private System.Windows.Forms.TextBox textBoxKursi;
         private System.Windows.Forms.TextBox textBoxDurasi;
         private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.TextBox textBoxHarga;
