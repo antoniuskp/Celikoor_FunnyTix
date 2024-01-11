@@ -56,30 +56,37 @@ namespace FunnyTix_LIB
             while (hasil.Read() == true)
             {
                 string sesi = hasil.GetValue(0).ToString();
-                switch (sesi)
-                {
-                    case "I":
-                        jam = "12.00 - 15.00 WIB";
-                        break;
-                    case "II":
-                        jam = "15.30 - 18.30 WIB";
-                        break;
-                    case "III":
-                        jam = "19.00 - 22.00 WIB";
-                        break;
-                    case "IV":
-                        jam = "22.30 - 01.30 WIB";
-                        break;
-                }
+                jam = SesiToJam(sesi);
             }
 
             return jam;
         }
 
-        public static List<SesiFilm> BacaFilmHariIni()
+        public static string SesiToJam(string sesi)
+        {
+            string jam = "";
+            switch (sesi)
+            {
+                case "I":
+                    jam = "12.00 - 15.00 WIB";
+                    break;
+                case "II":
+                    jam = "15.30 - 18.30 WIB";
+                    break;
+                case "III":
+                    jam = "19.00 - 22.00 WIB";
+                    break;
+                case "IV":
+                    jam = "22.30 - 01.30 WIB";
+                    break;
+            }
+            return jam;
+        }
+
+        public static List<SesiFilm> BacaFilmHari(DateTime tanggalPemutaran, string judul="")
         {
             //Ambil JadwalFilmHariIni
-            List<JadwalFilm> jadwalHariIni = JadwalFilm.BacaData("tanggal", DateTime.Now.ToString("yyyy-MM-dd"));
+            List<JadwalFilm> jadwalHariIni = JadwalFilm.BacaData("tanggal", tanggalPemutaran.ToString("yyyy-MM-dd"));
             List<SesiFilm> sesiFilmHariIni = new List<SesiFilm>();
             for (int i = 0; i < jadwalHariIni.Count; i++)
             {
@@ -87,13 +94,46 @@ namespace FunnyTix_LIB
                 MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
                 while (hasil.Read() == true)
                 {
-                    SesiFilm sf = new SesiFilm();
-                    sf.JadwalFilm = JadwalFilm.BacaData("id", hasil.GetValue(0).ToString())[0];
-                    sf.FilmStudio.Film = Film.BacaData(hasil.GetValue(2).ToString())[0];
-                    sf.FilmStudio.Studio = Studio.BacaData(hasil.GetValue(1).ToString())[0];
-                    sesiFilmHariIni.Add(sf);
+                    
+                    if (judul!="")
+                    {
+                        List<Film> listJudul = Film.BacaDataJudul(judul);
+
+                        if (listJudul.Count == 0) {
+                            return new List<SesiFilm>();
+                        }
+                        //return Film.BacaData(hasil.GetValue(2).ToString())[0].Id.ToString();
+                        if (Film.BacaData(hasil.GetValue(2).ToString())[0].Id==Film.BacaDataJudul(judul)[0].Id)
+                        {
+                            SesiFilm sf = new SesiFilm();
+                            sf.JadwalFilm = JadwalFilm.BacaData("id", hasil.GetValue(0).ToString())[0];
+                            sf.FilmStudio.Film = Film.BacaData(hasil.GetValue(2).ToString())[0];
+                            sf.FilmStudio.Studio = Studio.BacaData("id", hasil.GetValue(1).ToString())[0];
+                            sesiFilmHariIni.Add(sf);
+                            break;
+                        }
+                        else
+                        {
+                            SesiFilm sf = new SesiFilm();
+                        sf.JadwalFilm = JadwalFilm.BacaData("id", hasil.GetValue(0).ToString())[0];
+                        sf.FilmStudio.Film = Film.BacaData(hasil.GetValue(2).ToString())[0];
+                        sf.FilmStudio.Studio = Studio.BacaData("id", hasil.GetValue(1).ToString())[0];
+                        sesiFilmHariIni.Add(sf);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        SesiFilm sf = new SesiFilm();
+                        sf.JadwalFilm = JadwalFilm.BacaData("id", hasil.GetValue(0).ToString())[0];
+                        sf.FilmStudio.Film = Film.BacaData(hasil.GetValue(2).ToString())[0];
+                        sf.FilmStudio.Studio = Studio.BacaData("id",hasil.GetValue(1).ToString())[0];
+                        sesiFilmHariIni.Add(sf);
+                        break;
+                    }
                 }
             }
+            //return "";
             return sesiFilmHariIni;
         }
 
@@ -122,6 +162,12 @@ namespace FunnyTix_LIB
             }
             return listJadwalFilm;
         }
+
+        /*public override string ToString()
+        {
+            string data = Tanggal + " " + Jam_pemutaran;
+            return data;
+        }*/
         #endregion
     }
 }

@@ -12,7 +12,6 @@ namespace FunnyTix_LIB
         #region DATA MEMBERS
         private Film film;
         private Studio studio;
-
         #endregion
 
         #region CONSTRUCTORS
@@ -32,6 +31,12 @@ namespace FunnyTix_LIB
         public Film Film { get => film; set => film = value; }
         public Studio Studio { get => studio; set => studio = value; }
         #endregion
+
+        /*public override string ToString()
+        {
+            string data = Film.Judul + " " + Studio.Nama;
+            return data;
+        }*/
 
     }
 }

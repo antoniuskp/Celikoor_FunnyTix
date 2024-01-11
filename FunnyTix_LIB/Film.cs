@@ -314,6 +314,35 @@ namespace FunnyTix_LIB
             }
             return listBahasa;
         }
+
+        public static List<Film> BacaDataJudul(string value = "")
+        {
+            string query = "SELECT * FROM films;";
+            if (value != "")
+            {
+                query = $"SELECT * FROM films where judul like '%{value}%';";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<Film> listFilm = new List<Film>();
+
+            while (hasil.Read() == true)
+            {
+                Film film = new Film(
+                    hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString(),
+                    int.Parse(hasil.GetValue(3).ToString()),
+                    int.Parse(hasil.GetValue(4).ToString()),
+                    Kelompok.BacaData("id", hasil.GetValue(5).ToString())[0],
+                    hasil.GetValue(6).ToString(),
+                    int.Parse(hasil.GetValue(7).ToString()),
+                    hasil.GetValue(8).ToString(),
+                    double.Parse(hasil.GetValue(9).ToString()));
+
+                film.Id = int.Parse(hasil.GetValue(0).ToString());
+                listFilm.Add(film);
+            }
+            return listFilm;
+        }
         #endregion
 
         #region 
