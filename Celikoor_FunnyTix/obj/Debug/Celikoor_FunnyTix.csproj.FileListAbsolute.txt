@@ -506,7 +506,6 @@ C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\Fu
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormProfile.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahFilm.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahFilm.resources
-C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahDetailFilm.resources
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahDetailFilm.resources
@@ -514,11 +513,6 @@ C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterFilm.resources
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterFilm.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormIsiSaldo.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterFilm.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterJenisStudio.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterStudio.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormProfile.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahDetailFilm.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahFilm.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterFilm.resources
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahDetailFilm.resources
+C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
