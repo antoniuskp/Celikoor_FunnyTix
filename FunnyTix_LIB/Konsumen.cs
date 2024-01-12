@@ -128,6 +128,11 @@ namespace FunnyTix_LIB
             }
         }
 
+        public static void UbahSaldo(Konsumen k, int jum)
+        {
+            string sql = $"UPDATE konsumens SET saldo = saldo + ('{jum}') WHERE id = '{k.ID}';";
+            Koneksi.JalankanPerintahNonQuery(sql);
+        }
         public static void UpdateSaldo(double val, Konsumen konsumen)
         {
             try

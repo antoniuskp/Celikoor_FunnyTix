@@ -44,6 +44,7 @@ namespace FunnyTix_LIB
                             hasil.GetValue(8).ToString()
                         );
 
+
                     USERNAME = konsumen.Username;
                     PASSWORD = konsumen.Password;
                     ROLE = Role.KONSUMEN;

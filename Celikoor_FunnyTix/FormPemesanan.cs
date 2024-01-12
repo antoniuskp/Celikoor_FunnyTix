@@ -45,6 +45,10 @@ namespace Celikoor_FunnyTix
             daftarFilm = Film.BacaData();
             comboBoxJudul.DataSource = daftarFilm;
             comboBoxJudul.DisplayMember = "Judul";
+            double saldo = Auth.GetKonsumen().Saldo;
+            textBoxSaldo.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", saldo.ToString());
+
+
         }
 
         private void InitializeCheckBoxArray(string huruf)
@@ -317,7 +321,7 @@ namespace Celikoor_FunnyTix
                         textBoxTotalAkhir.Text = $"{totalAkhir}";
                     }
                 }
-                labelUserSelection.Text = String.Join(", ", userSelection);
+                labelUserSelection.Text = String.Join(",", userSelection);
             }
         }
 
@@ -504,6 +508,76 @@ namespace Celikoor_FunnyTix
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pictureBoxKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBoxKonfirmasiPembayaran_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult res = MessageBox.Show("Apakah Anda Yakin untuk membeli tiket? ", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if(res == DialogResult.Yes)
+                {
+                    string kursi = labelUserSelection.Text;
+                    string[] arrKursi = kursi.Split(',');
+
+
+                    int noNota = Invoice.GenerateNoNota();
+                    //Tambah Data 
+                    Invoice nota = new Invoice();
+                    nota.Id = noNota;
+                    nota.Tanggal = DateTime.Now;
+                    nota.GrandTotal = int.Parse(textBoxTotal.Text);
+                    nota.DiskonNominal = int.Parse(textBoxDiskon.Text);
+                    nota.Konsumen = Auth.GetKonsumen();
+                    nota.Status = "PENDING";
+
+                    foreach (string k in arrKursi)
+                    {
+                        string jam = comboBoxJamPemutaran.Text;
+
+                        Tiket t = new Tiket();
+                        t.IdInvoice = nota;
+                        t.NoKursi = k;
+                        t.Status = false;
+                        t.Operators = Pegawai.BacaData("id", "1")[0];
+
+                        string numericValue = new string(textBoxHarga.Text.Where(char.IsDigit).ToArray());
+                        t.Harga = int.Parse(numericValue);
+
+                        string tglPilihan = dateTimePickerTambah.Value.ToString("yyyy-MM-dd");
+                        t.JadwalFilm = JadwalFilm.BacaData("tanggal", tglPilihan, jam)[0];
+
+
+                        t.Studio = Studio.BacaData("nama", comboBoxStudio.Text)[0];
+                        t.Film = selectedFilm;
+
+                        nota.TambahTiket(t);
+
+
+                    }
+
+                    if (Auth.GetKonsumen().Saldo > int.Parse(textBoxTotalAkhir.Text))
+                    {
+                        Konsumen.UbahSaldo(Auth.GetKonsumen(), -int.Parse(textBoxTotalAkhir.Text));
+                        Invoice.TambahData(nota);
+                        MessageBox.Show("Pembayaran Berhasil!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Saldo Anda Kurang!");
+                    }
+                }              
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Penambahan Data Gagal " + ex.Message);
             }
         }
     }

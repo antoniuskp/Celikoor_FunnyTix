@@ -10,7 +10,7 @@ namespace FunnyTix_LIB
 {
     public class JadwalFilm
     {
-        #region data members
+        #region data members, constructor, properties
         private int id;
         private DateTime tanggal;
         private string jam_pemutaran;

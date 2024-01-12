@@ -519,3 +519,6 @@ C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyT
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterFilm.resources
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahDetailFilm.resources
 C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahFilm.resources
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Memory.dll
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll

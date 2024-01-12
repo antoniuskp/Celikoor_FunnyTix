@@ -68,6 +68,7 @@
             this.pictureBoxKonfirmasiPembayaran.Size = new System.Drawing.Size(413, 64);
             this.pictureBoxKonfirmasiPembayaran.TabIndex = 0;
             this.pictureBoxKonfirmasiPembayaran.TabStop = false;
+            this.pictureBoxKonfirmasiPembayaran.Click += new System.EventHandler(this.pictureBoxKonfirmasiPembayaran_Click);
             // 
             // pictureBoxKeluar
             // 
@@ -78,6 +79,7 @@
             this.pictureBoxKeluar.Size = new System.Drawing.Size(188, 64);
             this.pictureBoxKeluar.TabIndex = 1;
             this.pictureBoxKeluar.TabStop = false;
+            this.pictureBoxKeluar.Click += new System.EventHandler(this.pictureBoxKeluar_Click);
             // 
             // textBoxSaldo
             // 
@@ -88,6 +90,7 @@
             this.textBoxSaldo.Location = new System.Drawing.Point(1727, 770);
             this.textBoxSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSaldo.Name = "textBoxSaldo";
+            this.textBoxSaldo.ReadOnly = true;
             this.textBoxSaldo.Size = new System.Drawing.Size(203, 25);
             this.textBoxSaldo.TabIndex = 2;
             // 
@@ -100,6 +103,7 @@
             this.textBoxDiskon.Location = new System.Drawing.Point(1469, 686);
             this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDiskon.Name = "textBoxDiskon";
+            this.textBoxDiskon.ReadOnly = true;
             this.textBoxDiskon.Size = new System.Drawing.Size(159, 25);
             this.textBoxDiskon.TabIndex = 4;
             // 
@@ -112,6 +116,7 @@
             this.textBoxTotal.Location = new System.Drawing.Point(1469, 615);
             this.textBoxTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
             this.textBoxTotal.Size = new System.Drawing.Size(159, 25);
             this.textBoxTotal.TabIndex = 5;
             // 
@@ -136,6 +141,7 @@
             this.textBoxDurasi.Location = new System.Drawing.Point(1445, 331);
             this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDurasi.Name = "textBoxDurasi";
+            this.textBoxDurasi.ReadOnly = true;
             this.textBoxDurasi.Size = new System.Drawing.Size(159, 25);
             this.textBoxDurasi.TabIndex = 8;
             // 
@@ -148,6 +154,7 @@
             this.textBoxGenre.Location = new System.Drawing.Point(1760, 331);
             this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.ReadOnly = true;
             this.textBoxGenre.Size = new System.Drawing.Size(145, 25);
             this.textBoxGenre.TabIndex = 9;
             // 
@@ -160,6 +167,7 @@
             this.textBoxHarga.Location = new System.Drawing.Point(451, 348);
             this.textBoxHarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxHarga.Name = "textBoxHarga";
+            this.textBoxHarga.ReadOnly = true;
             this.textBoxHarga.Size = new System.Drawing.Size(159, 25);
             this.textBoxHarga.TabIndex = 10;
             // 
@@ -172,6 +180,7 @@
             this.textBoxSisa.Location = new System.Drawing.Point(451, 422);
             this.textBoxSisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSisa.Name = "textBoxSisa";
+            this.textBoxSisa.ReadOnly = true;
             this.textBoxSisa.Size = new System.Drawing.Size(159, 25);
             this.textBoxSisa.TabIndex = 11;
             // 
@@ -184,6 +193,7 @@
             this.textBoxJenisStudio.Location = new System.Drawing.Point(129, 350);
             this.textBoxJenisStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJenisStudio.Name = "textBoxJenisStudio";
+            this.textBoxJenisStudio.ReadOnly = true;
             this.textBoxJenisStudio.Size = new System.Drawing.Size(159, 25);
             this.textBoxJenisStudio.TabIndex = 12;
             // 
@@ -196,6 +206,7 @@
             this.textBoxKapasitas.Location = new System.Drawing.Point(129, 420);
             this.textBoxKapasitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKapasitas.Name = "textBoxKapasitas";
+            this.textBoxKapasitas.ReadOnly = true;
             this.textBoxKapasitas.Size = new System.Drawing.Size(181, 25);
             this.textBoxKapasitas.TabIndex = 13;
             // 
@@ -229,7 +240,7 @@
             this.comboBoxJudul.Location = new System.Drawing.Point(131, 100);
             this.comboBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJudul.Name = "comboBoxJudul";
-            this.comboBoxJudul.Size = new System.Drawing.Size(476, 35);
+            this.comboBoxJudul.Size = new System.Drawing.Size(476, 36);
             this.comboBoxJudul.TabIndex = 20;
             this.comboBoxJudul.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudul_SelectedIndexChanged_1);
             // 
@@ -321,7 +332,7 @@
             this.labelUserSelection.ForeColor = System.Drawing.Color.Maroon;
             this.labelUserSelection.Location = new System.Drawing.Point(1450, 551);
             this.labelUserSelection.Name = "labelUserSelection";
-            this.labelUserSelection.Size = new System.Drawing.Size(60, 27);
+            this.labelUserSelection.Size = new System.Drawing.Size(60, 28);
             this.labelUserSelection.TabIndex = 26;
             this.labelUserSelection.Text = "kursi";
             // 
@@ -333,6 +344,7 @@
             this.richTextBoxSinopsis.ForeColor = System.Drawing.Color.Maroon;
             this.richTextBoxSinopsis.Location = new System.Drawing.Point(1296, 126);
             this.richTextBoxSinopsis.Name = "richTextBoxSinopsis";
+            this.richTextBoxSinopsis.ReadOnly = true;
             this.richTextBoxSinopsis.Size = new System.Drawing.Size(653, 172);
             this.richTextBoxSinopsis.TabIndex = 27;
             this.richTextBoxSinopsis.Text = "";
@@ -356,6 +368,7 @@
             this.textBoxAktor.ForeColor = System.Drawing.Color.NavajoWhite;
             this.textBoxAktor.Location = new System.Drawing.Point(1551, 402);
             this.textBoxAktor.Name = "textBoxAktor";
+            this.textBoxAktor.ReadOnly = true;
             this.textBoxAktor.Size = new System.Drawing.Size(354, 21);
             this.textBoxAktor.TabIndex = 29;
             // 
@@ -365,7 +378,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 846);
+            this.ClientSize = new System.Drawing.Size(1991, 894);
             this.Controls.Add(this.textBoxAktor);
             this.Controls.Add(this.pictureBoxCover);
             this.Controls.Add(this.richTextBoxSinopsis);

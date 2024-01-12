@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
 
 namespace FunnyTix_LIB
-{
+{    
     public class Invoice
     {
         #region DATA MEMBERS
@@ -18,6 +18,7 @@ namespace FunnyTix_LIB
         private Konsumen konsumen;
         private Pegawai kasir;
         private string status;
+        private List<Tiket> listTiket;
         #endregion
 
         #region CONSTRUCTORS
@@ -30,6 +31,7 @@ namespace FunnyTix_LIB
             Konsumen = konsumen;
             Kasir = kasir;
             Status = status;
+            ListTiket = new List<Tiket>();
         }
         public Invoice()
         {
@@ -39,7 +41,8 @@ namespace FunnyTix_LIB
             DiskonNominal = 0;
             Konsumen = new Konsumen();
             Kasir = new Pegawai();
-            Status = "";
+            Status = "PENDING";
+            this.ListTiket = new List<Tiket>();
         }
         #endregion
 
@@ -51,9 +54,28 @@ namespace FunnyTix_LIB
         public Konsumen Konsumen { get => konsumen; set => konsumen = value; }
         public Pegawai Kasir { get => kasir; set => kasir = value; }
         public string Status { get => status; set => status = value; }
+        public List<Tiket> ListTiket { get => listTiket; set => listTiket = value; }
         #endregion
 
         #region METHODS
+        public static int GenerateNoNota()
+        {
+            int notaBaru = 0;
+            string cmd = $"SELECT * from invoices order by id desc limit 1;";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+
+            if(hasil.Read() == true)
+            {
+                string noNotaAkhir = hasil.GetValue(0).ToString();
+
+                notaBaru = int.Parse(noNotaAkhir) + 1;
+
+            }
+            return notaBaru;
+
+        }
+
         public static Invoice CariInvoice(int id, string noKursi)
         {
             string query = $"SELECT i.* FROM invoices i INNER JOIN tikets t on t.invoices_id = i.id WHERE t.nomor_kursi = '{noKursi}' and i.id = '{id}';";
@@ -110,11 +132,33 @@ namespace FunnyTix_LIB
             }
             return listInvoice;
         }
+
+        public void TambahTiket(Tiket ticket)
+        {
+            Tiket t = new Tiket();
+            t.NoKursi = ticket.NoKursi;
+            t.Status = false;
+            t.Operators = Pegawai.BacaData("id", "1")[0];
+            t.Harga = ticket.Harga;
+            t.JadwalFilm = ticket.JadwalFilm;
+            t.Studio = ticket.Studio;
+            t.Film = ticket.Film;
+            this.ListTiket.Add(t);
+
+        }
         public static void TambahData(Invoice invoice)
         {
-            string cmd = $"INSERT INTO invoices (tanggal, grand_total, diskon_nominal, konsumen_id, kasir_id, status) values ('{invoice.Id}', '{invoice.Tanggal}','{invoice.GrandTotal}','{invoice.DiskonNominal}','{invoice.Konsumen.ID}','{invoice.Kasir.ID}','{invoice.Status}');";
+            string cmd = $"INSERT INTO invoices (id, tanggal, grand_total, diskon_nominal, konsumens_id, status) values('{invoice.Id}','{invoice.Tanggal.ToString("yyyy-MM-dd")}', '{invoice.GrandTotal}', '{invoice.DiskonNominal}', '{invoice.Konsumen.ID}', '{invoice.Status}'); ";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
+
+            for(int i = 0; i < invoice.ListTiket.Count; i++)
+            {
+                string query = $"INSERT INTO tikets (`invoices_id`, `nomor_kursi`, `status_hadir`, `operator_id`, `harga`, `jadwal_film_id`, `studios_id`, `films_id`) " +
+                    $"VALUES ('{invoice.Id}', '{invoice.ListTiket[i].NoKursi}', '{invoice.ListTiket[i].Status}', '{invoice.ListTiket[i].Operators.ID}', " +
+                    $"'{invoice.ListTiket[i].Harga}', '{invoice.ListTiket[i].JadwalFilm.Id}', '{invoice.ListTiket[i].Studio.ID}', '{invoice.ListTiket[i].Film.Id}');";
+                Koneksi.JalankanPerintahNonQuery(query);
+            }
         }
 
         public static void UpdateInvoice(Invoice invoice)
@@ -128,7 +172,7 @@ namespace FunnyTix_LIB
         {
             return
             Konsumen.ID.ToString();
-            Kasir.ID.ToString();
+            //Kasir.ID.ToString();
         }
         #endregion
 
