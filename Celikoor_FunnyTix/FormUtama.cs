@@ -497,6 +497,9 @@ namespace Celikoor_FunnyTix
             visiblePanelList = false;
         }
 
-        
+        private void panelMasterPegawai_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

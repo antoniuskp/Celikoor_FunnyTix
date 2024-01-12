@@ -34,30 +34,7 @@ namespace Celikoor_FunnyTix
                 dataGridViewHasil.DataSource = listPegawai;
                 comboBox.SelectedIndex = 0;
 
-                if (listPegawai.Count > 0)
-                {
-                    if (dataGridViewHasil.ColumnCount <8)
-                    {
-                        /*DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-
-                        bcol.HeaderText = "Aksi";
-                        bcol.Text = "Ubah";
-                        bcol.Name = "buttonUbahGrid";
-                        bcol.UseColumnTextForButtonValue = true;
-                        dataGridViewHasil.Columns.Add(bcol);
-*/
-                        DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                        bcol2.HeaderText = "Aksi";
-                        bcol2.Text = "Hapus";
-                        bcol2.Name = "buttonHapusGrid";
-                        bcol2.UseColumnTextForButtonValue = true;
-                        dataGridViewHasil.Columns.Add(bcol2);
-                    }
-                }
-                else
-                {
-                    dataGridViewHasil.DataSource = null;
-                }
+                
             }
             catch(Exception ex)
             {
