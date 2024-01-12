@@ -148,6 +148,10 @@ namespace FunnyTix_LIB
             {
                 query = $"SELECT * FROM `jadwal_films` WHERE jam_pemutaran = '{jam}' AND tanggal = '{value}';";
             }
+            else if(filter == "tanggal" && jam == "")
+            {
+                query = $"SELECT * FROM `jadwal_films` WHERE tanggal = '{value}';";
+            }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<JadwalFilm> listJadwalFilm = new List<JadwalFilm>();
 

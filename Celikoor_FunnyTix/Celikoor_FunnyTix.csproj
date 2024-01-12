@@ -381,5 +381,11 @@
   <ItemGroup>
     <None Include="Resources\formIsiSaldo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormPemesananRevise.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formPesan.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

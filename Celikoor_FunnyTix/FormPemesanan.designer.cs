@@ -40,7 +40,6 @@
             this.textBoxSisa = new System.Windows.Forms.TextBox();
             this.textBoxJenisStudio = new System.Windows.Forms.TextBox();
             this.textBoxKapasitas = new System.Windows.Forms.TextBox();
-            this.textBoxStudio = new System.Windows.Forms.TextBox();
             this.panelA = new System.Windows.Forms.Panel();
             this.comboBoxJudul = new System.Windows.Forms.ComboBox();
             this.dateTimePickerTambah = new System.Windows.Forms.DateTimePicker();
@@ -49,11 +48,12 @@
             this.textBoxAge = new System.Windows.Forms.TextBox();
             this.comboBoxJamPemutaran = new System.Windows.Forms.ComboBox();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
-            this.comboBoxStudio = new System.Windows.Forms.ComboBox();
+            this.comboBoxJenisStudio = new System.Windows.Forms.ComboBox();
             this.labelUserSelection = new System.Windows.Forms.Label();
             this.richTextBoxSinopsis = new System.Windows.Forms.RichTextBox();
             this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.textBoxAktor = new System.Windows.Forms.TextBox();
+            this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKonfirmasiPembayaran)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
@@ -210,18 +210,6 @@
             this.textBoxKapasitas.Size = new System.Drawing.Size(181, 25);
             this.textBoxKapasitas.TabIndex = 13;
             // 
-            // textBoxStudio
-            // 
-            this.textBoxStudio.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxStudio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxStudio.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStudio.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBoxStudio.Location = new System.Drawing.Point(501, 273);
-            this.textBoxStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxStudio.Name = "textBoxStudio";
-            this.textBoxStudio.Size = new System.Drawing.Size(107, 25);
-            this.textBoxStudio.TabIndex = 17;
-            // 
             // panelA
             // 
             this.panelA.BackColor = System.Drawing.Color.NavajoWhite;
@@ -249,12 +237,13 @@
             this.dateTimePickerTambah.CalendarFont = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerTambah.CalendarForeColor = System.Drawing.Color.DarkRed;
             this.dateTimePickerTambah.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
+            this.dateTimePickerTambah.CalendarTitleForeColor = System.Drawing.Color.Maroon;
             this.dateTimePickerTambah.CalendarTrailingForeColor = System.Drawing.Color.RosyBrown;
-            this.dateTimePickerTambah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerTambah.Location = new System.Drawing.Point(123, 182);
+            this.dateTimePickerTambah.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTambah.Location = new System.Drawing.Point(123, 265);
             this.dateTimePickerTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerTambah.Name = "dateTimePickerTambah";
-            this.dateTimePickerTambah.Size = new System.Drawing.Size(327, 28);
+            this.dateTimePickerTambah.Size = new System.Drawing.Size(261, 23);
             this.dateTimePickerTambah.TabIndex = 21;
             this.dateTimePickerTambah.ValueChanged += new System.EventHandler(this.dateTimePickerTambah_ValueChanged);
             // 
@@ -293,10 +282,10 @@
             // 
             this.comboBoxJamPemutaran.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJamPemutaran.FormattingEnabled = true;
-            this.comboBoxJamPemutaran.Location = new System.Drawing.Point(473, 182);
+            this.comboBoxJamPemutaran.Location = new System.Drawing.Point(451, 267);
             this.comboBoxJamPemutaran.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxJamPemutaran.Name = "comboBoxJamPemutaran";
-            this.comboBoxJamPemutaran.Size = new System.Drawing.Size(89, 26);
+            this.comboBoxJamPemutaran.Size = new System.Drawing.Size(156, 26);
             this.comboBoxJamPemutaran.TabIndex = 23;
             this.comboBoxJamPemutaran.SelectedIndexChanged += new System.EventHandler(this.comboBoxJamPemutaran_SelectedIndexChanged);
             // 
@@ -304,25 +293,28 @@
             // 
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCinema.ForeColor = System.Drawing.Color.Maroon;
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(123, 272);
+            this.comboBoxCinema.Location = new System.Drawing.Point(421, 182);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(297, 26);
+            this.comboBoxCinema.Size = new System.Drawing.Size(211, 26);
             this.comboBoxCinema.TabIndex = 24;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
-            // comboBoxStudio
+            // comboBoxJenisStudio
             // 
-            this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxStudio.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(501, 272);
-            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(94, 26);
-            this.comboBoxStudio.TabIndex = 25;
-            this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
+            this.comboBoxJenisStudio.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBoxJenisStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJenisStudio.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxJenisStudio.ForeColor = System.Drawing.Color.Maroon;
+            this.comboBoxJenisStudio.FormattingEnabled = true;
+            this.comboBoxJenisStudio.Location = new System.Drawing.Point(123, 182);
+            this.comboBoxJenisStudio.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
+            this.comboBoxJenisStudio.Size = new System.Drawing.Size(223, 26);
+            this.comboBoxJenisStudio.TabIndex = 25;
+            this.comboBoxJenisStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxJenisStudio_SelectedIndexChanged);
             // 
             // labelUserSelection
             // 
@@ -372,18 +364,29 @@
             this.textBoxAktor.Size = new System.Drawing.Size(354, 21);
             this.textBoxAktor.TabIndex = 29;
             // 
+            // comboBoxStudio
+            // 
+            this.comboBoxStudio.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStudio.FormattingEnabled = true;
+            this.comboBoxStudio.Location = new System.Drawing.Point(129, 348);
+            this.comboBoxStudio.Name = "comboBoxStudio";
+            this.comboBoxStudio.Size = new System.Drawing.Size(159, 31);
+            this.comboBoxStudio.TabIndex = 30;
+            this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
+            // 
             // FormPemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPemesanan;
+            this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.formPesan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1991, 894);
+            this.Controls.Add(this.comboBoxStudio);
             this.Controls.Add(this.textBoxAktor);
             this.Controls.Add(this.pictureBoxCover);
             this.Controls.Add(this.richTextBoxSinopsis);
             this.Controls.Add(this.labelUserSelection);
-            this.Controls.Add(this.comboBoxStudio);
+            this.Controls.Add(this.comboBoxJenisStudio);
             this.Controls.Add(this.comboBoxCinema);
             this.Controls.Add(this.comboBoxJamPemutaran);
             this.Controls.Add(this.textBoxAge);
@@ -392,7 +395,6 @@
             this.Controls.Add(this.dateTimePickerTambah);
             this.Controls.Add(this.comboBoxJudul);
             this.Controls.Add(this.panelA);
-            this.Controls.Add(this.textBoxStudio);
             this.Controls.Add(this.textBoxKapasitas);
             this.Controls.Add(this.textBoxJenisStudio);
             this.Controls.Add(this.textBoxSisa);
@@ -431,7 +433,6 @@
         private System.Windows.Forms.TextBox textBoxSisa;
         private System.Windows.Forms.TextBox textBoxJenisStudio;
         private System.Windows.Forms.TextBox textBoxKapasitas;
-        private System.Windows.Forms.TextBox textBoxStudio;
         private System.Windows.Forms.Panel panelA;
         private System.Windows.Forms.ComboBox comboBoxJudul;
         private System.Windows.Forms.DateTimePicker dateTimePickerTambah;
@@ -440,10 +441,11 @@
         private System.Windows.Forms.TextBox textBoxAge;
         private System.Windows.Forms.ComboBox comboBoxJamPemutaran;
         private System.Windows.Forms.ComboBox comboBoxCinema;
-        private System.Windows.Forms.ComboBox comboBoxStudio;
+        private System.Windows.Forms.ComboBox comboBoxJenisStudio;
         private System.Windows.Forms.Label labelUserSelection;
         private System.Windows.Forms.RichTextBox richTextBoxSinopsis;
         private System.Windows.Forms.PictureBox pictureBoxCover;
         private System.Windows.Forms.TextBox textBoxAktor;
+        private System.Windows.Forms.ComboBox comboBoxStudio;
     }
 }

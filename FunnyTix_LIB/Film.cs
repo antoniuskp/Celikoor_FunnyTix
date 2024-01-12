@@ -144,92 +144,52 @@ namespace FunnyTix_LIB
             
         }
 
-        //public void CariJadwalKosong(Film f, Studio s)
-        //{
-        //    string query = $"SELECT DISTINCT jf.* FROM jadwal_films jf LEFT JOIN sesi_films sf on sf.jadwal_film_id = jf.id WHERE sf.films_id = '{f.Id}' is null AND sf.studios_id = '{s.ID}' is null; ";
 
-        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+        //public static DataTable CariJadwalPemutaran(int fid, DateTime tgl, string cinema, string studio)
+        //{
+        //    var data = new DataTable("Daftar Jam Pemutaran");
+        //    data.Columns.Add("Jam Pemutaran", typeof(string));
+
+        //    string cmd = $"select distinct jf.jam_pemutaran " +
+        //        $"from jadwal_films as jf " +
+        //        $"inner join sesi_films as sf on jf.id = sf.jadwal_film_id " +
+        //        $"inner join film_studio as fs on sf.films_id = fs.films_id " +
+        //        $"inner join films as f on fs.films_id = f.id " +
+        //        $"inner join studios as s on fs.studios_id = s.id " +
+        //        $"inner join cinemas as c on s.cinemas_id = c.id " +
+        //        $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema}' and s.nama = '{studio}';";
+
+        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
 
         //    while (hasil.Read() == true)
         //    {
-        //        SesiFilm sf = new SesiFilm();
-        //        sf.JadwalFilm = JadwalFilm.BacaData(hasil.GetValue(0).ToString())[0];
-        //        f.ListSesiFilm.Add(sf);
+        //        DataRow row = data.NewRow();
+        //        row["Jam Pemutaran"] = hasil.GetValue(0).ToString();
+        //        data.Rows.Add(row);
         //    }
+
+        //    return data;
         //}
 
+        //public static DataTable CariStudio(int fid, DateTime tgl, Cinema cinema)
+        //{
+        //    var data = new DataTable("Daftar Studio");
+        //    data.Columns.Add("Studio", typeof(string));
 
-        public static DataTable CariCinema(int fid, string tgl)
-        {
-            var data = new DataTable("Daftar Cinema");
-            data.Columns.Add("nama_cabang", typeof(string));
-
-            string cmd = $"select distinct c.nama_cabang " +
-                $"from jadwal_films as jf " +
-                $"inner  join sesi_films as sf on jf.id = sf.jadwal_film_id " +
-                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
-                $"inner join films as f on fs.films_id = f.id " +
-                $"inner join studios as s on fs.studios_id = s.id " +
-                $"inner join cinemas as c on s.cinemas_id = c.id " +
-                $"where f.id = '{fid}' and jf.tanggal = '{tgl}';";
-
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
-
-            while (hasil.Read() == true)
-            {
-                DataRow row = data.NewRow();
-                row["nama_cabang"] = hasil.GetValue(0).ToString();
-                data.Rows.Add(row);
-            }
-
-            return data;
-        }
-
-        public static DataTable CariJadwalPemutaran(int fid, DateTime tgl, string cinema, string studio)
-        {
-            var data = new DataTable("Daftar Jam Pemutaran");
-            data.Columns.Add("Jam Pemutaran", typeof(string));
-
-            string cmd = $"select distinct jf.jam_pemutaran " +
-                $"from jadwal_films as jf " +
-                $"inner join sesi_films as sf on jf.id = sf.jadwal_film_id " +
-                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
-                $"inner join films as f on fs.films_id = f.id " +
-                $"inner join studios as s on fs.studios_id = s.id " +
-                $"inner join cinemas as c on s.cinemas_id = c.id " +
-                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema}' and s.nama = '{studio}';";
-
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
-
-            while (hasil.Read() == true)
-            {
-                DataRow row = data.NewRow();
-                row["Jam Pemutaran"] = hasil.GetValue(0).ToString();
-                data.Rows.Add(row);
-            }
-
-            return data;
-        }
-
-        public static DataTable CariStudio(int fid, DateTime tgl, Cinema cinema)
-        {
-            var data = new DataTable("Daftar Studio");
-            data.Columns.Add("Studio", typeof(string));
-
-            string cmd = $"SELECT DISTINCT s.nama FROM jadwal_films as jf INNER JOIN sesi_films AS sf ON jf.id = sf.jadwal_film_id INNER JOIN film_studio AS fs ON sf.films_id = fs.films_id INNER JOIN films as f on fs.films_id = f.id INNER JOIN studios as s on fs.studios_id = s.id INNER JOIN cinemas as c on s.cinemas_id = c.id WHERE f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' AND c.nama_cabang = '{cinema.NamaCabang}';";
+        //    string cmd = $"SELECT DISTINCT s.nama FROM jadwal_films as jf INNER JOIN sesi_films AS sf ON jf.id = sf.jadwal_film_id INNER JOIN film_studio AS fs ON sf.films_id = fs.films_id INNER JOIN films as f on fs.films_id = f.id INNER JOIN studios as s on fs.studios_id = s.id INNER JOIN cinemas as c on s.cinemas_id = c.id WHERE f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' AND c.nama_cabang = '{cinema.NamaCabang}';";
 
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
 
-            while (hasil.Read() == true)
-            {
-                DataRow row = data.NewRow();
-                row["Studio"] = hasil.GetValue(0).ToString();
-                data.Rows.Add(row);
-            }
+        //    while (hasil.Read() == true)
+        //    {
+        //        DataRow row = data.NewRow();
+        //        row["Studio"] = hasil.GetValue(0).ToString();
+        //        data.Rows.Add(row);
+        //    }
 
-            return data;
-        }
+        //    return data;
+        //}
 
         public static List<Film> BacaData(string value = "")
         {

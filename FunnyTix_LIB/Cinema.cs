@@ -97,6 +97,27 @@ namespace FunnyTix_LIB
             }
         }
 
+        public static List<Cinema> BacaCinemaJenisStudio(JenisStudio js)
+        {
+            string query = $"SELECT DISTINCT c.* FROM cinemas c INNER JOIN studios s on s.cinemas_id = c.id " +
+                $"INNER JOIN jenis_studios js on js.id = jenis_studios_id WHERE js.id = '{js.Id}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<Cinema> listCinema = new List<Cinema>();
+            while(hasil.Read() == true)
+            {
+                Cinema c = new Cinema();
+                c.ID = int.Parse(hasil.GetValue(0).ToString());
+                c.NamaCabang = hasil.GetValue(1).ToString();
+                c.Alamat = hasil.GetValue(2).ToString();
+                c.Tgl_Buka = DateTime.Parse(hasil.GetValue(3).ToString());
+                c.Kota = hasil.GetValue(4).ToString();
+                listCinema.Add(c);
+            }
+            return listCinema;
+
+        }
+
         public override string ToString()
         {
             return NamaCabang;

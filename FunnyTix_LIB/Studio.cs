@@ -45,7 +45,49 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+        public static List<Studio> BacaStudioSesiFilm(JadwalFilm jf, Film f)
+        {
+            string query = $"SELECT * FROM sesi_films WHERE films_id = '{f.Id}' AND jadwal_film_id = '{jf.Id}';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
+            List<Studio> listData = new List<Studio>();
+            while(hasil.Read() == true)
+            {
+                Studio s = Studio.BacaData("id", hasil.GetValue(1).ToString())[0];
+                listData.Add(s);
+            }
+            return listData;
+        }
+
+        public static List<Studio> CariStudio(Film f)
+        {
+            //var data = new DataTable("Daftar Cinema");
+            //data.Columns.Add("nama_cabang", typeof(string));
+
+            //string cmd = $"select distinct c.nama_cabang " +
+            //    $"from jadwal_films as jf " +
+            //    $"inner  join sesi_films as sf on jf.id = sf.jadwal_film_id " +
+            //    $"inner join film_studio as fs on sf.films_id = fs.films_id " +
+            //    $"inner join films as f on fs.films_id = f.id " +
+            //    $"inner join studios as s on fs.studios_id = s.id " +
+            //    $"inner join cinemas as c on s.cinemas_id = c.id " +
+            //    $"where f.id = '{fid}' and jf.tanggal = '{tgl}';";
+
+            string cmd = $"SELECT * FROM film_studio where films_id = '{f.Id}';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+            List<Studio> listStudio = new List<Studio>();
+            while (hasil.Read() == true)
+            {
+                //DataRow row = data.NewRow();
+                //row["nama_cabang"] = hasil.GetValue(0).ToString();
+                //data.Rows.Add(row);
+
+                Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
+                listStudio.Add(s);
+
+            }
+            return listStudio;
+        }
         public static List<Studio> BacaData(string filter = "", string value = "")
         {
             string query = "";
