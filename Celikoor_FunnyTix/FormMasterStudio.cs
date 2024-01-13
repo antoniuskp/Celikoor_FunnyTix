@@ -82,27 +82,27 @@ namespace Celikoor_FunnyTix
             switch (comboBox.Text)
             {
                 case "Nama":
-                    listStudio = Studio.BacaData("Nama", textBox.Text);
+                    listStudio = Studio.FilterStudio("Nama", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Kapasitas":
-                    listStudio = Studio.BacaData("kapasitas", textBox.Text);
+                    listStudio = Studio.FilterStudio("kapasitas", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Jenis Studio":
-                    listStudio = Studio.BacaData("jenis_studios_id", JenisStudio.BacaData(textBox.Text)[0].Nama);
+                    listStudio = Studio.FilterStudio("jenis_studios_id", JenisStudio.BacaData(textBox.Text)[0].Nama);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Cinema":
-                    listStudio = Studio.BacaData("cinemas_id", Cinema.BacaData("id", textBox.Text)[0].NamaCabang);
+                    listStudio = Studio.FilterStudio("cinemas_id", Cinema.BacaData("id", textBox.Text)[0].NamaCabang);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Harga Weekday":
-                    listStudio = Studio.BacaData("harga_weekday", textBox.Text);
+                    listStudio = Studio.FilterStudio("harga_weekday", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Harga Weekend":
-                    listStudio = Studio.BacaData("harga_weekend", textBox.Text);
+                    listStudio = Studio.FilterStudio("harga_weekend", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
             }
@@ -126,7 +126,7 @@ namespace Celikoor_FunnyTix
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-            panelTambahStudio.Visible = true;
+            
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -151,8 +151,8 @@ namespace Celikoor_FunnyTix
                 string nama = textBoxNama.Text;
                 int kapasitas = int.Parse(textBoxKapasitas.Text);
 
-                JenisStudio jenisStudio = JenisStudio.BacaData("Nama", comboBoxJenisStudio.Text)[0];
-                Cinema cinema = Cinema.BacaData("NamaCabang", comboBoxCinema.Text)[0];
+                JenisStudio jenisStudio = (JenisStudio) comboBoxJenisStudio.SelectedItem;
+                Cinema cinema = (Cinema) comboBoxCinema.SelectedItem;
 
 
                 int hargaWeekday = int.Parse(textBoxHargaWeekday.Text);
@@ -182,18 +182,21 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                string id = labelID.Text;
-                string nama = textBoxNamaUbah.Text;
-                int kapasitas = int.Parse(textBoxKapasitasUbah.Text);
+                string hargaWeekDay = new string(textBoxHargaWeekdayUbah.Text.Where(char.IsDigit).ToArray());
+                string hargaWeekEnd = new string(textBoxHargaWeekendUbah.Text.Where(char.IsDigit).ToArray());
+                //int hargaWeekday = int.Parse(textBoxHargaWeekdayUbah.Text);
+                //int hargaWeekend = int.Parse(textBoxHargaWeekendUbah.Text);
 
-                JenisStudio jenisStudio = JenisStudio.BacaData("nama", comboBoxJenisStudioUbah.Text)[0];
-                Cinema cinema = Cinema.BacaData("nama_cabang", comboBoxCinemaUbah.Text)[0];
+                Studio s = new Studio();
+                s.ID = int.Parse(labelID.Text);
+                s.Nama = textBoxNamaUbah.Text;
+                s.Kapasitas = int.Parse(textBoxKapasitasUbah.Text);
+                s.JenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
+                s.Cinema = (Cinema)comboBoxCinema.SelectedItem;
+                s.HargaWeekday = int.Parse(hargaWeekDay);
+                s.HargaWeekend = int.Parse(hargaWeekEnd);
 
-                int hargaWeekday = int.Parse(textBoxHargaWeekdayUbah.Text);
-                int hargaWeekend = int.Parse(textBoxHargaWeekendUbah.Text);
-
-                Studio studio = new Studio(nama, kapasitas, jenisStudio, cinema, hargaWeekday, hargaWeekend);
-                Studio.UbahData(studio);
+                Studio.UbahData(s);
 
                 textBoxNamaUbah.Clear();
                 textBoxKapasitasUbah.Clear();
@@ -255,6 +258,11 @@ namespace Celikoor_FunnyTix
                     }
                 }
             }
+        }
+
+        private void buttonTambah_Click_1(object sender, EventArgs e)
+        {
+            panelTambahStudio.Visible = true;
         }
     }
 }

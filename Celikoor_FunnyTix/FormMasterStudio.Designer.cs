@@ -74,6 +74,8 @@ namespace Celikoor_FunnyTix
             this.buttonBatalUbah = new System.Windows.Forms.Button();
             this.buttonSimpanUbah = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.labelRp = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panelTambahStudio.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
@@ -88,7 +90,7 @@ namespace Celikoor_FunnyTix
             this.panelTambahStudio.Controls.Add(this.buttonBatal);
             this.panelTambahStudio.Controls.Add(this.buttonSimpan);
             this.panelTambahStudio.Controls.Add(this.label5);
-            this.panelTambahStudio.Location = new System.Drawing.Point(488, 291);
+            this.panelTambahStudio.Location = new System.Drawing.Point(488, 289);
             this.panelTambahStudio.Name = "panelTambahStudio";
             this.panelTambahStudio.Size = new System.Drawing.Size(549, 472);
             this.panelTambahStudio.TabIndex = 23;
@@ -96,6 +98,8 @@ namespace Celikoor_FunnyTix
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.labelRp);
             this.groupBox1.Controls.Add(this.textBoxHargaWeekend);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBoxHargaWeekday);
@@ -119,10 +123,10 @@ namespace Celikoor_FunnyTix
             // textBoxHargaWeekend
             // 
             this.textBoxHargaWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHargaWeekend.Location = new System.Drawing.Point(196, 242);
+            this.textBoxHargaWeekend.Location = new System.Drawing.Point(237, 242);
             this.textBoxHargaWeekend.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHargaWeekend.Name = "textBoxHargaWeekend";
-            this.textBoxHargaWeekend.Size = new System.Drawing.Size(263, 30);
+            this.textBoxHargaWeekend.Size = new System.Drawing.Size(222, 30);
             this.textBoxHargaWeekend.TabIndex = 20;
             // 
             // label9
@@ -140,34 +144,36 @@ namespace Celikoor_FunnyTix
             // textBoxHargaWeekday
             // 
             this.textBoxHargaWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHargaWeekday.Location = new System.Drawing.Point(196, 198);
+            this.textBoxHargaWeekday.Location = new System.Drawing.Point(237, 198);
             this.textBoxHargaWeekday.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHargaWeekday.Name = "textBoxHargaWeekday";
-            this.textBoxHargaWeekday.Size = new System.Drawing.Size(263, 30);
+            this.textBoxHargaWeekday.Size = new System.Drawing.Size(222, 30);
             this.textBoxHargaWeekday.TabIndex = 18;
             // 
             // comboBoxCinema
             // 
+            this.comboBoxCinema.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
             this.comboBoxCinema.Items.AddRange(new object[] {
             "ADMIN",
             "KASIR",
             "OPERATOR"});
-            this.comboBoxCinema.Location = new System.Drawing.Point(199, 162);
+            this.comboBoxCinema.Location = new System.Drawing.Point(199, 157);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxCinema.Size = new System.Drawing.Size(121, 31);
             this.comboBoxCinema.TabIndex = 17;
             // 
             // comboBoxJenisStudio
             // 
+            this.comboBoxJenisStudio.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJenisStudio.FormattingEnabled = true;
             this.comboBoxJenisStudio.Items.AddRange(new object[] {
             "ADMIN",
             "KASIR",
             "OPERATOR"});
-            this.comboBoxJenisStudio.Location = new System.Drawing.Point(199, 119);
+            this.comboBoxJenisStudio.Location = new System.Drawing.Point(199, 116);
             this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
-            this.comboBoxJenisStudio.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxJenisStudio.Size = new System.Drawing.Size(121, 31);
             this.comboBoxJenisStudio.TabIndex = 16;
             // 
             // label4
@@ -313,7 +319,7 @@ namespace Celikoor_FunnyTix
             this.buttonTambah.TabIndex = 21;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = false;
-            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click_1);
             // 
             // dataGridViewHasil
             // 
@@ -451,7 +457,7 @@ namespace Celikoor_FunnyTix
             this.labelID.Location = new System.Drawing.Point(198, 18);
             this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(95, 25);
+            this.labelID.Size = new System.Drawing.Size(102, 26);
             this.labelID.TabIndex = 22;
             this.labelID.Text = "ID Studio";
             // 
@@ -463,7 +469,7 @@ namespace Celikoor_FunnyTix
             this.label17.Location = new System.Drawing.Point(143, 18);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 25);
+            this.label17.Size = new System.Drawing.Size(48, 26);
             this.label17.TabIndex = 21;
             this.label17.Text = "ID : ";
             // 
@@ -484,7 +490,7 @@ namespace Celikoor_FunnyTix
             this.label10.Location = new System.Drawing.Point(14, 263);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(174, 25);
+            this.label10.Size = new System.Drawing.Size(179, 26);
             this.label10.TabIndex = 19;
             this.label10.Text = "Harga Weekend : ";
             // 
@@ -507,7 +513,7 @@ namespace Celikoor_FunnyTix
             "OPERATOR"});
             this.comboBoxCinemaUbah.Location = new System.Drawing.Point(199, 173);
             this.comboBoxCinemaUbah.Name = "comboBoxCinemaUbah";
-            this.comboBoxCinemaUbah.Size = new System.Drawing.Size(121, 32);
+            this.comboBoxCinemaUbah.Size = new System.Drawing.Size(121, 31);
             this.comboBoxCinemaUbah.TabIndex = 17;
             // 
             // comboBoxJenisStudioUbah
@@ -520,7 +526,7 @@ namespace Celikoor_FunnyTix
             "OPERATOR"});
             this.comboBoxJenisStudioUbah.Location = new System.Drawing.Point(199, 130);
             this.comboBoxJenisStudioUbah.Name = "comboBoxJenisStudioUbah";
-            this.comboBoxJenisStudioUbah.Size = new System.Drawing.Size(121, 32);
+            this.comboBoxJenisStudioUbah.Size = new System.Drawing.Size(121, 31);
             this.comboBoxJenisStudioUbah.TabIndex = 16;
             // 
             // label11
@@ -531,7 +537,7 @@ namespace Celikoor_FunnyTix
             this.label11.Location = new System.Drawing.Point(16, 219);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 25);
+            this.label11.Size = new System.Drawing.Size(176, 26);
             this.label11.TabIndex = 14;
             this.label11.Text = "Harga Weekday : ";
             // 
@@ -552,7 +558,7 @@ namespace Celikoor_FunnyTix
             this.label12.Location = new System.Drawing.Point(91, 176);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 25);
+            this.label12.Size = new System.Drawing.Size(100, 26);
             this.label12.TabIndex = 8;
             this.label12.Text = "Cinema : ";
             // 
@@ -564,7 +570,7 @@ namespace Celikoor_FunnyTix
             this.label13.Location = new System.Drawing.Point(53, 133);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 25);
+            this.label13.Size = new System.Drawing.Size(142, 26);
             this.label13.TabIndex = 7;
             this.label13.Text = "Jenis Studio : ";
             // 
@@ -576,7 +582,7 @@ namespace Celikoor_FunnyTix
             this.label14.Location = new System.Drawing.Point(74, 92);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 25);
+            this.label14.Size = new System.Drawing.Size(117, 26);
             this.label14.TabIndex = 6;
             this.label14.Text = "Kapasitas : ";
             // 
@@ -597,7 +603,7 @@ namespace Celikoor_FunnyTix
             this.label15.Location = new System.Drawing.Point(106, 49);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 25);
+            this.label15.Size = new System.Drawing.Size(83, 26);
             this.label15.TabIndex = 3;
             this.label15.Text = "Nama : ";
             // 
@@ -642,14 +648,36 @@ namespace Celikoor_FunnyTix
             this.label16.Text = "U B A H  S T U D I O";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelRp
+            // 
+            this.labelRp.AutoSize = true;
+            this.labelRp.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRp.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelRp.Location = new System.Drawing.Point(192, 203);
+            this.labelRp.Name = "labelRp";
+            this.labelRp.Size = new System.Drawing.Size(38, 23);
+            this.labelRp.TabIndex = 21;
+            this.labelRp.Text = "Rp.";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.label18.Location = new System.Drawing.Point(192, 247);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 23);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Rp.";
+            // 
             // FormMasterStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1520, 1029);
-            this.Controls.Add(this.panelUbahStudio);
             this.Controls.Add(this.panelTambahStudio);
+            this.Controls.Add(this.panelUbahStudio);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.dataGridViewHasil);
@@ -718,5 +746,7 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label labelRp;
     }
 }

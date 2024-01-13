@@ -88,6 +88,33 @@ namespace FunnyTix_LIB
             }
             return listStudio;
         }
+
+        public static List<Studio> FilterStudio (string filter = "", string value = "")
+        {
+            string query= $"SELECT * FROM studios s WHERE {filter} like '%{value}%';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<Studio> listJadwalFilm = new List<Studio>();
+
+            while (hasil.Read() == true)
+            {
+                Studio tampung = new Studio();
+                tampung.ID = int.Parse(hasil.GetValue(0).ToString());
+                tampung.Nama = hasil.GetValue(1).ToString();
+                tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
+                tampung.HargaWeekday = int.Parse(hasil.GetValue(5).ToString());
+                tampung.HargaWeekend = int.Parse(hasil.GetValue(6).ToString());
+
+                List<JenisStudio> listJenisStudio = JenisStudio.BacaData("Id", hasil.GetValue(3).ToString());
+                tampung.JenisStudio = listJenisStudio[0];
+
+                List<Cinema> listCinema = Cinema.BacaData("ID", hasil.GetValue(4).ToString());
+                tampung.Cinema = listCinema[0];
+
+                listJadwalFilm.Add(tampung);
+            }
+            return listJadwalFilm;
+
+            }
         public static List<Studio> BacaData(string filter = "", string value = "")
         {
             string query = "";
@@ -135,8 +162,8 @@ namespace FunnyTix_LIB
 
         public static void TambahData(Studio s)
         {
-            string query = $"INSERT INTO studios (nama, kapasitas, jenis_studios_id, cinemas_id, harga_weekday, harga_weekend) values ('{s.Nama}', {s.Kapasitas}, " +
-                $"{s.JenisStudio.Id}, {s.Cinema.ID}, {s.HargaWeekday}, {s.HargaWeekend});";
+            string query = $"INSERT INTO studios (nama, kapasitas, jenis_studios_id, cinemas_id, harga_weekday, harga_weekend) " +
+                $"values ('{s.Nama}', '{s.Kapasitas}', '{s.JenisStudio.Id}', '{s.Cinema.ID}', '{s.HargaWeekday}', '{s.HargaWeekend}');";
 
              Koneksi.JalankanPerintahNonQuery(query);
         }
@@ -150,7 +177,7 @@ namespace FunnyTix_LIB
 
         public static void UbahData(Studio s)
         {
-            string query = $"UPDATE studios set nama = '{s.Nama}', kapasitas = {s.Kapasitas}, jenis_studios_id = {s.JenisStudio.Id}, cinemas_id = {s.Cinema.ID}, harga_weekday = {s.HargaWeekday}, harga_weekend = {s.HargaWeekend} where id = {s.ID};";
+            string query = $"UPDATE studios set nama = '{s.Nama}', kapasitas = '{s.Kapasitas}', jenis_studios_id = '{s.JenisStudio.Id}', cinemas_id = '{s.Cinema.ID}', harga_weekday = '{s.HargaWeekday}', harga_weekend = '{s.HargaWeekend}' where id = '{s.ID}';";
 
             Koneksi.JalankanPerintahNonQuery(query);
         }
