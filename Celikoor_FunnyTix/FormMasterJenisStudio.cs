@@ -97,12 +97,12 @@ namespace Celikoor_FunnyTix
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
             string nama = textBoxNama.Text;
-            string deskripsi = listBox1.Text;
+            string deskripsi = richTextBox1.Text;
             JenisStudio jn = new JenisStudio(nama, deskripsi);
             JenisStudio.TambahData(jn);
 
             textBoxNama.Clear();
-            listBox1.Text = "";
+            richTextBox1.Text = "";
 
             FormMasterJenisStudio_Load(this, e);
 

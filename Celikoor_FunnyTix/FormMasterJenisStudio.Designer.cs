@@ -46,7 +46,7 @@ namespace Celikoor_FunnyTix
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panelTambahJenisStudio.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
@@ -67,7 +67,7 @@ namespace Celikoor_FunnyTix
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBoxNama);
             this.groupBox1.Controls.Add(this.label3);
@@ -87,7 +87,7 @@ namespace Celikoor_FunnyTix
             this.label6.Location = new System.Drawing.Point(41, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 27);
+            this.label6.Size = new System.Drawing.Size(119, 28);
             this.label6.TabIndex = 6;
             this.label6.Text = "Deskripsi : ";
             // 
@@ -109,7 +109,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(72, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 27);
+            this.label3.Size = new System.Drawing.Size(87, 28);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nama : ";
             // 
@@ -268,16 +268,13 @@ namespace Celikoor_FunnyTix
             this.label1.Text = "MASTER JENIS STUDIO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listBox1
+            // richTextBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.listBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
-            this.listBox1.Location = new System.Drawing.Point(162, 94);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(281, 130);
-            this.listBox1.TabIndex = 13;
+            this.richTextBox1.Location = new System.Drawing.Point(160, 101);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(283, 142);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
             // 
             // FormMasterJenisStudio
             // 
@@ -323,6 +320,6 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
