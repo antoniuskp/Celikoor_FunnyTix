@@ -107,12 +107,16 @@ namespace FunnyTix_LIB
         }
 
 
-        public static List<Invoice> BacaData(string filter = "", string value = "")
+        public static List<Invoice> BacaData(string filter = "", string value = "", Konsumen k = null)
         {
             string query = "SELECT * FROM invoices;";
-            if (value != "")
+            if (value != "" && k == null)
             {
                 query = $"SELECT * FROM invoices where {filter} like '%{value}%';";
+            }
+            else if (filter == "tanggal" && value != "" && k != null)
+            {
+                query = $"SELECT * FROM invoices WHERE tanggal LIKE '{value}%' AND konsumens_id = '{k.ID}';";
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Invoice> listInvoice = new List<Invoice>();
@@ -163,7 +167,7 @@ namespace FunnyTix_LIB
 
         public static void UpdateInvoice(Invoice invoice)
         {
-            string cmd = $"UPDATE invoices set status = '{invoice.Status}' where invoices.id = '{invoice.Id}';";
+            string cmd = $"UPDATE invoices SET kasir_id = '{invoice.Kasir.ID}', status = '{invoice.Status}' WHERE id = '{invoice.Id}';";
 
             Koneksi.JalankanPerintahNonQuery(cmd);
         }

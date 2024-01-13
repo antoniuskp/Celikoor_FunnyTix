@@ -32,5 +32,13 @@ namespace Celikoor_FunnyTix
         {
             this.Close();
         }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            List<Invoice> listInvoice = Invoice.BacaData("tanggal", dateTimePickerTglTransaksi.Value.ToString("yyyy-MM-dd"), Auth.GetKonsumen());
+            dataGridViewHasil.DataSource = listInvoice;
+
+
+        }
     }
 }

@@ -80,9 +80,10 @@
             // dateTimePickerTglTransaksi
             // 
             this.dateTimePickerTglTransaksi.CalendarFont = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerTglTransaksi.Location = new System.Drawing.Point(439, 36);
+            this.dateTimePickerTglTransaksi.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTglTransaksi.Location = new System.Drawing.Point(454, 32);
             this.dateTimePickerTglTransaksi.Name = "dateTimePickerTglTransaksi";
-            this.dateTimePickerTglTransaksi.Size = new System.Drawing.Size(678, 22);
+            this.dateTimePickerTglTransaksi.Size = new System.Drawing.Size(652, 28);
             this.dateTimePickerTglTransaksi.TabIndex = 4;
             // 
             // buttonCari
@@ -96,6 +97,7 @@
             this.buttonCari.TabIndex = 3;
             this.buttonCari.Text = "Cari";
             this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // label2
             // 
@@ -104,7 +106,7 @@
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(145, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(285, 39);
+            this.label2.Size = new System.Drawing.Size(286, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tanggal Transaksi:";
             // 

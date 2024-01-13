@@ -72,6 +72,7 @@ namespace Celikoor_FunnyTix
                 Invoice invoice = new Invoice();
                 invoice.Id = id;
                 invoice.Status = status;
+                invoice.Kasir = Auth.GetPegawai();
 
                 Invoice.UpdateInvoice(invoice);
                 MessageBox.Show("Invoice berhasil diupdate");
