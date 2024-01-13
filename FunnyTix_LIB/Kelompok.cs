@@ -1,29 +1,34 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace FunnyTix_LIB
 {
     public class Kelompok
     {
+        #region DATA MEMBERS
+        private int id;
+        private string nama;
+        #endregion
+
         #region PROPERTIES
-        public int ID { get; set; }
-        public string Nama { get; set; }
+        public int Id { get => id; set => id = value; }
+        public string Nama { get => nama; set => nama = value; }
         #endregion
 
         #region CONSTRUCTOR
         public Kelompok(string nama)
         {
-            ID = 0;
-            Nama = nama;
+            this.Id = 0;
+            this.Nama = nama;
         }
         public Kelompok()
         {
-            ID = 0;
-            Nama = "";
+            this.Id = 0;
+            this.Nama = "";
         }
         #endregion
 
@@ -34,11 +39,12 @@ namespace FunnyTix_LIB
 
             MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
 
-            var lstKelompok = new List<Kelompok>();
+            List<Kelompok> lstKelompok = new List<Kelompok>();
             while (res.Read() == true)
             {
-                Kelompok k = new Kelompok(res.GetValue(1).ToString());
-                k.ID = int.Parse(res.GetValue(0).ToString());
+                Kelompok k = new Kelompok();
+                k.Id = int.Parse(res.GetValue(0).ToString());
+                k.Nama = res.GetValue(1).ToString();
 
                 lstKelompok.Add(k);
             }

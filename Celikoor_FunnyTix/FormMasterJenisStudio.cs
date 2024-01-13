@@ -114,11 +114,11 @@ namespace Celikoor_FunnyTix
             switch (comboBox.Text)
             {
                 case "Nama":
-                    listJenisStudio = JenisStudio.BacaData("Nama", textBox.Text);
+                    listJenisStudio = JenisStudio.CariJenisStudio("Nama", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Deskripsi":
-                    listJenisStudio= JenisStudio.BacaData("deskripsi", textBox.Text);
+                    listJenisStudio= JenisStudio.CariJenisStudio("deskripsi", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
             }

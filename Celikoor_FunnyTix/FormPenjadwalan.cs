@@ -21,9 +21,13 @@ namespace Celikoor_FunnyTix
             InitializeComponent();
         }
 
-        Studio selectedStudio;
-        Film selectedFilm;
-        Cinema selectedCinema;
+        private Studio selectedStudio;
+        private JenisStudio selectedJenisStudio;
+        private Cinema selectedCinema;
+        private Film selectedFilm;
+        private List<JenisStudio> listJenisStudio;
+        private List<Studio> listStudio;
+        private List<JadwalFilm> listJadwal;
 
         private void FormPenjadwalan_Load(object sender, EventArgs e)
         {
@@ -40,25 +44,9 @@ namespace Celikoor_FunnyTix
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
-            List<Studio> listStudio = Studio.BacaData("cinemas_id", selectedCinema.ID.ToString());
-            comboBoxStudio.DataSource = listStudio;
-            comboBoxStudio.DisplayMember = "nama";
-        }
-
-        
-        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Display Studios Attributes 
-            selectedStudio = (Studio)comboBoxStudio.SelectedItem;
-            string selectedID = selectedStudio.JenisStudio.Id.ToString();
-            textBoxNamaBioskop.Text = JenisStudio.CariJenisStudio(selectedStudio).Nama;
-            textBoxKapasitas.Text = selectedStudio.Kapasitas.ToString();
-            labelHargaWeekday.Text = "Rp " + selectedStudio.HargaWeekday.ToString();
-            labelHargaWeekend.Text = "Rp " + selectedStudio.HargaWeekend.ToString();
-
-            //Display Film into ComboBox
-            comboBoxJudulFilm.DataSource = Film.BacaData();
-            comboBoxJudulFilm.DisplayMember = "judul";
+            listJenisStudio = JenisStudio.BacaJenisStudio(selectedCinema);
+            comboBoxJenisStudio.DataSource = listJenisStudio;
+            comboBoxJenisStudio.DisplayMember = "nama";
         }
         
         private void comboBoxJudulFilm_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,7 +134,7 @@ namespace Celikoor_FunnyTix
                     dataGridViewHasil.Columns.Add(btnHapus);//menambahkan button ke grid
                 }
 
-                List<JadwalFilm> listJadwal = new List<JadwalFilm>();
+                listJadwal = new List<JadwalFilm>();
                 //Membuat Film
                 for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
                 {
@@ -169,8 +157,7 @@ namespace Celikoor_FunnyTix
         {
             comboBoxJudulFilm.SelectedIndex = 0;
             comboBoxCinema.SelectedIndex = 0;
-            comboBoxStudio.SelectedIndex = 0;
-            textBoxNamaBioskop.Clear();
+            comboBoxJenisStudio.SelectedIndex = 0;
             textBoxKapasitas.Clear();
             textBoxAktor.Clear();
             textBoxDurasi.Clear();
@@ -191,16 +178,28 @@ namespace Celikoor_FunnyTix
 
         }
 
+        private void HapusJadwalFilm()
+        {
+            for(int i = 0; i < listJadwal.Count; i++)
+            {
+                if(listJadwal[i].Jam_pemutaran == sesi)
+                {
+                    listJadwal.RemoveAt(i);
+                }
+            }
+        }
+        string sesi;
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = dataGridViewHasil.CurrentRow.Index;
-            string sesi = dataGridViewHasil.CurrentRow.Cells["columnJam"].Value.ToString(); //mengambil kode yang akan diubah oleh user
+            sesi = dataGridViewHasil.CurrentRow.Cells["columnJam"].Value.ToString(); //mengambil kode yang akan diubah oleh user
             if (e.ColumnIndex == dataGridViewHasil.Columns["Aksi"].Index)
             {
                 DialogResult result = MessageBox.Show($"Apakah setuju untuk membatalkan pemutaran film {selectedFilm.Judul} pada Studio {selectedStudio.Nama} sesi {sesi}", "CONFIRMATION", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     dataGridViewHasil.Rows.RemoveAt(idx);
+                    HapusJadwalFilm();
                 }
 
             }
@@ -277,6 +276,38 @@ namespace Celikoor_FunnyTix
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void comboBoxJenisStudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Display Studios Attributes 
+            selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
+            listStudio = Studio.BacaStudio(selectedCinema, selectedJenisStudio);
+
+            if (listStudio != null)
+            {
+                comboBoxStudio.DataSource = listStudio;
+                comboBoxStudio.DisplayMember = "nama";
+
+                
+            }
+
+        }
+
+        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxStudio != null)
+            {
+                selectedStudio = (Studio)comboBoxStudio.SelectedItem;
+                textBoxKapasitas.Text = selectedStudio.Kapasitas.ToString();
+                labelHargaWeekday.Text = selectedStudio.HargaWeekday.ToString();
+                labelHargaWeekend.Text = selectedStudio.HargaWeekend.ToString();
+
+                //Display Film into ComboBox
+                comboBoxJudulFilm.DataSource = Film.BacaData();
+                comboBoxJudulFilm.DisplayMember = "judul";
+
             }
         }
     }

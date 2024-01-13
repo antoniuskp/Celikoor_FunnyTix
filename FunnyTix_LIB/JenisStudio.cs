@@ -13,7 +13,7 @@ namespace FunnyTix_LIB
         private string nama;
         private string deskripsi;
 
-        
+
         #endregion
 
         #region CONSTRUCTORS
@@ -38,6 +38,23 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+        public static List<JenisStudio> BacaJenisStudio(Cinema c)
+        {
+            string query = $"SELECT DISTINCT js.* FROM jenis_studios js LEFT JOIN studios s on s.jenis_studios_id = js.id LEFT JOIN cinemas c ON c.id = s.cinemas_id WHERE c.id = '{c.ID}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            List<JenisStudio> listJenisStudio = new List<JenisStudio>();
+            while (hasil.Read() == true)
+            {
+                JenisStudio j = new JenisStudio();
+                j.Id = int.Parse(hasil.GetValue(0).ToString());
+                j.Nama = hasil.GetValue(1).ToString();
+                j.Deskripsi = hasil.GetValue(2).ToString();
+                listJenisStudio.Add(j);
+            }
+            return listJenisStudio;
+        }
         public static List<JenisStudio> BacaJenisStudioFilm(Film f)
         {
             string query = $"SELECT DISTINCT js.* FROM jenis_studios js " +
@@ -47,7 +64,7 @@ namespace FunnyTix_LIB
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
             List<JenisStudio> listJenisStudio = new List<JenisStudio>();
-            while(hasil.Read() == true)
+            while (hasil.Read() == true)
             {
                 JenisStudio j = new JenisStudio();
                 j.Id = int.Parse(hasil.GetValue(0).ToString());
@@ -64,7 +81,7 @@ namespace FunnyTix_LIB
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
-            if(hasil.Read() == true)
+            if (hasil.Read() == true)
             {
                 JenisStudio js = new JenisStudio();
                 js.Id = int.Parse(hasil.GetValue(0).ToString());
@@ -76,6 +93,22 @@ namespace FunnyTix_LIB
             {
                 return null;
             }
+        }
+        public static List<JenisStudio> CariJenisStudio(string filter = "", string value = "")
+        {
+            string query = $"SELECT * FROM jenis_studios where {filter} like '%{value}%';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<JenisStudio> listJenisStudio = new List<JenisStudio>();
+
+            while (hasil.Read() == true)
+            {
+                JenisStudio jS = new JenisStudio(
+                    hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString());
+                jS.Id = int.Parse(hasil.GetValue(0).ToString());
+                listJenisStudio.Add(jS);
+            }
+            return listJenisStudio;
         }
 
         public static List<JenisStudio> BacaData(string filter = "", string value = "")

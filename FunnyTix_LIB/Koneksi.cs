@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using MySql.Data.MySqlClient;
 using System.Configuration;
 
@@ -45,9 +44,13 @@ namespace FunnyTix_LIB
         public void Connect()
         {
             if (KoneksiDB.State == System.Data.ConnectionState.Open)
+            {
                 KoneksiDB.Close();
-
-            KoneksiDB.Open();
+            }
+            else
+            {
+                KoneksiDB.Open();
+            }
         }
 
         public static MySqlDataReader JalankanPerintahSelect(string sql)

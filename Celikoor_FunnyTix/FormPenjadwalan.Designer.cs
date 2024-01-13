@@ -30,8 +30,7 @@ namespace Celikoor_FunnyTix
         private void InitializeComponent()
         {
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
-            this.comboBoxStudio = new System.Windows.Forms.ComboBox();
-            this.textBoxNamaBioskop = new System.Windows.Forms.TextBox();
+            this.comboBoxJenisStudio = new System.Windows.Forms.ComboBox();
             this.labelHargaWeekday = new System.Windows.Forms.Label();
             this.labelHargaWeekend = new System.Windows.Forms.Label();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
@@ -56,6 +55,7 @@ namespace Celikoor_FunnyTix
             this.checkBoxIV = new System.Windows.Forms.CheckBox();
             this.textBoxKelompok = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonTambah)).BeginInit();
@@ -68,37 +68,25 @@ namespace Celikoor_FunnyTix
             this.comboBoxCinema.BackColor = System.Drawing.Color.NavajoWhite;
             this.comboBoxCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(116, 101);
-            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCinema.Location = new System.Drawing.Point(87, 82);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(368, 33);
+            this.comboBoxCinema.Size = new System.Drawing.Size(277, 28);
             this.comboBoxCinema.TabIndex = 0;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
-            // comboBoxStudio
+            // comboBoxJenisStudio
             // 
-            this.comboBoxStudio.BackColor = System.Drawing.Color.NavajoWhite;
-            this.comboBoxStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxStudio.ForeColor = System.Drawing.Color.Maroon;
-            this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(538, 101);
-            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(128, 33);
-            this.comboBoxStudio.TabIndex = 1;
-            this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
-            // 
-            // textBoxNamaBioskop
-            // 
-            this.textBoxNamaBioskop.BackColor = System.Drawing.Color.Maroon;
-            this.textBoxNamaBioskop.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNamaBioskop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaBioskop.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxNamaBioskop.Location = new System.Drawing.Point(123, 182);
-            this.textBoxNamaBioskop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNamaBioskop.Name = "textBoxNamaBioskop";
-            this.textBoxNamaBioskop.Size = new System.Drawing.Size(207, 31);
-            this.textBoxNamaBioskop.TabIndex = 2;
+            this.comboBoxJenisStudio.BackColor = System.Drawing.Color.NavajoWhite;
+            this.comboBoxJenisStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxJenisStudio.ForeColor = System.Drawing.Color.Maroon;
+            this.comboBoxJenisStudio.FormattingEnabled = true;
+            this.comboBoxJenisStudio.Location = new System.Drawing.Point(404, 82);
+            this.comboBoxJenisStudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
+            this.comboBoxJenisStudio.Size = new System.Drawing.Size(97, 28);
+            this.comboBoxJenisStudio.TabIndex = 1;
+            this.comboBoxJenisStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxJenisStudio_SelectedIndexChanged);
             // 
             // labelHargaWeekday
             // 
@@ -106,9 +94,10 @@ namespace Celikoor_FunnyTix
             this.labelHargaWeekday.BackColor = System.Drawing.Color.NavajoWhite;
             this.labelHargaWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHargaWeekday.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHargaWeekday.Location = new System.Drawing.Point(530, 207);
+            this.labelHargaWeekday.Location = new System.Drawing.Point(398, 168);
+            this.labelHargaWeekday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHargaWeekday.Name = "labelHargaWeekday";
-            this.labelHargaWeekday.Size = new System.Drawing.Size(24, 25);
+            this.labelHargaWeekday.Size = new System.Drawing.Size(19, 20);
             this.labelHargaWeekday.TabIndex = 4;
             this.labelHargaWeekday.Text = "0";
             // 
@@ -118,9 +107,10 @@ namespace Celikoor_FunnyTix
             this.labelHargaWeekend.BackColor = System.Drawing.Color.NavajoWhite;
             this.labelHargaWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHargaWeekend.ForeColor = System.Drawing.Color.Maroon;
-            this.labelHargaWeekend.Location = new System.Drawing.Point(530, 251);
+            this.labelHargaWeekend.Location = new System.Drawing.Point(398, 204);
+            this.labelHargaWeekend.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHargaWeekend.Name = "labelHargaWeekend";
-            this.labelHargaWeekend.Size = new System.Drawing.Size(24, 25);
+            this.labelHargaWeekend.Size = new System.Drawing.Size(19, 20);
             this.labelHargaWeekend.TabIndex = 5;
             this.labelHargaWeekend.Text = "0";
             // 
@@ -136,12 +126,12 @@ namespace Celikoor_FunnyTix
             this.columnTanggal,
             this.columnJam});
             this.dataGridViewHasil.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(54, 628);
-            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(40, 510);
+            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.RowHeadersWidth = 62;
             this.dataGridViewHasil.RowTemplate.Height = 28;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(1633, 307);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(1225, 249);
             this.dataGridViewHasil.TabIndex = 9;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             this.dataGridViewHasil.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridViewHasil_ColumnAdded);
@@ -184,10 +174,10 @@ namespace Celikoor_FunnyTix
             // pictureBoxCover
             // 
             this.pictureBoxCover.BackColor = System.Drawing.Color.Sienna;
-            this.pictureBoxCover.Location = new System.Drawing.Point(754, 42);
-            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxCover.Location = new System.Drawing.Point(566, 34);
+            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(487, 553);
+            this.pictureBoxCover.Size = new System.Drawing.Size(365, 449);
             this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCover.TabIndex = 10;
             this.pictureBoxCover.TabStop = false;
@@ -198,10 +188,10 @@ namespace Celikoor_FunnyTix
             this.textBoxKapasitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxKapasitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKapasitas.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.textBoxKapasitas.Location = new System.Drawing.Point(122, 256);
-            this.textBoxKapasitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxKapasitas.Location = new System.Drawing.Point(92, 208);
+            this.textBoxKapasitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKapasitas.Name = "textBoxKapasitas";
-            this.textBoxKapasitas.Size = new System.Drawing.Size(207, 31);
+            this.textBoxKapasitas.Size = new System.Drawing.Size(155, 25);
             this.textBoxKapasitas.TabIndex = 12;
             // 
             // richTextBoxSinopsis
@@ -210,10 +200,10 @@ namespace Celikoor_FunnyTix
             this.richTextBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxSinopsis.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxSinopsis.ForeColor = System.Drawing.Color.Maroon;
-            this.richTextBoxSinopsis.Location = new System.Drawing.Point(1293, 128);
-            this.richTextBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxSinopsis.Location = new System.Drawing.Point(970, 104);
+            this.richTextBoxSinopsis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBoxSinopsis.Name = "richTextBoxSinopsis";
-            this.richTextBoxSinopsis.Size = new System.Drawing.Size(659, 257);
+            this.richTextBoxSinopsis.Size = new System.Drawing.Size(494, 209);
             this.richTextBoxSinopsis.TabIndex = 14;
             this.richTextBoxSinopsis.Text = "";
             // 
@@ -223,10 +213,10 @@ namespace Celikoor_FunnyTix
             this.textBoxDurasi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDurasi.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDurasi.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxDurasi.Location = new System.Drawing.Point(1449, 421);
-            this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxDurasi.Location = new System.Drawing.Point(1087, 342);
+            this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDurasi.Name = "textBoxDurasi";
-            this.textBoxDurasi.Size = new System.Drawing.Size(144, 29);
+            this.textBoxDurasi.Size = new System.Drawing.Size(108, 23);
             this.textBoxDurasi.TabIndex = 15;
             // 
             // textBoxGenre
@@ -235,10 +225,10 @@ namespace Celikoor_FunnyTix
             this.textBoxGenre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxGenre.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGenre.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxGenre.Location = new System.Drawing.Point(1772, 421);
-            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxGenre.Location = new System.Drawing.Point(1329, 342);
+            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(152, 16);
+            this.textBoxGenre.Size = new System.Drawing.Size(114, 13);
             this.textBoxGenre.TabIndex = 17;
             // 
             // textBoxAktor
@@ -247,19 +237,19 @@ namespace Celikoor_FunnyTix
             this.textBoxAktor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAktor.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAktor.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxAktor.Location = new System.Drawing.Point(1533, 497);
-            this.textBoxAktor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxAktor.Location = new System.Drawing.Point(1150, 404);
+            this.textBoxAktor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAktor.Name = "textBoxAktor";
-            this.textBoxAktor.Size = new System.Drawing.Size(391, 16);
+            this.textBoxAktor.Size = new System.Drawing.Size(293, 13);
             this.textBoxAktor.TabIndex = 18;
             // 
             // buttonTambah
             // 
             this.buttonTambah.BackColor = System.Drawing.Color.Transparent;
-            this.buttonTambah.Location = new System.Drawing.Point(490, 497);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonTambah.Location = new System.Drawing.Point(368, 404);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(130, 52);
+            this.buttonTambah.Size = new System.Drawing.Size(98, 42);
             this.buttonTambah.TabIndex = 22;
             this.buttonTambah.TabStop = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
@@ -267,10 +257,10 @@ namespace Celikoor_FunnyTix
             // buttonSimpan
             // 
             this.buttonSimpan.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSimpan.Location = new System.Drawing.Point(1756, 659);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSimpan.Location = new System.Drawing.Point(1317, 535);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(156, 42);
+            this.buttonSimpan.Size = new System.Drawing.Size(117, 34);
             this.buttonSimpan.TabIndex = 23;
             this.buttonSimpan.TabStop = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
@@ -278,10 +268,10 @@ namespace Celikoor_FunnyTix
             // buttonKeluar
             // 
             this.buttonKeluar.BackColor = System.Drawing.Color.Transparent;
-            this.buttonKeluar.Location = new System.Drawing.Point(1756, 751);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKeluar.Location = new System.Drawing.Point(1317, 610);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(156, 42);
+            this.buttonKeluar.Size = new System.Drawing.Size(117, 34);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.TabStop = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
@@ -292,9 +282,10 @@ namespace Celikoor_FunnyTix
             this.comboBoxJudulFilm.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJudulFilm.ForeColor = System.Drawing.Color.Maroon;
             this.comboBoxJudulFilm.FormattingEnabled = true;
-            this.comboBoxJudulFilm.Location = new System.Drawing.Point(133, 345);
+            this.comboBoxJudulFilm.Location = new System.Drawing.Point(100, 280);
+            this.comboBoxJudulFilm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxJudulFilm.Name = "comboBoxJudulFilm";
-            this.comboBoxJudulFilm.Size = new System.Drawing.Size(496, 36);
+            this.comboBoxJudulFilm.Size = new System.Drawing.Size(373, 30);
             this.comboBoxJudulFilm.TabIndex = 25;
             this.comboBoxJudulFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudulFilm_SelectedIndexChanged);
             // 
@@ -304,9 +295,10 @@ namespace Celikoor_FunnyTix
             this.checkBoxI.BackColor = System.Drawing.Color.NavajoWhite;
             this.checkBoxI.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxI.ForeColor = System.Drawing.Color.Maroon;
-            this.checkBoxI.Location = new System.Drawing.Point(141, 522);
+            this.checkBoxI.Location = new System.Drawing.Point(106, 424);
+            this.checkBoxI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxI.Name = "checkBoxI";
-            this.checkBoxI.Size = new System.Drawing.Size(36, 23);
+            this.checkBoxI.Size = new System.Drawing.Size(30, 19);
             this.checkBoxI.TabIndex = 27;
             this.checkBoxI.Text = "I";
             this.checkBoxI.UseVisualStyleBackColor = false;
@@ -317,9 +309,10 @@ namespace Celikoor_FunnyTix
             this.checkBoxII.BackColor = System.Drawing.Color.NavajoWhite;
             this.checkBoxII.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxII.ForeColor = System.Drawing.Color.Maroon;
-            this.checkBoxII.Location = new System.Drawing.Point(205, 522);
+            this.checkBoxII.Location = new System.Drawing.Point(154, 424);
+            this.checkBoxII.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxII.Name = "checkBoxII";
-            this.checkBoxII.Size = new System.Drawing.Size(41, 23);
+            this.checkBoxII.Size = new System.Drawing.Size(34, 19);
             this.checkBoxII.TabIndex = 28;
             this.checkBoxII.Text = "II";
             this.checkBoxII.UseVisualStyleBackColor = false;
@@ -330,9 +323,10 @@ namespace Celikoor_FunnyTix
             this.checkBoxIII.BackColor = System.Drawing.Color.NavajoWhite;
             this.checkBoxIII.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxIII.ForeColor = System.Drawing.Color.Maroon;
-            this.checkBoxIII.Location = new System.Drawing.Point(270, 522);
+            this.checkBoxIII.Location = new System.Drawing.Point(202, 424);
+            this.checkBoxIII.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxIII.Name = "checkBoxIII";
-            this.checkBoxIII.Size = new System.Drawing.Size(46, 23);
+            this.checkBoxIII.Size = new System.Drawing.Size(38, 19);
             this.checkBoxIII.TabIndex = 29;
             this.checkBoxIII.Text = "III";
             this.checkBoxIII.UseVisualStyleBackColor = false;
@@ -343,9 +337,10 @@ namespace Celikoor_FunnyTix
             this.checkBoxIV.BackColor = System.Drawing.Color.NavajoWhite;
             this.checkBoxIV.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxIV.ForeColor = System.Drawing.Color.Maroon;
-            this.checkBoxIV.Location = new System.Drawing.Point(340, 522);
+            this.checkBoxIV.Location = new System.Drawing.Point(255, 424);
+            this.checkBoxIV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxIV.Name = "checkBoxIV";
-            this.checkBoxIV.Size = new System.Drawing.Size(46, 23);
+            this.checkBoxIV.Size = new System.Drawing.Size(38, 19);
             this.checkBoxIV.TabIndex = 30;
             this.checkBoxIV.Text = "IV";
             this.checkBoxIV.UseVisualStyleBackColor = false;
@@ -356,27 +351,41 @@ namespace Celikoor_FunnyTix
             this.textBoxKelompok.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxKelompok.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKelompok.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxKelompok.Location = new System.Drawing.Point(1862, 89);
+            this.textBoxKelompok.Location = new System.Drawing.Point(1396, 72);
+            this.textBoxKelompok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxKelompok.Name = "textBoxKelompok";
-            this.textBoxKelompok.Size = new System.Drawing.Size(50, 25);
+            this.textBoxKelompok.Size = new System.Drawing.Size(38, 20);
             this.textBoxKelompok.TabIndex = 31;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(133, 431);
+            this.dateTimePicker1.Location = new System.Drawing.Point(100, 350);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(343, 28);
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 24);
             this.dateTimePicker1.TabIndex = 32;
+            // 
+            // comboBoxStudio
+            // 
+            this.comboBoxStudio.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStudio.FormattingEnabled = true;
+            this.comboBoxStudio.Location = new System.Drawing.Point(92, 148);
+            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxStudio.Name = "comboBoxStudio";
+            this.comboBoxStudio.Size = new System.Drawing.Size(157, 27);
+            this.comboBoxStudio.TabIndex = 33;
+            this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
             // FormPenjadwalan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImage = global::Celikoor_FunnyTix.Properties.Resources.FormPenjadwalan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 844);
+            this.ClientSize = new System.Drawing.Size(1443, 686);
+            this.Controls.Add(this.comboBoxStudio);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBoxKelompok);
             this.Controls.Add(this.checkBoxIV);
@@ -396,12 +405,11 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.labelHargaWeekend);
             this.Controls.Add(this.labelHargaWeekday);
-            this.Controls.Add(this.textBoxNamaBioskop);
-            this.Controls.Add(this.comboBoxStudio);
+            this.Controls.Add(this.comboBoxJenisStudio);
             this.Controls.Add(this.comboBoxCinema);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormPenjadwalan";
             this.Text = "FormPenjadwalan";
             this.Load += new System.EventHandler(this.FormPenjadwalan_Load);
@@ -418,8 +426,7 @@ namespace Celikoor_FunnyTix
         #endregion
 
         private System.Windows.Forms.ComboBox comboBoxCinema;
-        private System.Windows.Forms.ComboBox comboBoxStudio;
-        private System.Windows.Forms.TextBox textBoxNamaBioskop;
+        private System.Windows.Forms.ComboBox comboBoxJenisStudio;
         private System.Windows.Forms.Label labelHargaWeekday;
         private System.Windows.Forms.Label labelHargaWeekend;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
@@ -444,5 +451,6 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.DataGridViewTextBoxColumn columnStudio;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTanggal;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnJam;
+        private System.Windows.Forms.ComboBox comboBoxStudio;
     }
 }

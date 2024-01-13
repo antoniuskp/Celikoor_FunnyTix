@@ -241,11 +241,13 @@ namespace Celikoor_FunnyTix
                     if (comboBoxStudio.Items.Count > 0 && IsChange)
                     {
                         CurrentPrice += TicketPrice;
-                        textBoxTotal.Text = $"{CurrentPrice}";
+                        string curPrice = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", CurrentPrice.ToString());
+                        textBoxTotal.Text = $"{curPrice}";
 
                         //double totalAkhir = CurrentPrice - ((CurrentPrice * (FilmDiscount / 100)) * userSelection.Count);
                         double totalAkhir = CurrentPrice - (CurrentPrice * (FilmDiscount / 100));
-                        textBoxTotalAkhir.Text = $"{totalAkhir}";
+                        string format = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", totalAkhir.ToString());
+                        textBoxTotalAkhir.Text = $"{format}";
                     }  
                 }
                 else
@@ -276,7 +278,7 @@ namespace Celikoor_FunnyTix
                 
                 JadwalFilm jf = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), selectedPemutaran.Jam_pemutaran)[0];
 
-                List<Studio> listStudio = Studio.BacaStudioSesiFilm(jf, selectedFilm);
+                List<Studio> listStudio = Studio.BacaStudio(jf, selectedFilm);
                 if(listStudio.Count > 0)
                 {
                     comboBoxStudio.DataSource = listStudio;
@@ -310,6 +312,7 @@ namespace Celikoor_FunnyTix
                 textBoxAktor.Clear();
                 FilmDiscount = selectedFilm.Diskon;
                 textBoxDiskon.Text = selectedFilm.Diskon.ToString();
+                textBoxAge.Text = selectedFilm.Kelompok.Nama;
 
                 //Display Aktor
                 for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
@@ -421,7 +424,10 @@ namespace Celikoor_FunnyTix
                     Invoice nota = new Invoice();
                     nota.Id = noNota;
                     nota.Tanggal = DateTime.Now;
-                    nota.GrandTotal = int.Parse(textBoxTotal.Text);
+
+                    string grandTotal = new string(textBoxTotalAkhir.Text.Where(char.IsDigit).ToArray());
+
+                    nota.GrandTotal = int.Parse(grandTotal);
                     nota.DiskonNominal = int.Parse(textBoxDiskon.Text);
                     nota.Konsumen = Auth.GetKonsumen();
                     nota.Status = "PENDING";
@@ -453,10 +459,10 @@ namespace Celikoor_FunnyTix
 
                     if (Auth.GetKonsumen().Saldo > int.Parse(textBoxTotalAkhir.Text))
                     {
-                        Konsumen.UbahSaldo(Auth.GetKonsumen(), -int.Parse(textBoxTotalAkhir.Text));
+                        string totalAkhir = new string(textBoxTotalAkhir.Text.Where(char.IsDigit).ToArray());
+                        Konsumen.UbahSaldo(Auth.GetKonsumen(), -int.Parse(totalAkhir));
                         Invoice.TambahData(nota);
                         MessageBox.Show("Pembayaran Berhasil!");
-                        this.Clear();
                     }
                     else
                     {
@@ -471,13 +477,6 @@ namespace Celikoor_FunnyTix
             {
                 MessageBox.Show("Penambahan Data Gagal " + ex.Message);
             }
-        }
-
-        private void Clear()
-        {
-            InitializeCheckBoxArray("A");
-            InitializeCheckBoxArray("B");
-            InitializeCheckBoxArray("C");
         }
 
         private void comboBoxJenisStudio_SelectedIndexChanged(object sender, EventArgs e)
@@ -549,14 +548,11 @@ namespace Celikoor_FunnyTix
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedStudio = (Studio)comboBoxStudio.SelectedItem;
-            string namaStudio = selectedStudio.Nama;
-            Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
             DateTime selectedDate = dateTimePickerTambah.Value;
-            string cinema = selectedCinema.NamaCabang;
-            string jamPemutaran = selectedPemutaran.Jam_pemutaran;
+            JadwalFilm jf = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), selectedPemutaran.Jam_pemutaran)[0];
 
-            chairTaken = Tiket.CariNomorKursi(selectedFilm.Id, selectedDate, cinema, namaStudio, jamPemutaran);
-
+            chairTaken = Tiket.CariNomorKursi(jf, selectedStudio, selectedFilm);
+            foreach (string i in chairTaken) MessageBox.Show(i);
             IsChange = false;
             //* Cek nomor kursi apa saja yg telah dibeli
             // Ubah Enabled dlu biar di Method InputKursi tidak dijalankan
@@ -638,6 +634,8 @@ namespace Celikoor_FunnyTix
             }
             textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", TicketPrice.ToString());
             textBoxKapasitas.Text = selectedStudio.Kapasitas.ToString();
+
+            textBoxSisa.Text = (selectedStudio.Kapasitas - chairTaken.Count).ToString();
         }
     }
     

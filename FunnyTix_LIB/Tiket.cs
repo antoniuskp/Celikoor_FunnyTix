@@ -152,19 +152,21 @@ namespace FunnyTix_LIB
                 return null;
             }
         }
-        public static List<string> CariNomorKursi(int fid, DateTime tgl, string cinema, string studio, string jamPemutaran)
+        public static List<string> CariNomorKursi(JadwalFilm jf, Studio s, Film f)
         {
             List<string> nomorKursi = new List<string>();
 
-            string cmd = $"select distinct t.nomor_kursi " +
-                $"from jadwal_films as jf " +
-                $"inner join sesi_films as sf on jf.id = sf.jadwal_film_id " +
-                $"inner join film_studio as fs on sf.films_id = fs.films_id " +
-                $"inner join films as f on fs.films_id = f.id " +
-                $"inner join studios as s on fs.studios_id = s.id " +
-                $"inner join cinemas as c on s.cinemas_id = c.id " +
-                $"inner join tikets as t on t.jadwal_film_id = sf.jadwal_film_id and t.studios_id = sf.studios_id and t.films_id = sf.films_id " +
-                $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema}' and s.nama = '{studio}' and jf.jam_pemutaran = '{jamPemutaran}';";
+            //string cmd = $"select distinct t.nomor_kursi " +
+            //    $"from jadwal_films as jf " +
+            //    $"inner join sesi_films as sf on jf.id = sf.jadwal_film_id " +
+            //    $"inner join film_studio as fs on sf.films_id = fs.films_id " +
+            //    $"inner join films as f on fs.films_id = f.id " +
+            //    $"inner join studios as s on fs.studios_id = s.id " +
+            //    $"inner join cinemas as c on s.cinemas_id = c.id " +
+            //    $"inner join tikets as t on t.jadwal_film_id = sf.jadwal_film_id and t.studios_id = sf.studios_id and t.films_id = sf.films_id " +
+            //    $"where f.id = '{fid}' and jf.tanggal = '{tgl.ToString("yyyy-MM-dd")}' and c.nama_cabang = '{cinema}' and s.nama = '{studio}' and jf.jam_pemutaran = '{jamPemutaran}';";
+
+            string cmd = $"SELECT t.nomor_kursi from tikets t where t.jadwal_film_id = '{jf.Id}' AND t.studios_id = '{s.ID}' AND t.films_id = '{f.Id}';";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
 

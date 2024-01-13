@@ -45,7 +45,22 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
-        public static List<Studio> BacaStudioSesiFilm(JadwalFilm jf, Film f)
+        #region baca data
+        public static List<Studio>BacaStudio(Cinema c, JenisStudio js)
+        {
+            string query = $"SELECT * FROM studios WHERE jenis_studios_id = '{js.Id}' AND cinemas_id ='{c.ID}';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            List<Studio> listData = new List<Studio>();
+            while (hasil.Read() == true)
+            {
+                Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
+                listData.Add(s);
+            }
+            return listData;
+        }
+
+        public static List<Studio> BacaStudio(JadwalFilm jf, Film f)
         {
             string query = $"SELECT * FROM sesi_films WHERE films_id = '{f.Id}' AND jadwal_film_id = '{jf.Id}';";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
@@ -159,7 +174,9 @@ namespace FunnyTix_LIB
             }
             return listJadwalFilm;
         }
+        #endregion
 
+        #region tambah data
         public static void TambahData(Studio s)
         {
             string query = $"INSERT INTO studios (nama, kapasitas, jenis_studios_id, cinemas_id, harga_weekday, harga_weekend) " +
@@ -167,52 +184,57 @@ namespace FunnyTix_LIB
 
              Koneksi.JalankanPerintahNonQuery(query);
         }
+        #endregion
 
+        #region hapus data
         public static void HapusData(Studio s)
         {
             string query = $"DELETE FROM studios where id = {s.ID};";
 
             Koneksi.JalankanPerintahNonQuery(query);
         }
+        #endregion
 
+        #region ubah data
         public static void UbahData(Studio s)
         {
             string query = $"UPDATE studios set nama = '{s.Nama}', kapasitas = '{s.Kapasitas}', jenis_studios_id = '{s.JenisStudio.Id}', cinemas_id = '{s.Cinema.ID}', harga_weekday = '{s.HargaWeekday}', harga_weekend = '{s.HargaWeekend}' where id = '{s.ID}';";
 
             Koneksi.JalankanPerintahNonQuery(query);
         }
+        #endregion
 
         public override string ToString()
         {
             return this.Nama;
         }
 
-        public static DataTable CariJenisStudio(string nama)
-        {
-            var data = new DataTable("Daftar Jenis Studio");
-            data.Columns.Add("jenis_studio", typeof(string));
-            data.Columns.Add("harga_weekday", typeof(int));
-            data.Columns.Add("harga_weekend", typeof(int));
-            data.Columns.Add("kapasitas", typeof(int));
+        //public static DataTable CariJenisStudio(string nama)
+        //{
+        //    var data = new DataTable("Daftar Jenis Studio");
+        //    data.Columns.Add("jenis_studio", typeof(string));
+        //    data.Columns.Add("harga_weekday", typeof(int));
+        //    data.Columns.Add("harga_weekend", typeof(int));
+        //    data.Columns.Add("kapasitas", typeof(int));
 
 
 
-            string cmd = $"SELECT js.nama, s.harga_weekday, s.harga_weekend, s.kapasitas FROM studios s INNER JOIN jenis_studios js on s.jenis_studios_id = js.id where s.nama = '{nama}';";
+        //    string cmd = $"SELECT js.nama, s.harga_weekday, s.harga_weekend, s.kapasitas FROM studios s INNER JOIN jenis_studios js on s.jenis_studios_id = js.id where s.nama = '{nama}';";
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
+        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
 
-            while (hasil.Read() == true)
-            {
-                DataRow row = data.NewRow();
-                row["jenis_studio"] = hasil.GetValue(0).ToString();
-                row["harga_weekday"] = hasil.GetValue(1).ToString();
-                row["harga_weekend"] = hasil.GetValue(2).ToString();
-                row["kapasitas"] = hasil.GetValue(3).ToString();
-                data.Rows.Add(row);
-            }
+        //    while (hasil.Read() == true)
+        //    {
+        //        DataRow row = data.NewRow();
+        //        row["jenis_studio"] = hasil.GetValue(0).ToString();
+        //        row["harga_weekday"] = hasil.GetValue(1).ToString();
+        //        row["harga_weekend"] = hasil.GetValue(2).ToString();
+        //        row["kapasitas"] = hasil.GetValue(3).ToString();
+        //        data.Rows.Add(row);
+        //    }
 
-            return data;
-        }
+        //    return data;
+        //}
         #endregion
 
     }

@@ -13,6 +13,7 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormDataTransaksi : Form
     {
+        List<Invoice> listInvoice;
         public FormDataTransaksi()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Celikoor_FunnyTix
         {
             FormUtama frm = (FormUtama)this.Owner;
 
-            List<Invoice> listInvoice = Invoice.BacaData();
+            listInvoice = Invoice.BacaData();
 
             dataGridViewHasil.DataSource = listInvoice;
         }
@@ -30,6 +31,30 @@ namespace Celikoor_FunnyTix
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();   
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            switch (comboBox.Text)
+            {
+                case "id":
+                    listInvoice = Invoice.BacaData("id", textBox.Text);
+                    dataGridViewHasil.DataSource = listInvoice;
+                    break;
+                case "tanggal":
+                    listInvoice = Invoice.BacaData("tanggal", textBox.Text);
+                    dataGridViewHasil.DataSource = listInvoice;
+                    break;
+                case "status":
+                    listInvoice = Invoice.BacaData("status", textBox.Text);
+                    dataGridViewHasil.DataSource = listInvoice;
+                    break;
+                case "konsumen":
+                    Konsumen k = Konsumen.BacaData("nama", textBox.Text)[0];
+                    listInvoice = Invoice.BacaData("konsumens_id", k.ID.ToString());
+                    dataGridViewHasil.DataSource = listInvoice;
+                    break;
+            }
         }
     }
 }
