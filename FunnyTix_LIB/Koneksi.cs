@@ -21,7 +21,7 @@ namespace FunnyTix_LIB
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = vConnString;
 
-            Connect();
+            //Connect();
         }
 
         public Koneksi()
@@ -39,7 +39,9 @@ namespace FunnyTix_LIB
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = vConnString;
 
-            Connect();
+            //Connect();
+            KoneksiDB.Close();
+            KoneksiDB.Open();
         }
         public void Connect()
         {

@@ -331,9 +331,9 @@ namespace FunnyTix_LIB
             {
                 for (int i = 0; i < f.ListFilmStudio.Count; i++)
                 {
-                    FilmStudio fs = Film.BacaDataFilmStudio(f.ListFilmStudio[i].Film.Id.ToString(), f.ListFilmStudio[i].Studio.ID.ToString())[0];
+                    List<FilmStudio> fs = Film.BacaDataFilmStudio(f.ListFilmStudio[i].Film.Id.ToString(), f.ListFilmStudio[i].Studio.ID.ToString());
                     //Pengecekan Ada film Studio 
-                    if (fs == null)
+                    if (fs.Count == 0)
                     {
                         //membuat filmstudio
                         string query = $"INSERT INTO film_studio (studios_id, films_id) VALUES ('{f.ListFilmStudio[i].Studio.ID}','{f.ListFilmStudio[i].Film.Id}');";
