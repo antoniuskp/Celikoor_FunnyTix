@@ -45,10 +45,14 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHODS
+
         #region baca data
-        public static List<Studio>BacaStudio(Cinema c, JenisStudio js)
+        public static List<Studio> BacaSesiFilm(Film f)
         {
-            string query = $"SELECT * FROM studios WHERE jenis_studios_id = '{js.Id}' AND cinemas_id ='{c.ID}';";
+            string query = $"SELECT DISTINCT s.* FROM sesi_films sf " +
+                $"inner join film_studio fs on sf.studios_id = fs.studios_id " +
+                $"inner join studios s on s.id = fs.studios_id WHERE sf.films_id = '{f.Id}';";
+
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
             List<Studio> listData = new List<Studio>();
@@ -60,6 +64,28 @@ namespace FunnyTix_LIB
             return listData;
         }
 
+        public static List<Studio>BacaStudio(Cinema c, JenisStudio js, Film f)
+        {
+            string query = "";
+            if (f == null)
+            {
+                query = $"SELECT * FROM studios WHERE jenis_studios_id = '{js.Id}' AND cinemas_id ='{c.ID}';";
+            }
+            else
+            {
+                query = $"SELECT DISTINCT fs.* FROM studios s INNER JOIN film_studio fs on s.id = fs.studios_id " +
+                    $"WHERE s.jenis_studios_id = '{js.Id}' AND s.cinemas_id = '{c.ID}'  AND fs.films_id = '{f.Id}';";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            List<Studio> listData = new List<Studio>();
+            while (hasil.Read() == true)
+            {
+                Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
+                listData.Add(s);
+            }
+            return listData;
+        }
         public static List<Studio> BacaStudio(JadwalFilm jf, Film f)
         {
             string query = $"SELECT * FROM sesi_films WHERE films_id = '{f.Id}' AND jadwal_film_id = '{jf.Id}';";
@@ -73,37 +99,6 @@ namespace FunnyTix_LIB
             }
             return listData;
         }
-
-        public static List<Studio> CariStudio(Film f)
-        {
-            //var data = new DataTable("Daftar Cinema");
-            //data.Columns.Add("nama_cabang", typeof(string));
-
-            //string cmd = $"select distinct c.nama_cabang " +
-            //    $"from jadwal_films as jf " +
-            //    $"inner  join sesi_films as sf on jf.id = sf.jadwal_film_id " +
-            //    $"inner join film_studio as fs on sf.films_id = fs.films_id " +
-            //    $"inner join films as f on fs.films_id = f.id " +
-            //    $"inner join studios as s on fs.studios_id = s.id " +
-            //    $"inner join cinemas as c on s.cinemas_id = c.id " +
-            //    $"where f.id = '{fid}' and jf.tanggal = '{tgl}';";
-
-            string cmd = $"SELECT * FROM film_studio where films_id = '{f.Id}';";
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
-            List<Studio> listStudio = new List<Studio>();
-            while (hasil.Read() == true)
-            {
-                //DataRow row = data.NewRow();
-                //row["nama_cabang"] = hasil.GetValue(0).ToString();
-                //data.Rows.Add(row);
-
-                Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
-                listStudio.Add(s);
-
-            }
-            return listStudio;
-        }
-
         public static List<Studio> FilterStudio (string filter = "", string value = "")
         {
             string query= $"SELECT * FROM studios s WHERE {filter} like '%{value}%';";
@@ -160,17 +155,7 @@ namespace FunnyTix_LIB
                 tampung.Cinema = listCinema[0]; 
 
                 listJadwalFilm.Add(tampung);    
-                //JenisStudio j = new JenisStudio();
-                //j.Id = int.Parse(hasil.GetValue(3).ToString());
-
-                //Cinema c = new Cinema();
-                //c.ID = int.Parse(hasil.GetValue(4).ToString());
-
-                //Studio s = new Studio(hasil.GetValue(1).ToString(),
-                //    int.Parse(hasil.GetValue(2).ToString()), j, c, int.Parse(hasil.GetValue(5).ToString()),
-                //    int.Parse(hasil.GetValue(6).ToString()));
-                //s.ID = int.Parse(hasil.GetValue(0).ToString());
-                //listJadwalFilm.Add(s);
+                
             }
             return listJadwalFilm;
         }
@@ -208,33 +193,6 @@ namespace FunnyTix_LIB
         {
             return this.Nama;
         }
-
-        //public static DataTable CariJenisStudio(string nama)
-        //{
-        //    var data = new DataTable("Daftar Jenis Studio");
-        //    data.Columns.Add("jenis_studio", typeof(string));
-        //    data.Columns.Add("harga_weekday", typeof(int));
-        //    data.Columns.Add("harga_weekend", typeof(int));
-        //    data.Columns.Add("kapasitas", typeof(int));
-
-
-
-        //    string cmd = $"SELECT js.nama, s.harga_weekday, s.harga_weekend, s.kapasitas FROM studios s INNER JOIN jenis_studios js on s.jenis_studios_id = js.id where s.nama = '{nama}';";
-
-        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);
-
-        //    while (hasil.Read() == true)
-        //    {
-        //        DataRow row = data.NewRow();
-        //        row["jenis_studio"] = hasil.GetValue(0).ToString();
-        //        row["harga_weekday"] = hasil.GetValue(1).ToString();
-        //        row["harga_weekend"] = hasil.GetValue(2).ToString();
-        //        row["kapasitas"] = hasil.GetValue(3).ToString();
-        //        data.Rows.Add(row);
-        //    }
-
-        //    return data;
-        //}
         #endregion
 
     }

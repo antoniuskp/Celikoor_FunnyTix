@@ -34,14 +34,12 @@ namespace FunnyTix_LIB
             string vUID = settingSection.Settings.Get("dbUid").Value.ValueXml.InnerText;
             string vPWD = settingSection.Settings.Get("dbPwd").Value.ValueXml.InnerText;
 
-            string vConnString = "Server=" + vServer + ";Database=" + vDb + ";Uid=" + vUID + ";Pwd=" + vPWD + ";";
+            string vConnString = "Server=" + vServer + ";Database=" + vDb + ";Uid=" + vUID + ";Pwd=" + vPWD + ";default command timeout=200";
 
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = vConnString;
 
-            //Connect();
-            KoneksiDB.Close();
-            KoneksiDB.Open();
+            Connect();
         }
         public void Connect()
         {

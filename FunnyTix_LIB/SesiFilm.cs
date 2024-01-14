@@ -33,55 +33,6 @@ namespace FunnyTix_LIB
         }
         #endregion
 
-        #region METHOD
-        //public static void TambahData(SesiFilm sesiFilm)
-        //{
-        //    if (SesiFilm.BacaData(sesiFilm.JadwalFilm.Id.ToString(), sesiFilm.Studio.ID.ToString(), sesiFilm.Film.Id.ToString()).Count > 0)
-        //    {
-        //        throw new Exception("Credentials have taken!");
-        //    }
-
-        //    string cmd = $"INSERT INTO SESI_FILMS (jadwal_film_id, studios_id, films_id) VALUES " +
-        //        $"('{sesiFilm.JadwalFilm.Id}', '{sesiFilm.Studio.ID}', '{sesiFilm.Film.Id}');";
-
-        //    Koneksi.JalankanPerintahNonQuery(cmd);  //! Masukkan data ke Tabel Konsumen
-        //}
-
-        //public static List<SesiFilm> BacaData(string val = "", string val2 = "", string val3="")
-        //{
-
-        //    string cmd = (val == "") ? $"SELECT * FROM SESI_FILMS;" : $"SELECT * FROM SESI_FILMS WHERE jadwal_film_id LIKE '%{val}%' AND studios_id LIKE '%{val2}%' AND films_id LIKE '%{val3}%';";
-
-        //    MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);
-
-        //    var listSesiFilm = new List<SesiFilm>();
-
-        //    while (res.Read() == true)
-        //    {
-        //        SesiFilm sF = new SesiFilm(
-        //                JadwalFilm.BacaData(res.GetValue(0).ToString())[0],
-        //                Studio.BacaData("id", res.GetValue(1).ToString())[0],
-        //                Film.BacaData(res.GetValue(2).ToString())[0]
-        //            );
-
-        //        listSesiFilm.Add(sF);
-        //    }
-
-        //    return listSesiFilm;
-        //}
-        //public static void DeleteData(SesiFilm sesiFilm)
-        //{
-        //    try
-        //    {
-        //        string cmd = $"DELETE FROM SESI_FILMS WHERE jadwal_film_id LIKE '%{sesiFilm.jadwalFilm.Id}%' AND studios_id LIKE '%{sesiFilm.Studio.ID}%' AND films_id LIKE '%{sesiFilm.Film.Id}%';";
-
-        //        Koneksi.JalankanPerintahNonQuery(cmd);
-        //    }
-        //    catch (Exception x)
-        //    {
-        //        throw x;
-        //    }
-        //}
-        #endregion
+        
     }
 }

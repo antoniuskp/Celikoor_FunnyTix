@@ -44,131 +44,15 @@ namespace Celikoor_FunnyTix
             comboBoxCinema.DataSource = listCinema;
             comboBoxCinema.DisplayMember = "nama_cabang";
         }
-
-        private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cekStudio = false;
-            cekJenisStudio = false;
-            cekFilm = false;
-            cekCinema = true;
-            if (cekCinema)
-            {
-                selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
-                listJenisStudio = JenisStudio.BacaJenisStudio(selectedCinema);
-                comboBoxJenisStudio.DataSource = listJenisStudio;
-                comboBoxJenisStudio.DisplayMember = "nama";
-                cekJenisStudio = true;
-            }
-       }
         
         private void comboBoxJudulFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cekStudio = false;
-            cekJenisStudio = false;
-            cekCinema = false;
-            if (cekFilm)
-            {
-                //Clearing Films Attributes
-                textBoxDurasi.Clear();
-                textBoxGenre.Clear();
-                textBoxAktor.Clear();
-                dateTimePicker1.Value = DateTime.Now;
-
-                //Display Films Attributes 
-                selectedFilm = (Film)comboBoxJudulFilm.SelectedItem;
-                LoadImage(selectedFilm.CoverImage);
-                textBoxDurasi.Text = selectedFilm.Durasi.ToString();
-                richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
-                textBoxKelompok.Text = selectedFilm.Kelompok.Nama;
-                selectedFilm.BacaAktorFilm(selectedFilm);
-                selectedFilm.BacaGenreFilm(selectedFilm);
-                for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
-                {
-                    if (selectedFilm.ListAktor.Count == 1)
-                    {
-                        textBoxAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
-
-                    }
-                    else if (selectedFilm.ListAktor.Count > 1)
-                    {
-                        if (i >= 0 && i <= 1)
-                        {
-                            textBoxAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
-                        }
-                    }
-
-                }
-                if (selectedFilm.ListAktor.Count > 2)
-                {
-                    textBoxAktor.Text += "...";
-                }
-                for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
-                {
-                    if (selectedFilm.ListGenre.Count == 1)
-                    {
-                        textBoxGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
-
-                    }
-                    else if (i >= 0 && i < 2)
-                    {
-                        textBoxGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
-                    }
-                }
-                if (selectedFilm.ListGenre.Count > 2)
-                {
-                    textBoxGenre.Text += ",...";
-                }
-            }
-            cekFilm = false;
+            
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (checkBoxI.Checked == true)
-                {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
-                }
-                if (checkBoxII.Checked == true)
-                {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "II");
-                }
-                if (checkBoxIII.Checked == true)
-                {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "III");
-                }
-                if (checkBoxIV.Checked == true)
-                {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
-                }
-
-                if (dataGridViewHasil.Columns.Count == 5)
-                {
-                    //button hapus
-                    DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
-                    btnHapus.Name = "Aksi"; //nama objek button
-                    btnHapus.Text = "Hapus";//text yang muncul di 
-                    btnHapus.UseColumnTextForButtonValue = true;//agar tulisan muncul di button
-                    dataGridViewHasil.Columns.Add(btnHapus);//menambahkan button ke grid
-                }
-
-                listJadwal = new List<JadwalFilm>();
-                //Membuat Film
-                for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
-                {
-                    JadwalFilm jf = new JadwalFilm();
-                    jf.Tanggal = DateTime.Parse(dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString());
-                    jf.Jam_pemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
-                    listJadwal.Add(jf);
-                }
-                selectedFilm.TambahSesiFilm(selectedFilm, selectedStudio, listJadwal);
-                ClearTambah();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
             
         }
 
@@ -227,43 +111,7 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (dataGridViewHasil.Rows.Count != 1)
-                {
-                    DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        if (dataGridViewHasil != null)
-                        {
-                            try
-                            {
-                                Film.TambahSesiFilm(selectedFilm);
-                                MessageBox.Show("Data Berhasil Ditambahkan");
-                                Bersihkan();
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "WARNING! ⚠️");
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tidak Ada Data yang Ditambahkan");
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Tambahkan Film, Studio, dan Jadwal Film!", "WARNING ⚠️");
-                }
-                FormPenjadwalan_Load(this, e);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                
-            }
+           
       
         //dataGridViewHasil.Rows.Clear();
         }
@@ -317,22 +165,7 @@ namespace Celikoor_FunnyTix
 
         private void comboBoxJenisStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cekStudio = false;
-            cekFilm = false;
-            cekCinema = false;
-            if (cekJenisStudio)
-            {
-                //Display Studios Attributes 
-                selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
-                listStudio = Studio.BacaStudio(selectedCinema, selectedJenisStudio);
-
-                if (listStudio != null)
-                {
-                    comboBoxStudio.DataSource = listStudio;
-                    comboBoxStudio.DisplayMember = "nama";
-                    cekStudio = true;
-                }
-            }
+           
         }
 
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
@@ -354,6 +187,192 @@ namespace Celikoor_FunnyTix
                     comboBoxJudulFilm.DisplayMember = "judul";
                     cekFilm = true;
                 }
+            }
+        }
+
+        private void buttonPilihJudul_Click(object sender, EventArgs e)
+        {
+            cekFilm = true;
+            cekStudio = false;
+            cekJenisStudio = false;
+            cekCinema = false;
+            if (cekFilm)
+            {
+                //Clearing Films Attributes
+                textBoxDurasi.Clear();
+                textBoxGenre.Clear();
+                textBoxAktor.Clear();
+                dateTimePicker1.Value = DateTime.Now;
+
+                //Display Films Attributes 
+                selectedFilm = (Film)comboBoxJudulFilm.SelectedItem;
+                MessageBox.Show(selectedFilm.Judul);
+                LoadImage(selectedFilm.CoverImage);
+                textBoxDurasi.Text = selectedFilm.Durasi.ToString();
+                richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
+                textBoxKelompok.Text = selectedFilm.Kelompok.Nama;
+                selectedFilm.BacaAktorFilm(selectedFilm);
+                selectedFilm.BacaGenreFilm(selectedFilm);
+                for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
+                {
+                    if (selectedFilm.ListAktor.Count == 1)
+                    {
+                        textBoxAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
+
+                    }
+                    else if (selectedFilm.ListAktor.Count > 1)
+                    {
+                        if (i >= 0 && i <= 1)
+                        {
+                            textBoxAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
+                        }
+                    }
+
+                }
+                if (selectedFilm.ListAktor.Count > 2)
+                {
+                    textBoxAktor.Text += "...";
+                }
+                for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
+                {
+                    if (selectedFilm.ListGenre.Count == 1)
+                    {
+                        textBoxGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
+
+                    }
+                    else if (i >= 0 && i < 2)
+                    {
+                        textBoxGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
+                    }
+                }
+                if (selectedFilm.ListGenre.Count > 2)
+                {
+                    textBoxGenre.Text += ",...";
+                }
+            }
+        }
+
+        private void buttonPilihCinema_Click(object sender, EventArgs e)
+        {
+            cekCinema = true;
+            if (cekCinema)
+            {
+                selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
+                listJenisStudio = JenisStudio.BacaJenisStudio(selectedCinema);
+                comboBoxJenisStudio.DataSource = listJenisStudio;
+                comboBoxJenisStudio.DisplayMember = "nama";
+                cekJenisStudio = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (checkBoxI.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
+                }
+                if (checkBoxII.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "II");
+                }
+                if (checkBoxIII.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "III");
+                }
+                if (checkBoxIV.Checked == true)
+                {
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
+                }
+
+                if (dataGridViewHasil.Columns.Count == 5)
+                {
+                    //button hapus
+                    DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
+                    btnHapus.Name = "Aksi"; //nama objek button
+                    btnHapus.Text = "Hapus";//text yang muncul di 
+                    btnHapus.UseColumnTextForButtonValue = true;//agar tulisan muncul di button
+                    dataGridViewHasil.Columns.Add(btnHapus);//menambahkan button ke grid
+                }
+
+                listJadwal = new List<JadwalFilm>();
+                //Membuat Film
+                for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
+                {
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.Tanggal = DateTime.Parse(dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString());
+                    jf.Jam_pemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
+                    listJadwal.Add(jf);
+                }
+                selectedFilm.TambahSesiFilm(selectedFilm, selectedStudio, listJadwal);
+                ClearTambah();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBoxJudulFilm_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            cekJenisStudio = true;
+            if (cekJenisStudio)
+            {
+                //Display Studios Attributes 
+                selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
+                listStudio = Studio.BacaStudio(selectedCinema, selectedJenisStudio, null);
+
+                if (listStudio != null)
+                {
+                    comboBoxStudio.DataSource = listStudio;
+                    comboBoxStudio.DisplayMember = "nama";
+                    cekStudio = true;
+                }
+            }
+        }
+
+        private void buttonSimpan_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewHasil.Rows.Count != 1)
+                {
+                    DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (dataGridViewHasil != null)
+                        {
+                            try
+                            {
+                                Film.TambahSesiFilm(selectedFilm);
+                                MessageBox.Show("Data Berhasil Ditambahkan");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "WARNING! ⚠️");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tidak Ada Data yang Ditambahkan");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tambahkan Film, Studio, dan Jadwal Film!", "WARNING ⚠️");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
         }
     }

@@ -75,24 +75,24 @@ namespace FunnyTix_LIB
             return listJenisStudio;
         }
 
-        public static JenisStudio CariJenisStudio(Studio s)
+        public static List<JenisStudio> CariJenisStudioFilm(Film f)
         {
-            string query = $"SELECT js.* FROM jenis_studios js INNER JOIN studios s on s.jenis_studios_id = js.id WHERE s.id = '{s.ID}';";
+            string query = $"SELECT DISTINCT js.* FROM jenis_studios js INNER JOIN studios s on s.jenis_studios_id = js.id " +
+                $"INNER JOIN film_studio fs on fs.studios_id = s.id WHERE fs.films_id = '{f.Id}';";
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
-            if (hasil.Read() == true)
+            List<JenisStudio> listData = new List<JenisStudio>();
+            while (hasil.Read() == true)
             {
                 JenisStudio js = new JenisStudio();
                 js.Id = int.Parse(hasil.GetValue(0).ToString());
                 js.Nama = hasil.GetValue(1).ToString();
                 js.Deskripsi = hasil.GetValue(2).ToString();
-                return js;
+                listData.Add(js);
             }
-            else
-            {
-                return null;
-            }
+            return listData;
+
         }
         public static List<JenisStudio> CariJenisStudio(string filter = "", string value = "")
         {

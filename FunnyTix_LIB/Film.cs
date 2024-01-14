@@ -229,11 +229,11 @@ namespace FunnyTix_LIB
             }
             else if (studio == "")
             {
-                cmd = $"SELECT * FROM film_studio WHERE films_id = '{film}';";
+                cmd = $"SELECT DISTINCT * FROM film_studio WHERE films_id = '{film}';";
             }
             else if (film == "")
             {
-                cmd = $"SELECT * FROM film_studio WHERE studios_id = '{studio}';";
+                cmd = $"SELECT DISTINCT * FROM film_studio WHERE studios_id = '{studio}';";
 
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cmd);

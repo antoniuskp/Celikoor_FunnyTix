@@ -167,11 +167,7 @@ namespace FunnyTix_LIB
             return listJadwalFilm;
         }
 
-        /*public override string ToString()
-        {
-            string data = Tanggal + " " + Jam_pemutaran;
-            return data;
-        }*/
+
         #endregion
     }
 }

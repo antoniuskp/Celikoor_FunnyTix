@@ -18,7 +18,6 @@ namespace Celikoor_FunnyTix
         private const int Rows = 7;
         private const int Columns = 4;
         private Film selectedFilm;
-        private List<Cinema> daftarCinema;
         private List<string> userSelection = new List<string>();
         private bool studioIsLoaded = false;
         private List<string> chairTaken = new List<string>();
@@ -26,10 +25,22 @@ namespace Celikoor_FunnyTix
         private double FilmDiscount;
         private bool IsChange = true;
         private Studio selectedStudio;
-        private JenisStudio selectedJenisStudio;
-        private Cinema selectedCinema;
         private double TicketPrice;
         private JadwalFilm selectedPemutaran;
+        private JadwalFilm jadwal;
+        private JenisStudio selectedJenisStudio;
+        private Cinema selectedCinema;
+        private List<Studio> daftarStudio;
+        private List<FilmStudio> daftarFilmStudio;
+        private List<JenisStudio> daftarJenisStudio;
+        private List<Cinema> daftarCinema;
+        private bool cekFilm = true;
+        private bool cekJenisStudio = true;
+        private bool cekCinema = true;
+        private bool cekStudio = true;
+        private bool cekJamPemutaran = true;
+        private bool cekJadwal = true;
+
 
         private CheckBox[,] checkBoxArray;
         public FormPemesanan()
@@ -48,8 +59,9 @@ namespace Celikoor_FunnyTix
             comboBoxJudul.DisplayMember = "Judul";
             double saldo = Auth.GetKonsumen().Saldo;
             textBoxSaldo.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", saldo.ToString());
-
-
+            dateTimePickerTambah.Enabled = false;
+            comboBoxJamPemutaran.Enabled = false;
+            comboBoxStudio.Enabled = false;
         }
 
         private void InitializeCheckBoxArray(string huruf)
@@ -164,69 +176,29 @@ namespace Celikoor_FunnyTix
             panelC.BackColor = Color.LightSalmon;
         }
 
-        private void pictureBoxKonfirmasiPembayaran_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxKonfirmasiPembayaran.BackColor = Color.LightSalmon;
-
-        }
-
-        private void pictureBoxKeluar_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxKeluar.BackColor = Color.LightSalmon;
-
-        }
         #endregion
-
-
-        private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (comboBoxCinema != null)
-                {
-                    selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
-                    //comboBoxCinema.ValueMember = "nama_cabang";
-                    //Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
-                    //Film filmId = Film.BacaData(selectedFilm.Id.ToString())[0];
-                    //string selectedCinema = (string)comboBoxCinema.SelectedValue;
-                    //Cinema cinema = Cinema.BacaData("nama_cabang", selectedCinema)[0];
-
-                    //Studio studio = Studio.BacaData("cinemas_id", cinema.ID.ToString())[0];
-                    //var ds = new DataTable();
-                    //ds = Film.CariStudio(selectedFilm.Id, dateTimePickerTambah.Value, cinema);
-
-                    //if (ds.Rows.Count == 0)
-                    //{
-                    //    MessageBox.Show("KOSONG");
-                    //}
-                    //comboBoxJenisStudio.DataSource = ds;
-                    //comboBoxJenisStudio.DisplayMember = "Studio";
-                    //comboBoxJenisStudio.ValueMember = "Studio";
-
-
-                }
-            }
-            catch (Exception x)
-            {
-                MessageBox.Show(x.Message);
-                Environment.Exit(0);
-            }
-        }
 
         private void dateTimePickerTambah_ValueChanged(object sender, EventArgs e)
         {
-            string selectedTgl = dateTimePickerTambah.Value.ToString("yyyy-MM-dd");
-            List<JadwalFilm> listJadwalFilm = JadwalFilm.BacaData("tanggal", selectedTgl);
-            if(listJadwalFilm.Count > 0)
+            cekJadwal = true;
+            if (cekJadwal)
             {
-                comboBoxJamPemutaran.DataSource = listJadwalFilm;
-                comboBoxJamPemutaran.DisplayMember = "jam_pemutaran";
+                string selectedTgl = dateTimePickerTambah.Value.ToString("yyyy-MM-dd");
+                MessageBox.Show(selectedTgl);
+                List<JadwalFilm> listJadwalFilm = JadwalFilm.BacaData("tanggal", selectedTgl);
+                if (listJadwalFilm.Count > 0)
+                {
+                    comboBoxJamPemutaran.DataSource = listJadwalFilm;
+                    comboBoxJamPemutaran.DisplayMember = "jam_pemutaran";
+                    //cekJamPemutaran = true;
+                }
+                else if (listJadwalFilm.Count == 0)
+                {
+                    MessageBox.Show("Jadwal Film tidak ditemukan pada studio ini!", "WARNING");
+                    comboBoxJamPemutaran.Text = "";
+                }
             }
-            else if (listJadwalFilm.Count == 0)
-            {
-                MessageBox.Show("Jadwal Film tidak ditemukan pada studio ini!", "WARNING");
-                comboBoxJamPemutaran.Text = "";
-            }
+            
         }
 
         private void InputKursi(object sender, EventArgs e)
@@ -269,27 +241,19 @@ namespace Celikoor_FunnyTix
 
         private void comboBoxJamPemutaran_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cekJamPemutaran = true;
             try
             {
-                textBoxHarga.Text = "";
-                textBoxKapasitas.Text = "";
-                textBoxSisa.Text = "";
-                selectedPemutaran = (JadwalFilm)comboBoxJamPemutaran.SelectedItem;
-                
-                JadwalFilm jf = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), selectedPemutaran.Jam_pemutaran)[0];
-
-                List<Studio> listStudio = Studio.BacaStudio(jf, selectedFilm);
-                if(listStudio.Count > 0)
+                if (cekJamPemutaran)
                 {
-                    comboBoxStudio.DataSource = listStudio;
-                    comboBoxStudio.DisplayMember = "nama";
-                }
-                else
-                {
-                    comboBoxStudio.Text = "";
+                    textBoxHarga.Text = "";
+                    textBoxKapasitas.Text = "";
+                    textBoxSisa.Text = "";
+                    selectedPemutaran = (JadwalFilm)comboBoxJamPemutaran.SelectedItem;
+                    jadwal = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), selectedPemutaran.Jam_pemutaran)[0];
+                    //cekStudio = true;
                 }
                 
-                             
             }
             catch (Exception x)
             {
@@ -297,83 +261,10 @@ namespace Celikoor_FunnyTix
             }
         }
 
+        
         private void comboBoxJudul_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            try
-            {
-                selectedFilm = (Film)comboBoxJudul.SelectedItem;
-                LoadImage(selectedFilm.CoverImage);
-                richTextBoxSinopsis.Clear();
-                richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
-                textBoxDurasi.Text = selectedFilm.Durasi.ToString() + " menit";
-                selectedFilm.BacaAktorFilm(selectedFilm);
-                selectedFilm.BacaGenreFilm(selectedFilm);
-                textBoxGenre.Clear();
-                textBoxAktor.Clear();
-                FilmDiscount = selectedFilm.Diskon;
-                textBoxDiskon.Text = selectedFilm.Diskon.ToString();
-                textBoxAge.Text = selectedFilm.Kelompok.Nama;
-
-                //Display Aktor
-                for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
-                {
-                    if (selectedFilm.ListAktor.Count == 1)
-                    {
-                        textBoxAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
-
-                    }
-                    else if (selectedFilm.ListAktor.Count > 1)
-                    {
-                        if (i >= 0 && i <= 1)
-                        {
-                            textBoxAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
-                        }
-                    }
-
-                }
-                if (selectedFilm.ListAktor.Count > 2)
-                {
-                    textBoxAktor.Text += "...";
-                }
-
-                //Display Genre
-                for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
-                {
-                    if (selectedFilm.ListGenre.Count == 1)
-                    {
-                        textBoxGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
-
-                    }
-                    else if (i >= 0 && i < 2)
-                    {
-                        textBoxGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
-                    }
-                }
-                if (selectedFilm.ListGenre.Count > 2)
-                {
-                    textBoxGenre.Text += ",...";
-                }
-
-
-
-                List<JenisStudio> daftarJenisStudio = JenisStudio.BacaJenisStudioFilm(selectedFilm);
-
-                if (daftarJenisStudio != null)
-                {
-                    comboBoxJenisStudio.DataSource = daftarJenisStudio;
-                    comboBoxJenisStudio.DisplayMember = "nama";
-                    //comboBoxCinema.ValueMember = "nama";
-                    //comboBoxCinema.SelectedIndex = 0;
-                }
-                else
-                {
-                    comboBoxCinema.DataSource = null;
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
             
         }
         public void LoadImage(string url)
@@ -410,10 +301,330 @@ namespace Celikoor_FunnyTix
 
         private void pictureBoxKonfirmasiPembayaran_Click(object sender, EventArgs e)
         {
+            
+        }
+
+
+        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+      
+
+        private void buttonPilihJudul_Click(object sender, EventArgs e)
+        {
+            cekFilm = true;
+            try
+            {
+                if (cekFilm)
+                {
+                    selectedFilm = (Film)comboBoxJudul.SelectedItem;
+                    LoadImage(selectedFilm.CoverImage);
+                    richTextBoxSinopsis.Clear();
+                    richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
+                    textBoxDurasi.Text = selectedFilm.Durasi.ToString() + " menit";
+                    selectedFilm.BacaAktorFilm(selectedFilm);
+                    selectedFilm.BacaGenreFilm(selectedFilm);
+                    textBoxGenre.Clear();
+                    textBoxAktor.Clear();
+                    FilmDiscount = selectedFilm.Diskon;
+                    textBoxDiskon.Text = selectedFilm.Diskon.ToString();
+                    textBoxAge.Text = selectedFilm.Kelompok.Nama;
+
+                    //Display Aktor
+                    for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
+                    {
+                        if (selectedFilm.ListAktor.Count == 1)
+                        {
+                            textBoxAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
+
+                        }
+                        else if (selectedFilm.ListAktor.Count > 1)
+                        {
+                            if (i >= 0 && i <= 1)
+                            {
+                                textBoxAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
+                            }
+                        }
+
+                    }
+                    if (selectedFilm.ListAktor.Count > 2)
+                    {
+                        textBoxAktor.Text += "...";
+                    }
+
+                    //Display Genre
+                    for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
+                    {
+                        if (selectedFilm.ListGenre.Count == 1)
+                        {
+                            textBoxGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
+
+                        }
+                        else if (i >= 0 && i < 2)
+                        {
+                            textBoxGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
+                        }
+                    }
+                    if (selectedFilm.ListGenre.Count > 2)
+                    {
+                        textBoxGenre.Text += ",...";
+                    }
+
+                    daftarJenisStudio = JenisStudio.BacaData();
+                    comboBoxJenisStudio.DataSource = daftarJenisStudio;
+                    comboBoxJenisStudio.DisplayMember = "nama";
+                    //cekJenisStudio = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPilihJenisStudio_Click(object sender, EventArgs e)
+        {
+            cekJenisStudio = true;
+            try
+            {
+                if (cekJenisStudio)
+                {
+                    if (comboBoxJenisStudio != null)
+                    {
+                        List<JenisStudio> listJenisStudio = JenisStudio.CariJenisStudioFilm(selectedFilm);
+                        if (listJenisStudio.Count > 0)
+                        {
+                            int count = 0;
+                            for (int i = 0; i < listJenisStudio.Count; i++)
+                            {
+                                if (listJenisStudio[i].Nama == comboBoxJenisStudio.Text)
+                                {
+                                    selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
+                                    daftarCinema = Cinema.BacaData();
+                                    comboBoxCinema.DataSource = daftarCinema;
+                                    comboBoxCinema.DisplayMember = "nama_cabang";
+                                    //cekCinema = true;
+                                    break;
+                                }
+                                count++;
+                            }
+                            if (count == listJenisStudio.Count)
+                            {
+                                MessageBox.Show($"Tidak ditemukan jenis studio {comboBoxJenisStudio.Text} pada film ini!");
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPilihCinema_Click(object sender, EventArgs e)
+        {
+            cekCinema = true;
+            try
+            {
+                if (cekCinema)
+                {
+                    if (comboBoxCinema != null)
+                    {
+                        List<Cinema> listCinema = Cinema.CariCinema(selectedJenisStudio, selectedFilm);
+                        if (listCinema.Count > 0)
+                        {
+                            int count = 0;
+                            for (int i = 0; i < listCinema.Count; i++)
+                            {
+                                if (listCinema[i].NamaCabang == comboBoxCinema.Text)
+                                {
+                                    selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
+                                    daftarStudio = Studio.BacaData();
+                                    comboBoxStudio.DataSource = daftarStudio;
+                                    comboBoxStudio.DisplayMember = "nama";
+                                    //cekJadwal = true;
+                                    dateTimePickerTambah.Enabled = true;
+                                    comboBoxJamPemutaran.Enabled = true;
+                                    comboBoxStudio.Enabled = true;
+                                    break;
+                                }
+                                count++;
+                            }
+                            if (count == listCinema.Count)
+                            {
+                                MessageBox.Show($"Tidak ditemukan cinema {comboBoxCinema.Text} pada jenis studio ini dan film ini!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Tidak ditemukan cinema {comboBoxCinema.Text} pada jenis studio ini dan film ini!");
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
+
+        private void buttonPilihStudio_Click(object sender, EventArgs e)
+        {
+            cekStudio = true;
+            if (cekStudio)
+            {
+                List<Studio> listStudio = Studio.BacaStudio(selectedCinema, selectedJenisStudio, selectedFilm);
+                int count = 0;
+                for (int i = 0; i < listStudio.Count; i++)
+                {
+                    if (listStudio[i].Nama == comboBoxStudio.Text)
+                    {
+                        selectedStudio = (Studio)comboBoxStudio.SelectedItem;
+                        FilmStudio fs = new FilmStudio();
+                        fs.Film = selectedFilm;
+                        fs.Studio = selectedStudio;
+                        if (jadwal != null)
+                        {
+                            bool status = Film.CekJadwalFilmStudio(fs, jadwal);
+                            if (status)
+                            {
+                                chairTaken = Tiket.CariNomorKursi(jadwal, selectedStudio, selectedFilm);
+                                IsChange = false;
+                                //* Cek nomor kursi apa saja yg telah dibeli
+                                // Ubah Enabled dlu biar di Method InputKursi tidak dijalankan
+                                // Method InputKursi hanya dijalankan ketika user yg memilih, bukan sistem
+                                foreach (Control control in panelA.Controls)
+                                {
+                                    if (control is CheckBox)
+                                    {
+                                        CheckBox checkBox = (CheckBox)control;
+                                        if (chairTaken.Contains((string)checkBox.Tag))
+                                        {
+                                            checkBox.Enabled = false;
+                                            checkBox.Checked = true;
+                                            checkBox.ForeColor = Color.Black;
+                                        }
+                                        else
+                                        {
+                                            checkBox.Enabled = true;
+                                            checkBox.Checked = false;
+                                        }
+                                    }
+                                }
+
+                                foreach (Control control in panelB.Controls)
+                                {
+                                    if (control is CheckBox)
+                                    {
+                                        CheckBox checkBox = (CheckBox)control;
+                                        if (chairTaken.Contains((string)checkBox.Tag))
+                                        {
+                                            checkBox.Enabled = false;
+                                            checkBox.Checked = true;
+                                            checkBox.ForeColor = Color.Black;
+                                        }
+                                        else
+                                        {
+                                            checkBox.Enabled = true;
+                                            checkBox.Checked = false;
+                                        }
+                                    }
+                                }
+
+                                foreach (Control control in panelC.Controls)
+                                {
+                                    if (control is CheckBox)
+                                    {
+                                        CheckBox checkBox = (CheckBox)control;
+                                        if (chairTaken.Contains((string)checkBox.Tag))
+                                        {
+                                            checkBox.Enabled = false;
+                                            checkBox.Checked = true;
+                                            checkBox.ForeColor = Color.Black;
+                                        }
+                                        else
+                                        {
+                                            checkBox.Enabled = true;
+                                            checkBox.Checked = false;
+                                        }
+                                    }
+                                }
+
+                                studioIsLoaded = true;
+                                IsChange = true;
+                                textBoxTotalAkhir.Text = "";
+                                labelUserSelection.Text = "";
+                                textBoxTotal.Text = "";
+                                //FilmDiscount = 0;
+                                CurrentPrice = 0;
+                                textBoxTotal.Text = "";
+
+                                DateTime myDateTime = dateTimePickerTambah.Value;
+                                if (myDateTime.DayOfWeek == DayOfWeek.Saturday || myDateTime.DayOfWeek == DayOfWeek.Sunday)
+                                {
+                                    TicketPrice = double.Parse(selectedStudio.HargaWeekend.ToString());
+                                }
+                                else
+                                {
+                                    TicketPrice = double.Parse(selectedStudio.HargaWeekday.ToString());
+                                }
+                                textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", TicketPrice.ToString());
+                                textBoxKapasitas.Text = selectedStudio.Kapasitas.ToString();
+
+                                textBoxSisa.Text = (selectedStudio.Kapasitas - chairTaken.Count).ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Maaf, tidak ditemukan jadwal film pada studio ini!", "WARNING");
+                            }
+
+                            daftarStudio = Studio.BacaData();
+                            break;
+                        }
+                    }
+                    count++;
+
+
+                    if (count == listStudio.Count)
+                    {
+                        MessageBox.Show($"Tidak ditemukan studio {comboBoxStudio.Text} pada film, jenis studio, dan cinema tersebut!", "WARNING");
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonKonfirmasi_Click(object sender, EventArgs e)
+        {
             try
             {
                 DialogResult res = MessageBox.Show("Apakah Anda Yakin untuk membeli tiket? ", "CONFIRMATION", MessageBoxButtons.YesNo);
-                if(res == DialogResult.Yes)
+                if (res == DialogResult.Yes)
                 {
                     string kursi = labelUserSelection.Text;
                     string[] arrKursi = kursi.Split(',');
@@ -457,9 +668,9 @@ namespace Celikoor_FunnyTix
 
                     }
 
-                    if (Auth.GetKonsumen().Saldo > int.Parse(textBoxTotalAkhir.Text))
+                    string totalAkhir = new string(textBoxTotalAkhir.Text.Where(char.IsDigit).ToArray());
+                    if (Auth.GetKonsumen().Saldo > int.Parse(totalAkhir))
                     {
-                        string totalAkhir = new string(textBoxTotalAkhir.Text.Where(char.IsDigit).ToArray());
                         Konsumen.UbahSaldo(Auth.GetKonsumen(), -int.Parse(totalAkhir));
                         Invoice.TambahData(nota);
                         MessageBox.Show("Pembayaran Berhasil!");
@@ -469,173 +680,19 @@ namespace Celikoor_FunnyTix
                         MessageBox.Show("Saldo Anda Kurang!");
                     }
 
-                    
-                }              
+
+                }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Penambahan Data Gagal " + ex.Message);
             }
         }
 
-        private void comboBoxJenisStudio_SelectedIndexChanged(object sender, EventArgs e)
+        private void panelC_MouseHover_1(object sender, EventArgs e)
         {
-            try
-            {
-               if(comboBoxJenisStudio != null)
-                {
-                    selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
-                    daftarCinema = Cinema.BacaCinemaJenisStudio(selectedJenisStudio);
-                    comboBoxCinema.DataSource = daftarCinema;
-                    comboBoxCinema.DisplayMember = "nama_cabang";
-                }
-                
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-
-
-            //string day = dateTimePickerTambah.Value.DayOfWeek.ToString();
-            //string namaStudio = comboBoxStudio.Text;
-            //var jenisStudio = Studio.CariJenisStudio(namaStudio);
-
-            //if (jenisStudio.Rows.Count > 0)
-            //{
-            //    textBoxJenisStudio.Text = jenisStudio.Rows[0][0].ToString();
-            //    if (day == "Sunday" || day == "Saturday")
-            //    {
-            //        string price = jenisStudio.Rows[0][2].ToString();
-            //        textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", price.ToString());
-            //        TicketPrice = double.Parse(price);
-            //    }
-            //    else
-            //    {
-            //        string price = jenisStudio.Rows[0][1].ToString();
-            //        textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", price.ToString());
-            //        TicketPrice = double.Parse(price);
-            //    }
-            //    textBoxKapasitas.Text = jenisStudio.Rows[0][3].ToString();
-            //}
-
-            //*Add jam pemutaran
-            //Film selectedFilm = (Film)comboBoxJudul.SelectedItem;
-            //DateTime selectedDate = dateTimePickerTambah.Value;
-            //string cinema = comboBoxCinema.Text;
-
-            //var daftarJamPemutaran = Film.CariJadwalPemutaran(selectedFilm.Id, selectedDate, cinema, namaStudio);
-
-            //if (daftarJamPemutaran.Rows.Count > 0)
-            //{
-            //    comboBoxJamPemutaran.DataSource = daftarJamPemutaran;
-            //    comboBoxJamPemutaran.DisplayMember = "Jam Pemutaran";
-            //    comboBoxJamPemutaran.ValueMember = "Jam Pemutaran";
-            //    jamPemutaranIsLoaded = true;
-            //    //comboBoxCinema.SelectedIndex = 0;
-            //}
-            //else
-            //{
-            //    comboBoxJamPemutaran.DataSource = null;
-            //}
-
-
-
-        }
-
-        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedStudio = (Studio)comboBoxStudio.SelectedItem;
-            DateTime selectedDate = dateTimePickerTambah.Value;
-            JadwalFilm jf = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), selectedPemutaran.Jam_pemutaran)[0];
-
-            chairTaken = Tiket.CariNomorKursi(jf, selectedStudio, selectedFilm);
-            foreach (string i in chairTaken) MessageBox.Show(i);
-            IsChange = false;
-            //* Cek nomor kursi apa saja yg telah dibeli
-            // Ubah Enabled dlu biar di Method InputKursi tidak dijalankan
-            // Method InputKursi hanya dijalankan ketika user yg memilih, bukan sistem
-            foreach (Control control in panelA.Controls)
-            {
-                if (control is CheckBox)
-                {
-                    CheckBox checkBox = (CheckBox)control;
-                    if (chairTaken.Contains((string)checkBox.Tag))
-                    {
-                        checkBox.Enabled = false;
-                        checkBox.Checked = true;
-                        checkBox.ForeColor = Color.Black;
-                    }
-                    else
-                    {
-                        checkBox.Enabled = true;
-                        checkBox.Checked = false;
-                    }
-                }
-            }
-
-            foreach (Control control in panelB.Controls)
-            {
-                if (control is CheckBox)
-                {
-                    CheckBox checkBox = (CheckBox)control;
-                    if (chairTaken.Contains((string)checkBox.Tag))
-                    {
-                        checkBox.Enabled = false;
-                        checkBox.Checked = true;
-                        checkBox.ForeColor = Color.Black;
-                    }
-                    else
-                    {
-                        checkBox.Enabled = true;
-                        checkBox.Checked = false;
-                    }
-                }
-            }
-
-            foreach (Control control in panelC.Controls)
-            {
-                if (control is CheckBox)
-                {
-                    CheckBox checkBox = (CheckBox)control;
-                    if (chairTaken.Contains((string)checkBox.Tag))
-                    {
-                        checkBox.Enabled = false;
-                        checkBox.Checked = true;
-                        checkBox.ForeColor = Color.Black;
-                    }
-                    else
-                    {
-                        checkBox.Enabled = true;
-                        checkBox.Checked = false;
-                    }
-                }
-            }
-
-            studioIsLoaded = true;
-            IsChange = true;
-            textBoxTotalAkhir.Text = "";
-            labelUserSelection.Text = "";
-            textBoxTotal.Text = "";
-            //FilmDiscount = 0;
-            CurrentPrice = 0;
-            textBoxTotal.Text = "";
-
-            DateTime myDateTime = dateTimePickerTambah.Value;
-            if (myDateTime.DayOfWeek == DayOfWeek.Saturday || myDateTime.DayOfWeek == DayOfWeek.Sunday)
-            {
-                TicketPrice = double.Parse(selectedStudio.HargaWeekend.ToString());
-            }
-            else
-            {
-                TicketPrice = double.Parse(selectedStudio.HargaWeekday.ToString());
-            }
-            textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", TicketPrice.ToString());
-            textBoxKapasitas.Text = selectedStudio.Kapasitas.ToString();
-
-            textBoxSisa.Text = (selectedStudio.Kapasitas - chairTaken.Count).ToString();
+            panelC.BackColor = Color.LightSalmon;
         }
     }
     
