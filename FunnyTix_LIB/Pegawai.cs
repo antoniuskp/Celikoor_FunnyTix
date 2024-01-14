@@ -42,6 +42,49 @@ namespace FunnyTix_LIB
         #endregion
 
         #region METHOD
+        public static string GenerateUsernamePegawai(string role)
+        {
+            string usernameBaru = "";
+            string query = "";
+            if(role == "ADMIN")
+            {
+                query = $"SELECT username FROM pegawais WHERE username LIKE 'A%' ORDER BY id DESC LIMIT 1;";
+            }
+            else if(role == "KASIR")
+            {
+                query = $"SELECT username FROM pegawais WHERE username LIKE 'K%' ORDER BY id DESC LIMIT 1;";
+
+            }
+            else if(role == "OPERATOR")
+            {
+                query = $"SELECT username FROM pegawais WHERE username LIKE 'O%' ORDER BY id DESC LIMIT 1;";
+            }
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            if (hasil.Read() == true)
+            {
+                string noNotaAkhir = hasil.GetValue(0).ToString().Substring(1);
+                int number = int.Parse(noNotaAkhir);
+                number += 1;
+                string output = number.ToString("D3");
+
+                if (role == "ADMIN")
+                {
+                    usernameBaru = "A" + output;
+                }
+                else if(role == "KASIR")
+                {
+                    usernameBaru = "K" + output;
+                }
+                else if (role == "OPERATOR")
+                {
+                    usernameBaru = "O" + output;
+                }
+            }
+            return usernameBaru;
+        }
+
         //TODO Create
         public static void TambahData(Pegawai pegawai)
         {

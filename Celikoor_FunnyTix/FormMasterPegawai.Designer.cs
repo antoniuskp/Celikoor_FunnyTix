@@ -42,7 +42,6 @@ namespace Celikoor_FunnyTix
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxRoles = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@ namespace Celikoor_FunnyTix
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahPegawai.SuspendLayout();
@@ -190,9 +190,9 @@ namespace Celikoor_FunnyTix
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelUsername);
             this.groupBox1.Controls.Add(this.comboBoxRoles);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBoxUsername);
             this.groupBox1.Controls.Add(this.textBoxEmail);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.label8);
@@ -218,8 +218,9 @@ namespace Celikoor_FunnyTix
             "OPERATOR"});
             this.comboBoxRoles.Location = new System.Drawing.Point(170, 216);
             this.comboBoxRoles.Name = "comboBoxRoles";
-            this.comboBoxRoles.Size = new System.Drawing.Size(121, 32);
+            this.comboBoxRoles.Size = new System.Drawing.Size(121, 31);
             this.comboBoxRoles.TabIndex = 15;
+            this.comboBoxRoles.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoles_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -229,18 +230,9 @@ namespace Celikoor_FunnyTix
             this.label4.Location = new System.Drawing.Point(85, 218);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 25);
+            this.label4.Size = new System.Drawing.Size(77, 26);
             this.label4.TabIndex = 14;
             this.label4.Text = "Roles : ";
-            // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.Location = new System.Drawing.Point(170, 126);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(263, 28);
-            this.textBoxUsername.TabIndex = 13;
             // 
             // textBoxEmail
             // 
@@ -257,6 +249,7 @@ namespace Celikoor_FunnyTix
             this.textBoxPassword.Location = new System.Drawing.Point(170, 171);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(263, 28);
             this.textBoxPassword.TabIndex = 9;
             // 
@@ -268,7 +261,7 @@ namespace Celikoor_FunnyTix
             this.label8.Location = new System.Drawing.Point(46, 174);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 25);
+            this.label8.Size = new System.Drawing.Size(119, 26);
             this.label8.TabIndex = 8;
             this.label8.Text = "Password : ";
             // 
@@ -280,7 +273,7 @@ namespace Celikoor_FunnyTix
             this.label7.Location = new System.Drawing.Point(40, 129);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 25);
+            this.label7.Size = new System.Drawing.Size(124, 26);
             this.label7.TabIndex = 7;
             this.label7.Text = "Username : ";
             // 
@@ -292,7 +285,7 @@ namespace Celikoor_FunnyTix
             this.label6.Location = new System.Drawing.Point(82, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.Size = new System.Drawing.Size(80, 26);
             this.label6.TabIndex = 6;
             this.label6.Text = "Email : ";
             // 
@@ -313,7 +306,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(78, 42);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(83, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nama : ";
             // 
@@ -358,6 +351,17 @@ namespace Celikoor_FunnyTix
             this.label5.Text = "T A M B A H  P E G A W A I";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelUsername.Location = new System.Drawing.Point(171, 131);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(98, 23);
+            this.labelUsername.TabIndex = 16;
+            this.labelUsername.Text = "Username";
+            // 
             // FormMasterPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,7 +402,6 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBoxRoles;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label8;
@@ -409,5 +412,6 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonBatal;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelUsername;
     }
 }

@@ -44,7 +44,9 @@ namespace Celikoor_FunnyTix
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
+            
             panelTambahPegawai.Visible = true;
+
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
@@ -102,17 +104,18 @@ namespace Celikoor_FunnyTix
             panelTambahPegawai.Visible = false;
             textBoxEmail.Clear();   
             textBoxNama.Clear();    
-            textBoxPassword.Clear();    
-            textBoxUsername.Clear();
+            textBoxPassword.Clear();
+            labelUsername.Text = "";
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
+
             string nama = textBoxNama.Text;
-            string email = textBoxEmail.Text;   
-            string username = textBoxUsername.Text; 
+            string email = textBoxEmail.Text;    
             string pwd = textBoxPassword.Text;  
             string roles = comboBoxRoles.Text;
+            string username = labelUsername.Text;
 
             Pegawai pegawai = new Pegawai(nama, email, username, pwd, roles);
             Pegawai.TambahData(pegawai);
@@ -121,7 +124,7 @@ namespace Celikoor_FunnyTix
             textBoxEmail.Clear();
             textBoxNama.Clear();
             textBoxPassword.Clear();
-            textBoxUsername.Clear();
+            labelUsername.Text = "Username";
 
             FormMasterPegawai_Load(this, e);
         }
@@ -167,6 +170,12 @@ namespace Celikoor_FunnyTix
                 
 
             }*/
-        }    
+        }
+
+        private void comboBoxRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelUsername.Text = Pegawai.GenerateUsernamePegawai(comboBoxRoles.Text);
+
+        }
     }
 }
