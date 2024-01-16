@@ -103,8 +103,27 @@ namespace FunnyTix_LIB
         {
             try
             {
-                string cmd = $"DELETE FROM cinemas WHERE id = '{kodeHapus}';";
 
+                string cmd = $"Select id from studios where cinemas_id = '{kodeHapus}';";
+                var hasil = Koneksi.JalankanPerintahSelect(cmd);
+                List<int> listStudio = new List<int>();
+                while(hasil.Read())
+                {
+                    int id = hasil.GetInt32(0);
+                    cmd = $"Delete from tikets where studios_id = '{id}'";
+                    Koneksi.JalankanPerintahNonQuery(cmd);
+
+                    cmd = $"Delete from sesi_films where studios_id = '{id}'";
+                    Koneksi.JalankanPerintahNonQuery(cmd);
+
+                    cmd = $"Delete from film_studio where studios_id = '{id}'";
+                    Koneksi.JalankanPerintahNonQuery(cmd);
+                }
+
+                cmd = $"Delete from studios where cinemas_id = '{kodeHapus}';";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM cinemas WHERE id = '{kodeHapus}';";
                 Koneksi.JalankanPerintahNonQuery(cmd);
             }
             catch (Exception x)
