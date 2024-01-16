@@ -14,6 +14,7 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormValidasiInvoice : Form
     {
+        List<Invoice> listInvoice;
         public FormValidasiInvoice()
         {
             InitializeComponent();
@@ -24,39 +25,49 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                List<Invoice> listInvoice = Invoice.BacaData();
-
-                dataGridViewHasil.DataSource = listInvoice;
-
-                //comboBox.DataSource = listPegawai;
-                comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-
-                dataGridViewHasil.DataSource = listInvoice;
-                comboBox.SelectedIndex = 0;
-
-                if (listInvoice.Count > 0)
-                {
-                    if (dataGridViewHasil.ColumnCount == 7)
-                    {
-                        DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                        bcol.HeaderText = "Aksi";
-                        bcol.Text = "Validasi";
-                        bcol.Name = "buttonValidasi";
-                        bcol.UseColumnTextForButtonValue = true;
-                        dataGridViewHasil.Columns.Add(bcol);
-                    }
-                }
-                else
-                {
-                    dataGridViewHasil.DataSource = null;
-                }
+                listInvoice = Invoice.BacaData();
+                InputDataGrid();
+                FormatHeaderDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        private void InputDataGrid()
+        {
+            dataGridViewHasil.Rows.Clear();
 
+
+            foreach (Invoice In in listInvoice)
+            {
+                string id = In.Id.ToString();
+                string tgl = In.Tanggal.ToString("yyyy-MM-dd");
+                string grand_total = In.GrandTotal.ToString();
+                string diskon = In.DiskonNominal.ToString();
+                string konsumen = In.Konsumen.ToString();
+                string kasir = In.Kasir.ToString();
+                string status = In.Status.ToString();   
+                string validasi = "Validasi";
+
+                dataGridViewHasil.Rows.Add(id, tgl, grand_total, diskon, konsumen, kasir, status, validasi);
+            }
+            comboBox.SelectedIndex = 0;
+        }
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
+
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+        }
         private void buttonBatal_Click(object sender, EventArgs e)
         {
             panelValidasiInvoice.Visible = false;
@@ -88,12 +99,6 @@ namespace Celikoor_FunnyTix
 
         private void buttonCari_Click(object sender, EventArgs e)
         {
-            comboBox.SelectedIndex = 0;
-            textBox.Text = "";
-        }
-
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
             switch (comboBox.Text)
             {
                 case "Tanggal":
@@ -108,7 +113,7 @@ namespace Celikoor_FunnyTix
 
             if (listInvoices.Count > 0)
             {
-                dataGridViewHasil.DataSource = listInvoices;
+                InputDataGrid();
             }
             else
             {
@@ -128,12 +133,12 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
-                string status = dataGridViewHasil.CurrentRow.Cells["Status"].Value.ToString();
+                string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+                string status = dataGridViewHasil.CurrentRow.Cells["status_column"].Value.ToString();
 
-                if (e.ColumnIndex == dataGridViewHasil.Columns["buttonValidasi"].Index)
+                if (e.ColumnIndex == dataGridViewHasil.Columns["validasi_column"].Index)
                 {
-                    Invoice invoice = Invoice.BacaData("id", kode)[0];
+                    Invoice invoice = Invoice.BacaData("Id", kode)[0];
                     labelId.Text = kode;
                     comboBoxStatus.Text = status;
                     panelValidasiInvoice.Visible = true;

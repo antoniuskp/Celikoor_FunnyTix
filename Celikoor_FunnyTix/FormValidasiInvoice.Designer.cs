@@ -29,6 +29,14 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,13 +47,21 @@ namespace Celikoor_FunnyTix
             this.label1 = new System.Windows.Forms.Label();
             this.panelValidasiInvoice = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelId = new System.Windows.Forms.Label();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.labelId = new System.Windows.Forms.Label();
+            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grand_total_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diskon_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.konsumen_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kasir_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validasi_column = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelValidasiInvoice.SuspendLayout();
@@ -68,6 +84,15 @@ namespace Celikoor_FunnyTix
             // 
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_column,
+            this.tgl_column,
+            this.grand_total_column,
+            this.diskon_column,
+            this.konsumen_column,
+            this.kasir_column,
+            this.status_column,
+            this.validasi_column});
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(16, 197);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -100,7 +125,7 @@ namespace Celikoor_FunnyTix
             this.buttonCari.Name = "buttonCari";
             this.buttonCari.Size = new System.Drawing.Size(170, 51);
             this.buttonCari.TabIndex = 3;
-            this.buttonCari.Text = "CLEAR";
+            this.buttonCari.Text = "Cari";
             this.buttonCari.UseVisualStyleBackColor = false;
             this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
@@ -112,7 +137,6 @@ namespace Celikoor_FunnyTix
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(667, 36);
             this.textBox.TabIndex = 2;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // comboBox
             // 
@@ -177,6 +201,18 @@ namespace Celikoor_FunnyTix
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelId.Location = new System.Drawing.Point(165, 39);
+            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(101, 25);
+            this.labelId.TabIndex = 16;
+            this.labelId.Text = "ID Invoice";
             // 
             // comboBoxStatus
             // 
@@ -256,17 +292,96 @@ namespace Celikoor_FunnyTix
             this.label5.Text = "V A L I D A S I";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelId
+            // id_column
             // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.labelId.Location = new System.Drawing.Point(165, 39);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(101, 25);
-            this.labelId.TabIndex = 16;
-            this.labelId.Text = "ID Invoice";
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.DarkRed;
+            this.id_column.DefaultCellStyle = dataGridViewCellStyle17;
+            this.id_column.HeaderText = "ID";
+            this.id_column.MinimumWidth = 6;
+            this.id_column.Name = "id_column";
+            this.id_column.Width = 125;
+            // 
+            // tgl_column
+            // 
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.DarkRed;
+            this.tgl_column.DefaultCellStyle = dataGridViewCellStyle18;
+            this.tgl_column.HeaderText = "Tanggal";
+            this.tgl_column.MinimumWidth = 6;
+            this.tgl_column.Name = "tgl_column";
+            this.tgl_column.Width = 125;
+            // 
+            // grand_total_column
+            // 
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.DarkRed;
+            this.grand_total_column.DefaultCellStyle = dataGridViewCellStyle19;
+            this.grand_total_column.HeaderText = "Grand Total";
+            this.grand_total_column.MinimumWidth = 6;
+            this.grand_total_column.Name = "grand_total_column";
+            this.grand_total_column.Width = 125;
+            // 
+            // diskon_column
+            // 
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.DarkRed;
+            this.diskon_column.DefaultCellStyle = dataGridViewCellStyle20;
+            this.diskon_column.HeaderText = "Diskon";
+            this.diskon_column.MinimumWidth = 6;
+            this.diskon_column.Name = "diskon_column";
+            this.diskon_column.Width = 125;
+            // 
+            // konsumen_column
+            // 
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DarkRed;
+            this.konsumen_column.DefaultCellStyle = dataGridViewCellStyle21;
+            this.konsumen_column.HeaderText = "Konsumen";
+            this.konsumen_column.MinimumWidth = 6;
+            this.konsumen_column.Name = "konsumen_column";
+            this.konsumen_column.Width = 125;
+            // 
+            // kasir_column
+            // 
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.DarkRed;
+            this.kasir_column.DefaultCellStyle = dataGridViewCellStyle22;
+            this.kasir_column.HeaderText = "Kasir";
+            this.kasir_column.MinimumWidth = 6;
+            this.kasir_column.Name = "kasir_column";
+            this.kasir_column.Width = 125;
+            // 
+            // status_column
+            // 
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.DarkRed;
+            this.status_column.DefaultCellStyle = dataGridViewCellStyle23;
+            this.status_column.HeaderText = "Status";
+            this.status_column.MinimumWidth = 6;
+            this.status_column.Name = "status_column";
+            this.status_column.Width = 125;
+            // 
+            // validasi_column
+            // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.DarkRed;
+            this.validasi_column.DefaultCellStyle = dataGridViewCellStyle24;
+            this.validasi_column.HeaderText = "Aksi";
+            this.validasi_column.MinimumWidth = 6;
+            this.validasi_column.Name = "validasi_column";
+            this.validasi_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.validasi_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.validasi_column.Width = 125;
             // 
             // FormValidasiInvoice
             // 
@@ -311,5 +426,13 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tgl_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grand_total_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diskon_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn konsumen_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kasir_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_column;
+        private System.Windows.Forms.DataGridViewButtonColumn validasi_column;
     }
 }
