@@ -142,8 +142,27 @@ namespace FunnyTix_LIB
 
         public static void DeleteData(string kodeHapus)
         {
-            string cmd = $"DELETE FROM jenis_studios WHERE id = '{kodeHapus}';";
+            string cmd = $"Select id from studios where jenis_studios_id = '{kodeHapus}';";
 
+            var hasil = Koneksi.JalankanPerintahSelect(cmd);
+            List<int> listStudio = new List<int>();
+            while (hasil.Read())
+            {
+                int id = hasil.GetInt32(0);
+                cmd = $"Delete from tikets where studios_id = '{id}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"Delete from sesi_films where studios_id = '{id}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"Delete from film_studio where studios_id = '{id}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+            }
+
+            cmd = $"Delete from studios where jenis_studios_id = '{kodeHapus}';";
+            Koneksi.JalankanPerintahNonQuery(cmd);
+
+            cmd = $"DELETE FROM jenis_studios WHERE id = '{kodeHapus}';";
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 
