@@ -38,7 +38,8 @@ namespace Celikoor_FunnyTix
             try
             {
                 int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
-                Tiket.UpdateKehadiran(noInv.ToString());
+                string noKursi = textBoxNoTiket.Text.Substring(3, 3);
+                Tiket.UpdateKehadiran(noInv.ToString(), noKursi);
                 MessageBox.Show($"Data berhasil diupdate", "INFORMATION");
             }
             catch (Exception ex)

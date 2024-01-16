@@ -101,9 +101,14 @@ namespace FunnyTix_LIB
         {
             try
             {
-                string cmd = $"DELETE FROM aktors where id = '{kodeHapus}';";
+                string cmd = $"DELETE From aktor_film where aktors_id='{kodeHapus}';";
 
                 Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM aktors where id = '{kodeHapus}';";
+
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
             }
             catch (Exception x)
             {
