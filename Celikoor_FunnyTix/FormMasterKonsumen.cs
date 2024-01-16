@@ -24,11 +24,82 @@ namespace Celikoor_FunnyTix
 
             listKonsumen = Konsumen.BacaData();
 
-            dataGridViewHasil.DataSource = listKonsumen;
-            ShowDataGrid();
+            InputDataGrid();
+            FormatHeaderDataGrid();
         }
 
-        private void textBox_TextChanged(object sender, EventArgs e)
+        private void InputDataGrid()
+        {
+            dataGridViewHasil.Rows.Clear();
+
+
+            foreach (Konsumen k in listKonsumen)
+            {
+                string id = k.ID.ToString();
+                string nama = k.Nama.ToString();
+                string email = k.Email.ToString();
+                string noHp = k.No_Hp.ToString();
+                string gender = k.Gender.ToString();
+                string tglLahir = k.Tgl_lahir.ToString("dd/MM/yyyy");
+                string saldo = k.Saldo.ToString();
+                string username = k.Username.ToString();
+
+                dataGridViewHasil.Rows.Add(id, nama, email, noHp, gender, tglLahir, saldo, username, " ", "Hapus");
+            }
+            comboBox.SelectedIndex = 0;
+        }
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
+
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBox.Text = "";
+            comboBox.SelectedIndex = 0;
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus konsumen " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Konsumen.DeleteData(kode);
+
+                        FormMasterKonsumen_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
         {
             switch (comboBox.Text)
             {
@@ -64,7 +135,7 @@ namespace Celikoor_FunnyTix
 
             if (listKonsumen.Count > 0)
             {
-                dataGridViewHasil.DataSource = listKonsumen;
+                InputDataGrid();
             }
             else
             {
@@ -73,67 +144,9 @@ namespace Celikoor_FunnyTix
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }
-            ShowDataGrid();
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBox.Text = "";
-            comboBox.SelectedIndex = 0;
-        }
-        public void ShowDataGrid()
-        {
-            if (dataGridViewHasil.ColumnCount == 9)
-            {
-                /*DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-
-                bcol.HeaderText = "Aksi";
-                bcol.Text = "Ubah";
-                bcol.Name = "btnUbahGrid";
-                bcol.UseColumnTextForButtonValue = true;
-                dataGridViewHasil.Columns.Add(bcol);*/
-
-                DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                bcol2.HeaderText = "Aksi";
-                bcol2.Text = "Hapus";
-                bcol2.Name = "buttonHapusGrid";
-                bcol2.UseColumnTextForButtonValue = true;
-                dataGridViewHasil.Columns.Add(bcol2);
-            }
             for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
             {
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            }
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
-
-
-            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
-            {
-                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus konsumen " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    try
-                    {
-                        Konsumen.DeleteData(kode);
-
-                        FormMasterKonsumen_Load(this, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
-                    }
-                }
             }
         }
     }

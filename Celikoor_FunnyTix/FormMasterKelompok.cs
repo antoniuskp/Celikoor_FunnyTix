@@ -23,60 +23,38 @@ namespace Celikoor_FunnyTix
         {
             FormUtama frm = (FormUtama)this.Owner;
 
-            listKelompok = Kelompok.BacaData(); 
+            listKelompok = Kelompok.BacaData();
 
-            dataGridViewHasil.DataSource = listKelompok;
-            ShowDataGrid();
+            InputDataGrid();
+            FormatHeaderDataGrid();
         }
 
-        private void textBox_TextChanged(object sender, EventArgs e)
+        private void InputDataGrid()
         {
-            switch (comboBox.Text)
-            {
-                case "Nama":
-                    listKelompok = Kelompok.BacaData("nama", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-            }
+            dataGridViewHasil.Rows.Clear();
 
-            if (listKelompok.Count > 0)
+
+            foreach (Kelompok k in listKelompok)
             {
-                dataGridViewHasil.DataSource = listKelompok;
-                ShowDataGrid();
+                string id = k.Id.ToString();
+                string nama = k.Nama.ToString();
+
+                dataGridViewHasil.Rows.Add(id, nama, "Hapus");
             }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-            }
+            comboBox.SelectedIndex = 0;
         }
-        public void ShowDataGrid()
+        private void FormatHeaderDataGrid()
         {
-            if (dataGridViewHasil.ColumnCount == 2)
-            {
-                /*DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
 
-                bcol.HeaderText = "Aksi";
-                bcol.Text = "Ubah";
-                bcol.Name = "btnUbahGrid";
-                bcol.UseColumnTextForButtonValue = true;
-                dataGridViewHasil.Columns.Add(bcol);*/
-
-                DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                bcol2.HeaderText = "Aksi";
-                bcol2.Text = "Hapus";
-                bcol2.Name = "buttonHapusGrid";
-                bcol2.UseColumnTextForButtonValue = true;
-                dataGridViewHasil.Columns.Add(bcol2);
-            }
-            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
-            {
-                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            }
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBox.Text = "";
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -110,11 +88,11 @@ namespace Celikoor_FunnyTix
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
 
 
-            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
             {
                 DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus kelompok " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -131,6 +109,30 @@ namespace Celikoor_FunnyTix
                         MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
                     }
                 }
+            }
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            switch (comboBox.Text)
+            {
+                case "Nama":
+                    listKelompok = Kelompok.BacaData("nama", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
+
+            if (listKelompok.Count > 0)
+            {
+                InputDataGrid();
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
         }
     }
