@@ -162,9 +162,39 @@ namespace FunnyTix_LIB
         {
             try
             {
-                string cmd = $"DELETE FROM konsumens WHERE id = '{kodeHapus}';";
+                //! Invoices
+                string cmd = $"SELECT id from invoices WHERE konsumens_id = '{kodeHapus}';";
 
+                var res = Koneksi.JalankanPerintahSelect(cmd);
+                List<int> listInvoices = new List<int>();
+
+                while (res.Read() == true)
+                {
+                    listInvoices.Add(res.GetInt32(0));
+                }
+
+                //! Delete Tickets
+                foreach (int id in listInvoices)
+                {
+                    cmd = $"DELETE FROM tikets WHERE invoices_id = '{id}'";
+                    Koneksi.JalankanPerintahNonQuery(cmd);
+                }
+
+                //!  Delete Invoices
+                foreach (int id in listInvoices)
+                {
+                    cmd = $"DELETE FROM invoices WHERE id = '{id}'";
+                    Koneksi.JalankanPerintahNonQuery(cmd);
+                }
+
+                //! Delete Konsumens
+                cmd = $"DELETE FROM konsumens WHERE id = '{kodeHapus}'";
                 Koneksi.JalankanPerintahNonQuery(cmd);
+
+
+                //string cmd = $"DELETE FROM konsumens WHERE id = '{kodeHapus}';";
+
+                //Koneksi.JalankanPerintahNonQuery(cmd);
             }
             catch (Exception x)
             {
