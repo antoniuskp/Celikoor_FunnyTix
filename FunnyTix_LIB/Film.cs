@@ -394,9 +394,27 @@ namespace FunnyTix_LIB
         #region DELETE
         public static void DeleteData(string kodeHapus)
         {
+            try
+            {
+                string cmd = $"DELETE FROM tikets WHERE films_id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
 
-            string cmd = $"DELETE FROM films WHERE id = '{kodeHapus}';";
-            Koneksi.JalankanPerintahNonQuery(cmd);
+                cmd = $"DELETE FROM sesi_films WHERE films_id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM film_studio WHERE films_id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM genre_film WHERE films_id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM films WHERE id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+            }
+            catch (Exception x)
+            {
+                throw x;
+            }
 
         }
         #endregion
