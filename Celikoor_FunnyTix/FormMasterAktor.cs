@@ -26,50 +26,27 @@ namespace Celikoor_FunnyTix
 
             listAktor = Aktor.BacaData();
 
-            //dataGridViewHasil.DataSource = listAktor;
-            dataGridViewHasil.Rows.Clear(); 
+            InputDataGrid();
+        }
+        private void InputDataGrid()
+        {
+            dataGridViewHasil.Rows.Clear();
 
 
-            foreach(Aktor act in listAktor)
+            foreach (Aktor act in listAktor)
             {
                 string id = act.ID.ToString();
                 string nama = act.Nama.ToString();
                 string tgllahir = act.Tgl_Lahir.ToString("yyyy-MM-dd");
                 string gender = act.Gender.ToString();
                 string negara = act.Negara_Asal.ToString();
-
-                dataGridViewHasil.Rows.Add(id, nama, tgllahir, gender, negara);    
+                string ubah = "Ubah";
+                string hapus = "Hapus";
+                
+                dataGridViewHasil.Rows.Add(id, nama, tgllahir, gender, negara, ubah, hapus);
             }
             comboBox.SelectedIndex = 0;
-            /*
-
-            if (listAktor.Count > 0)
-            {
-                dataGridViewHasil.DataSource = listAktor;
-                if (dataGridViewHasil.ColumnCount == 5)
-                {
-                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Ubah";
-                    bcol.Name = "buttonUbahGrid";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewHasil.Columns.Add(bcol);
-
-                    DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                    bcol2.HeaderText = "Aksi";
-                    bcol2.Text = "Hapus";
-                    bcol2.Name = "buttonHapusGrid";
-                    bcol2.UseColumnTextForButtonValue = true;
-                    dataGridViewHasil.Columns.Add(bcol2);
-                }
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-            }*/
         }
-
         private void textBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -118,11 +95,11 @@ namespace Celikoor_FunnyTix
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
 
 
-            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonUbahGrid"].Index)
+            if (e.ColumnIndex == dataGridViewHasil.Columns["ubah_column"].Index)
             {
                 Aktor aktor = Aktor.BacaData("id", kode)[0];
                 labelID.Text = kode;
@@ -140,7 +117,7 @@ namespace Celikoor_FunnyTix
 
                 panelUbah.Visible = true;
             }
-            else if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            else if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
             {
                 DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus aktor " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -199,7 +176,7 @@ namespace Celikoor_FunnyTix
 
             if (listAktor.Count > 0)
             {
-                dataGridViewHasil.DataSource = listAktor;
+                InputDataGrid();
             }
             else
             {

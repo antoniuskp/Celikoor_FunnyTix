@@ -31,15 +31,24 @@ namespace Celikoor_FunnyTix
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.Id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_lahir_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.negara_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ubah_column = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCari = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -74,11 +83,6 @@ namespace Celikoor_FunnyTix
             this.buttonBatalUbah = new System.Windows.Forms.Button();
             this.buttonSimpanUbah = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.Id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tgl_lahir_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.negara_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahAktor.SuspendLayout();
@@ -134,25 +138,119 @@ namespace Celikoor_FunnyTix
             this.nama_column,
             this.tgl_lahir_column,
             this.gender_column,
-            this.negara_column});
+            this.negara_column,
+            this.ubah_column,
+            this.hapus_column});
             this.dataGridViewHasil.EnableHeadersVisualStyles = false;
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(12, 190);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewHasil.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewHasil.ReadOnly = true;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHasil.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewHasil.RowHeadersWidth = 51;
             this.dataGridViewHasil.RowTemplate.Height = 24;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 13;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
+            // 
+            // Id_column
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            this.Id_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id_column.HeaderText = "ID";
+            this.Id_column.MinimumWidth = 6;
+            this.Id_column.Name = "Id_column";
+            this.Id_column.ReadOnly = true;
+            this.Id_column.Width = 125;
+            // 
+            // nama_column
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            this.nama_column.DefaultCellStyle = dataGridViewCellStyle4;
+            this.nama_column.HeaderText = "Nama";
+            this.nama_column.MinimumWidth = 6;
+            this.nama_column.Name = "nama_column";
+            this.nama_column.ReadOnly = true;
+            this.nama_column.Width = 125;
+            // 
+            // tgl_lahir_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            this.tgl_lahir_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tgl_lahir_column.HeaderText = "Tanggal Lahir";
+            this.tgl_lahir_column.MinimumWidth = 6;
+            this.tgl_lahir_column.Name = "tgl_lahir_column";
+            this.tgl_lahir_column.ReadOnly = true;
+            this.tgl_lahir_column.Width = 125;
+            // 
+            // gender_column
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
+            this.gender_column.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gender_column.HeaderText = "Gender";
+            this.gender_column.MinimumWidth = 6;
+            this.gender_column.Name = "gender_column";
+            this.gender_column.ReadOnly = true;
+            this.gender_column.Width = 125;
+            // 
+            // negara_column
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
+            this.negara_column.DefaultCellStyle = dataGridViewCellStyle7;
+            this.negara_column.HeaderText = "Negara Asal";
+            this.negara_column.MinimumWidth = 6;
+            this.negara_column.Name = "negara_column";
+            this.negara_column.ReadOnly = true;
+            this.negara_column.Width = 125;
+            // 
+            // ubah_column
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkRed;
+            this.ubah_column.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ubah_column.HeaderText = "Aksi";
+            this.ubah_column.MinimumWidth = 6;
+            this.ubah_column.Name = "ubah_column";
+            this.ubah_column.ReadOnly = true;
+            this.ubah_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ubah_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ubah_column.Text = "Ubah";
+            this.ubah_column.Width = 125;
+            // 
+            // hapus_column
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkRed;
+            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle9;
+            this.hapus_column.HeaderText = "Aksi";
+            this.hapus_column.MinimumWidth = 6;
+            this.hapus_column.Name = "hapus_column";
+            this.hapus_column.ReadOnly = true;
+            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.hapus_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hapus_column.Text = "Hapus";
+            this.hapus_column.Width = 125;
             // 
             // panel1
             // 
@@ -566,61 +664,6 @@ namespace Celikoor_FunnyTix
             this.label12.Text = "U B A H  A K T O R";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Id_column
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
-            this.Id_column.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Id_column.HeaderText = "ID";
-            this.Id_column.MinimumWidth = 6;
-            this.Id_column.Name = "Id_column";
-            this.Id_column.Width = 125;
-            // 
-            // nama_column
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
-            this.nama_column.DefaultCellStyle = dataGridViewCellStyle4;
-            this.nama_column.HeaderText = "Nama";
-            this.nama_column.MinimumWidth = 6;
-            this.nama_column.Name = "nama_column";
-            this.nama_column.Width = 125;
-            // 
-            // tgl_lahir_column
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
-            this.tgl_lahir_column.DefaultCellStyle = dataGridViewCellStyle5;
-            this.tgl_lahir_column.HeaderText = "Tanggal Lahir";
-            this.tgl_lahir_column.MinimumWidth = 6;
-            this.tgl_lahir_column.Name = "tgl_lahir_column";
-            this.tgl_lahir_column.Width = 125;
-            // 
-            // gender_column
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
-            this.gender_column.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gender_column.HeaderText = "Gender";
-            this.gender_column.MinimumWidth = 6;
-            this.gender_column.Name = "gender_column";
-            this.gender_column.Width = 125;
-            // 
-            // negara_column
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
-            this.negara_column.DefaultCellStyle = dataGridViewCellStyle7;
-            this.negara_column.HeaderText = "Negara Asal";
-            this.negara_column.MinimumWidth = 6;
-            this.negara_column.Name = "negara_column";
-            this.negara_column.Width = 125;
-            // 
             // FormMasterAktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -694,5 +737,7 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.DataGridViewTextBoxColumn tgl_lahir_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn negara_column;
+        private System.Windows.Forms.DataGridViewButtonColumn ubah_column;
+        private System.Windows.Forms.DataGridViewButtonColumn hapus_column;
     }
 }

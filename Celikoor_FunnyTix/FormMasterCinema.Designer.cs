@@ -29,11 +29,17 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonCari = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +57,12 @@ namespace Celikoor_FunnyTix
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_cabang_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamat_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_dibuka_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kota_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahCinema.SuspendLayout();
@@ -85,8 +97,16 @@ namespace Celikoor_FunnyTix
             // 
             // dataGridViewHasil
             // 
+            this.dataGridViewHasil.AllowUserToAddRows = false;
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_column,
+            this.nama_cabang_column,
+            this.alamat_column,
+            this.tgl_dibuka_column,
+            this.kota_column,
+            this.hapus_column});
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(12, 190);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -100,7 +120,7 @@ namespace Celikoor_FunnyTix
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.buttonClear);
+            this.panel1.Controls.Add(this.buttonCari);
             this.panel1.Controls.Add(this.textBox);
             this.panel1.Controls.Add(this.comboBox);
             this.panel1.Controls.Add(this.label2);
@@ -110,18 +130,18 @@ namespace Celikoor_FunnyTix
             this.panel1.Size = new System.Drawing.Size(1488, 86);
             this.panel1.TabIndex = 12;
             // 
-            // buttonClear
+            // buttonCari
             // 
-            this.buttonClear.BackColor = System.Drawing.Color.Maroon;
-            this.buttonClear.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(1296, 22);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(170, 51);
-            this.buttonClear.TabIndex = 3;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.buttonCari.BackColor = System.Drawing.Color.Maroon;
+            this.buttonCari.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCari.ForeColor = System.Drawing.Color.White;
+            this.buttonCari.Location = new System.Drawing.Point(1296, 22);
+            this.buttonCari.Name = "buttonCari";
+            this.buttonCari.Size = new System.Drawing.Size(170, 51);
+            this.buttonCari.TabIndex = 3;
+            this.buttonCari.Text = "Cari";
+            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // textBox
             // 
@@ -132,7 +152,6 @@ namespace Celikoor_FunnyTix
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(667, 36);
             this.textBox.TabIndex = 2;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // comboBox
             // 
@@ -328,6 +347,75 @@ namespace Celikoor_FunnyTix
             this.label5.Text = "T A M B A H  C I N E M A";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // id_column
+            // 
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.DarkRed;
+            this.id_column.DefaultCellStyle = dataGridViewCellStyle19;
+            this.id_column.HeaderText = "ID";
+            this.id_column.MinimumWidth = 6;
+            this.id_column.Name = "id_column";
+            this.id_column.Width = 125;
+            // 
+            // nama_cabang_column
+            // 
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.DarkRed;
+            this.nama_cabang_column.DefaultCellStyle = dataGridViewCellStyle20;
+            this.nama_cabang_column.HeaderText = "Nama Cabang";
+            this.nama_cabang_column.MinimumWidth = 6;
+            this.nama_cabang_column.Name = "nama_cabang_column";
+            this.nama_cabang_column.Width = 125;
+            // 
+            // alamat_column
+            // 
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DarkRed;
+            this.alamat_column.DefaultCellStyle = dataGridViewCellStyle21;
+            this.alamat_column.HeaderText = "Alamat";
+            this.alamat_column.MinimumWidth = 6;
+            this.alamat_column.Name = "alamat_column";
+            this.alamat_column.Width = 125;
+            // 
+            // tgl_dibuka_column
+            // 
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.DarkRed;
+            this.tgl_dibuka_column.DefaultCellStyle = dataGridViewCellStyle22;
+            this.tgl_dibuka_column.HeaderText = "Tanggal Dibuka";
+            this.tgl_dibuka_column.MinimumWidth = 6;
+            this.tgl_dibuka_column.Name = "tgl_dibuka_column";
+            this.tgl_dibuka_column.Width = 125;
+            // 
+            // kota_column
+            // 
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.DarkRed;
+            this.kota_column.DefaultCellStyle = dataGridViewCellStyle23;
+            this.kota_column.HeaderText = "Kota";
+            this.kota_column.MinimumWidth = 6;
+            this.kota_column.Name = "kota_column";
+            this.kota_column.Width = 125;
+            // 
+            // hapus_column
+            // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.DarkRed;
+            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle24;
+            this.hapus_column.HeaderText = "Aksi";
+            this.hapus_column.MinimumWidth = 6;
+            this.hapus_column.Name = "hapus_column";
+            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.hapus_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hapus_column.Width = 125;
+            // 
             // FormMasterCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,7 +447,7 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonCari;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
@@ -377,5 +465,11 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxAlamat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_cabang_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamat_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tgl_dibuka_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kota_column;
+        private System.Windows.Forms.DataGridViewButtonColumn hapus_column;
     }
 }
