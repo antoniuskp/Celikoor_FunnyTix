@@ -202,9 +202,27 @@ namespace FunnyTix_LIB
         #region hapus data
         public static void HapusData(Studio s)
         {
-            string query = $"DELETE FROM studios where id = {s.ID};";
+            try
+            {
+                string cmd = $"DELETE FROM tikets WHERE studios_id = '{s.ID}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
 
-            Koneksi.JalankanPerintahNonQuery(query);
+                cmd = $"DELETE FROM sesi_films WHERE studios_id = '{s.ID}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM film_studio WHERE studios_id = '{s.ID}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE FROM studios WHERE id = '{s.ID}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+            }
+            catch (Exception x)
+            {
+                throw x;
+            }
+            /*string query = $"DELETE FROM studios where id = {s.ID};";
+
+            Koneksi.JalankanPerintahNonQuery(query);*/
         }
         #endregion
 
