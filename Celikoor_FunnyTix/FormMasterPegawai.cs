@@ -50,7 +50,7 @@ namespace Celikoor_FunnyTix
                 string username = p.Username.ToString();
                 string roles = p.Roles.ToString();
 
-                dataGridViewHasil.Rows.Add(id, nama, email, username, " ", roles, "Ubah", "Hapus");
+                dataGridViewHasil.Rows.Add(id, nama, email, username, " ", roles, "Hapus");
             }
             comboBox.SelectedIndex = 0;
         }

@@ -127,34 +127,32 @@ namespace FunnyTix_LIB
         {
             try
             {
-                //! Tickets
-                string cmd = $"SELECT invoices_id from tikets WHERE operator_id = '{kodeHapus}'";
+
+                string cmd = $"delete from tikets WHERE operator_id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"SELECT id from invoices WHERE kasir_id = '{kodeHapus}'";
 
                 var res = Koneksi.JalankanPerintahSelect(cmd);
                 var listInvoies_id = new List<int>();
 
-                // Kalo Operator
-                if (res.Read() == true)
+                while (res.Read() == true)
                 {
                     listInvoies_id.Add(res.GetInt32(0));
-                    while (res.Read() == true)
-                    {
-                        listInvoies_id.Add(res.GetInt32(0));
-                    }
-
-                    //! Delete Tickets and Invoices
-                    foreach(int id in listInvoies_id)
-                    {
-                        cmd = $"DELETE tikets WHERE invoices_id = '{id}'";
-                        Koneksi.JalankanPerintahNonQuery(cmd);
-                    }
                 }
-                else
+
+                foreach (int id in listInvoies_id)
                 {
-                    // Kalo yg dihapus bukan operator (kasir)
-                    cmd = $"SELECT id from invoices";
-
+                    cmd = $"DELETE from tikets WHERE invoices_id = '{id}'";
+                    Koneksi.JalankanPerintahNonQuery(cmd);
                 }
+
+                cmd = $"DELETE from invoices WHERE kasir_id = '{kodeHapus}'";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
+                cmd = $"DELETE from pegawais where id='{kodeHapus}';";
+                Koneksi.JalankanPerintahNonQuery(cmd);
+
             }
             catch (Exception x)
             {
