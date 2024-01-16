@@ -33,17 +33,19 @@
             this.comboBoxChoose = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExport = new System.Windows.Forms.Button();
+            this.buttonCari = new System.Windows.Forms.Button();
+            this.labelLaporan = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(54, 243);
+            this.dataGridView.Location = new System.Drawing.Point(54, 357);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(1402, 567);
+            this.dataGridView.Size = new System.Drawing.Size(1402, 433);
             this.dataGridView.TabIndex = 0;
             // 
             // label
@@ -60,23 +62,21 @@
             // 
             // comboBoxChoose
             // 
-            this.comboBoxChoose.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxChoose.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxChoose.ForeColor = System.Drawing.Color.DarkRed;
             this.comboBoxChoose.FormattingEnabled = true;
             this.comboBoxChoose.Items.AddRange(new object[] {
-            "Laporan jumlah film terlaris (paling banyak ditonton) per bulannya selama tahun 2" +
-                "023",
+            "Laporan jumlah film terlaris per bulannya selama tahun 2023",
             "Laporan peringkat 3 cabang terbanyak yang mendapatkan pemasukkan dari penjualan t" +
-                "iket (dilihat dari total nominalnya)",
+                "iket",
             "Laporan 3 teratas film yang paling banyak jumlah ketidakhadiran penontonnya",
             "Laporan 3 studio beserta nama cinemanya, yang memiliki tingkat utilitas terendah " +
-                "pada bulan tertentu (dihitung dari banyaknya kosong kursi pada studio tersebut)",
-            "Laporan 10 konsumen teratas yang paling sering menonton film bergenre comedy (dil" +
-                "ihat dari frekuensi menonton film komedinya)",
+                "pada bulan tertentu",
+            "Laporan 10 konsumen teratas yang paling sering menonton film bergenre comedy ",
             "Laporan Aktor dengan pemain film terbanyak"});
-            this.comboBoxChoose.Location = new System.Drawing.Point(319, 173);
+            this.comboBoxChoose.Location = new System.Drawing.Point(319, 176);
             this.comboBoxChoose.Name = "comboBoxChoose";
-            this.comboBoxChoose.Size = new System.Drawing.Size(1137, 40);
+            this.comboBoxChoose.Size = new System.Drawing.Size(1137, 33);
             this.comboBoxChoose.TabIndex = 2;
             this.comboBoxChoose.SelectedIndexChanged += new System.EventHandler(this.comboBoxChoose_SelectedIndexChanged);
             // 
@@ -86,7 +86,7 @@
             this.label1.BackColor = System.Drawing.Color.DarkRed;
             this.label1.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Location = new System.Drawing.Point(47, 172);
+            this.label1.Location = new System.Drawing.Point(37, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 39);
             this.label1.TabIndex = 3;
@@ -105,17 +105,45 @@
             this.buttonExport.UseVisualStyleBackColor = false;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
+            // buttonCari
+            // 
+            this.buttonCari.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonCari.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCari.ForeColor = System.Drawing.Color.DarkRed;
+            this.buttonCari.Location = new System.Drawing.Point(1362, 240);
+            this.buttonCari.Name = "buttonCari";
+            this.buttonCari.Size = new System.Drawing.Size(94, 37);
+            this.buttonCari.TabIndex = 27;
+            this.buttonCari.Text = "Cari";
+            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
+            // 
+            // labelLaporan
+            // 
+            this.labelLaporan.AutoSize = true;
+            this.labelLaporan.BackColor = System.Drawing.Color.DarkRed;
+            this.labelLaporan.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLaporan.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelLaporan.Location = new System.Drawing.Point(54, 306);
+            this.labelLaporan.Name = "labelLaporan";
+            this.labelLaporan.Size = new System.Drawing.Size(0, 27);
+            this.labelLaporan.TabIndex = 28;
+            // 
             // FormLaporan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1511, 1033);
+            this.ControlBox = false;
+            this.Controls.Add(this.labelLaporan);
+            this.Controls.Add(this.buttonCari);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxChoose);
             this.Controls.Add(this.label);
             this.Controls.Add(this.dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLaporan";
             this.Text = "Form Laporan";
             this.Load += new System.EventHandler(this.FormLaporan_Load);
@@ -132,5 +160,7 @@
         private System.Windows.Forms.ComboBox comboBoxChoose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExport;
+        private System.Windows.Forms.Button buttonCari;
+        private System.Windows.Forms.Label labelLaporan;
     }
 }

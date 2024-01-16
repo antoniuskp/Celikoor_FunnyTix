@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using System.IO;
+using System.Globalization;
 
 namespace FunnyTix_LIB
 {
@@ -230,7 +231,7 @@ namespace FunnyTix_LIB
 
         public static void CetakLaporan(string namaLaporan, int index, List<Laporan> listLaporan)
         {
-            string nama = "Laporan_" + namaLaporan.Substring(0,20);
+            string nama = "Laporan_" + namaLaporan.Substring(0,15);
             StreamWriter NamaFile = new StreamWriter(nama);
             if(namaLaporan.Length>74)
             {
@@ -270,7 +271,7 @@ namespace FunnyTix_LIB
                     NamaFile.WriteLine("Grand Total       Cabang");
                     for (int i = 0; i < listLaporan.Count; i++)
                     {
-                        string grandTotal = listLaporan[i].GrandTotal.ToString().PadRight(15, ' ');
+                        string grandTotal = listLaporan[i].GrandTotal.ToString("C", CultureInfo.CreateSpecificCulture("id-ID")).PadRight(15, ' ');
                         string cabang = listLaporan[i].Cabang;
 
                         NamaFile.WriteLine(grandTotal + " | " + cabang);
@@ -311,10 +312,10 @@ namespace FunnyTix_LIB
                     break;
 
                 case 5:
-                    NamaFile.WriteLine("Nama Aktor             Jumlah Film");
+                    NamaFile.WriteLine("Nama Aktor                       Jumlah Film");
                     for (int i = 0; i < listLaporan.Count; i++)
                     {
-                        string aktor = listLaporan[i].Aktor.PadRight(40, ' ');
+                        string aktor = listLaporan[i].Aktor.PadRight(30, ' ');
                         string jumlahFilm = listLaporan[i].JumlahFilm.ToString();
 
                         NamaFile.WriteLine(aktor + " | " + jumlahFilm);
