@@ -73,7 +73,7 @@ namespace FunnyTix_LIB
                 }
                 else if (filter != "")
                 {
-                    cmd = $"select * from aktors where {filter} like '%{val}%';";
+                    cmd = $"select * from aktors where {filter} like '{val}%';";
                 }
 
                 MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);

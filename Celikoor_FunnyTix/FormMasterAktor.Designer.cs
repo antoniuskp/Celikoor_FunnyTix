@@ -29,11 +29,19 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonCari = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,6 +74,11 @@ namespace Celikoor_FunnyTix
             this.buttonBatalUbah = new System.Windows.Forms.Button();
             this.buttonSimpanUbah = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.Id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_lahir_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.negara_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahAktor.SuspendLayout();
@@ -102,12 +115,39 @@ namespace Celikoor_FunnyTix
             // 
             // dataGridViewHasil
             // 
+            this.dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.dataGridViewHasil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
+            this.dataGridViewHasil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHasil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_column,
+            this.nama_column,
+            this.tgl_lahir_column,
+            this.gender_column,
+            this.negara_column});
+            this.dataGridViewHasil.EnableHeadersVisualStyles = false;
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(12, 190);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHasil.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewHasil.RowHeadersWidth = 51;
             this.dataGridViewHasil.RowTemplate.Height = 24;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
@@ -117,7 +157,7 @@ namespace Celikoor_FunnyTix
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.buttonClear);
+            this.panel1.Controls.Add(this.buttonCari);
             this.panel1.Controls.Add(this.textBox);
             this.panel1.Controls.Add(this.comboBox);
             this.panel1.Controls.Add(this.label2);
@@ -127,18 +167,18 @@ namespace Celikoor_FunnyTix
             this.panel1.Size = new System.Drawing.Size(1488, 86);
             this.panel1.TabIndex = 12;
             // 
-            // buttonClear
+            // buttonCari
             // 
-            this.buttonClear.BackColor = System.Drawing.Color.Maroon;
-            this.buttonClear.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(1296, 22);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(170, 51);
-            this.buttonClear.TabIndex = 3;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.buttonCari.BackColor = System.Drawing.Color.Maroon;
+            this.buttonCari.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCari.ForeColor = System.Drawing.Color.White;
+            this.buttonCari.Location = new System.Drawing.Point(1296, 22);
+            this.buttonCari.Name = "buttonCari";
+            this.buttonCari.Size = new System.Drawing.Size(170, 51);
+            this.buttonCari.TabIndex = 3;
+            this.buttonCari.Text = "Cari";
+            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // textBox
             // 
@@ -436,7 +476,7 @@ namespace Celikoor_FunnyTix
             this.label4.Location = new System.Drawing.Point(26, 196);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 25);
+            this.label4.Size = new System.Drawing.Size(135, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Negara Asal : ";
             // 
@@ -526,6 +566,61 @@ namespace Celikoor_FunnyTix
             this.label12.Text = "U B A H  A K T O R";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Id_column
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            this.Id_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id_column.HeaderText = "ID";
+            this.Id_column.MinimumWidth = 6;
+            this.Id_column.Name = "Id_column";
+            this.Id_column.Width = 125;
+            // 
+            // nama_column
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            this.nama_column.DefaultCellStyle = dataGridViewCellStyle4;
+            this.nama_column.HeaderText = "Nama";
+            this.nama_column.MinimumWidth = 6;
+            this.nama_column.Name = "nama_column";
+            this.nama_column.Width = 125;
+            // 
+            // tgl_lahir_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            this.tgl_lahir_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tgl_lahir_column.HeaderText = "Tanggal Lahir";
+            this.tgl_lahir_column.MinimumWidth = 6;
+            this.tgl_lahir_column.Name = "tgl_lahir_column";
+            this.tgl_lahir_column.Width = 125;
+            // 
+            // gender_column
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
+            this.gender_column.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gender_column.HeaderText = "Gender";
+            this.gender_column.MinimumWidth = 6;
+            this.gender_column.Name = "gender_column";
+            this.gender_column.Width = 125;
+            // 
+            // negara_column
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
+            this.negara_column.DefaultCellStyle = dataGridViewCellStyle7;
+            this.negara_column.HeaderText = "Negara Asal";
+            this.negara_column.MinimumWidth = 6;
+            this.negara_column.Name = "negara_column";
+            this.negara_column.Width = 125;
+            // 
             // FormMasterAktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -561,7 +656,7 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonCari;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
@@ -594,5 +689,10 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.Button buttonBatalUbah;
         private System.Windows.Forms.Button buttonSimpanUbah;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tgl_lahir_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn negara_column;
     }
 }

@@ -26,8 +26,22 @@ namespace Celikoor_FunnyTix
 
             listAktor = Aktor.BacaData();
 
-            dataGridViewHasil.DataSource = listAktor;
+            //dataGridViewHasil.DataSource = listAktor;
+            dataGridViewHasil.Rows.Clear(); 
+
+
+            foreach(Aktor act in listAktor)
+            {
+                string id = act.ID.ToString();
+                string nama = act.Nama.ToString();
+                string tgllahir = act.Tgl_Lahir.ToString("yyyy-MM-dd");
+                string gender = act.Gender.ToString();
+                string negara = act.Negara_Asal.ToString();
+
+                dataGridViewHasil.Rows.Add(id, nama, tgllahir, gender, negara);    
+            }
             comboBox.SelectedIndex = 0;
+            /*
 
             if (listAktor.Count > 0)
             {
@@ -53,52 +67,12 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-            }
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBox.Text = "";
-            comboBox.SelectedIndex = 0;
+            }*/
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            switch (comboBox.Text)
-            {
-                case "Nama":
-                    listAktor = Aktor.BacaData("Nama", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Tanggal Lahir":
-                    listAktor = Aktor.BacaData("tgl_lahir", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Gender":
-                    listAktor = Aktor.BacaData("gender", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Negara":
-                    listAktor = Aktor.BacaData("negara_asal", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-            }
 
-            if (listAktor.Count > 0)
-            {
-                dataGridViewHasil.DataSource = listAktor;
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
-                textBox.Text = "";
-                comboBox.SelectedIndex = 0;
-            }
-            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
-            {
-                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            }
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -199,6 +173,45 @@ namespace Celikoor_FunnyTix
             panelUbah.Visible = false;
 
             FormMasterAktor_Load(this, e);
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            switch (comboBox.Text)
+            {
+                case "Nama":
+                    listAktor = Aktor.BacaData("Nama", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Tanggal Lahir":
+                    listAktor = Aktor.BacaData("Tgl_lahir", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Gender":
+                    listAktor = Aktor.BacaData("Gender", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Negara":
+                    listAktor = Aktor.BacaData("Negara_asal", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
+
+            if (listAktor.Count > 0)
+            {
+                dataGridViewHasil.DataSource = listAktor;
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Tidak ada data yang cocok.");
+                textBox.Text = "";
+                comboBox.SelectedIndex = 0;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
         }
     }
 }
