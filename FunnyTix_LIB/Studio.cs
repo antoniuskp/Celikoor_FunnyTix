@@ -47,25 +47,26 @@ namespace FunnyTix_LIB
         #region METHODS
 
         #region baca data
-        public static List<Studio> BacaSesiFilm(Film f)
-        {
-            string query = $"SELECT DISTINCT s.* FROM sesi_films sf " +
-                $"inner join film_studio fs on sf.studios_id = fs.studios_id " +
-                $"inner join studios s on s.id = fs.studios_id WHERE sf.films_id = '{f.Id}';";
+        //public static List<Studio> BacaSesiFilm(Film f)
+        //{
+        //    string query = $"SELECT DISTINCT s.* FROM sesi_films sf " +
+        //        $"inner join film_studio fs on sf.studios_id = fs.studios_id " +
+        //        $"inner join studios s on s.id = fs.studios_id WHERE sf.films_id = '{f.Id}';";
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
-            List<Studio> listData = new List<Studio>();
-            while (hasil.Read() == true)
-            {
-                Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
-                listData.Add(s);
-            }
-            return listData;
-        }
+        //    List<Studio> listData = new List<Studio>();
+        //    while (hasil.Read() == true)
+        //    {
+        //        Studio s = Studio.BacaData("id", hasil.GetValue(0).ToString())[0];
+        //        listData.Add(s);
+        //    }
+        //    return listData;
+        //}
 
         public static List<Studio>BacaStudio(Cinema c, JenisStudio js, Film f)
         {
+            //ini perlu diganti
             string query = "";
             if (f == null)
             {
@@ -101,6 +102,7 @@ namespace FunnyTix_LIB
         }
         public static List<Studio> FilterStudio (string filter = "", string value = "")
         {
+            //ini perlu diganti
             string query= $"SELECT * FROM studios s WHERE {filter} like '%{value}%';";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Studio> listJadwalFilm = new List<Studio>();
@@ -127,6 +129,7 @@ namespace FunnyTix_LIB
             }
         public static List<Studio> BacaData(string filter = "", string value = "")
         {
+            //ini perlu diganti
             string query = "";
             if (filter == "")
             {

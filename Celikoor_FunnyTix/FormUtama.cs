@@ -383,7 +383,10 @@ namespace Celikoor_FunnyTix
         #region Panel Pegawai Kasir
         private void panelInvoice_Click(object sender, EventArgs e)
         {
-            form.OpenChild(new FormValidasiInvoice());
+            //form.OpenChild(new FormValidasiInvoice());
+            FormValidasiInvoice frm = new FormValidasiInvoice();
+            frm.MdiParent = this;
+            frm.ShowDialog();
         }
         private void label10_Click(object sender, EventArgs e)
         {

@@ -111,6 +111,7 @@
             this.buttonUpdate.TabIndex = 5;
             this.buttonUpdate.Text = "UPDATE";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // textBoxNoInv
             // 
@@ -142,7 +143,7 @@
             this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label1.Location = new System.Drawing.Point(102, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 32);
+            this.label1.Size = new System.Drawing.Size(162, 33);
             this.label1.TabIndex = 8;
             this.label1.Text = "Operator Id";
             // 

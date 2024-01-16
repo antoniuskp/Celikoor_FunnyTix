@@ -33,6 +33,7 @@ namespace FunnyTix_LIB
         #region METHODS
         public static List<Genre> BacaGenreBelum(Film f)
         {
+            //ini perlu diganti
             string cmd = $"SELECT g.* FROM genres g LEFT JOIN genre_film gf ON g.id = gf.genres_id AND gf.films_id = '{f.Id}' WHERE gf.genres_id IS NULL;";
 
             MySqlDataReader res = Koneksi.JalankanPerintahSelect(cmd);

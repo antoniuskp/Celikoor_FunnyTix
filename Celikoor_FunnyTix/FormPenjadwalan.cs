@@ -38,23 +38,10 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.DefaultCellStyle.ForeColor = Color.Black;
             this.WindowState = FormWindowState.Maximized;
             List<Cinema> listCinema = Cinema.BacaData();
-            //comboBoxCinema.SelectedIndex = -1;
-            //comboBoxJudulFilm.SelectedIndex = -1;
-            //comboBoxStudio.SelectedIndex = -1;
             comboBoxCinema.DataSource = listCinema;
             comboBoxCinema.DisplayMember = "nama_cabang";
         }
-        
-        private void comboBoxJudulFilm_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
+       
 
         private void ClearTambah()
         {
@@ -107,13 +94,6 @@ namespace Celikoor_FunnyTix
 
             }
 
-        }
-
-        private void buttonSimpan_Click(object sender, EventArgs e)
-        {
-           
-      
-        //dataGridViewHasil.Rows.Clear();
         }
 
         private void Bersihkan()

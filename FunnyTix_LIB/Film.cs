@@ -77,7 +77,7 @@ namespace FunnyTix_LIB
         public string Bahasa { get => bahasa; set => bahasa = value; }
         public int IsSubIndo { get => isSubIndo; set => isSubIndo = value; }
         public string CoverImage { get => coverImage; set => coverImage = value; }
-        public double Diskon { get => diskon; set => diskon = value; }
+        public double Diskon { get => diskon; set => diskon =  value; }
         public List<AktorFilm> ListAktor { get => listAktor; set => listAktor = value; }
         public List<GenreFilm> ListGenre { get => listGenre; set => listGenre = value; }
         public List<FilmStudio> ListFilmStudio { get => listFilmStudio; set => listFilmStudio = value; }
@@ -87,36 +87,37 @@ namespace FunnyTix_LIB
         #region METHODS
 
         #region SELECT
-        public static List<Film> CariFilmTanpaStudio(Studio s)
-        {
-            string query = $"SELECT f.* FROM films f LEFT JOIN film_studio fs ON f.id = fs.films_id AND fs.studios_id = '{s.ID}' WHERE fs.films_id IS NULL;";
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+        //public static List<Film> CariFilmTanpaStudio(Studio s)
+        //{
+        //    string query = $"SELECT f.* FROM films f LEFT JOIN film_studio fs ON f.id = fs.films_id AND fs.studios_id = '{s.ID}' WHERE fs.films_id IS NULL;";
+        //    MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
-            List<Film> listFilm = new List<Film>();
-            while(hasil.Read() == true)
-            {
-                Film f = new Film();
-                f.Id = int.Parse(hasil.GetValue(0).ToString());
-                f.Judul = hasil.GetValue(1).ToString();
-                f.Sinopsis = hasil.GetValue(2).ToString();
-                f.Tahun = int.Parse(hasil.GetValue(3).ToString());
-                f.Durasi = int.Parse(hasil.GetValue(4).ToString());
+        //    List<Film> listFilm = new List<Film>();
+        //    while(hasil.Read() == true)
+        //    {
+        //        Film f = new Film();
+        //        f.Id = int.Parse(hasil.GetValue(0).ToString());
+        //        f.Judul = hasil.GetValue(1).ToString();
+        //        f.Sinopsis = hasil.GetValue(2).ToString();
+        //        f.Tahun = int.Parse(hasil.GetValue(3).ToString());
+        //        f.Durasi = int.Parse(hasil.GetValue(4).ToString());
 
-                Kelompok k = new Kelompok();
-                k.Id = int.Parse(hasil.GetValue(5).ToString());
+        //        Kelompok k = new Kelompok();
+        //        k.Id = int.Parse(hasil.GetValue(5).ToString());
 
-                f.Kelompok = k;
-                f.Bahasa = hasil.GetValue(6).ToString();
-                f.IsSubIndo = int.Parse(hasil.GetValue(7).ToString());
-                f.CoverImage = hasil.GetValue(8).ToString();
-                f.Diskon = int.Parse(hasil.GetValue(9).ToString());
-                listFilm.Add(f);
-            }
-            return listFilm;
-        }
+        //        f.Kelompok = k;
+        //        f.Bahasa = hasil.GetValue(6).ToString();
+        //        f.IsSubIndo = int.Parse(hasil.GetValue(7).ToString());
+        //        f.CoverImage = hasil.GetValue(8).ToString();
+        //        f.Diskon = int.Parse(hasil.GetValue(9).ToString());
+        //        listFilm.Add(f);
+        //    }
+        //    return listFilm;
+        //}
 
         public void BacaGenreFilm(Film f)
         {
+            //ini perlu diubah
             f.ListGenre.Clear();
             string query = $"SELECT DISTINCT genres_id FROM genre_film WHERE films_id = '{f.Id}';";
 
@@ -132,6 +133,7 @@ namespace FunnyTix_LIB
 
         public void BacaAktorFilm(Film f)
         {
+            //ini perlu diubah
             string query = $"SELECT * FROM aktor_film WHERE films_id = {f.Id};";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
@@ -193,6 +195,7 @@ namespace FunnyTix_LIB
 
         public static List<Film> BacaData(string value = "")
         {
+            //ini perlu diubah
             string query = "SELECT * FROM films;";
             if (value != "")
             {
@@ -222,6 +225,7 @@ namespace FunnyTix_LIB
         }
         public static List<FilmStudio> BacaDataFilmStudio(string film = "", string studio = "")
         {
+            //ini perlu diubah
             string cmd = $"SELECT * FROM film_studio;";
             if (film != "" && studio != "")
             {
@@ -323,7 +327,6 @@ namespace FunnyTix_LIB
             }
         }
 
-        
         public static void TambahSesiFilm(Film f)
         {
             //tambah Data ke film studio
@@ -369,7 +372,6 @@ namespace FunnyTix_LIB
             }
         }
             
-
         public static void TambahDataSesiFilm(SesiFilm sf)
         {
             JadwalFilm jf = JadwalFilm.BacaData("tanggal", sf.JadwalFilm.Tanggal.ToString("yyyy-MM-dd"), sf.JadwalFilm.Jam_pemutaran)[0];
@@ -387,28 +389,9 @@ namespace FunnyTix_LIB
         #region DELETE
         public static void DeleteData(string kodeHapus)
         {
-            //string cmd = $"DELETE FROM actor_film as AF inner join films as F on AF.films_id = F.id " +
-            //    $"inner join genre_film as GF on F.id = GF.films_id " +
-            //    $"inner join film_studio as FS on F.id = FS.films_id" +
-            //    $"inner join sesi_films as SF on FS.films_id = SF.films_id " +
-            //    $"WHERE id = '{kodeHapus}';";
-
-            //Koneksi.JalankanPerintahNonQuery(cmd);
 
             string cmd = $"DELETE FROM films WHERE id = '{kodeHapus}';";
             Koneksi.JalankanPerintahNonQuery(cmd);
-
-            //string cmdHapusAktor = $"DELETE FROM aktor_film WHERE id = '{kodeHapus}';";
-            //Koneksi.JalankanPerintahNonQuery(cmdHapusAktor);
-
-            //string cmdHapusGenre = $"DELETE FROM genre_film WHERE id = '{kodeHapus}';";
-            //Koneksi.JalankanPerintahNonQuery(cmdHapusGenre);
-
-            //string cmdHapusStudio = $"DELETE FROM film_studio WHERE id = '{kodeHapus}';";
-            //Koneksi.JalankanPerintahNonQuery(cmdHapusStudio); 
-
-            //string cmdHapusSesi = $"DELETE FROM sesi_films WHERE id = '{kodeHapus}';";
-            //Koneksi.JalankanPerintahNonQuery(cmdHapusSesi);
 
         }
         #endregion
