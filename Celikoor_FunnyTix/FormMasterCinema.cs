@@ -25,73 +25,40 @@ namespace Celikoor_FunnyTix
             comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
             listCabang = Cinema.BacaData();
-            dataGridViewHasil.DataSource = listCabang;
 
-            comboBox.SelectedIndex = 0;
-            if (listCabang.Count > 0)
-            {
-                dataGridViewHasil.DataSource = listCabang;
-                if (dataGridViewHasil.ColumnCount == 5)
-                {
-                    /*DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
+            InputDataGrid();
+            FormatHeaderDataGrid(); 
 
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Ubah";
-                    bcol.Name = "btnUbahGrid";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewHasil.Columns.Add(bcol);*/
-
-                    DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                    bcol2.HeaderText = "Aksi";
-                    bcol2.Text = "Hapus";
-                    bcol2.Name = "buttonHapusGrid";
-                    bcol2.UseColumnTextForButtonValue = true;
-                    dataGridViewHasil.Columns.Add(bcol2);
-                }
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-            }
         }
-
-        private void textBox_TextChanged(object sender, EventArgs e)
+        private void InputDataGrid()
         {
-            switch (comboBox.Text)
-            {
-                case "Cabang":
-                    listCabang = Cinema.BacaData("nama_cabang", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Alamat":
-                    listCabang = Cinema.BacaData("alamat", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Tanggal Dibuka":
-                    listCabang = Cinema.BacaData("tgl_dibuka", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Kota":
-                    listCabang = Cinema.BacaData("kota", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-            }
+            dataGridViewHasil.Rows.Clear();
 
-            if (listCabang.Count > 0)
+
+            foreach (Cinema cin in listCabang)
             {
-                dataGridViewHasil.DataSource = listCabang;
+                string id = cin.ID.ToString();
+                string nama_cabang = cin.NamaCabang.ToString();
+                string alamat = cin.Alamat.ToString();
+                string tgl_dibuka = cin.Tgl_Buka.ToString("yyyy-MM-dd");    
+                string kota = cin.Kota.ToString();
+                string hapus = "Hapus";
+
+                dataGridViewHasil.Rows.Add(id, nama_cabang, alamat, tgl_dibuka, kota, hapus);
             }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
-                textBox.Text = "";
-                comboBox.SelectedIndex = 0;
-            }
-            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
-            {
-                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            }
+            comboBox.SelectedIndex = 0;
+        }
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
+
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -135,11 +102,11 @@ namespace Celikoor_FunnyTix
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["NamaCabang"].Value.ToString();
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_cabang_column"].Value.ToString();
 
 
-            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
             {
                 DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus cinema " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -162,6 +129,45 @@ namespace Celikoor_FunnyTix
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            switch (comboBox.Text)
+            {
+                case "Cabang":
+                    listCabang = Cinema.BacaData("Nama_cabang", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Alamat":
+                    listCabang = Cinema.BacaData("Alamat", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Tanggal Dibuka":
+                    listCabang = Cinema.BacaData("Tgl_dibuka", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Kota":
+                    listCabang = Cinema.BacaData("Kota", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
+
+            if (listCabang.Count > 0)
+            {
+                InputDataGrid();
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Tidak ada data yang cocok.");
+                textBox.Text = "";
+                comboBox.SelectedIndex = 0;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
         }
     }
 }
