@@ -127,8 +127,19 @@ namespace FunnyTix_LIB
         }
         public static List<Studio> FilterStudio (string filter = "", string value = "")
         {
-            //ini perlu diganti
-            string query= $"SELECT * FROM studios s WHERE {filter} like '%{value}%';";
+            string query = $"";
+            if (filter == "nama_cabang")
+            {
+                query = $"SELECT s.* FROM studios s INNER JOIN cinemas c on c.id = s.cinemas_id WHERE c.nama_cabang LIKE '%{value}%';";
+            }
+            else if (filter == "jenis_studio")
+            {
+                query = $"SELECT s.* FROM studios s INNER JOIN jenis_studios js on js.id = s.jenis_studios_id WHERE js.nama LIKE '%{value}%';";
+            }
+            else
+            {
+                query = $"SELECT * FROM studios WHERE {filter} like '%{value}%';";
+            }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Studio> listJadwalFilm = new List<Studio>();
 

@@ -68,12 +68,13 @@ namespace Celikoor_FunnyTix
 
                     //Tambah Film
                     Film.TambahData(f);
-                    MessageBox.Show("Data Berhasil ditambahkan!", "Message 😊");
+                    MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+                    Bersihkan();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Data Tidak dapat ditambahkan! " + ex.Message);
+                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
             }
         }
 
@@ -83,5 +84,19 @@ namespace Celikoor_FunnyTix
             form.Owner = this;
             form.ShowDialog();
         }
+        private void Bersihkan()
+        {
+            textBoxDiskon.Clear();
+            textBoxDurasi.Clear();
+            textBoxJudul.Clear();
+            textBoxUrl.Clear();
+            dateTimePickerRilis.Value = DateTime.Now;
+            comboBoxBahasa.SelectedIndex = -1;
+            richTextBoxSinopsis.Clear();
+            comboBoxKelompokUmur.SelectedIndex = -1;
+            radioButtonTidak.Checked = false;
+            radioButtonYa.Checked = false;
+        }
     }
+    
 }

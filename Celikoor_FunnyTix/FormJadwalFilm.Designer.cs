@@ -76,6 +76,7 @@
             this.dataGridViewHasil.RowTemplate.Height = 24;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 18;
+            this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
             // gridJudulFilm
             // 

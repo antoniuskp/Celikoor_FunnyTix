@@ -85,7 +85,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
+                MessageBox.Show("Maaf, Tidak ada jenis studio yang cocok.", "INFORMATION");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }
@@ -112,17 +112,30 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            string nama = textBoxNama.Text;
-            string deskripsi = richTextBox1.Text;
-            JenisStudio jn = new JenisStudio(nama, deskripsi);
-            JenisStudio.TambahData(jn);
+            try
+            {
+                DialogResult result = MessageBox.Show("Apakah yakin untuk menambah data?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    string nama = textBoxNama.Text;
+                    string deskripsi = richTextBox1.Text;
+                    JenisStudio jn = new JenisStudio(nama, deskripsi);
+                    JenisStudio.TambahData(jn);
+                    MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+                    textBoxNama.Clear();
+                    richTextBox1.Text = "";
 
-            textBoxNama.Clear();
-            richTextBox1.Text = "";
+                    FormMasterJenisStudio_Load(this, e);
 
-            FormMasterJenisStudio_Load(this, e);
-
-            panelTambahJenisStudio.Visible = false;
+                    panelTambahJenisStudio.Visible = false;
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
+            }
+            
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)

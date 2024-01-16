@@ -37,12 +37,12 @@ namespace Celikoor_FunnyTix
             {
                 int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
                 string noKursi = textBoxNoTiket.Text.Substring(3, 3);
-                Tiket.UpdateKehadiran(noInv.ToString(), noKursi);
-                MessageBox.Show($"Data berhasil diupdate", "INFORMATION");
+                Tiket.UpdateKehadiran(noInv.ToString(), noKursi, Auth.GetPegawai());
+                MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Gagal Mengubah Status. Data Tidak Ditemukan!", "DANGER");
+                MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
             }
             
         }

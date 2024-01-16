@@ -86,14 +86,15 @@ namespace Celikoor_FunnyTix
                 invoice.Kasir = Auth.GetPegawai();
 
                 Invoice.UpdateInvoice(invoice);
-                MessageBox.Show("Invoice berhasil diupdate");
+                MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
                 panelValidasiInvoice.Visible = false;
 
                 FormValidasiInvoice_Load(this, e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
+
             }
         }
 

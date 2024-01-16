@@ -48,11 +48,12 @@ namespace Celikoor_FunnyTix
                         FormUtama.statusLogin = true;
                         FormUtama.PegawaiInit(Auth.GetPegawai().Roles);
                         FormUtama.CURRENT_ROLE = Role.PEGAWAI;
+                        MessageBox.Show("LOGIN BERHASIL!", "SUCCESS ☑️");
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Credentials!");
+                        MessageBox.Show("Maaf, Password atau Username Salah!", "WARNING⚠️");
                     }
                 }
                 
@@ -66,11 +67,12 @@ namespace Celikoor_FunnyTix
                         FormUtama.statusLogin = true;
                         FormUtama.KonsumenInit();
                         FormUtama.CURRENT_ROLE = Role.KONSUMEN;
+                        MessageBox.Show("LOGIN BERHASIL!", "SUCCESS ☑️");
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Credentials!");
+                        MessageBox.Show("Maaf, Password atau Username Salah!", "WARNING⚠️");
                     }
                 }
             }

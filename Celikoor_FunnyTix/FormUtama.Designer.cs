@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
             this.panelPIlihan = new System.Windows.Forms.Panel();
+            this.labelNama = new System.Windows.Forms.Label();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panelPegawaiOperator = new System.Windows.Forms.Panel();
             this.panelUpdateStatus = new System.Windows.Forms.Panel();
@@ -80,7 +81,6 @@
             this.panelMasterPegawai = new System.Windows.Forms.Panel();
             this.labelPegawai = new System.Windows.Forms.Label();
             this.labelProfile = new System.Windows.Forms.Label();
-            this.labelNama = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelPegawaiOperator.SuspendLayout();
@@ -128,6 +128,17 @@
             this.panelPIlihan.Size = new System.Drawing.Size(523, 1034);
             this.panelPIlihan.TabIndex = 15;
             // 
+            // labelNama
+            // 
+            this.labelNama.AutoSize = true;
+            this.labelNama.Font = new System.Drawing.Font("Montserrat", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.labelNama.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelNama.Location = new System.Drawing.Point(202, 312);
+            this.labelNama.Name = "labelNama";
+            this.labelNama.Size = new System.Drawing.Size(91, 33);
+            this.labelNama.TabIndex = 36;
+            this.labelNama.Text = "nama";
+            // 
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.Image = global::Celikoor_FunnyTix.Properties.Resources.profile_user;
@@ -159,6 +170,9 @@
             this.panelUpdateStatus.Size = new System.Drawing.Size(523, 100);
             this.panelUpdateStatus.TabIndex = 1;
             this.panelUpdateStatus.Click += new System.EventHandler(this.panelUpdateStatus_Click);
+            this.panelUpdateStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUpdateStatus_Paint);
+            this.panelUpdateStatus.MouseLeave += new System.EventHandler(this.panelUpdateStatus_MouseLeave);
+            this.panelUpdateStatus.MouseHover += new System.EventHandler(this.panelUpdateStatus_MouseHover);
             // 
             // labelUpdate
             // 
@@ -197,6 +211,8 @@
             this.panelIsiSaldo.Size = new System.Drawing.Size(523, 100);
             this.panelIsiSaldo.TabIndex = 22;
             this.panelIsiSaldo.Click += new System.EventHandler(this.panelIsiSaldo_Click);
+            this.panelIsiSaldo.MouseLeave += new System.EventHandler(this.panelIsiSaldo_MouseLeave);
+            this.panelIsiSaldo.MouseHover += new System.EventHandler(this.panelIsiSaldo_MouseHover);
             // 
             // label1
             // 
@@ -222,6 +238,8 @@
             this.panelBeliTiket.Size = new System.Drawing.Size(523, 100);
             this.panelBeliTiket.TabIndex = 21;
             this.panelBeliTiket.Click += new System.EventHandler(this.panelBeliTiket_Click);
+            this.panelBeliTiket.MouseLeave += new System.EventHandler(this.panelBeliTiket_MouseLeave);
+            this.panelBeliTiket.MouseHover += new System.EventHandler(this.panelBeliTiket_MouseHover);
             // 
             // labelBeliTiket
             // 
@@ -247,6 +265,8 @@
             this.panelHistory.Size = new System.Drawing.Size(523, 100);
             this.panelHistory.TabIndex = 19;
             this.panelHistory.Click += new System.EventHandler(this.panelHistory_Click);
+            this.panelHistory.MouseLeave += new System.EventHandler(this.panelHistory_MouseLeave);
+            this.panelHistory.MouseHover += new System.EventHandler(this.panelHistory_MouseHover);
             // 
             // labelHistory
             // 
@@ -273,6 +293,8 @@
             this.panelProfil.Size = new System.Drawing.Size(523, 100);
             this.panelProfil.TabIndex = 8;
             this.panelProfil.Click += new System.EventHandler(this.panelProfil_Click);
+            this.panelProfil.MouseLeave += new System.EventHandler(this.panelProfil_MouseLeave);
+            this.panelProfil.MouseHover += new System.EventHandler(this.panelProfil_MouseHover);
             // 
             // labelProfil
             // 
@@ -333,6 +355,8 @@
             this.panelInvoice.Size = new System.Drawing.Size(523, 100);
             this.panelInvoice.TabIndex = 22;
             this.panelInvoice.Click += new System.EventHandler(this.panelInvoice_Click);
+            this.panelInvoice.MouseLeave += new System.EventHandler(this.panelInvoice_MouseLeave);
+            this.panelInvoice.MouseHover += new System.EventHandler(this.panelInvoice_MouseHover);
             // 
             // labelInvoice
             // 
@@ -359,6 +383,8 @@
             this.panelLogout.Size = new System.Drawing.Size(523, 50);
             this.panelLogout.TabIndex = 20;
             this.panelLogout.Click += new System.EventHandler(this.panelLogout_Click);
+            this.panelLogout.MouseLeave += new System.EventHandler(this.panelLogout_MouseLeave);
+            this.panelLogout.MouseHover += new System.EventHandler(this.panelLogout_MouseHover);
             // 
             // labelLogOut
             // 
@@ -368,7 +394,7 @@
             this.labelLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogOut.Location = new System.Drawing.Point(37, 14);
             this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(123, 32);
+            this.labelLogOut.Size = new System.Drawing.Size(129, 33);
             this.labelLogOut.TabIndex = 17;
             this.labelLogOut.Text = "LOG OUT";
             this.labelLogOut.Click += new System.EventHandler(this.label26_Click);
@@ -384,6 +410,7 @@
             this.panelPegawaiAdmin.Name = "panelPegawaiAdmin";
             this.panelPegawaiAdmin.Size = new System.Drawing.Size(523, 484);
             this.panelPegawaiAdmin.TabIndex = 22;
+            this.panelPegawaiAdmin.MouseHover += new System.EventHandler(this.panelPegawaiAdmin_MouseHover);
             // 
             // panelLaporan
             // 
@@ -397,6 +424,8 @@
             this.panelLaporan.Size = new System.Drawing.Size(523, 100);
             this.panelLaporan.TabIndex = 21;
             this.panelLaporan.Click += new System.EventHandler(this.panelLaporan_Click);
+            this.panelLaporan.MouseLeave += new System.EventHandler(this.panelLaporan_MouseLeave);
+            this.panelLaporan.MouseHover += new System.EventHandler(this.panelLaporan_MouseHover);
             // 
             // labelLaporan
             // 
@@ -423,6 +452,8 @@
             this.panelDataTransaksi.Size = new System.Drawing.Size(523, 100);
             this.panelDataTransaksi.TabIndex = 22;
             this.panelDataTransaksi.Click += new System.EventHandler(this.panelDataTransaksi_Click);
+            this.panelDataTransaksi.MouseLeave += new System.EventHandler(this.panelDataTransaksi_MouseLeave);
+            this.panelDataTransaksi.MouseHover += new System.EventHandler(this.panelDataTransaksi_MouseHover);
             // 
             // labelDataTransaksi
             // 
@@ -449,6 +480,8 @@
             this.panelPenjadwalan.Size = new System.Drawing.Size(523, 100);
             this.panelPenjadwalan.TabIndex = 21;
             this.panelPenjadwalan.Click += new System.EventHandler(this.panelPenjadwalan_Click);
+            this.panelPenjadwalan.MouseLeave += new System.EventHandler(this.panelPenjadwalan_MouseLeave);
+            this.panelPenjadwalan.MouseHover += new System.EventHandler(this.panelPenjadwalan_MouseHover);
             // 
             // labelPenjadwalan
             // 
@@ -475,6 +508,8 @@
             this.panelMaster.Size = new System.Drawing.Size(523, 100);
             this.panelMaster.TabIndex = 20;
             this.panelMaster.Click += new System.EventHandler(this.panelMaster_Click);
+            this.panelMaster.MouseLeave += new System.EventHandler(this.panelMaster_MouseLeave);
+            this.panelMaster.MouseHover += new System.EventHandler(this.panelMaster_MouseHover);
             // 
             // labelMaster
             // 
@@ -530,6 +565,8 @@
             this.panelMasterKonsumen.Size = new System.Drawing.Size(359, 50);
             this.panelMasterKonsumen.TabIndex = 19;
             this.panelMasterKonsumen.Click += new System.EventHandler(this.panelMasterKonsumen_Click);
+            this.panelMasterKonsumen.MouseLeave += new System.EventHandler(this.panelMasterKonsumen_MouseLeave);
+            this.panelMasterKonsumen.MouseHover += new System.EventHandler(this.panelMasterKonsumen_MouseHover);
             // 
             // labelKonsumen
             // 
@@ -539,7 +576,7 @@
             this.labelKonsumen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKonsumen.Location = new System.Drawing.Point(19, 11);
             this.labelKonsumen.Name = "labelKonsumen";
-            this.labelKonsumen.Size = new System.Drawing.Size(157, 32);
+            this.labelKonsumen.Size = new System.Drawing.Size(163, 33);
             this.labelKonsumen.TabIndex = 17;
             this.labelKonsumen.Text = "KONSUMEN";
             this.labelKonsumen.Click += new System.EventHandler(this.label14_Click);
@@ -556,6 +593,8 @@
             this.panelMasterFilm.Size = new System.Drawing.Size(359, 50);
             this.panelMasterFilm.TabIndex = 25;
             this.panelMasterFilm.Click += new System.EventHandler(this.panelMasterFilm_Click);
+            this.panelMasterFilm.MouseLeave += new System.EventHandler(this.panelMasterFilm_MouseLeave);
+            this.panelMasterFilm.MouseHover += new System.EventHandler(this.panelMasterFilm_MouseHover);
             // 
             // labelFilm
             // 
@@ -565,7 +604,7 @@
             this.labelFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelFilm.Location = new System.Drawing.Point(19, 11);
             this.labelFilm.Name = "labelFilm";
-            this.labelFilm.Size = new System.Drawing.Size(73, 32);
+            this.labelFilm.Size = new System.Drawing.Size(75, 33);
             this.labelFilm.TabIndex = 17;
             this.labelFilm.Text = "FILM";
             // 
@@ -581,6 +620,8 @@
             this.panelJenisStudio.Size = new System.Drawing.Size(359, 50);
             this.panelJenisStudio.TabIndex = 24;
             this.panelJenisStudio.Click += new System.EventHandler(this.panelJenisStudio_Click);
+            this.panelJenisStudio.MouseLeave += new System.EventHandler(this.panelJenisStudio_MouseLeave);
+            this.panelJenisStudio.MouseHover += new System.EventHandler(this.panelJenisStudio_MouseHover);
             // 
             // labelJenisStudio
             // 
@@ -590,7 +631,7 @@
             this.labelJenisStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelJenisStudio.Location = new System.Drawing.Point(19, 11);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(183, 32);
+            this.labelJenisStudio.Size = new System.Drawing.Size(190, 33);
             this.labelJenisStudio.TabIndex = 17;
             this.labelJenisStudio.Text = "JENIS STUDIO";
             this.labelJenisStudio.Click += new System.EventHandler(this.label9_Click);
@@ -607,6 +648,8 @@
             this.panelStudio.Size = new System.Drawing.Size(359, 50);
             this.panelStudio.TabIndex = 23;
             this.panelStudio.Click += new System.EventHandler(this.panelStudio_Click);
+            this.panelStudio.MouseLeave += new System.EventHandler(this.panelStudio_MouseLeave);
+            this.panelStudio.MouseHover += new System.EventHandler(this.panelStudio_MouseHover);
             // 
             // labelStudio
             // 
@@ -616,7 +659,7 @@
             this.labelStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelStudio.Location = new System.Drawing.Point(19, 11);
             this.labelStudio.Name = "labelStudio";
-            this.labelStudio.Size = new System.Drawing.Size(107, 32);
+            this.labelStudio.Size = new System.Drawing.Size(112, 33);
             this.labelStudio.TabIndex = 17;
             this.labelStudio.Text = "STUDIO";
             this.labelStudio.Click += new System.EventHandler(this.label7_Click);
@@ -633,6 +676,8 @@
             this.panelMasterGenre.Size = new System.Drawing.Size(359, 50);
             this.panelMasterGenre.TabIndex = 24;
             this.panelMasterGenre.Click += new System.EventHandler(this.panelMasterGenre_Click);
+            this.panelMasterGenre.MouseLeave += new System.EventHandler(this.panelMasterGenre_MouseLeave);
+            this.panelMasterGenre.MouseHover += new System.EventHandler(this.panelMasterGenre_MouseHover);
             // 
             // labelGenre
             // 
@@ -642,7 +687,7 @@
             this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelGenre.Location = new System.Drawing.Point(19, 11);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(98, 32);
+            this.labelGenre.Size = new System.Drawing.Size(103, 33);
             this.labelGenre.TabIndex = 17;
             this.labelGenre.Text = "GENRE";
             this.labelGenre.Click += new System.EventHandler(this.label22_Click);
@@ -659,6 +704,8 @@
             this.panelMasterAktor.Size = new System.Drawing.Size(359, 50);
             this.panelMasterAktor.TabIndex = 23;
             this.panelMasterAktor.Click += new System.EventHandler(this.panelMasterAktor_Click);
+            this.panelMasterAktor.MouseEnter += new System.EventHandler(this.panelMasterAktor_MouseEnter);
+            this.panelMasterAktor.MouseHover += new System.EventHandler(this.panelMasterAktor_MouseHover);
             // 
             // labelAktor
             // 
@@ -685,6 +732,8 @@
             this.panelMasterKelompok.Size = new System.Drawing.Size(359, 50);
             this.panelMasterKelompok.TabIndex = 22;
             this.panelMasterKelompok.Click += new System.EventHandler(this.panelMasterKelompok_Click);
+            this.panelMasterKelompok.MouseLeave += new System.EventHandler(this.panelMasterKelompok_MouseLeave);
+            this.panelMasterKelompok.MouseHover += new System.EventHandler(this.panelMasterKelompok_MouseHover);
             // 
             // labelKelompok
             // 
@@ -694,7 +743,7 @@
             this.labelKelompok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKelompok.Location = new System.Drawing.Point(19, 11);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(154, 32);
+            this.labelKelompok.Size = new System.Drawing.Size(162, 33);
             this.labelKelompok.TabIndex = 17;
             this.labelKelompok.Text = "KELOMPOK";
             this.labelKelompok.Click += new System.EventHandler(this.label18_Click);
@@ -711,6 +760,8 @@
             this.panelMasterCinema.Size = new System.Drawing.Size(359, 50);
             this.panelMasterCinema.TabIndex = 20;
             this.panelMasterCinema.Click += new System.EventHandler(this.panelMasterCinema_Click);
+            this.panelMasterCinema.MouseLeave += new System.EventHandler(this.panelMasterCinema_MouseLeave);
+            this.panelMasterCinema.MouseHover += new System.EventHandler(this.panelMasterCinema_MouseHover);
             // 
             // labelCinema
             // 
@@ -720,7 +771,7 @@
             this.labelCinema.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCinema.Location = new System.Drawing.Point(19, 11);
             this.labelCinema.Name = "labelCinema";
-            this.labelCinema.Size = new System.Drawing.Size(113, 32);
+            this.labelCinema.Size = new System.Drawing.Size(117, 33);
             this.labelCinema.TabIndex = 17;
             this.labelCinema.Text = "CINEMA";
             this.labelCinema.Click += new System.EventHandler(this.label16_Click);
@@ -737,7 +788,8 @@
             this.panelMasterPegawai.Size = new System.Drawing.Size(359, 50);
             this.panelMasterPegawai.TabIndex = 21;
             this.panelMasterPegawai.Click += new System.EventHandler(this.panelMasterPegawai_Click);
-            this.panelMasterPegawai.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMasterPegawai_Paint);
+            this.panelMasterPegawai.MouseLeave += new System.EventHandler(this.panelMasterPegawai_MouseLeave);
+            this.panelMasterPegawai.MouseHover += new System.EventHandler(this.panelMasterPegawai_MouseHover);
             // 
             // labelPegawai
             // 
@@ -747,10 +799,11 @@
             this.labelPegawai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelPegawai.Location = new System.Drawing.Point(19, 11);
             this.labelPegawai.Name = "labelPegawai";
-            this.labelPegawai.Size = new System.Drawing.Size(133, 32);
+            this.labelPegawai.Size = new System.Drawing.Size(138, 33);
             this.labelPegawai.TabIndex = 17;
             this.labelPegawai.Text = "PEGAWAI";
             this.labelPegawai.Click += new System.EventHandler(this.label20_Click);
+            this.labelPegawai.MouseHover += new System.EventHandler(this.labelPegawai_MouseHover);
             // 
             // labelProfile
             // 
@@ -763,17 +816,6 @@
             this.labelProfile.Size = new System.Drawing.Size(116, 38);
             this.labelProfile.TabIndex = 17;
             this.labelProfile.Text = "Profile";
-            // 
-            // labelNama
-            // 
-            this.labelNama.AutoSize = true;
-            this.labelNama.Font = new System.Drawing.Font("Montserrat", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.labelNama.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.labelNama.Location = new System.Drawing.Point(202, 312);
-            this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(86, 32);
-            this.labelNama.TabIndex = 36;
-            this.labelNama.Text = "nama";
             // 
             // FormUtama
             // 

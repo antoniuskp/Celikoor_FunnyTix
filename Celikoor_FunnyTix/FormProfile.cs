@@ -98,7 +98,7 @@ namespace Celikoor_FunnyTix
                             listKonsumen[i].Tgl_lahir = tglLahir;
 
                             Konsumen.UbahProfil(listKonsumen[i]);
-
+                            MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
                             FormProfile_Load(this, e);
                             break;
                         }
@@ -110,7 +110,7 @@ namespace Celikoor_FunnyTix
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Perubahan data profil gagal. Error : " + ex.Message);
+                    MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
                 }
             }            
         }

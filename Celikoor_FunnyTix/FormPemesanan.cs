@@ -631,12 +631,12 @@ namespace Celikoor_FunnyTix
                     {
                         Konsumen.UbahSaldo(Auth.GetKonsumen(), -int.Parse(totalAkhir));
                         Invoice.TambahData(nota);
-                        MessageBox.Show("Pembayaran Berhasil!");
+                        MessageBox.Show("Pembayaran Berhasil!", "SUCCESS ☑️");
                         FormPemesanan_Load(this, e);
                     }
                     else
                     {
-                        MessageBox.Show("Saldo Anda Kurang!");
+                        MessageBox.Show("Penambahan Data Gagal!, Saldo Anda Kurang", "WARNING ⚠️");
                     }
 
                 }
@@ -689,6 +689,37 @@ namespace Celikoor_FunnyTix
                 MessageBox.Show("Maaf, Tidak ditemukan Jadwal Film untuk jenis studio dan cinema ini!");
             }
             //Pengecekan Jadwal Film apakah ada pada film, jenis studio, cinema, jadwal film
+        }
+
+        private void panelB_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelB_MouseLeave(object sender, EventArgs e)
+        {
+            panelB.BackColor = Color.NavajoWhite;
+        }
+
+        private void panelC_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelC_MouseLeave(object sender, EventArgs e)
+        {
+            panelC.BackColor = Color.NavajoWhite;
+
+        }
+
+        private void panelA_MouseLeave(object sender, EventArgs e)
+        {
+            panelA.BackColor = Color.NavajoWhite;
         }
     }
     

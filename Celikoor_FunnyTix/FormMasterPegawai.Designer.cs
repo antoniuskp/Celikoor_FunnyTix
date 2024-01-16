@@ -39,6 +39,13 @@ namespace Celikoor_FunnyTix
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roles_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCari = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -60,13 +67,6 @@ namespace Celikoor_FunnyTix
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roles_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahPegawai.SuspendLayout();
@@ -121,6 +121,84 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.TabIndex = 8;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
+            // id_column
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Maroon;
+            this.id_column.DefaultCellStyle = dataGridViewCellStyle1;
+            this.id_column.HeaderText = "ID";
+            this.id_column.MinimumWidth = 6;
+            this.id_column.Name = "id_column";
+            this.id_column.Width = 125;
+            // 
+            // nama_column
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.nama_column.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nama_column.HeaderText = "Nama";
+            this.nama_column.MinimumWidth = 6;
+            this.nama_column.Name = "nama_column";
+            this.nama_column.Width = 125;
+            // 
+            // email_column
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Maroon;
+            this.email_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.email_column.HeaderText = "Email";
+            this.email_column.MinimumWidth = 6;
+            this.email_column.Name = "email_column";
+            this.email_column.Width = 125;
+            // 
+            // username_column
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Maroon;
+            this.username_column.DefaultCellStyle = dataGridViewCellStyle4;
+            this.username_column.HeaderText = "Username";
+            this.username_column.MinimumWidth = 6;
+            this.username_column.Name = "username_column";
+            this.username_column.Width = 125;
+            // 
+            // password_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Maroon;
+            this.password_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.password_column.HeaderText = "Password";
+            this.password_column.MinimumWidth = 6;
+            this.password_column.Name = "password_column";
+            this.password_column.Width = 125;
+            // 
+            // roles_column
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Maroon;
+            this.roles_column.DefaultCellStyle = dataGridViewCellStyle6;
+            this.roles_column.HeaderText = "Roles";
+            this.roles_column.MinimumWidth = 6;
+            this.roles_column.Name = "roles_column";
+            this.roles_column.Width = 125;
+            // 
+            // hapus_column
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Maroon;
+            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle7;
+            this.hapus_column.HeaderText = "Aksi";
+            this.hapus_column.MinimumWidth = 6;
+            this.hapus_column.Name = "hapus_column";
+            this.hapus_column.Width = 125;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
@@ -166,7 +244,6 @@ namespace Celikoor_FunnyTix
             "Nama",
             "Email",
             "Username",
-            "Password",
             "Roles"});
             this.comboBox.Location = new System.Drawing.Point(321, 29);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -236,7 +313,7 @@ namespace Celikoor_FunnyTix
             this.labelUsername.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelUsername.Location = new System.Drawing.Point(171, 131);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(97, 24);
+            this.labelUsername.Size = new System.Drawing.Size(98, 23);
             this.labelUsername.TabIndex = 16;
             this.labelUsername.Text = "Username";
             // 
@@ -250,7 +327,7 @@ namespace Celikoor_FunnyTix
             "OPERATOR"});
             this.comboBoxRoles.Location = new System.Drawing.Point(170, 216);
             this.comboBoxRoles.Name = "comboBoxRoles";
-            this.comboBoxRoles.Size = new System.Drawing.Size(121, 32);
+            this.comboBoxRoles.Size = new System.Drawing.Size(121, 31);
             this.comboBoxRoles.TabIndex = 15;
             this.comboBoxRoles.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoles_SelectedIndexChanged);
             // 
@@ -382,84 +459,6 @@ namespace Celikoor_FunnyTix
             this.label5.TabIndex = 19;
             this.label5.Text = "T A M B A H  P E G A W A I";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // id_column
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Maroon;
-            this.id_column.DefaultCellStyle = dataGridViewCellStyle1;
-            this.id_column.HeaderText = "ID";
-            this.id_column.MinimumWidth = 6;
-            this.id_column.Name = "id_column";
-            this.id_column.Width = 125;
-            // 
-            // nama_column
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
-            this.nama_column.DefaultCellStyle = dataGridViewCellStyle2;
-            this.nama_column.HeaderText = "Nama";
-            this.nama_column.MinimumWidth = 6;
-            this.nama_column.Name = "nama_column";
-            this.nama_column.Width = 125;
-            // 
-            // email_column
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Maroon;
-            this.email_column.DefaultCellStyle = dataGridViewCellStyle3;
-            this.email_column.HeaderText = "Email";
-            this.email_column.MinimumWidth = 6;
-            this.email_column.Name = "email_column";
-            this.email_column.Width = 125;
-            // 
-            // username_column
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Maroon;
-            this.username_column.DefaultCellStyle = dataGridViewCellStyle4;
-            this.username_column.HeaderText = "Username";
-            this.username_column.MinimumWidth = 6;
-            this.username_column.Name = "username_column";
-            this.username_column.Width = 125;
-            // 
-            // password_column
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Maroon;
-            this.password_column.DefaultCellStyle = dataGridViewCellStyle5;
-            this.password_column.HeaderText = "Password";
-            this.password_column.MinimumWidth = 6;
-            this.password_column.Name = "password_column";
-            this.password_column.Width = 125;
-            // 
-            // roles_column
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Maroon;
-            this.roles_column.DefaultCellStyle = dataGridViewCellStyle6;
-            this.roles_column.HeaderText = "Roles";
-            this.roles_column.MinimumWidth = 6;
-            this.roles_column.Name = "roles_column";
-            this.roles_column.Width = 125;
-            // 
-            // hapus_column
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Maroon;
-            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle7;
-            this.hapus_column.HeaderText = "Aksi";
-            this.hapus_column.MinimumWidth = 6;
-            this.hapus_column.Name = "hapus_column";
-            this.hapus_column.Width = 125;
             // 
             // FormMasterPegawai
             // 

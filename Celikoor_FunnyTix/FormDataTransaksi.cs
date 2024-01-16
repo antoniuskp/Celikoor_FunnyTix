@@ -40,21 +40,40 @@ namespace Celikoor_FunnyTix
             {
                 case "id":
                     listInvoice = Invoice.BacaData("id", textBox.Text);
-                    dataGridViewHasil.DataSource = listInvoice;
+                    dataGridViewHasil.Refresh();
                     break;
                 case "tanggal":
                     listInvoice = Invoice.BacaData("tanggal", textBox.Text);
-                    dataGridViewHasil.DataSource = listInvoice;
+                    dataGridViewHasil.Refresh();
                     break;
                 case "status":
                     listInvoice = Invoice.BacaData("status", textBox.Text);
-                    dataGridViewHasil.DataSource = listInvoice;
+                    dataGridViewHasil.Refresh();
                     break;
                 case "konsumen":
                     Konsumen k = Konsumen.BacaData("nama", textBox.Text)[0];
                     listInvoice = Invoice.BacaData("konsumens_id", k.ID.ToString());
-                    dataGridViewHasil.DataSource = listInvoice;
+                    dataGridViewHasil.Refresh();
                     break;
+                default:
+                    listInvoice = Invoice.BacaData();
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
+            if(listInvoice.Count > 0)
+            {
+                dataGridViewHasil.DataSource = listInvoice;
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Maaf, Tidak ada nota yang cocok.", "INFORMATION");
+                textBox.Text = "";
+                comboBox.SelectedIndex = 0;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
         }
     }

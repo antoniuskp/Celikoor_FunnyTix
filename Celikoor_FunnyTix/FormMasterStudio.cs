@@ -97,11 +97,11 @@ namespace Celikoor_FunnyTix
                     dataGridViewHasil.Refresh();
                     break;
                 case "Jenis Studio":
-                    listStudio = Studio.FilterStudio("jenis_studios_id", JenisStudio.BacaData(textBox.Text)[0].Nama);
+                    listStudio = Studio.FilterStudio("jenis_studio", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Cinema":
-                    listStudio = Studio.FilterStudio("cinemas_id", Cinema.BacaData("id", textBox.Text)[0].NamaCabang);
+                    listStudio = Studio.FilterStudio("nama_cabang", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Harga Weekday":
@@ -112,6 +112,9 @@ namespace Celikoor_FunnyTix
                     listStudio = Studio.FilterStudio("harga_weekend", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
+                default:
+                    listStudio = Studio.BacaData();
+                    break;
             }
 
             if (listStudio.Count > 0)
@@ -121,7 +124,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
+                MessageBox.Show("Maaf, Tidak ada studio yang cocok.");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }
@@ -205,6 +208,8 @@ namespace Celikoor_FunnyTix
 
                 Studio.UbahData(s);
 
+                MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
+
                 textBoxNamaUbah.Clear();
                 textBoxKapasitasUbah.Clear();
                 comboBoxJenisStudioUbah.SelectedIndex = 0;
@@ -218,7 +223,8 @@ namespace Celikoor_FunnyTix
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
+
             }
         }
 

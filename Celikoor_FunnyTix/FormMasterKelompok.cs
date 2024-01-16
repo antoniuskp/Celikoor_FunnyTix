@@ -77,6 +77,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Maaf, Tidak ada kelompok yang cocok.", "INFORMATION");
             }
             for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
             {
@@ -102,15 +103,23 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            string batasanUsia = textBoxBatasanUsia.Text;
+            try
+            {
+                string batasanUsia = textBoxBatasanUsia.Text;
 
-            Kelompok kel = new Kelompok(batasanUsia);
-            Kelompok.TambahData(kel);
+                Kelompok kel = new Kelompok(batasanUsia);
+                Kelompok.TambahData(kel);
+                MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
+                panelTambahKelompok.Visible = false;
+                textBoxBatasanUsia.Clear();
 
-            panelTambahKelompok.Visible = false;
-            textBoxBatasanUsia.Clear();
-
-            FormMasterKelompok_Load(this, e);
+                FormMasterKelompok_Load(this, e);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
+            }
+            ;
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)

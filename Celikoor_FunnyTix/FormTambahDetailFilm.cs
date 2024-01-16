@@ -20,6 +20,7 @@ namespace Celikoor_FunnyTix
 
         Film selectedFilm;
         Aktor selectedAktor;
+        Genre selectedGenre;
         FormTambahFilm frm;
         private void FormTambahDetailFilm_Load(object sender, EventArgs e)
         {
@@ -89,18 +90,13 @@ namespace Celikoor_FunnyTix
 
         private void comboBoxNamaGenre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Genre g = (Genre)comboBoxNamaGenre.SelectedItem;
-            richTextBoxDeskripsiGenre.Text = g.Deskripsi;
+            
         }
 
         
         private void comboBoxAktor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedAktor = (Aktor)comboBoxAktor.SelectedItem;
-            labelValueTanggalLahir.Text = selectedAktor.Tgl_Lahir.ToString("yyyy-MM-dd");
-            if (selectedAktor.Gender == "P") labelGenderValue.Text = "Pria";
-            labelGenderValue.Text = "Wanita";
-            labelNegaraAsalValue.Text = selectedAktor.Negara_Asal;
+            
 
         }
 
@@ -113,13 +109,14 @@ namespace Celikoor_FunnyTix
                 {
                     Genre g = (Genre)comboBoxNamaGenre.SelectedItem;
                     Genre.TambahGenreFilm(selectedFilm, g);
-                    MessageBox.Show("Data BERHASIL DITAMBAHKAN", "CONFIRMATION ✅");
+                    MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+                    Bersihkan();
                 }
                 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Penambahan Data Gagal " + ex.Message, "ERROR ❌");
+                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
             }
         }
 
@@ -137,16 +134,51 @@ namespace Celikoor_FunnyTix
                     else peran = "FIGURAN";
 
                     Aktor.TambahAktorFilm(selectedFilm, selectedAktor, peran);
-                    MessageBox.Show("Data BERHASIL DITAMBAHKAN", "CONFIRMATION ✅");
+                    MessageBox.Show("Penambahan Data Berhasil", "CONFIRMATION ✅");
+                    Bersihkan();
                 }
                 
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Penambahan Data Gagal " + ex.Message, "ERROR ❌");
+                MessageBox.Show("Penambahan Data Gagal!", "ERROR ❌");
             }
             
 
+        }
+
+        private void Bersihkan()
+        {
+            comboBoxAktor.SelectedIndex = 0;
+            comboBoxFilm.SelectedIndex = 0;
+            radioButtonFiguran.Checked = false;
+            radioButtonPembantu.Checked = false;
+            radioButtonUtama.Checked = false;
+            labelValueTanggalLahir.Text = "";
+            labelGenderValue.Text = "";
+            labelNegaraAsalValue.Text = "";
+            comboBoxNamaGenre.SelectedIndex = 0;
+            richTextBoxDeskripsiGenre.Clear();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonPilihAktor_Click(object sender, EventArgs e)
+        {
+            selectedAktor = (Aktor)comboBoxAktor.SelectedItem;
+            labelValueTanggalLahir.Text = selectedAktor.Tgl_Lahir.ToString("yyyy-MM-dd");
+            if (selectedAktor.Gender == "P") labelGenderValue.Text = "WANITA";
+            labelGenderValue.Text = "PRIA";
+            labelNegaraAsalValue.Text = selectedAktor.Negara_Asal;
+        }
+
+        private void buttonGenre_Click(object sender, EventArgs e)
+        {
+            selectedGenre = (Genre)comboBoxNamaGenre.SelectedItem;
+            richTextBoxDeskripsiGenre.Text = selectedGenre.Deskripsi;
         }
     }
 }

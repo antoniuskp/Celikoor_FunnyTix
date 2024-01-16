@@ -203,6 +203,10 @@ namespace FunnyTix_LIB
             {
                 query = "SELECT * FROM films;";
             }
+            else if(filter == "Kelompok")
+            {
+                query = $"SELECT f.* FROM films f INNER JOIN kelompoks k on k.id = f.kelompoks_id WHERE k.nama LIKE '%{value}%';";
+            }
             else
             {
                 query = $"SELECT * FROM films where {filter} like '{value}%';";

@@ -201,58 +201,53 @@ namespace Celikoor_FunnyTix
 
         private void buttonPilihJudul_Click(object sender, EventArgs e)
         {
-            cekFilm = true;
-            cekStudio = false;
-            cekJenisStudio = false;
-            cekCinema = false;
-            if (cekFilm)
+
+            //Display Films Attributes 
+            selectedFilm = (Film)comboBoxJudulFilm.SelectedItem;
+            labelJudulFilm.Text = selectedFilm.Judul;
+            LoadImage(selectedFilm.CoverImage);
+            labelDurasi.Text = selectedFilm.Durasi.ToString() + " menit";
+            richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
+            labelKelompok.Text = selectedFilm.Kelompok.Nama;
+            selectedFilm.BacaAktorFilm(selectedFilm);
+            selectedFilm.BacaGenreFilm(selectedFilm);
+            for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
             {
-                //Display Films Attributes 
-                selectedFilm = (Film)comboBoxJudulFilm.SelectedItem;
-                labelJudulFilm.Text = selectedFilm.Judul;
-                LoadImage(selectedFilm.CoverImage);
-                labelDurasi.Text = selectedFilm.Durasi.ToString() + " menit";
-                richTextBoxSinopsis.Text = selectedFilm.Sinopsis;
-                labelKelompok.Text = selectedFilm.Kelompok.Nama;
-                selectedFilm.BacaAktorFilm(selectedFilm);
-                selectedFilm.BacaGenreFilm(selectedFilm);
-                for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
+                if (selectedFilm.ListAktor.Count == 1)
                 {
-                    if (selectedFilm.ListAktor.Count == 1)
-                    {
-                        labelAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
-
-                    }
-                    else if (selectedFilm.ListAktor.Count > 1)
-                    {
-                        if (i >= 0 && i <= 1)
-                        {
-                            labelAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
-                        }
-                    }
+                    labelAktor.Text = selectedFilm.ListAktor[i].Aktor.Nama;
 
                 }
-                if (selectedFilm.ListAktor.Count > 2)
+                else if (selectedFilm.ListAktor.Count > 1)
                 {
-                    labelAktor.Text += "...";
-                }
-                for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
-                {
-                    if (selectedFilm.ListGenre.Count == 1)
+                    if (i >= 0 && i <= 1)
                     {
-                        labelGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
+                        labelAktor.Text += selectedFilm.ListAktor[i].Aktor.Nama + ", ";
+                    }
+                }
 
-                    }
-                    else if (i >= 0 && i < 2)
-                    {
-                        labelGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
-                    }
-                }
-                if (selectedFilm.ListGenre.Count > 2)
+            }
+            if (selectedFilm.ListAktor.Count > 2)
+            {
+                labelAktor.Text += "...";
+            }
+            for (int i = 0; i < selectedFilm.ListGenre.Count; i++)
+            {
+                if (selectedFilm.ListGenre.Count == 1)
                 {
-                    labelGenre.Text += ",...";
+                    labelGenre.Text = selectedFilm.ListGenre[i].Genre.Nama;
+
+                }
+                else if (i >= 0 && i < 2)
+                {
+                    labelGenre.Text += selectedFilm.ListGenre[i].Genre.Nama + ", ";
                 }
             }
+            if (selectedFilm.ListGenre.Count > 2)
+            {
+                labelGenre.Text += ",...";
+            }
+            
 
             groupBox3.Enabled = true;
             dateTimePicker1.Value = DateTime.Now;
@@ -260,18 +255,16 @@ namespace Celikoor_FunnyTix
 
         private void buttonPilihCinema_Click(object sender, EventArgs e)
         {
-            cekCinema = true;
-            if (cekCinema)
-            {
-                selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
-                listJenisStudio = JenisStudio.BacaJenisStudio(selectedCinema);
+            
+            selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
+            listJenisStudio = JenisStudio.BacaJenisStudio(selectedCinema);
 
-                comboBoxJenisStudio.DataSource = listJenisStudio;
-                comboBoxJenisStudio.Text = "";
+            comboBoxJenisStudio.DataSource = listJenisStudio;
+            comboBoxJenisStudio.Text = "";
 
-                comboBoxJenisStudio.DisplayMember = "nama";
-                cekJenisStudio = true;
-            }
+            comboBoxJenisStudio.DisplayMember = "nama";
+            cekJenisStudio = true;
+            
             groupBox3.Enabled = true;
 
         }
@@ -340,21 +333,19 @@ namespace Celikoor_FunnyTix
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            cekJenisStudio = true;
-            if (cekJenisStudio)
-            {
-                //Display Studios Attributes 
-                selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
-                listStudio = Studio.BacaStudio(selectedCinema, selectedJenisStudio, null);
+            
+            //Display Studios Attributes 
+            selectedJenisStudio = (JenisStudio)comboBoxJenisStudio.SelectedItem;
+            listStudio = Studio.BacaStudio(selectedCinema, selectedJenisStudio, null);
 
-                if (listStudio != null)
-                {
-                    comboBoxStudio.Text = "";
-                    comboBoxStudio.DataSource = listStudio;
-                    comboBoxStudio.DisplayMember = "nama";
-                    cekStudio = true;
-                }
+            if (listStudio != null)
+            {
+                comboBoxStudio.Text = "";
+                comboBoxStudio.DataSource = listStudio;
+                comboBoxStudio.DisplayMember = "nama";
+                cekStudio = true;
             }
+            
         }
 
         private void buttonSimpan_Click_1(object sender, EventArgs e)
@@ -371,22 +362,22 @@ namespace Celikoor_FunnyTix
                             try
                             {
                                 Film.TambahSesiFilm(selectedFilm);
-                                MessageBox.Show("Data Berhasil Ditambahkan");
+                                MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show(ex.Message, "WARNING! ⚠️");
+                                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Tidak Ada Data yang Ditambahkan");
+                            MessageBox.Show("Maaf, Tidak Ada Data yang Ditambahkan", "WARNING ⚠️");
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Tambahkan Film, Studio, dan Jadwal Film!", "WARNING ⚠️");
+                    MessageBox.Show("Tolong, tambahkan Film, Studio, dan Jadwal Film", "WARNING ⚠");
                 }
             }
             catch (Exception ex)
@@ -420,7 +411,6 @@ namespace Celikoor_FunnyTix
                     comboBoxJudulFilm.Text = "";
                     comboBoxJudulFilm.DataSource = Film.BacaData();
                     comboBoxJudulFilm.DisplayMember = "judul";
-                    cekFilm = true;
                 }
             }
         }

@@ -29,24 +29,18 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonCari = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
-            this.comboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +51,12 @@ namespace Celikoor_FunnyTix
             this.username_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.password_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonCari = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,118 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 13;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
+            // 
+            // id_column
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Maroon;
+            this.id_column.DefaultCellStyle = dataGridViewCellStyle1;
+            this.id_column.HeaderText = "ID";
+            this.id_column.MinimumWidth = 6;
+            this.id_column.Name = "id_column";
+            this.id_column.Width = 125;
+            // 
+            // nama_column
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.nama_column.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nama_column.HeaderText = "Nama";
+            this.nama_column.MinimumWidth = 6;
+            this.nama_column.Name = "nama_column";
+            this.nama_column.Width = 125;
+            // 
+            // email_column
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Maroon;
+            this.email_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.email_column.HeaderText = "Email";
+            this.email_column.MinimumWidth = 6;
+            this.email_column.Name = "email_column";
+            this.email_column.Width = 125;
+            // 
+            // no_hp_column
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Maroon;
+            this.no_hp_column.DefaultCellStyle = dataGridViewCellStyle4;
+            this.no_hp_column.HeaderText = "No_Hp";
+            this.no_hp_column.MinimumWidth = 6;
+            this.no_hp_column.Name = "no_hp_column";
+            this.no_hp_column.Width = 125;
+            // 
+            // gender_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Maroon;
+            this.gender_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gender_column.HeaderText = "Gender";
+            this.gender_column.MinimumWidth = 6;
+            this.gender_column.Name = "gender_column";
+            this.gender_column.Width = 125;
+            // 
+            // tgl_lahir_column
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Maroon;
+            this.tgl_lahir_column.DefaultCellStyle = dataGridViewCellStyle6;
+            this.tgl_lahir_column.HeaderText = "Tgl_Lahir";
+            this.tgl_lahir_column.MinimumWidth = 6;
+            this.tgl_lahir_column.Name = "tgl_lahir_column";
+            this.tgl_lahir_column.Width = 125;
+            // 
+            // saldo_column
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Maroon;
+            this.saldo_column.DefaultCellStyle = dataGridViewCellStyle7;
+            this.saldo_column.HeaderText = "Saldo";
+            this.saldo_column.MinimumWidth = 6;
+            this.saldo_column.Name = "saldo_column";
+            this.saldo_column.Width = 125;
+            // 
+            // username_column
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Maroon;
+            this.username_column.DefaultCellStyle = dataGridViewCellStyle8;
+            this.username_column.HeaderText = "Username";
+            this.username_column.MinimumWidth = 6;
+            this.username_column.Name = "username_column";
+            this.username_column.Width = 125;
+            // 
+            // password_column
+            // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Maroon;
+            this.password_column.DefaultCellStyle = dataGridViewCellStyle9;
+            this.password_column.HeaderText = "Password";
+            this.password_column.MinimumWidth = 6;
+            this.password_column.Name = "password_column";
+            this.password_column.Width = 125;
+            // 
+            // hapus_column
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Maroon;
+            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle10;
+            this.hapus_column.HeaderText = "Aksi";
+            this.hapus_column.MinimumWidth = 6;
+            this.hapus_column.Name = "hapus_column";
+            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.hapus_column.Width = 125;
             // 
             // panel1
             // 
@@ -148,12 +260,11 @@ namespace Celikoor_FunnyTix
             "Nomor handphone",
             "Gender",
             "Tanggal Lahir",
-            "Username",
-            "Password"});
+            "Username"});
             this.comboBox.Location = new System.Drawing.Point(321, 30);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 35);
+            this.comboBox.Size = new System.Drawing.Size(269, 36);
             this.comboBox.TabIndex = 1;
             // 
             // label2
@@ -178,118 +289,6 @@ namespace Celikoor_FunnyTix
             this.label1.TabIndex = 11;
             this.label1.Text = "MASTER KONSUMEN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // id_column
-            // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Maroon;
-            this.id_column.DefaultCellStyle = dataGridViewCellStyle11;
-            this.id_column.HeaderText = "ID";
-            this.id_column.MinimumWidth = 6;
-            this.id_column.Name = "id_column";
-            this.id_column.Width = 125;
-            // 
-            // nama_column
-            // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Maroon;
-            this.nama_column.DefaultCellStyle = dataGridViewCellStyle12;
-            this.nama_column.HeaderText = "Nama";
-            this.nama_column.MinimumWidth = 6;
-            this.nama_column.Name = "nama_column";
-            this.nama_column.Width = 125;
-            // 
-            // email_column
-            // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Maroon;
-            this.email_column.DefaultCellStyle = dataGridViewCellStyle13;
-            this.email_column.HeaderText = "Email";
-            this.email_column.MinimumWidth = 6;
-            this.email_column.Name = "email_column";
-            this.email_column.Width = 125;
-            // 
-            // no_hp_column
-            // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Maroon;
-            this.no_hp_column.DefaultCellStyle = dataGridViewCellStyle14;
-            this.no_hp_column.HeaderText = "No_Hp";
-            this.no_hp_column.MinimumWidth = 6;
-            this.no_hp_column.Name = "no_hp_column";
-            this.no_hp_column.Width = 125;
-            // 
-            // gender_column
-            // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Maroon;
-            this.gender_column.DefaultCellStyle = dataGridViewCellStyle15;
-            this.gender_column.HeaderText = "Gender";
-            this.gender_column.MinimumWidth = 6;
-            this.gender_column.Name = "gender_column";
-            this.gender_column.Width = 125;
-            // 
-            // tgl_lahir_column
-            // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Maroon;
-            this.tgl_lahir_column.DefaultCellStyle = dataGridViewCellStyle16;
-            this.tgl_lahir_column.HeaderText = "Tgl_Lahir";
-            this.tgl_lahir_column.MinimumWidth = 6;
-            this.tgl_lahir_column.Name = "tgl_lahir_column";
-            this.tgl_lahir_column.Width = 125;
-            // 
-            // saldo_column
-            // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Maroon;
-            this.saldo_column.DefaultCellStyle = dataGridViewCellStyle17;
-            this.saldo_column.HeaderText = "Saldo";
-            this.saldo_column.MinimumWidth = 6;
-            this.saldo_column.Name = "saldo_column";
-            this.saldo_column.Width = 125;
-            // 
-            // username_column
-            // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Maroon;
-            this.username_column.DefaultCellStyle = dataGridViewCellStyle18;
-            this.username_column.HeaderText = "Username";
-            this.username_column.MinimumWidth = 6;
-            this.username_column.Name = "username_column";
-            this.username_column.Width = 125;
-            // 
-            // password_column
-            // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Maroon;
-            this.password_column.DefaultCellStyle = dataGridViewCellStyle19;
-            this.password_column.HeaderText = "Password";
-            this.password_column.MinimumWidth = 6;
-            this.password_column.Name = "password_column";
-            this.password_column.Width = 125;
-            // 
-            // hapus_column
-            // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Maroon;
-            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle20;
-            this.hapus_column.HeaderText = "Aksi";
-            this.hapus_column.MinimumWidth = 6;
-            this.hapus_column.Name = "hapus_column";
-            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.hapus_column.Width = 125;
             // 
             // FormMasterKonsumen
             // 

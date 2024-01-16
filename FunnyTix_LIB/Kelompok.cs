@@ -85,5 +85,9 @@ namespace FunnyTix_LIB
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
         #endregion
+        public override string ToString()
+        {
+            return this.Nama;
+        }
     }
 }

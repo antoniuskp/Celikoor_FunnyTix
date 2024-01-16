@@ -109,5 +109,9 @@ namespace Celikoor_FunnyTix
             }
         }
 
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -220,6 +220,7 @@
             this.panelA.Name = "panelA";
             this.panelA.Size = new System.Drawing.Size(181, 252);
             this.panelA.TabIndex = 18;
+            this.panelA.MouseLeave += new System.EventHandler(this.panelA_MouseLeave);
             this.panelA.MouseHover += new System.EventHandler(this.panelA_MouseHover);
             // 
             // comboBoxJudul
@@ -231,7 +232,7 @@
             this.comboBoxJudul.Location = new System.Drawing.Point(123, 87);
             this.comboBoxJudul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJudul.Name = "comboBoxJudul";
-            this.comboBoxJudul.Size = new System.Drawing.Size(476, 35);
+            this.comboBoxJudul.Size = new System.Drawing.Size(476, 36);
             this.comboBoxJudul.TabIndex = 20;
             // 
             // dateTimePickerTambah
@@ -252,11 +253,13 @@
             // panelB
             // 
             this.panelB.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panelB.Location = new System.Drawing.Point(311, 670);
+            this.panelB.Location = new System.Drawing.Point(302, 669);
             this.panelB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelB.Name = "panelB";
             this.panelB.Size = new System.Drawing.Size(189, 252);
             this.panelB.TabIndex = 19;
+            this.panelB.Paint += new System.Windows.Forms.PaintEventHandler(this.panelB_Paint);
+            this.panelB.MouseLeave += new System.EventHandler(this.panelB_MouseLeave);
             this.panelB.MouseHover += new System.EventHandler(this.panelB_MouseHover);
             // 
             // panelC
@@ -267,6 +270,8 @@
             this.panelC.Name = "panelC";
             this.panelC.Size = new System.Drawing.Size(195, 252);
             this.panelC.TabIndex = 19;
+            this.panelC.Paint += new System.Windows.Forms.PaintEventHandler(this.panelC_Paint);
+            this.panelC.MouseLeave += new System.EventHandler(this.panelC_MouseLeave);
             this.panelC.MouseHover += new System.EventHandler(this.panelC_MouseHover);
             // 
             // textBoxAge
@@ -302,7 +307,7 @@
             this.labelUserSelection.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelUserSelection.Location = new System.Drawing.Point(1417, 561);
             this.labelUserSelection.Name = "labelUserSelection";
-            this.labelUserSelection.Size = new System.Drawing.Size(65, 27);
+            this.labelUserSelection.Size = new System.Drawing.Size(65, 28);
             this.labelUserSelection.TabIndex = 26;
             this.labelUserSelection.Text = "kursi";
             // 
@@ -467,7 +472,7 @@
             this.label9.ForeColor = System.Drawing.Color.Maroon;
             this.label9.Location = new System.Drawing.Point(86, 551);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(608, 48);
+            this.label9.Size = new System.Drawing.Size(632, 48);
             this.label9.TabIndex = 40;
             this.label9.Text = "LAYAR";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -477,9 +482,9 @@
             this.label10.BackColor = System.Drawing.Color.NavajoWhite;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Maroon;
-            this.label10.Location = new System.Drawing.Point(86, 615);
+            this.label10.Location = new System.Drawing.Point(91, 615);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(186, 41);
+            this.label10.Size = new System.Drawing.Size(181, 41);
             this.label10.TabIndex = 41;
             this.label10.Text = "A";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,21 +494,22 @@
             this.label11.BackColor = System.Drawing.Color.NavajoWhite;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Maroon;
-            this.label11.Location = new System.Drawing.Point(314, 615);
+            this.label11.Location = new System.Drawing.Point(302, 615);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(186, 41);
+            this.label11.Size = new System.Drawing.Size(189, 41);
             this.label11.TabIndex = 42;
             this.label11.Text = "B";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.NavajoWhite;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Maroon;
-            this.label12.Location = new System.Drawing.Point(532, 615);
+            this.label12.Location = new System.Drawing.Point(522, 615);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(186, 41);
+            this.label12.Size = new System.Drawing.Size(196, 41);
             this.label12.TabIndex = 43;
             this.label12.Text = "C";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -703,7 +709,7 @@
             this.comboBoxJenisStudio.Location = new System.Drawing.Point(123, 171);
             this.comboBoxJenisStudio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
-            this.comboBoxJenisStudio.Size = new System.Drawing.Size(476, 35);
+            this.comboBoxJenisStudio.Size = new System.Drawing.Size(476, 36);
             this.comboBoxJenisStudio.TabIndex = 60;
             // 
             // comboBoxCinema
@@ -715,7 +721,7 @@
             this.comboBoxCinema.Location = new System.Drawing.Point(123, 250);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(476, 35);
+            this.comboBoxCinema.Size = new System.Drawing.Size(476, 36);
             this.comboBoxCinema.TabIndex = 61;
             // 
             // buttonJadwal

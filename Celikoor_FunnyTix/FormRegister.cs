@@ -131,7 +131,7 @@ namespace Celikoor_FunnyTix
                 // Cek jika password != confirmPwd
                 if (pwd != confirmPwd)
                 {
-                    MessageBox.Show("Password and Confirm Password didn't match!");
+                    MessageBox.Show("Password dan Confirm Password tidak cocok!", "WARNING ⚠️");
                 }
                 else
                 {
@@ -145,7 +145,7 @@ namespace Celikoor_FunnyTix
                     konsumen.Password = pwd;
                     Konsumen.TambahData(konsumen);
 
-                    MessageBox.Show("Successfully create account!");
+                    MessageBox.Show("Akun berhasil dibuat", "SUCCESS ☑️");
                     this.Close();
                 }
             }

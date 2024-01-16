@@ -32,5 +32,10 @@ namespace Celikoor_FunnyTix
         {
 
         }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

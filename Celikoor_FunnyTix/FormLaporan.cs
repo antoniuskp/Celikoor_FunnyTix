@@ -32,7 +32,7 @@ namespace Celikoor_FunnyTix
         {
             Laporan.CetakLaporan(comboBoxChoose.Text, comboBoxChoose.SelectedIndex, listLaporan);
 
-            MessageBox.Show("Berhasil");
+            MessageBox.Show("Laporan berhasil dibuat!");
             
         }
 

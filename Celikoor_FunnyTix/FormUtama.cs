@@ -500,8 +500,228 @@ namespace Celikoor_FunnyTix
             visiblePanelList = false;
         }
 
-        private void panelMasterPegawai_Paint(object sender, PaintEventArgs e)
+        private void panelMasterKonsumen_MouseHover(object sender, EventArgs e)
         {
+            panelMasterKonsumen.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMasterKonsumen_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterKonsumen.BackColor = Color.Transparent;
+
+        }
+
+        private void labelPegawai_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMasterPegawai_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterPegawai.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelMasterPegawai_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterPegawai.BackColor = Color.Transparent;
+
+        }
+
+        private void panelStudio_MouseHover(object sender, EventArgs e)
+        {
+            panelStudio.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelStudio_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterPegawai.BackColor = Color.Transparent;
+        }
+
+        private void panelMasterKelompok_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterKelompok.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelMasterKelompok_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterKelompok.BackColor = Color.Transparent;
+        }
+
+        private void panelUpdateStatus_MouseHover(object sender, EventArgs e)
+        {
+            panelUpdateStatus.BackColor = Color.LightSalmon;
+        }
+
+        private void panelUpdateStatus_MouseLeave(object sender, EventArgs e)
+        {
+            panelUpdateStatus.BackColor = Color.Transparent; 
+
+        }
+
+        private void panelIsiSaldo_MouseHover(object sender, EventArgs e)
+        {
+            panelIsiSaldo.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelIsiSaldo_MouseLeave(object sender, EventArgs e)
+        {
+            panelIsiSaldo.BackColor = Color.Transparent;
+
+        }
+
+        private void panelBeliTiket_MouseHover(object sender, EventArgs e)
+        {
+            panelBeliTiket.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelBeliTiket_MouseLeave(object sender, EventArgs e)
+        {
+            panelBeliTiket.BackColor = Color.Transparent;
+
+        }
+
+        private void panelHistory_MouseHover(object sender, EventArgs e)
+        {
+            panelHistory.BackColor = Color.LightSalmon;
+        }
+
+        private void panelHistory_MouseLeave(object sender, EventArgs e)
+        {
+            panelHistory.BackColor = Color.Transparent;
+
+        }
+
+        private void panelUpdateStatus_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelInvoice_MouseHover(object sender, EventArgs e)
+        {
+            panelInvoice.BackColor = Color.LightSalmon;
+        }
+
+        private void panelInvoice_MouseLeave(object sender, EventArgs e)
+        {
+            panelInvoice.BackColor = Color.Transparent;
+
+        }
+
+        private void panelLogout_MouseHover(object sender, EventArgs e)
+        {
+            panelLogout.BackColor = Color.LightSalmon;
+        }
+
+        private void panelLogout_MouseLeave(object sender, EventArgs e)
+        {
+            panelLogout.BackColor = Color.Transparent;
+        }
+
+        private void panelPegawaiAdmin_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panelLaporan_MouseHover(object sender, EventArgs e)
+        {
+            panelLaporan.BackColor = Color.LightSalmon;
+        }
+
+        private void panelLaporan_MouseLeave(object sender, EventArgs e)
+        {
+            panelLaporan.BackColor = Color.Maroon;
+
+        }
+
+        private void panelDataTransaksi_MouseHover(object sender, EventArgs e)
+        {
+            panelDataTransaksi.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelDataTransaksi_MouseLeave(object sender, EventArgs e)
+        {
+            panelDataTransaksi.BackColor = Color.Transparent;
+
+        }
+
+        private void panelPenjadwalan_MouseHover(object sender, EventArgs e)
+        {
+            panelPenjadwalan.BackColor = Color.LightSalmon;
+        }
+
+        private void panelPenjadwalan_MouseLeave(object sender, EventArgs e)
+        {
+            panelPenjadwalan.BackColor = Color.Transparent;
+
+        }
+
+        private void panelMaster_MouseHover(object sender, EventArgs e)
+        {
+            panelMaster.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMaster_MouseLeave(object sender, EventArgs e)
+        {
+            panelMaster.BackColor = Color.Transparent;
+        }
+
+        private void panelMasterFilm_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterFilm.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMasterFilm_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterFilm.BackColor = Color.Transparent;
+        }
+
+        private void panelJenisStudio_MouseHover(object sender, EventArgs e)
+        {
+            panelJenisStudio.BackColor = Color.LightSalmon;
+        }
+
+        private void panelJenisStudio_MouseLeave(object sender, EventArgs e)
+        {
+            panelJenisStudio.BackColor = Color.Transparent;
+
+        }
+
+        private void panelMasterGenre_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterGenre.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMasterGenre_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterGenre.BackColor = Color.Transparent;
+
+        }
+
+        private void panelMasterAktor_MouseEnter(object sender, EventArgs e)
+        {
+            panelMasterAktor.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMasterAktor_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterAktor.BackColor = Color.Transparent;
+
+        }
+
+        private void panelMasterCinema_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterCinema.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMasterCinema_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterCinema.BackColor = Color.Transparent;
 
         }
     }

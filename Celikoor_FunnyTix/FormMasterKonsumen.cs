@@ -107,7 +107,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
+                MessageBox.Show("Maaf, Tidak ada konsumen yang cocok.", "INFORMATION");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }

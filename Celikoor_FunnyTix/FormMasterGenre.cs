@@ -84,7 +84,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
+                MessageBox.Show("Maaf, Tidak ada genre yang cocok.", "INFORMATION");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }
@@ -109,17 +109,30 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            string nama = textBoxNama.Text;
-            string desc = textBoxDeskripsi.Text;
+            try
+            {
+                DialogResult result = MessageBox.Show("Apakah yakin untuk menambah data?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    string nama = textBoxNama.Text;
+                    string desc = textBoxDeskripsi.Text;
 
-            Genre genre = new Genre(nama,desc);
-            Genre.TambahData(genre);
+                    Genre genre = new Genre(nama, desc);
+                    Genre.TambahData(genre);
+                    MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+                    panelTambahGenre.Visible = false;
+                    textBoxDeskripsi.Clear();
+                    textBoxNama.Clear();
 
-            panelTambahGenre.Visible = false;
-            textBoxDeskripsi.Clear();
-            textBoxNama.Clear();
-
-            FormMasterGenre_Load(this, e);
+                    FormMasterGenre_Load(this, e);
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
+            }
+            
         }
 
         private void dataGridViewHasil_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

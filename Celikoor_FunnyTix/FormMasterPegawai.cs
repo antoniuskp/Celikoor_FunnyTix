@@ -105,7 +105,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
+                MessageBox.Show("Maaf, Tidak ada pegawai yang cocok.", "INFORMATION");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }
@@ -139,23 +139,31 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string nama = textBoxNama.Text;
+                string email = textBoxEmail.Text;
+                string pwd = textBoxPassword.Text;
+                string roles = comboBoxRoles.Text;
+                string username = labelUsername.Text;
 
-            string nama = textBoxNama.Text;
-            string email = textBoxEmail.Text;    
-            string pwd = textBoxPassword.Text;  
-            string roles = comboBoxRoles.Text;
-            string username = labelUsername.Text;
+                Pegawai pegawai = new Pegawai(nama, email, username, pwd, roles);
+                Pegawai.TambahData(pegawai);
+                MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+                panelTambahPegawai.Visible = false;
+                textBoxEmail.Clear();
+                textBoxNama.Clear();
+                textBoxPassword.Clear();
+                labelUsername.Text = "Username";
 
-            Pegawai pegawai = new Pegawai(nama, email, username, pwd, roles);
-            Pegawai.TambahData(pegawai);
+                FormMasterPegawai_Load(this, e);
 
-            panelTambahPegawai.Visible = false;
-            textBoxEmail.Clear();
-            textBoxNama.Clear();
-            textBoxPassword.Clear();
-            labelUsername.Text = "Username";
-
-            FormMasterPegawai_Load(this, e);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
+            }
+            
         }        
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)

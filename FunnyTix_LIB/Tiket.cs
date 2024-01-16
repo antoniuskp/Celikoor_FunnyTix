@@ -242,9 +242,9 @@ namespace FunnyTix_LIB
                 $"values ({t.IdInvoice}, '{t.NoKursi}', '{res}', '{t.Operators.ID}', '{t.Harga}', '{t.JadwalFilm.Id}', '{t.Studio.ID}', '{t.Film.Id}';";
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
-        public static void UpdateKehadiran(string noInvoice, string noKursi)
+        public static void UpdateKehadiran(string noInvoice, string noKursi, Pegawai op)
         {
-            string cmd = $"UPDATE tikets set status_hadir = 1 WHERE invoices_id = '{noInvoice}' and nomor_kursi='{noKursi}';";
+            string cmd = $"UPDATE tikets t set t.status_hadir = 1 WHERE t.invoices_id = '{noInvoice}' AND t.nomor_kursi='{noKursi}' AND t.operator_id = '{op.ID}' ;";
             Koneksi.JalankanPerintahNonQuery(cmd);
         }
 

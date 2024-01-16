@@ -110,25 +110,42 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            string nama = textBoxNama.Text;
-            DateTime tglLahir = dateTimePickerTglLahir.Value;
-            string gender = comboBoxGender.Text;
-            string negara = textBoxNegara.Text;
+            try
+            {
+                DialogResult result = MessageBox.Show("Apakah yakin untuk menambah data?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    string nama = textBoxNama.Text;
+                    DateTime tglLahir = dateTimePickerTglLahir.Value;
+                    string gender = comboBoxGender.Text;
+                    string negara = textBoxNegara.Text;
 
-            Aktor act = new Aktor();
-            act.Nama = nama;
-            act.Tgl_Lahir = tglLahir;
-            act.Gender = gender;
-            act.Negara_Asal = negara;   
+                    Aktor act = new Aktor();
+                    act.Nama = nama;
+                    act.Tgl_Lahir = tglLahir;
+                    act.Gender = gender;
+                    act.Negara_Asal = negara;
 
-            Aktor.TambahData(act);
+                    Aktor.TambahData(act);
+                    MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
 
-            panelTambahAktor.Visible = false;
-            textBoxNama.Clear();
-            textBoxNegara.Clear();
-            dateTimePickerTglLahir.Value = DateTime.Now;
+                    FormMasterAktor_Load(this, e);
+                    panelTambahAktor.Visible = false;
+                    textBoxNama.Clear();
+                    textBoxNegara.Clear();
+                    dateTimePickerTglLahir.Value = DateTime.Now;
 
-            FormMasterAktor_Load(this, e);
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
+            }
+            
+
+            
+            
         }
 
         private void buttonBatalUbah_Click(object sender, EventArgs e)
@@ -138,12 +155,25 @@ namespace Celikoor_FunnyTix
 
         private void buttonSimpanUbah_Click(object sender, EventArgs e)
         {
-            Aktor aktor = new Aktor(textBoxNamaUbah.Text, dateTimePickerUbah.Value, comboBoxGenderUbah.Text, textBoxNegaraAsalUbah.Text);
-            aktor.ID = int.Parse(labelID.Text);
-            Aktor.UpdateData(aktor);
-            panelUbah.Visible = false;
-
-            FormMasterAktor_Load(this, e);
+            try
+            {
+                DialogResult result = MessageBox.Show("Apakah yakin untuk mengubah data?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    Aktor aktor = new Aktor(textBoxNamaUbah.Text, dateTimePickerUbah.Value, comboBoxGenderUbah.Text, textBoxNegaraAsalUbah.Text);
+                    aktor.ID = int.Parse(labelID.Text);
+                    Aktor.UpdateData(aktor);
+                    panelUbah.Visible = false;
+                    MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
+                    FormMasterAktor_Load(this, e);
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
+            }
+            
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)

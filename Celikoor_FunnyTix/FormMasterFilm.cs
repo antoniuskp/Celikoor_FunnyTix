@@ -100,11 +100,11 @@ namespace Celikoor_FunnyTix
                     dataGridViewHasil.Refresh();
                     break;
                 case "Sub Indonesia":
-                    listFilm = Film.BacaData("IsSubIndo", textBox.Text);
+                    listFilm = Film.BacaData("Is_Sub_Indo", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Diskon":
-                    listFilm = Film.BacaData("Diskon", textBox.Text);
+                    listFilm = Film.BacaData("diskon_nominal", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
             }
@@ -116,7 +116,7 @@ namespace Celikoor_FunnyTix
             else
             {
                 dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
+                MessageBox.Show("Maaf, Tidak ada film yang cocok.", "INFORMATION");
                 textBox.Text = "";
                 comboBoxCari.SelectedIndex = 0;
             }
@@ -124,6 +124,7 @@ namespace Celikoor_FunnyTix
             {
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
+            textBox.Clear();
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -155,15 +156,20 @@ namespace Celikoor_FunnyTix
                     try
                     {
                         Film.DeleteData(kode);
-
+                        MessageBox.Show("Penghapusan Data Berhasil!", "SUCCESS ☑️");
                         FormMasterFilm_Load(this, e);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                        MessageBox.Show("Penghapusan Data Gagal!", "ERROR ❌" );
                     }
                 }
             }
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
