@@ -370,7 +370,7 @@
             this.label5.ForeColor = System.Drawing.Color.Moccasin;
             this.label5.Location = new System.Drawing.Point(789, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(450, 111);
+            this.label5.Size = new System.Drawing.Size(448, 111);
             this.label5.TabIndex = 11;
             this.label5.Text = "FunnyTix.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -383,7 +383,7 @@
             this.label10.ForeColor = System.Drawing.Color.Moccasin;
             this.label10.Location = new System.Drawing.Point(930, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 27);
+            this.label10.Size = new System.Drawing.Size(167, 27);
             this.label10.TabIndex = 12;
             this.label10.Text = "Halaman Profil";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -393,7 +393,7 @@
             this.buttonSimpan.BackColor = System.Drawing.Color.NavajoWhite;
             this.buttonSimpan.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.Maroon;
-            this.buttonSimpan.Location = new System.Drawing.Point(1590, 882);
+            this.buttonSimpan.Location = new System.Drawing.Point(1230, 881);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(170, 51);
             this.buttonSimpan.TabIndex = 15;
