@@ -193,14 +193,17 @@ namespace FunnyTix_LIB
         //    return data;
         //}
 
-        public static List<Film> BacaData(string value = "")
+        public static List<Film> BacaData(string filter = "", string value = "")
         {
             //ini perlu diubah
-            string query = "SELECT * FROM films;";
-            if (value != "")
+            string query ="";
+            if (filter == "")
             {
-                int kode = int.Parse(value);
-                query = $"SELECT * FROM films where id = {kode};";
+                query = "SELECT * FROM films;";
+            }
+            else
+            {
+                query = $"SELECT * FROM films where {filter} like '{value}%';";
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Film> listFilm = new List<Film>();

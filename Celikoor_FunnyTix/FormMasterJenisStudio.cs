@@ -26,40 +26,46 @@ namespace Celikoor_FunnyTix
 
             listJenisStudio = JenisStudio.BacaData();
 
-            dataGridViewHasil.DataSource = listJenisStudio;
-            comboBox.SelectedIndex = 0;
-
-            if (listJenisStudio.Count > 0)
-            {
-                dataGridViewHasil.DataSource = listJenisStudio;
-                if (dataGridViewHasil.ColumnCount == 3)
-                {
-                    DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                    bcol.HeaderText = "Aksi";
-                    bcol.Text = "Hapus";
-                    bcol.Name = "buttonHapusGrid";
-                    bcol.UseColumnTextForButtonValue = true;
-                    dataGridViewHasil.Columns.Add(bcol);
-                }
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-            }
+            InputDataGrid();
+            FormatHeaderDataGrid();
         }
-
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void InputDataGrid()
         {
-            textBox.Text = "";
+            dataGridViewHasil.Rows.Clear();
+
+
+            foreach (JenisStudio js in listJenisStudio)
+            {
+                string id = js.Id.ToString();
+                string nama = js.Nama.ToString();
+                string deskripsi = js.Deskripsi.ToString();
+                string hapus = "Hapus";
+
+                dataGridViewHasil.Rows.Add(id, nama, deskripsi, hapus);
+            }
             comboBox.SelectedIndex = 0;
+        }
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
+
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string kode = dataGridViewHasil.CurrentRow.Cells["ID"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["Nama"].Value.ToString();
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
 
-            if (e.ColumnIndex == dataGridViewHasil.Columns["buttonHapusGrid"].Index)
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
             {
                 DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus jenis studio " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -111,6 +117,11 @@ namespace Celikoor_FunnyTix
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
             switch (comboBox.Text)
             {
                 case "Nama":
@@ -118,14 +129,15 @@ namespace Celikoor_FunnyTix
                     dataGridViewHasil.Refresh();
                     break;
                 case "Deskripsi":
-                    listJenisStudio= JenisStudio.CariJenisStudio("deskripsi", textBox.Text);
+                    listJenisStudio = JenisStudio.CariJenisStudio("Deskripsi", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
             }
 
             if (listJenisStudio.Count > 0)
             {
-                dataGridViewHasil.DataSource = listJenisStudio;
+                InputDataGrid();
+
             }
             else
             {

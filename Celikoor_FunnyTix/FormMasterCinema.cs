@@ -50,7 +50,7 @@ namespace Celikoor_FunnyTix
         }
         private void FormatHeaderDataGrid()
         {
-            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -59,12 +59,8 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.AllowUserToAddRows = false;
             dataGridViewHasil.ReadOnly = true;
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-        }
 
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBox.Text = "";
-            comboBox.SelectedIndex = 0;
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
         private void buttonBatal_Click(object sender, EventArgs e)
