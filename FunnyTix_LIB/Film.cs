@@ -146,6 +146,8 @@ namespace FunnyTix_LIB
             
         }
 
+        
+
 
         //public static DataTable CariJadwalPemutaran(int fid, DateTime tgl, string cinema, string studio)
         //{

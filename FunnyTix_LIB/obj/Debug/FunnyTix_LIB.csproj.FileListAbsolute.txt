@@ -96,7 +96,6 @@ D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Funn
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.dll
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.pdb
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\obj\Debug\FunnyTix_LIB.csproj.AssemblyReference.cache
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\MySql.Data.dll
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Memory.dll
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\fanny\Documents\College Life\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\System.Buffers.dll

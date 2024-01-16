@@ -87,6 +87,31 @@ namespace FunnyTix_LIB
             }
             return listData;
         }
+
+        public static List<Studio> CariStudio(Cinema c, JenisStudio js, Film f, JadwalFilm jf)
+        {
+            //ini perlu diganti
+            string query = $"SELECT DISTINCT s.* FROM studios s INNER JOIN film_studio fs on fs.studios_id = s.id INNER JOIN sesi_films sf on sf.studios_id = fs.studios_id " +
+                $"WHERE fs.films_id  = '{f.Id}' AND s.jenis_studios_id = '{js.Id}' AND s.cinemas_id = '{c.ID}' AND sf.jadwal_film_id = '{jf.Id}'; ";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+
+            List<Studio> listData = new List<Studio>();
+            while (hasil.Read() == true)
+            {
+                Studio s = new Studio();
+                s.ID = int.Parse(hasil.GetValue(0).ToString());
+                s.Nama = hasil.GetValue(1).ToString();
+                s.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
+                s.JenisStudio = JenisStudio.BacaData("id", hasil.GetValue(3).ToString())[0];
+                s.Cinema = Cinema.BacaData("id", hasil.GetValue(4).ToString())[0];
+                s.HargaWeekday = int.Parse(hasil.GetValue(5).ToString());
+                s.HargaWeekend = int.Parse(hasil.GetValue(6).ToString());
+                listData.Add(s);
+            }
+            return listData;
+        }
+
+
         public static List<Studio> BacaStudio(JadwalFilm jf, Film f)
         {
             string query = $"SELECT * FROM sesi_films WHERE films_id = '{f.Id}' AND jadwal_film_id = '{jf.Id}';";

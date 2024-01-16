@@ -80,6 +80,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.comboBoxJenisStudio = new System.Windows.Forms.ComboBox();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
+            this.buttonJadwal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKeluar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.SuspendLayout();
@@ -717,6 +718,19 @@
             this.comboBoxCinema.Size = new System.Drawing.Size(476, 35);
             this.comboBoxCinema.TabIndex = 61;
             // 
+            // buttonJadwal
+            // 
+            this.buttonJadwal.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonJadwal.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonJadwal.ForeColor = System.Drawing.Color.DarkRed;
+            this.buttonJadwal.Location = new System.Drawing.Point(622, 320);
+            this.buttonJadwal.Name = "buttonJadwal";
+            this.buttonJadwal.Size = new System.Drawing.Size(96, 41);
+            this.buttonJadwal.TabIndex = 62;
+            this.buttonJadwal.Text = "Pilih";
+            this.buttonJadwal.UseVisualStyleBackColor = false;
+            this.buttonJadwal.Click += new System.EventHandler(this.buttonJadwal_Click);
+            // 
             // FormPemesanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -724,6 +738,7 @@
             this.BackColor = System.Drawing.Color.DarkRed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 894);
+            this.Controls.Add(this.buttonJadwal);
             this.Controls.Add(this.comboBoxCinema);
             this.Controls.Add(this.comboBoxJenisStudio);
             this.Controls.Add(this.label21);
@@ -840,5 +855,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBoxJenisStudio;
         private System.Windows.Forms.ComboBox comboBoxCinema;
+        private System.Windows.Forms.Button buttonJadwal;
     }
 }

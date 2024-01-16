@@ -167,6 +167,17 @@ namespace FunnyTix_LIB
             return listJadwalFilm;
         }
 
+        public static bool BacaSesiFilm(JadwalFilm jf, Studio s, Film f)
+        {
+            string query = $"SELECT * FROM sesi_films sf WHERE sf.films_id = '{f.Id}' AND sf.studios_id ='{s.ID}' AND sf.jadwal_film_id = '{jf.Id}'; ";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            if (hasil.Read() == true)
+            {
+                return true;
+            }
+            return false;
+        }
+
 
         #endregion
     }
