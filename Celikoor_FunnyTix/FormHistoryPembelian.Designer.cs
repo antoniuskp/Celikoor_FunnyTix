@@ -128,10 +128,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1511, 1033);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHistoryPembelian";
             this.Text = "FormHistoryPembelian";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -655,39 +655,47 @@ namespace Celikoor_FunnyTix
 
         private void buttonJadwal_Click(object sender, EventArgs e)
         {
-            textBoxHarga.Text = "";
-            textBoxKapasitas.Text = "";
-            textBoxSisa.Text = "";
-
-            selectedJadwal = (JadwalFilm)comboBoxJamPemutaran.SelectedItem;
-            JadwalFilm jadwal = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), comboBoxJamPemutaran.Text)[0];
-            if (jadwal != null)
+            try
             {
-                daftarStudio = Studio.CariStudio(selectedCinema, selectedJenisStudio, selectedFilm, selectedJadwal);
-                List<Studio> listStudioAdaJadwalFilm = new List<Studio>();
-                for (int i = 0; i < daftarStudio.Count; i++)
+                textBoxHarga.Text = "";
+                textBoxKapasitas.Text = "";
+                textBoxSisa.Text = "";
+
+                selectedJadwal = (JadwalFilm)comboBoxJamPemutaran.SelectedItem;
+                JadwalFilm jadwal = JadwalFilm.BacaData("tanggal", dateTimePickerTambah.Value.ToString("yyyy-MM-dd"), comboBoxJamPemutaran.Text)[0];
+                if (jadwal != null)
                 {
-                    if (JadwalFilm.BacaSesiFilm(selectedJadwal, daftarStudio[i], selectedFilm))
+                    daftarStudio = Studio.CariStudio(selectedCinema, selectedJenisStudio, selectedFilm, selectedJadwal);
+                    List<Studio> listStudioAdaJadwalFilm = new List<Studio>();
+                    for (int i = 0; i < daftarStudio.Count; i++)
                     {
-                        listStudioAdaJadwalFilm.Add(daftarStudio[i]);
+                        if (JadwalFilm.BacaSesiFilm(selectedJadwal, daftarStudio[i], selectedFilm))
+                        {
+                            listStudioAdaJadwalFilm.Add(daftarStudio[i]);
+                        }
                     }
-                }
-                if (listStudioAdaJadwalFilm.Count > 0)
-                {
-                    comboBoxStudio.DataSource = listStudioAdaJadwalFilm;
-                    comboBoxStudio.DisplayMember = "nama";
-                    comboBoxStudio.Enabled = true;
+                    if (listStudioAdaJadwalFilm.Count > 0)
+                    {
+                        comboBoxStudio.DataSource = listStudioAdaJadwalFilm;
+                        comboBoxStudio.DisplayMember = "nama";
+                        comboBoxStudio.Enabled = true;
+                    }
+                    else
+                    {
+                        comboBoxStudio.Text = "Tidak Ada Studio";
+                        MessageBox.Show("Maaf, tidak ada studio untuk film ini!", "WARNING ⚠️");
+                    }
                 }
                 else
                 {
-                    comboBoxStudio.Text = "Tidak Ada Studio";
-                    MessageBox.Show("Maaf, tidak ada studio untuk film ini!", "WARNING ⚠️");
+                    MessageBox.Show("Maaf, Tidak ditemukan Jadwal Film untuk jenis studio dan cinema ini!");
                 }
             }
-            else
+            catch(Exception x)
             {
-                MessageBox.Show("Maaf, Tidak ditemukan Jadwal Film untuk jenis studio dan cinema ini!");
+                MessageBox.Show(x.Message);
             }
+            
             //Pengecekan Jadwal Film apakah ada pada film, jenis studio, cinema, jadwal film
         }
 

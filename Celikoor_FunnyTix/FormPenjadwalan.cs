@@ -64,21 +64,15 @@ namespace Celikoor_FunnyTix
 
         private void ClearTambah()
         {
-            comboBoxJudulFilm.SelectedIndex = 0;
-            comboBoxJudulFilm.Text = "";
-
-            dateTimePicker1.Value = DateTime.Now;   
-
-            comboBoxJudulFilm.SelectedIndex = 0;
-            pictureBoxCover.Image = null;
+            //pictureBoxCover.Image = null;
             groupBox3.Enabled = false;
 
-            labelJudulFilm.Text = "";
-            labelKelompok.Text = "";
-            richTextBoxSinopsis.Text = "";
-            labelDurasi.Text = "";
-            labelGenre.Text = "";
-            labelAktor.Text = "";
+            //labelJudulFilm.Text = "";
+            //labelKelompok.Text = "";
+            //richTextBoxSinopsis.Text = "";
+            //labelDurasi.Text = "";
+            //labelGenre.Text = "";
+            //labelAktor.Text = "";
 
             checkBoxI.Checked = false;
             checkBoxII.Checked = false;
@@ -272,7 +266,11 @@ namespace Celikoor_FunnyTix
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   
+                if (checkBoxI.Checked == false && checkBoxII.Checked == false && checkBoxIII.Checked == false && checkBoxIV.Checked == false)
+                {
+                    MessageBox.Show("Invalid data entry.");
+                }
                 if (checkBoxI.Checked == true)
                 {
                     dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
@@ -293,10 +291,7 @@ namespace Celikoor_FunnyTix
                     dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
                     ClearTambah();
                 }
-                else if(checkBoxI.Checked == false && checkBoxII.Checked == false && checkBoxIII.Checked == false && checkBoxIV.Checked == false)
-                {
-                    MessageBox.Show("Invalid data entry.");
-                }
+                
                 if (dataGridViewHasil.Columns.Count == 5)
                 {
                     //button hapus
@@ -352,7 +347,7 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                if (dataGridViewHasil.Rows.Count != 1)
+                if (dataGridViewHasil.Rows.Count == 1)
                 {
                     DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)

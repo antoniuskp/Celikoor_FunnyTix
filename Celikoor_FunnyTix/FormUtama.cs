@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,7 +76,7 @@ namespace Celikoor_FunnyTix
                     form.panelLogout.Visible = true;
                     form.panelLaporan.Visible =false;
                 }
-                form.labelNama.Text = Auth.GetPegawai().Nama;
+                form.labelNama.Text = Auth.GetPegawai().Nama + " - " + Auth.GetPegawai().Username + "\n" + Auth.GetPegawai().Roles;
             }
             catch (Exception x)
             {
@@ -107,7 +108,7 @@ namespace Celikoor_FunnyTix
 
                 form.panelListMaster.Visible = false;
 
-                form.labelNama.Text = Auth.GetKonsumen().Nama;
+                form.labelNama.Text = Auth.GetKonsumen().Nama + "\n" + Auth.GetKonsumen().Saldo.ToString("C", CultureInfo.CreateSpecificCulture("id-ID"));
             }
             catch (Exception x)
             {

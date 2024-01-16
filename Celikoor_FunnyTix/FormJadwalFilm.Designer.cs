@@ -37,7 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -111,7 +110,6 @@
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.dateTimePicker);
-            this.panel1.Controls.Add(this.buttonClear);
             this.panel1.Controls.Add(this.textBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(11, 100);
@@ -134,31 +132,17 @@
             // dateTimePicker
             // 
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(321, 32);
+            this.dateTimePicker.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(180, 31);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(330, 32);
+            this.dateTimePicker.Size = new System.Drawing.Size(390, 32);
             this.dateTimePicker.TabIndex = 4;
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.BackColor = System.Drawing.Color.Maroon;
-            this.buttonClear.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
-            this.buttonClear.ForeColor = System.Drawing.Color.White;
-            this.buttonClear.Location = new System.Drawing.Point(1296, 22);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(171, 50);
-            this.buttonClear.TabIndex = 3;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = false;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // textBox
             // 
             this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(799, 30);
+            this.textBox.Location = new System.Drawing.Point(783, 30);
             this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(479, 36);
@@ -172,9 +156,9 @@
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(27, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 39);
+            this.label2.Size = new System.Drawing.Size(134, 39);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Cari Berdasarkan : ";
+            this.label2.Text = "Tanggal";
             // 
             // label1
             // 
@@ -214,7 +198,6 @@
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

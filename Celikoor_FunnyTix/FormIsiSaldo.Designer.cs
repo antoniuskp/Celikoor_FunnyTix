@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIsiSaldo));
             this.buttonBayar = new System.Windows.Forms.Button();
             this.textBoxNominal = new System.Windows.Forms.TextBox();
             this.comboBoxMetode = new System.Windows.Forms.ComboBox();
@@ -82,9 +83,10 @@
             this.Controls.Add(this.comboBoxMetode);
             this.Controls.Add(this.buttonBayar);
             this.Controls.Add(this.textBoxNominal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormIsiSaldo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormIsiSaldo";
+            this.Text = "Top Up";
             this.ResumeLayout(false);
             this.PerformLayout();
 
