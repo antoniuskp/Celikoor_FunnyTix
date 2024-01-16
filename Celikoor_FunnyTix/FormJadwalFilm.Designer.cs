@@ -30,6 +30,10 @@
         {
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.gridJudulFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridJamPemutaran = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -37,10 +41,6 @@
             this.textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridJudulFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridJamPemutaran = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,34 @@
             this.dataGridViewHasil.RowTemplate.Height = 24;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 18;
+            // 
+            // gridJudulFilm
+            // 
+            this.gridJudulFilm.HeaderText = "Judul Film";
+            this.gridJudulFilm.MinimumWidth = 6;
+            this.gridJudulFilm.Name = "gridJudulFilm";
+            this.gridJudulFilm.Width = 125;
+            // 
+            // gridStudio
+            // 
+            this.gridStudio.HeaderText = "Studio";
+            this.gridStudio.MinimumWidth = 6;
+            this.gridStudio.Name = "gridStudio";
+            this.gridStudio.Width = 125;
+            // 
+            // gridTanggal
+            // 
+            this.gridTanggal.HeaderText = "Tanggal";
+            this.gridTanggal.MinimumWidth = 6;
+            this.gridTanggal.Name = "gridTanggal";
+            this.gridTanggal.Width = 125;
+            // 
+            // gridJamPemutaran
+            // 
+            this.gridJamPemutaran.HeaderText = "Jam Pemutaran";
+            this.gridJamPemutaran.MinimumWidth = 6;
+            this.gridJamPemutaran.Name = "gridJamPemutaran";
+            this.gridJamPemutaran.Width = 140;
             // 
             // panel1
             // 
@@ -159,34 +187,6 @@
             this.label1.Text = "JADWAL FILM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gridJudulFilm
-            // 
-            this.gridJudulFilm.HeaderText = "Judul Film";
-            this.gridJudulFilm.MinimumWidth = 6;
-            this.gridJudulFilm.Name = "gridJudulFilm";
-            this.gridJudulFilm.Width = 125;
-            // 
-            // gridStudio
-            // 
-            this.gridStudio.HeaderText = "Studio";
-            this.gridStudio.MinimumWidth = 6;
-            this.gridStudio.Name = "gridStudio";
-            this.gridStudio.Width = 125;
-            // 
-            // gridTanggal
-            // 
-            this.gridTanggal.HeaderText = "Tanggal";
-            this.gridTanggal.MinimumWidth = 6;
-            this.gridTanggal.Name = "gridTanggal";
-            this.gridTanggal.Width = 125;
-            // 
-            // gridJamPemutaran
-            // 
-            this.gridJamPemutaran.HeaderText = "Jam Pemutaran";
-            this.gridJamPemutaran.MinimumWidth = 6;
-            this.gridJamPemutaran.Name = "gridJamPemutaran";
-            this.gridJamPemutaran.Width = 140;
-            // 
             // FormJadwalFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,7 +200,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormJadwalFilm";
             this.Text = "FormJadwalFilm";
-            this.Load += new System.EventHandler(this.FormJadwalFilm_Load_1);
+            this.Load += new System.EventHandler(this.FormJadwalFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

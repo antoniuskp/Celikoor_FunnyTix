@@ -13,7 +13,9 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterKelompok : Form
     {
+
         public List<Kelompok> listKelompok;
+
         public FormMasterKelompok()
         {
             InitializeComponent();
@@ -43,6 +45,7 @@ namespace Celikoor_FunnyTix
             }
             comboBox.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
@@ -55,6 +58,35 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.ReadOnly = true;
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            switch (comboBox.Text)
+            {
+                case "Nama":
+                    listKelompok = Kelompok.BacaData("nama", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
+
+            if (listKelompok.Count > 0)
+            {
+                InputDataGrid();
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -81,11 +113,6 @@ namespace Celikoor_FunnyTix
             FormMasterKelompok_Load(this, e);
         }
 
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
@@ -109,30 +136,6 @@ namespace Celikoor_FunnyTix
                         MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
                     }
                 }
-            }
-        }
-
-        private void buttonCari_Click(object sender, EventArgs e)
-        {
-            switch (comboBox.Text)
-            {
-                case "Nama":
-                    listKelompok = Kelompok.BacaData("nama", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-            }
-
-            if (listKelompok.Count > 0)
-            {
-                InputDataGrid();
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-            }
-            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
-            {
-                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
         }
     }

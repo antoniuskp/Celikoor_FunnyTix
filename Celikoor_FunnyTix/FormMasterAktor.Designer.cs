@@ -286,7 +286,6 @@ namespace Celikoor_FunnyTix
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(667, 36);
             this.textBox.TabIndex = 2;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // comboBox
             // 
@@ -521,7 +520,7 @@ namespace Celikoor_FunnyTix
             this.labelID.Location = new System.Drawing.Point(169, 30);
             this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(86, 25);
+            this.labelID.Size = new System.Drawing.Size(92, 26);
             this.labelID.TabIndex = 13;
             this.labelID.Text = "ID Aktor";
             // 
@@ -533,7 +532,7 @@ namespace Celikoor_FunnyTix
             this.label13.Location = new System.Drawing.Point(118, 30);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 25);
+            this.label13.Size = new System.Drawing.Size(48, 26);
             this.label13.TabIndex = 12;
             this.label13.Text = "ID : ";
             // 
@@ -574,7 +573,7 @@ namespace Celikoor_FunnyTix
             this.label4.Location = new System.Drawing.Point(26, 196);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 25);
+            this.label4.Size = new System.Drawing.Size(138, 26);
             this.label4.TabIndex = 8;
             this.label4.Text = "Negara Asal : ";
             // 
@@ -586,7 +585,7 @@ namespace Celikoor_FunnyTix
             this.label9.Location = new System.Drawing.Point(69, 149);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 25);
+            this.label9.Size = new System.Drawing.Size(97, 26);
             this.label9.TabIndex = 7;
             this.label9.Text = "Gender : ";
             // 
@@ -598,7 +597,7 @@ namespace Celikoor_FunnyTix
             this.label10.Location = new System.Drawing.Point(14, 107);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(149, 25);
+            this.label10.Size = new System.Drawing.Size(155, 26);
             this.label10.TabIndex = 6;
             this.label10.Text = "Tanggal Lahir : ";
             // 
@@ -619,7 +618,7 @@ namespace Celikoor_FunnyTix
             this.label11.Location = new System.Drawing.Point(82, 64);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 25);
+            this.label11.Size = new System.Drawing.Size(83, 26);
             this.label11.TabIndex = 3;
             this.label11.Text = "Nama : ";
             // 

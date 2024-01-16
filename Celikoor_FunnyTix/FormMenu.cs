@@ -38,63 +38,12 @@ namespace Celikoor_FunnyTix
                     form.Show();
                     form.BringToFront();
                 }
-                //FormLogin frmLogin = new FormLogin();
-                //frmLogin.MdiParent = this;
-
-                //frmLogin.ShowDialog();
-                //frmLogin.WindowState = FormWindowState.Maximized;
-                //frmLogin.BringToFront();
             }
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
             FormUtama form = (FormUtama)this.MdiParent;
-
-            /*try
-            {
-                Koneksi koneksi = new Koneksi();
-                *//*
-                FormLogin formLogin = new FormLogin();
-                formLogin.Owner = this;
-                formLogin.ShowDialog();
-                *//*
-                
-                //Koneksi koneksi = new Koneksi(db.Default.server, db.Default.database, db.Default.username, db.Default.password);
-
-                *//*if (formLogin.ShowDialog() == DialogResult.OK)
-                {
-                    //jika login berhasil
-                    //labelWelcome.Text = "Welcome, " + konsumen.Nama + " to";
-
-                }
-                else
-                {
-                    //jika login gagal
-                    MessageBox.Show("Gagal login");
-                    Application.Exit();
-                }*//*
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Koneksi Gagal. Pesan Kesalahan : " + ex.Message);
-                Application.Exit();
-            }*/
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBoxPegawai_Click(object sender, EventArgs e)

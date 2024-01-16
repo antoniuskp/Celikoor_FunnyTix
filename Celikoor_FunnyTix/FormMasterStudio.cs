@@ -13,7 +13,9 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterStudio : Form
     {
+
         public List<Studio> listStudio;
+
         public FormMasterStudio()
         {
             InitializeComponent();
@@ -67,6 +69,7 @@ namespace Celikoor_FunnyTix
             }
             comboBox.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
@@ -81,25 +84,61 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void buttonCari_Click(object sender, EventArgs e)
         {
-            textBox.Text = "";
-            comboBox.SelectedIndex = 0;
-        }
+            switch (comboBox.Text)
+            {
+                case "Nama":
+                    listStudio = Studio.FilterStudio("Nama", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Kapasitas":
+                    listStudio = Studio.FilterStudio("kapasitas", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Jenis Studio":
+                    listStudio = Studio.FilterStudio("jenis_studios_id", JenisStudio.BacaData(textBox.Text)[0].Nama);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Cinema":
+                    listStudio = Studio.FilterStudio("cinemas_id", Cinema.BacaData("id", textBox.Text)[0].NamaCabang);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Harga Weekday":
+                    listStudio = Studio.FilterStudio("harga_weekday", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Harga Weekend":
+                    listStudio = Studio.FilterStudio("harga_weekend", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
 
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            
+            if (listStudio.Count > 0)
+            {
+                InputDataGrid();
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Tidak ada data yang cocok.");
+                textBox.Text = "";
+                comboBox.SelectedIndex = 0;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            panelTambahStudio.Visible = true;
         }
 
         private void buttonBatal_Click(object sender, EventArgs e)
@@ -188,12 +227,6 @@ namespace Celikoor_FunnyTix
             panelUbahStudio.Visible = false;
         }
 
-
-        private void buttonTambah_Click_1(object sender, EventArgs e)
-        {
-            panelTambahStudio.Visible = true;
-        }
-
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
@@ -231,53 +264,6 @@ namespace Celikoor_FunnyTix
                         MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
                     }
                 }
-            }
-        }
-
-        private void buttonCari_Click(object sender, EventArgs e)
-        {
-            switch (comboBox.Text)
-            {
-                case "Nama":
-                    listStudio = Studio.FilterStudio("Nama", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Kapasitas":
-                    listStudio = Studio.FilterStudio("kapasitas", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Jenis Studio":
-                    listStudio = Studio.FilterStudio("jenis_studios_id", JenisStudio.BacaData(textBox.Text)[0].Nama);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Cinema":
-                    listStudio = Studio.FilterStudio("cinemas_id", Cinema.BacaData("id", textBox.Text)[0].NamaCabang);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Harga Weekday":
-                    listStudio = Studio.FilterStudio("harga_weekday", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Harga Weekend":
-                    listStudio = Studio.FilterStudio("harga_weekend", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-            }
-
-            if (listStudio.Count > 0)
-            {
-                InputDataGrid();
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
-                textBox.Text = "";
-                comboBox.SelectedIndex = 0;
-            }
-            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
-            {
-                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
         }
     }

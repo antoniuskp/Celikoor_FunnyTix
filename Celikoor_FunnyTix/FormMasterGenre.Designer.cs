@@ -29,13 +29,17 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deskripsi_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCari = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -51,10 +55,6 @@ namespace Celikoor_FunnyTix
             this.buttonBatal = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deskripsi_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelTambahGenre.SuspendLayout();
@@ -105,6 +105,53 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 13;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick_1);
+            // 
+            // id_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            this.id_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.id_column.HeaderText = "ID";
+            this.id_column.MinimumWidth = 6;
+            this.id_column.Name = "id_column";
+            this.id_column.Width = 125;
+            // 
+            // nama_column
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
+            this.nama_column.DefaultCellStyle = dataGridViewCellStyle6;
+            this.nama_column.HeaderText = "Nama";
+            this.nama_column.MinimumWidth = 6;
+            this.nama_column.Name = "nama_column";
+            this.nama_column.Width = 125;
+            // 
+            // deskripsi_column
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
+            this.deskripsi_column.DefaultCellStyle = dataGridViewCellStyle7;
+            this.deskripsi_column.HeaderText = "Deskripsi";
+            this.deskripsi_column.MinimumWidth = 6;
+            this.deskripsi_column.Name = "deskripsi_column";
+            this.deskripsi_column.Width = 125;
+            // 
+            // hapus_column
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.DarkRed;
+            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle8;
+            this.hapus_column.HeaderText = "Aksi";
+            this.hapus_column.MinimumWidth = 6;
+            this.hapus_column.Name = "hapus_column";
+            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.hapus_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hapus_column.Width = 125;
             // 
             // panel1
             // 
@@ -165,7 +212,6 @@ namespace Celikoor_FunnyTix
             this.label2.Size = new System.Drawing.Size(291, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Cari Berdasarkan : ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -178,7 +224,6 @@ namespace Celikoor_FunnyTix
             this.label1.TabIndex = 11;
             this.label1.Text = "MASTER GENRE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelTambahGenre
             // 
@@ -223,7 +268,7 @@ namespace Celikoor_FunnyTix
             this.label7.Location = new System.Drawing.Point(52, 103);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 25);
+            this.label7.Size = new System.Drawing.Size(113, 26);
             this.label7.TabIndex = 7;
             this.label7.Text = "Deskripsi : ";
             // 
@@ -244,7 +289,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(21, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 25);
+            this.label3.Size = new System.Drawing.Size(146, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nama Genre : ";
             // 
@@ -288,53 +333,6 @@ namespace Celikoor_FunnyTix
             this.label5.TabIndex = 19;
             this.label5.Text = "T A M B A H  G E N R E";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // id_column
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
-            this.id_column.DefaultCellStyle = dataGridViewCellStyle1;
-            this.id_column.HeaderText = "ID";
-            this.id_column.MinimumWidth = 6;
-            this.id_column.Name = "id_column";
-            this.id_column.Width = 125;
-            // 
-            // nama_column
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
-            this.nama_column.DefaultCellStyle = dataGridViewCellStyle2;
-            this.nama_column.HeaderText = "Nama";
-            this.nama_column.MinimumWidth = 6;
-            this.nama_column.Name = "nama_column";
-            this.nama_column.Width = 125;
-            // 
-            // deskripsi_column
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
-            this.deskripsi_column.DefaultCellStyle = dataGridViewCellStyle3;
-            this.deskripsi_column.HeaderText = "Deskripsi";
-            this.deskripsi_column.MinimumWidth = 6;
-            this.deskripsi_column.Name = "deskripsi_column";
-            this.deskripsi_column.Width = 125;
-            // 
-            // hapus_column
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
-            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle4;
-            this.hapus_column.HeaderText = "Aksi";
-            this.hapus_column.MinimumWidth = 6;
-            this.hapus_column.Name = "hapus_column";
-            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.hapus_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hapus_column.Width = 125;
             // 
             // FormMasterGenre
             // 

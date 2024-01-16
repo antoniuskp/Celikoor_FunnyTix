@@ -13,13 +13,15 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormJadwalFilm : Form
     {
+
+        List<SesiFilm> listSesiFilm;
+
         public FormJadwalFilm()
         {
             InitializeComponent();
         }
 
-        List<SesiFilm> listSesiFilm;
-        private void FormJadwalFilm_Load_1(object sender, EventArgs e)
+        private void FormJadwalFilm_Load(object sender, EventArgs e)
         {
             FormUtama frm = (FormUtama)this.Owner;
 
@@ -36,7 +38,6 @@ namespace Celikoor_FunnyTix
 
                 dataGridViewHasil.Rows.Add(JudulFilm, Studio, Tanggal, JamPemutaran);
             }
-
         }
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -56,7 +57,6 @@ namespace Celikoor_FunnyTix
                 dataGridViewHasil.Rows.Add(JudulFilm, Studio, Tanggal, JamPemutaran);
             }
         }
-
 
         private void textBox_TextChanged(object sender, EventArgs e)
         {
@@ -108,5 +108,6 @@ namespace Celikoor_FunnyTix
                 dataGridViewHasil.Rows.Add(JudulFilm, Studio, Tanggal, JamPemutaran);
             }
         }
+
     }
 }

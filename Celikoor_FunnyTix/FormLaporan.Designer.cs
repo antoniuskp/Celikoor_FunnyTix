@@ -56,7 +56,7 @@
             this.label.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label.Location = new System.Drawing.Point(563, 57);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(431, 65);
+            this.label.Size = new System.Drawing.Size(449, 66);
             this.label.TabIndex = 1;
             this.label.Text = "       LAPORAN     ";
             // 
@@ -78,7 +78,6 @@
             this.comboBoxChoose.Name = "comboBoxChoose";
             this.comboBoxChoose.Size = new System.Drawing.Size(1137, 33);
             this.comboBoxChoose.TabIndex = 2;
-            this.comboBoxChoose.SelectedIndexChanged += new System.EventHandler(this.comboBoxChoose_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -88,7 +87,7 @@
             this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label1.Location = new System.Drawing.Point(37, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 39);
+            this.label1.Size = new System.Drawing.Size(265, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "  Jenis Laporan   :";
             // 

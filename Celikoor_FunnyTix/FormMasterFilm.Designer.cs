@@ -46,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.judul_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sinopsis_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +57,8 @@
             this.cover_image_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diskon_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,7 @@
             this.buttonKeluar.TabIndex = 23;
             this.buttonKeluar.Text = "Keluar";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonCari
             // 
@@ -166,31 +167,6 @@
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 21;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.buttonCari);
-            this.panel1.Controls.Add(this.textBox);
-            this.panel1.Controls.Add(this.comboBoxCari);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(16, 98);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1488, 86);
-            this.panel1.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(16, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1488, 65);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "MASTER FILM";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // id_column
             // 
@@ -315,6 +291,31 @@
             this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.hapus_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.hapus_column.Width = 125;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.Controls.Add(this.buttonCari);
+            this.panel1.Controls.Add(this.textBox);
+            this.panel1.Controls.Add(this.comboBoxCari);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(16, 98);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1488, 86);
+            this.panel1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1488, 65);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "MASTER FILM";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMasterFilm
             // 

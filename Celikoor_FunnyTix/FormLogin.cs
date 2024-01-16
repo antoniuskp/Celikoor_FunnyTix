@@ -13,17 +13,12 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormLogin : Form
     {
+        public bool isPegawai = false;
+        bool showPwd = false;
+
         public FormLogin()
         {
             InitializeComponent();
-        }
-        public bool isPegawai = false;
-        private void label3_Click(object sender, EventArgs e)
-        {
-            FormRegister frmRegister = new FormRegister();
-            frmRegister.ShowDialog();
-            frmRegister.WindowState = FormWindowState.Maximized;
-            frmRegister.BringToFront();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -37,15 +32,6 @@ namespace Celikoor_FunnyTix
                 labelRegister.Enabled = false;
             }
             textBoxPassword.UseSystemPasswordChar = true;
-            /*            else
-                        {
-                            label1.Text = "Don’t have an account?";
-                            label1.Enabled = true;
-                            labelRegister.Text = "Register Here";
-                            labelRegister.Enabled = true;
-                        }*/
-
-            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -81,8 +67,6 @@ namespace Celikoor_FunnyTix
                         FormUtama.KonsumenInit();
                         FormUtama.CURRENT_ROLE = Role.KONSUMEN;
                         this.Close();
-                        //this.Owner.Close();  // Udh ke close waktu OpenChild dipanggil utk buka MasterPegawai
-
                     }
                     else
                     {
@@ -94,53 +78,20 @@ namespace Celikoor_FunnyTix
             {
                 MessageBox.Show(x.Message);
             }
-            //try
-            //{
-            //    //membuat objek koneksi 
-            //    Koneksi koneksi = new Koneksi();
+        }
 
-            //    //string username = textBoxUsername.Text;
-            //    //string password = textBoxPassword.Text;
-
-            //    //username dan password
-            //    //Konsumen k = Konsumen.CekLogin(username, password);
-            //    //Pegawai p = Pegawai.CekLogin(username, password);
-
-            //    if (!(k is null)) //jika ditemukan pegawai dengan username dan password tersebut
-            //    {
-            //        //tampilkan kode, nama, jabatan pegawai yang sedang login ke label yang ada di form utama
-            //        FormUtama formUtama = new FormUtama();
-            //        formUtama.Owner = this;
-            //        //formUtama.konsumen = k;
-            //        formUtama.ShowDialog();
-
-            //        MessageBox.Show("Koneksi berhasil. Selamat menggunakan aplikasi.", "Informasi");
-
-            //        this.DialogResult = DialogResult.OK;
-            //        this.Hide();
-            //        //this.Close(); //menutup form login
-            //    }
-            //    else if(!(p is null))
-            //    {
-            //        FormPegawai formPegawai = new FormPegawai();
-            //        formPegawai.Owner = this;
-            //        //formPegawai.pegawai = p;
-            //        formPegawai.ShowDialog();
-
-            //        MessageBox.Show("Koneksi berhasil. Selamat menggunakan aplikasi.", "Informasi");
-
-            //        this.DialogResult = DialogResult.OK;
-            //        this.Hide(); //menutup form login
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show(this, "Username tidak ditemukan atau password salah. Apakah anda sudah registrasi?");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Koneksi gagal. Pesan kesalahan : " + ex.Message, "Kesalahan");
-            //}
+        private void pictBoxHide_Click(object sender, EventArgs e)
+        {
+            if (showPwd == false)
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+                showPwd = true;
+            }
+            else
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+                showPwd = false;
+            }
         }
 
         private void labelRegister_Click(object sender, EventArgs e)
@@ -150,19 +101,6 @@ namespace Celikoor_FunnyTix
             form.ShowDialog();
 
         }
-        bool showPwd=false;
-        private void pictBoxHide_Click(object sender, EventArgs e)
-        {
-            if(showPwd==false)
-            {
-                textBoxPassword.UseSystemPasswordChar=false;
-                showPwd = true;
-            }
-            else
-            {
-                textBoxPassword.UseSystemPasswordChar = true;
-                showPwd = false;
-            }
-        }
+        
     }
 }

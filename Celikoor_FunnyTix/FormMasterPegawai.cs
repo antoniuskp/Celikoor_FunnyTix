@@ -14,7 +14,9 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterPegawai : Form
     {
+
         public List<Pegawai> listPegawai;
+
         public FormMasterPegawai()
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace Celikoor_FunnyTix
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void InputDataGrid()
         {
             dataGridViewHasil.Rows.Clear();
@@ -54,6 +57,7 @@ namespace Celikoor_FunnyTix
             }
             comboBox.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
@@ -66,102 +70,6 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.ReadOnly = true;
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
-        }
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            
-            panelTambahPegawai.Visible = true;
-
-        }
-
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            comboBox.SelectedIndex = 0;
-            textBox.Text = "";
-        }
-
-        private void buttonBatal_Click(object sender, EventArgs e)
-        {
-            panelTambahPegawai.Visible = false;
-            textBoxEmail.Clear();   
-            textBoxNama.Clear();    
-            textBoxPassword.Clear();
-            labelUsername.Text = "";
-        }
-
-        private void buttonSimpan_Click(object sender, EventArgs e)
-        {
-
-            string nama = textBoxNama.Text;
-            string email = textBoxEmail.Text;    
-            string pwd = textBoxPassword.Text;  
-            string roles = comboBoxRoles.Text;
-            string username = labelUsername.Text;
-
-            Pegawai pegawai = new Pegawai(nama, email, username, pwd, roles);
-            Pegawai.TambahData(pegawai);
-
-            panelTambahPegawai.Visible = false;
-            textBoxEmail.Clear();
-            textBoxNama.Clear();
-            textBoxPassword.Clear();
-            labelUsername.Text = "Username";
-
-            FormMasterPegawai_Load(this, e);
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();   
-        }
-
-        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
-
-
-            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
-            {
-                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus pegawai " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    try
-                    {
-                        Pegawai.DeleteData(kode);
-
-                        FormMasterPegawai_Load(this, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
-                    }
-                }
-            }
-            /*else if (e.ColumnIndex == dataGridViewHasil.Columns["buttonUbahGrid"].Index)
-            {
-                Pegawai pegawai = Pegawai.BacaData("id", kode)[0];
-                panelUbahPegawai.Visible = true;
-                labelID.Text = kode;
-                textBoxNamaUbah.Text = nama;
-                textBoxEmailUbah.Text = pegawai.Email;
-                textBoxPasswordUbah.Text = pegawai.Password;
-                textBoxUsernameUbah.Text = pegawai.Username;
-                
-
-            }*/
-        }
-
-        private void comboBoxRoles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            labelUsername.Text = Pegawai.GenerateUsernamePegawai(comboBoxRoles.Text);
-
         }
 
         private void buttonCari_Click(object sender, EventArgs e)
@@ -206,6 +114,79 @@ namespace Celikoor_FunnyTix
             {
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            
+            panelTambahPegawai.Visible = true;
+
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            panelTambahPegawai.Visible = false;
+            textBoxEmail.Clear();   
+            textBoxNama.Clear();    
+            textBoxPassword.Clear();
+            labelUsername.Text = "";
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+
+            string nama = textBoxNama.Text;
+            string email = textBoxEmail.Text;    
+            string pwd = textBoxPassword.Text;  
+            string roles = comboBoxRoles.Text;
+            string username = labelUsername.Text;
+
+            Pegawai pegawai = new Pegawai(nama, email, username, pwd, roles);
+            Pegawai.TambahData(pegawai);
+
+            panelTambahPegawai.Visible = false;
+            textBoxEmail.Clear();
+            textBoxNama.Clear();
+            textBoxPassword.Clear();
+            labelUsername.Text = "Username";
+
+            FormMasterPegawai_Load(this, e);
+        }        
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus pegawai " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Pegawai.DeleteData(kode);
+
+                        FormMasterPegawai_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void comboBoxRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelUsername.Text = Pegawai.GenerateUsernamePegawai(comboBoxRoles.Text);
         }
     }
 }

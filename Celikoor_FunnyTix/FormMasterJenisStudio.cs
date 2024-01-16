@@ -13,12 +13,13 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterJenisStudio : Form
     {
+
+        List<JenisStudio> listJenisStudio;
+
         public FormMasterJenisStudio()
         {
             InitializeComponent();
         }
-
-        List<JenisStudio> listJenisStudio;
 
         private void FormMasterJenisStudio_Load(object sender, EventArgs e)
         {
@@ -29,6 +30,7 @@ namespace Celikoor_FunnyTix
             InputDataGrid();
             FormatHeaderDataGrid();
         }
+
         private void InputDataGrid()
         {
             dataGridViewHasil.Rows.Clear();
@@ -45,6 +47,7 @@ namespace Celikoor_FunnyTix
             }
             comboBox.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
@@ -60,28 +63,35 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
-        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonCari_Click(object sender, EventArgs e)
         {
-            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
-
-            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
+            switch (comboBox.Text)
             {
-                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus jenis studio " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                case "Nama":
+                    listJenisStudio = JenisStudio.CariJenisStudio("Nama", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Deskripsi":
+                    listJenisStudio = JenisStudio.CariJenisStudio("Deskripsi", textBox.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
 
-                if (confirm == DialogResult.Yes)
-                {
-                    try
-                    {
-                        JenisStudio.DeleteData(kode);
+            if (listJenisStudio.Count > 0)
+            {
+                InputDataGrid();
 
-                        FormMasterJenisStudio_Load(this, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
-                    }
-                }
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Tidak ada data yang cocok.");
+                textBox.Text = "";
+                comboBox.SelectedIndex = 0;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
         }
 
@@ -115,40 +125,28 @@ namespace Celikoor_FunnyTix
             panelTambahJenisStudio.Visible = false;
         }
 
-        private void textBox_TextChanged(object sender, EventArgs e)
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
 
-        }
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus jenis studio " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        private void buttonCari_Click(object sender, EventArgs e)
-        {
-            switch (comboBox.Text)
-            {
-                case "Nama":
-                    listJenisStudio = JenisStudio.CariJenisStudio("Nama", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-                case "Deskripsi":
-                    listJenisStudio = JenisStudio.CariJenisStudio("Deskripsi", textBox.Text);
-                    dataGridViewHasil.Refresh();
-                    break;
-            }
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        JenisStudio.DeleteData(kode);
 
-            if (listJenisStudio.Count > 0)
-            {
-                InputDataGrid();
-
-            }
-            else
-            {
-                dataGridViewHasil.DataSource = null;
-                MessageBox.Show("Tidak ada data yang cocok.");
-                textBox.Text = "";
-                comboBox.SelectedIndex = 0;
-            }
-            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
-            {
-                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                        FormMasterJenisStudio_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
             }
         }
     }

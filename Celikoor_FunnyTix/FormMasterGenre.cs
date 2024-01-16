@@ -13,7 +13,9 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterGenre : Form
     {
+
         public List<Genre> listGenre;
+
         public FormMasterGenre()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Celikoor_FunnyTix
             InputDataGrid();
             FormatHeaderDataGrid(); 
         }
+
         private void InputDataGrid()
         {
             dataGridViewHasil.Rows.Clear();
@@ -44,6 +47,7 @@ namespace Celikoor_FunnyTix
             }
             comboBox.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
@@ -57,57 +61,6 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
-        }
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            panelTambahGenre.Visible = true;
-        }
-
-        private void buttonBatal_Click(object sender, EventArgs e)
-        {
-            panelTambahGenre.Visible = false;
-            textBoxDeskripsi.Clear();
-            textBoxNama.Clear();
-        }
-
-        private void buttonSimpan_Click(object sender, EventArgs e)
-        {
-            string nama = textBoxNama.Text;
-            string desc = textBoxDeskripsi.Text;
-
-            Genre genre = new Genre(nama,desc);
-            Genre.TambahData(genre);
-
-            panelTambahGenre.Visible = false;
-            textBoxDeskripsi.Clear();
-            textBoxNama.Clear();
-
-            FormMasterGenre_Load(this, e);
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelTambahGenre_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void buttonCari_Click(object sender, EventArgs e)
@@ -135,6 +88,38 @@ namespace Celikoor_FunnyTix
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;
             }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            panelTambahGenre.Visible = true;
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
+            panelTambahGenre.Visible = false;
+            textBoxDeskripsi.Clear();
+            textBoxNama.Clear();
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            string nama = textBoxNama.Text;
+            string desc = textBoxDeskripsi.Text;
+
+            Genre genre = new Genre(nama,desc);
+            Genre.TambahData(genre);
+
+            panelTambahGenre.Visible = false;
+            textBoxDeskripsi.Clear();
+            textBoxNama.Clear();
+
+            FormMasterGenre_Load(this, e);
         }
 
         private void dataGridViewHasil_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

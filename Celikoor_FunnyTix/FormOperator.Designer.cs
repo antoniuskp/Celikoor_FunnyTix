@@ -151,7 +151,6 @@
             this.textBoxNoTiket.Size = new System.Drawing.Size(288, 33);
             this.textBoxNoTiket.TabIndex = 1;
             this.textBoxNoTiket.TextChanged += new System.EventHandler(this.textBoxNoTiket_TextChanged);
-            this.textBoxNoTiket.MouseLeave += new System.EventHandler(this.textBoxNoTiket_MouseLeave);
             // 
             // FormOperator
             // 

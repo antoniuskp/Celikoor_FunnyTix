@@ -36,10 +36,5 @@ namespace Celikoor_FunnyTix
                 MessageBox.Show("Terjadi error dalam melakukan top up. Pesan kesalahan: " + ex.Message);
             }
         }
-
-        private void FormIsiSaldo_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

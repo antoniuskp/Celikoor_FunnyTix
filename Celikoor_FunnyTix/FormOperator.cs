@@ -14,14 +14,12 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormOperator : Form
     {
+
         public List<Tiket> listTiket;
+
         public FormOperator()
         {
             InitializeComponent();
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
         }
 
         private void FormOperator_Load(object sender, EventArgs e)
@@ -85,11 +83,6 @@ namespace Celikoor_FunnyTix
             {
                 MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void textBoxNoTiket_MouseLeave(object sender, EventArgs e)
-        {
 
         }
     }

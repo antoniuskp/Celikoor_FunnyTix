@@ -14,6 +14,7 @@ namespace Celikoor_FunnyTix
     public partial class FormDataTransaksi : Form
     {
         List<Invoice> listInvoice;
+
         public FormDataTransaksi()
         {
             InitializeComponent();

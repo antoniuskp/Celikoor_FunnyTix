@@ -14,19 +14,12 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterFilm : Form
     {
+
         List<Film> listFilm;
+
         public FormMasterFilm()
         {
             InitializeComponent();
-        }
-
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            FormTambahFilm frmTambah = new FormTambahFilm();
-            frmTambah.Owner = this;
-            frmTambah.ShowDialog();
-
-            FormMasterFilm_Load(this, e);
         }
 
         private void FormMasterFilm_Load(object sender, EventArgs e)
@@ -38,6 +31,7 @@ namespace Celikoor_FunnyTix
             InputDataGrid();
             FormatHeaderDataGrid();
         }
+
         private void InputDataGrid()
         {
             dataGridViewHasil.Rows.Clear();
@@ -61,6 +55,7 @@ namespace Celikoor_FunnyTix
             }
             comboBoxCari.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
@@ -74,31 +69,6 @@ namespace Celikoor_FunnyTix
             //dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
-        }
-        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["judul_column"].Value.ToString();
-
-
-            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
-            {
-                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus film " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    try
-                    {
-                        Film.DeleteData(kode);
-
-                        FormMasterFilm_Load(this, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
-                    }
-                }
-            }
         }
 
         private void buttonCari_Click(object sender, EventArgs e)
@@ -153,6 +123,46 @@ namespace Celikoor_FunnyTix
             for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
             {
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormTambahFilm frmTambah = new FormTambahFilm();
+            frmTambah.Owner = this;
+            frmTambah.ShowDialog();
+
+            FormMasterFilm_Load(this, e);
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["judul_column"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus film " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Film.DeleteData(kode);
+
+                        FormMasterFilm_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
             }
         }
     }

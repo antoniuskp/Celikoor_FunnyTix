@@ -13,11 +13,14 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormMasterKonsumen : Form
     {
+
+        public List<Konsumen> listKonsumen;
+
         public FormMasterKonsumen()
         {
             InitializeComponent();
         }
-        public List<Konsumen> listKonsumen;
+
         private void FormMasterKonsumen_Load(object sender, EventArgs e)
         {
             //FormPegawai frmPegawai = (FormPegawai)this.Owner;
@@ -48,6 +51,7 @@ namespace Celikoor_FunnyTix
             }
             comboBox.SelectedIndex = 0;
         }
+
         private void FormatHeaderDataGrid()
         {
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.NavajoWhite;
@@ -60,43 +64,6 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.ReadOnly = true;
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBox.Text = "";
-            comboBox.SelectedIndex = 0;
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
-            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
-
-
-            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
-            {
-                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus konsumen " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (confirm == DialogResult.Yes)
-                {
-                    try
-                    {
-                        Konsumen.DeleteData(kode);
-
-                        FormMasterKonsumen_Load(this, e);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
-                    }
-                }
-            }
         }
 
         private void buttonCari_Click(object sender, EventArgs e)
@@ -147,6 +114,37 @@ namespace Celikoor_FunnyTix
             for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
             {
                 dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            string nama = dataGridViewHasil.CurrentRow.Cells["nama_column"].Value.ToString();
+
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["hapus_column"].Index)
+            {
+                DialogResult confirm = MessageBox.Show(this, "Anda yakin akan menghapus konsumen " + nama + "?", "HAPUS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Konsumen.DeleteData(kode);
+
+                        FormMasterKonsumen_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                    }
+                }
             }
         }
     }
