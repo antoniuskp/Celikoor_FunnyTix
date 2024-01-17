@@ -44,16 +44,23 @@ namespace FunnyTix_LIB
 
                 t.Harga = Double.Parse(hasil.GetValue(4).ToString());
 
-                JadwalFilm j = new JadwalFilm();
+                /*JadwalFilm j = new JadwalFilm();
                 j.Id = int.Parse(hasil.GetValue(5).ToString());
-                t.JadwalFilm = j;
+                t.JadwalFilm = j;*/
+                JadwalFilm j = JadwalFilm.BacaData("id", hasil.GetValue(5).ToString())[0];
 
-                Studio s = new Studio();
+                /*Studio s = new Studio();
                 s.ID = int.Parse(hasil.GetValue(6).ToString());
-                t.Studio = s;
+                t.Studio = s;*/
+                Studio s = Studio.BacaData("id", hasil.GetValue(6).ToString())[0];
 
-                Film f = new Film();
+                /*Film f = new Film();
                 f.Id = int.Parse(hasil.GetValue(7).ToString());
+                t.Film = f;*/
+                Film f = Film.BacaData("id", hasil.GetValue(7).ToString())[0];
+
+                t.JadwalFilm = j;
+                t.Studio = s;
                 t.Film = f;
 
                 //! Make Barcode based on invoice+noKursi
@@ -62,7 +69,7 @@ namespace FunnyTix_LIB
 
                 Zen.Barcode.BarcodeDraw brc = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
 
-                Image brcImage = brc.Draw(kodeTiket, 50);
+                Image brcImage = brc.Draw(kodeTiket, 70);
 
                 CredentialsTiket.Tiket_ = t;
                 CredentialsTiket.BrcImage = brcImage;
@@ -93,7 +100,6 @@ namespace FunnyTix_LIB
             Font fontHeading = new Font("new courier", 14);
             float tinggiFont = font.GetHeight(e.Graphics);
             float tinggiFontHeading = fontHeading.GetHeight(e.Graphics);
-            //float tinggiBarcode = bitmap.Height;
             float mt = 10, mr = 10, mb = 10, ml = 10;
             float y;
             float x = ml;
@@ -103,22 +109,22 @@ namespace FunnyTix_LIB
             string namaFile = $"{tiket.IdInvoice.Id.ToString().PadLeft(3, '0')}{tiket.NoKursi}";
             StreamWriter cetak = new StreamWriter(namaFile);
 
-            cetak.WriteLine("Kelompok");
+            cetak.WriteLine($"{tiket.Film.Kelompok.Nama.ToString()}");
             cetak.WriteLine("");
             cetak.WriteLine("");
             cetak.WriteLine("Movie");
-            cetak.WriteLine($"{tiket.Film.Judul}");
+            cetak.WriteLine($"{tiket.Film.Judul.ToString()}");
             cetak.WriteLine("");
             cetak.WriteLine("Time and Date");
-            cetak.WriteLine($"{tiket.JadwalFilm.Tanggal.ToString("dd-MM-yyyy")}");
-            cetak.WriteLine($"{tiket.JadwalFilm.Jam_pemutaran}");
+            cetak.WriteLine($"{tiket.JadwalFilm.Tanggal.ToString("dd-MM-yyyy")}\t\t{tiket.Studio.Cinema.NamaCabang.ToString()}");
+            cetak.WriteLine($"{tiket.JadwalFilm.Jam_pemutaran.ToString()}\t\t\t{tiket.Studio.Nama.ToString()}");
             cetak.WriteLine($"");
             cetak.WriteLine($"");
-            cetak.WriteLine("");
             cetak.WriteLine($"Seat");
-            cetak.WriteLine($"{tiket.NoKursi}");
+            cetak.WriteLine($"{tiket.NoKursi.ToString()}");
             cetak.WriteLine("");
-            cetak.WriteLine($"Tiket: Rp. {tiket.Harga}");
+            cetak.WriteLine($"Tiket: Rp. {tiket.Harga.ToString()}");
+            cetak.WriteLine("");
 
             cetak.Close();
 
@@ -170,10 +176,12 @@ namespace FunnyTix_LIB
             e.Graphics.DrawString(tiket.Film.Kelompok.Nama, font, Brushes.DarkBlue, x, y);//menulis ke memory
             jumBarisSaatIni++;*/
             String textCetak = bacaCetak.ReadLine();//mengambil 1 baris isi filetext
+            List<string> bedaFont = new List<string> { "movie", "i", "ii", "iii", "iv", "time and date", "seat", "13+", "17+", "21+", "23+", "su" };
             while (jumBarisSaatIni < maxBarisDalamHalaman && textCetak != null)
             {
                 y = mt + (jumBarisSaatIni * tinggiFont);
                 e.Graphics.DrawString(textCetak, font, Brushes.DarkBlue, x, y);//menulis ke memory
+                
                 jumBarisSaatIni++;
                 textCetak = bacaCetak.ReadLine();
             }
@@ -181,7 +189,7 @@ namespace FunnyTix_LIB
 
             //! Barcode
             e.Graphics.DrawImage(bitmap, x, mt + (jumBarisSaatIni * tinggiFont));
-
+            e.Graphics.DrawString(namaFile, font, Brushes.Black, x + 20, mt + ((jumBarisSaatIni + 4) * tinggiFont));
             bitmap.Dispose();
 
         }
