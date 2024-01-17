@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
-            this.gridJudulFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridJamPemutaran = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.gridJudulFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridStudio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridJamPemutaran = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,34 +81,6 @@
             this.dataGridViewHasil.TabIndex = 18;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
-            // gridJudulFilm
-            // 
-            this.gridJudulFilm.HeaderText = "Judul Film";
-            this.gridJudulFilm.MinimumWidth = 6;
-            this.gridJudulFilm.Name = "gridJudulFilm";
-            this.gridJudulFilm.Width = 125;
-            // 
-            // gridStudio
-            // 
-            this.gridStudio.HeaderText = "Studio";
-            this.gridStudio.MinimumWidth = 6;
-            this.gridStudio.Name = "gridStudio";
-            this.gridStudio.Width = 125;
-            // 
-            // gridTanggal
-            // 
-            this.gridTanggal.HeaderText = "Tanggal";
-            this.gridTanggal.MinimumWidth = 6;
-            this.gridTanggal.Name = "gridTanggal";
-            this.gridTanggal.Width = 125;
-            // 
-            // gridJamPemutaran
-            // 
-            this.gridJamPemutaran.HeaderText = "Jam Pemutaran";
-            this.gridJamPemutaran.MinimumWidth = 6;
-            this.gridJamPemutaran.Name = "gridJamPemutaran";
-            this.gridJamPemutaran.Width = 140;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
@@ -132,10 +108,10 @@
             // dateTimePicker
             // 
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.Location = new System.Drawing.Point(180, 31);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(390, 32);
+            this.dateTimePicker.Size = new System.Drawing.Size(390, 30);
             this.dateTimePicker.TabIndex = 4;
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
@@ -171,6 +147,50 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "JADWAL FILM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gridJudulFilm
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            this.gridJudulFilm.DefaultCellStyle = dataGridViewCellStyle1;
+            this.gridJudulFilm.HeaderText = "Judul Film";
+            this.gridJudulFilm.MinimumWidth = 6;
+            this.gridJudulFilm.Name = "gridJudulFilm";
+            this.gridJudulFilm.Width = 125;
+            // 
+            // gridStudio
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            this.gridStudio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridStudio.HeaderText = "Studio";
+            this.gridStudio.MinimumWidth = 6;
+            this.gridStudio.Name = "gridStudio";
+            this.gridStudio.Width = 125;
+            // 
+            // gridTanggal
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            this.gridTanggal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridTanggal.HeaderText = "Tanggal";
+            this.gridTanggal.MinimumWidth = 6;
+            this.gridTanggal.Name = "gridTanggal";
+            this.gridTanggal.Width = 125;
+            // 
+            // gridJamPemutaran
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            this.gridJamPemutaran.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gridJamPemutaran.HeaderText = "Jam Pemutaran";
+            this.gridJamPemutaran.MinimumWidth = 6;
+            this.gridJamPemutaran.Name = "gridJamPemutaran";
+            this.gridJamPemutaran.Width = 140;
             // 
             // FormJadwalFilm
             // 

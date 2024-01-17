@@ -38,8 +38,22 @@ namespace Celikoor_FunnyTix
 
                 dataGridViewHasil.Rows.Add(JudulFilm, Studio, Tanggal, JamPemutaran);
             }
+            FormatHeaderDataGrid();
         }
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
 
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+        }
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             dataGridViewHasil.Rows.Clear();

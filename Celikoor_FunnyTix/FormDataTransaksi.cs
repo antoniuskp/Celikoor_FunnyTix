@@ -25,10 +25,43 @@ namespace Celikoor_FunnyTix
             FormUtama frm = (FormUtama)this.Owner;
 
             listInvoice = Invoice.BacaData();
+            InputDataGrid();
+            FormatHeaderDataGrid();
+        }
+        private void InputDataGrid()
+        {
+            dataGridViewHasil.Rows.Clear();
 
-            dataGridViewHasil.DataSource = listInvoice;
+
+            foreach (Invoice In in listInvoice)
+            {
+                string id = In.Id.ToString();
+                string tgl = In.Tanggal.ToString("yyyy-MM-dd");
+                string grand_total = In.GrandTotal.ToString();
+                string diskon = In.DiskonNominal.ToString();
+                string konsumen = In.Konsumen.ToString();
+                string kasir = In.Kasir.ToString();
+                string status = In.Status.ToString();
+
+                dataGridViewHasil.Rows.Add(id, tgl, grand_total, diskon, konsumen, kasir, status);
+            }
+            comboBox.SelectedIndex = 0;
         }
 
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
+
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+        }
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();   
@@ -62,7 +95,7 @@ namespace Celikoor_FunnyTix
             }
             if(listInvoice.Count > 0)
             {
-                dataGridViewHasil.DataSource = listInvoice;
+                InputDataGrid();
             }
             else
             {

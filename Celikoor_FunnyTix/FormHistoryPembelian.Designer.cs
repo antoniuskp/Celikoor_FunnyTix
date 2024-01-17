@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -35,6 +40,11 @@
             this.buttonCari = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.status_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.no_kursi_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.harga_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.judul_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +66,12 @@
             // 
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.status_column,
+            this.tgl_column,
+            this.no_kursi_column,
+            this.harga_column,
+            this.judul_column});
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(11, 199);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -106,7 +122,7 @@
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(145, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(286, 39);
+            this.label2.Size = new System.Drawing.Size(285, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tanggal Transaksi:";
             // 
@@ -121,6 +137,61 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "HISTORY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // status_column
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            this.status_column.DefaultCellStyle = dataGridViewCellStyle1;
+            this.status_column.HeaderText = "Status";
+            this.status_column.MinimumWidth = 6;
+            this.status_column.Name = "status_column";
+            this.status_column.Width = 125;
+            // 
+            // tgl_column
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            this.tgl_column.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tgl_column.HeaderText = "Tanggal";
+            this.tgl_column.MinimumWidth = 6;
+            this.tgl_column.Name = "tgl_column";
+            this.tgl_column.Width = 125;
+            // 
+            // no_kursi_column
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            this.no_kursi_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.no_kursi_column.HeaderText = "Nomor Kursi";
+            this.no_kursi_column.MinimumWidth = 6;
+            this.no_kursi_column.Name = "no_kursi_column";
+            this.no_kursi_column.Width = 125;
+            // 
+            // harga_column
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            this.harga_column.DefaultCellStyle = dataGridViewCellStyle4;
+            this.harga_column.HeaderText = "Harga";
+            this.harga_column.MinimumWidth = 6;
+            this.harga_column.Name = "harga_column";
+            this.harga_column.Width = 125;
+            // 
+            // judul_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            this.judul_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.judul_column.HeaderText = "Judul";
+            this.judul_column.MinimumWidth = 6;
+            this.judul_column.Name = "judul_column";
+            this.judul_column.Width = 125;
             // 
             // FormHistoryPembelian
             // 
@@ -154,5 +225,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerTglTransaksi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tgl_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn no_kursi_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn harga_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn judul_column;
     }
 }
