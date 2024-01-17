@@ -205,6 +205,7 @@ namespace Celikoor_FunnyTix
             labelKelompok.Text = selectedFilm.Kelompok.Nama;
             selectedFilm.BacaAktorFilm(selectedFilm);
             selectedFilm.BacaGenreFilm(selectedFilm);
+            labelAktor.Text = "";
             for (int i = 0; i < selectedFilm.ListAktor.Count; i++)
             {
                 if (selectedFilm.ListAktor.Count == 1)

@@ -116,7 +116,7 @@ namespace Celikoor_FunnyTix
             this.labelHargaWeekday.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelHargaWeekday.Location = new System.Drawing.Point(153, 39);
             this.labelHargaWeekday.Name = "labelHargaWeekday";
-            this.labelHargaWeekday.Size = new System.Drawing.Size(0, 23);
+            this.labelHargaWeekday.Size = new System.Drawing.Size(0, 24);
             this.labelHargaWeekday.TabIndex = 4;
             // 
             // labelHargaWeekend
@@ -127,7 +127,7 @@ namespace Celikoor_FunnyTix
             this.labelHargaWeekend.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelHargaWeekend.Location = new System.Drawing.Point(153, 81);
             this.labelHargaWeekend.Name = "labelHargaWeekend";
-            this.labelHargaWeekend.Size = new System.Drawing.Size(0, 23);
+            this.labelHargaWeekend.Size = new System.Drawing.Size(0, 24);
             this.labelHargaWeekend.TabIndex = 5;
             // 
             // dataGridViewHasil
@@ -194,7 +194,7 @@ namespace Celikoor_FunnyTix
             this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCover.Name = "pictureBoxCover";
             this.pictureBoxCover.Size = new System.Drawing.Size(469, 553);
-            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCover.TabIndex = 10;
             this.pictureBoxCover.TabStop = false;
             // 
@@ -233,7 +233,7 @@ namespace Celikoor_FunnyTix
             this.checkBoxI.Location = new System.Drawing.Point(25, 40);
             this.checkBoxI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxI.Name = "checkBoxI";
-            this.checkBoxI.Size = new System.Drawing.Size(40, 32);
+            this.checkBoxI.Size = new System.Drawing.Size(40, 31);
             this.checkBoxI.TabIndex = 27;
             this.checkBoxI.Text = "I";
             this.checkBoxI.UseVisualStyleBackColor = false;
@@ -247,7 +247,7 @@ namespace Celikoor_FunnyTix
             this.checkBoxII.Location = new System.Drawing.Point(83, 40);
             this.checkBoxII.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxII.Name = "checkBoxII";
-            this.checkBoxII.Size = new System.Drawing.Size(46, 32);
+            this.checkBoxII.Size = new System.Drawing.Size(46, 31);
             this.checkBoxII.TabIndex = 28;
             this.checkBoxII.Text = "II";
             this.checkBoxII.UseVisualStyleBackColor = false;
@@ -261,7 +261,7 @@ namespace Celikoor_FunnyTix
             this.checkBoxIII.Location = new System.Drawing.Point(147, 40);
             this.checkBoxIII.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxIII.Name = "checkBoxIII";
-            this.checkBoxIII.Size = new System.Drawing.Size(52, 32);
+            this.checkBoxIII.Size = new System.Drawing.Size(52, 31);
             this.checkBoxIII.TabIndex = 29;
             this.checkBoxIII.Text = "III";
             this.checkBoxIII.UseVisualStyleBackColor = false;
@@ -275,7 +275,7 @@ namespace Celikoor_FunnyTix
             this.checkBoxIV.Location = new System.Drawing.Point(218, 40);
             this.checkBoxIV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxIV.Name = "checkBoxIV";
-            this.checkBoxIV.Size = new System.Drawing.Size(55, 32);
+            this.checkBoxIV.Size = new System.Drawing.Size(55, 31);
             this.checkBoxIV.TabIndex = 30;
             this.checkBoxIV.Text = "IV";
             this.checkBoxIV.UseVisualStyleBackColor = false;
@@ -364,7 +364,7 @@ namespace Celikoor_FunnyTix
             this.label1.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label1.Location = new System.Drawing.Point(52, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 28);
+            this.label1.Size = new System.Drawing.Size(91, 27);
             this.label1.TabIndex = 38;
             this.label1.Text = "Cinema";
             // 
@@ -376,7 +376,7 @@ namespace Celikoor_FunnyTix
             this.label2.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label2.Location = new System.Drawing.Point(54, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 28);
+            this.label2.Size = new System.Drawing.Size(136, 27);
             this.label2.TabIndex = 39;
             this.label2.Text = "Jenis Studio";
             // 
@@ -388,7 +388,7 @@ namespace Celikoor_FunnyTix
             this.label3.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label3.Location = new System.Drawing.Point(52, 247);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 28);
+            this.label3.Size = new System.Drawing.Size(161, 27);
             this.label3.TabIndex = 40;
             this.label3.Text = "Nama Bioskop";
             // 
@@ -424,7 +424,7 @@ namespace Celikoor_FunnyTix
             this.label6.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label6.Location = new System.Drawing.Point(52, 347);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 28);
+            this.label6.Size = new System.Drawing.Size(114, 27);
             this.label6.TabIndex = 43;
             this.label6.Text = "Kapasitas";
             // 
@@ -436,7 +436,7 @@ namespace Celikoor_FunnyTix
             this.label7.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label7.Location = new System.Drawing.Point(52, 632);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 28);
+            this.label7.Size = new System.Drawing.Size(70, 27);
             this.label7.TabIndex = 44;
             this.label7.Text = "Judul";
             // 
@@ -448,7 +448,7 @@ namespace Celikoor_FunnyTix
             this.label8.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label8.Location = new System.Drawing.Point(52, 725);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 28);
+            this.label8.Size = new System.Drawing.Size(95, 27);
             this.label8.TabIndex = 45;
             this.label8.Text = "Tanggal";
             // 
@@ -486,7 +486,7 @@ namespace Celikoor_FunnyTix
             this.label12.ForeColor = System.Drawing.Color.NavajoWhite;
             this.label12.Location = new System.Drawing.Point(21, 433);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 33);
+            this.label12.Size = new System.Drawing.Size(108, 33);
             this.label12.TabIndex = 51;
             this.label12.Text = "Durasi :";
             // 
@@ -537,7 +537,7 @@ namespace Celikoor_FunnyTix
             this.labelKapasitas.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelKapasitas.Location = new System.Drawing.Point(194, 350);
             this.labelKapasitas.Name = "labelKapasitas";
-            this.labelKapasitas.Size = new System.Drawing.Size(101, 23);
+            this.labelKapasitas.Size = new System.Drawing.Size(100, 24);
             this.labelKapasitas.TabIndex = 47;
             this.labelKapasitas.Text = "         Kursi";
             // 
@@ -570,7 +570,7 @@ namespace Celikoor_FunnyTix
             this.labelAktor.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelAktor.Location = new System.Drawing.Point(214, 487);
             this.labelAktor.Name = "labelAktor";
-            this.labelAktor.Size = new System.Drawing.Size(0, 28);
+            this.labelAktor.Size = new System.Drawing.Size(0, 27);
             this.labelAktor.TabIndex = 57;
             // 
             // labelGenre
@@ -581,7 +581,7 @@ namespace Celikoor_FunnyTix
             this.labelGenre.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelGenre.Location = new System.Drawing.Point(445, 440);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(0, 28);
+            this.labelGenre.Size = new System.Drawing.Size(0, 27);
             this.labelGenre.TabIndex = 56;
             // 
             // labelDurasi
@@ -592,7 +592,7 @@ namespace Celikoor_FunnyTix
             this.labelDurasi.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelDurasi.Location = new System.Drawing.Point(129, 439);
             this.labelDurasi.Name = "labelDurasi";
-            this.labelDurasi.Size = new System.Drawing.Size(0, 28);
+            this.labelDurasi.Size = new System.Drawing.Size(0, 27);
             this.labelDurasi.TabIndex = 55;
             // 
             // labelKelompok
@@ -614,7 +614,7 @@ namespace Celikoor_FunnyTix
             this.labelJudulFilm.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelJudulFilm.Location = new System.Drawing.Point(17, 38);
             this.labelJudulFilm.Name = "labelJudulFilm";
-            this.labelJudulFilm.Size = new System.Drawing.Size(0, 28);
+            this.labelJudulFilm.Size = new System.Drawing.Size(0, 27);
             this.labelJudulFilm.TabIndex = 50;
             // 
             // groupBox3
