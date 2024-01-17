@@ -52,6 +52,7 @@ namespace Celikoor_FunnyTix
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;
                     form.panelLaporan.Visible = true;
+
                 }
                 else if (role == "OPERATOR")
                 {
@@ -77,6 +78,7 @@ namespace Celikoor_FunnyTix
                     form.panelLaporan.Visible =false;
                 }
                 form.labelNama.Text = Auth.GetPegawai().Nama + " - " + Auth.GetPegawai().Username + "\n" + Auth.GetPegawai().Roles;
+                MessageBox.Show("LOGIN BERHASIL!", "SUCCESS ☑️");
             }
             catch (Exception x)
             {
@@ -109,6 +111,7 @@ namespace Celikoor_FunnyTix
                 form.panelListMaster.Visible = false;
 
                 form.labelNama.Text = Auth.GetKonsumen().Nama + "\n" + Auth.GetKonsumen().Saldo.ToString("C", CultureInfo.CreateSpecificCulture("id-ID"));
+                MessageBox.Show("LOGIN BERHASIL!", "SUCCESS ☑️");
             }
             catch (Exception x)
             {
@@ -384,10 +387,10 @@ namespace Celikoor_FunnyTix
         #region Panel Pegawai Kasir
         private void panelInvoice_Click(object sender, EventArgs e)
         {
-            //form.OpenChild(new FormValidasiInvoice());
-            FormValidasiInvoice frm = new FormValidasiInvoice();
+            form.OpenChild(new FormValidasiInvoice());
+            /*FormValidasiInvoice frm = new FormValidasiInvoice();
             frm.MdiParent = this;
-            frm.ShowDialog();
+            frm.ShowDialog();*/
         }
         private void label10_Click(object sender, EventArgs e)
         {
@@ -488,12 +491,6 @@ namespace Celikoor_FunnyTix
             frm.ShowDialog();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-            var frm = new FormIsiSaldo();
-            frm.ShowDialog();
-        }
-
         private void panelMasterFilm_Click(object sender, EventArgs e)
         {
             form.OpenChild(new FormMasterFilm());
@@ -537,7 +534,7 @@ namespace Celikoor_FunnyTix
 
         private void panelStudio_MouseLeave(object sender, EventArgs e)
         {
-            panelMasterPegawai.BackColor = Color.Transparent;
+            panelStudio.BackColor = Color.Transparent;
         }
 
         private void panelMasterKelompok_MouseHover(object sender, EventArgs e)
@@ -706,13 +703,12 @@ namespace Celikoor_FunnyTix
 
         private void panelMasterAktor_MouseEnter(object sender, EventArgs e)
         {
-            panelMasterAktor.BackColor = Color.LightSalmon;
+            
         }
 
         private void panelMasterAktor_MouseHover(object sender, EventArgs e)
         {
-            panelMasterAktor.BackColor = Color.Transparent;
-
+            panelMasterAktor.BackColor = Color.LightSalmon;
         }
 
         private void panelMasterCinema_MouseHover(object sender, EventArgs e)
@@ -724,6 +720,11 @@ namespace Celikoor_FunnyTix
         {
             panelMasterCinema.BackColor = Color.Transparent;
 
+        }
+
+        private void panelMasterAktor_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterAktor.BackColor = Color.Transparent;
         }
     }
 }

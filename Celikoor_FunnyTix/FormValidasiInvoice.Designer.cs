@@ -37,7 +37,6 @@ namespace Celikoor_FunnyTix
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,7 +62,6 @@ namespace Celikoor_FunnyTix
             this.kasir_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validasi_column = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelValidasiInvoice.SuspendLayout();
@@ -95,8 +93,7 @@ namespace Celikoor_FunnyTix
             this.konsumen_column,
             this.kasir_column,
             this.status_column,
-            this.validasi_column,
-            this.hapus_column});
+            this.validasi_column});
             this.dataGridViewHasil.GridColor = System.Drawing.Color.Maroon;
             this.dataGridViewHasil.Location = new System.Drawing.Point(16, 197);
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -214,7 +211,7 @@ namespace Celikoor_FunnyTix
             this.labelId.Location = new System.Drawing.Point(165, 39);
             this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(101, 25);
+            this.labelId.Size = new System.Drawing.Size(107, 26);
             this.labelId.TabIndex = 16;
             this.labelId.Text = "ID Invoice";
             // 
@@ -239,7 +236,7 @@ namespace Celikoor_FunnyTix
             this.label6.Location = new System.Drawing.Point(75, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.Size = new System.Drawing.Size(82, 26);
             this.label6.TabIndex = 6;
             this.label6.Text = "Status :";
             // 
@@ -251,7 +248,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(109, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 25);
+            this.label3.Size = new System.Drawing.Size(43, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID :";
             // 
@@ -387,20 +384,6 @@ namespace Celikoor_FunnyTix
             this.validasi_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.validasi_column.Width = 125;
             // 
-            // hapus_column
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkRed;
-            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle9;
-            this.hapus_column.HeaderText = "Aksi";
-            this.hapus_column.MinimumWidth = 6;
-            this.hapus_column.Name = "hapus_column";
-            this.hapus_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.hapus_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hapus_column.Width = 125;
-            // 
             // FormValidasiInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -452,6 +435,5 @@ namespace Celikoor_FunnyTix
         private System.Windows.Forms.DataGridViewTextBoxColumn kasir_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn status_column;
         private System.Windows.Forms.DataGridViewButtonColumn validasi_column;
-        private System.Windows.Forms.DataGridViewButtonColumn hapus_column;
     }
 }

@@ -385,7 +385,6 @@ C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyT
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.dll
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\FunnyTix_LIB.pdb
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.csproj.AssemblyReference.cache
-C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUpdateInvoice.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLaporan.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources

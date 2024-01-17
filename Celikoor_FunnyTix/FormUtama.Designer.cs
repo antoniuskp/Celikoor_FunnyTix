@@ -226,7 +226,6 @@
             this.label1.Size = new System.Drawing.Size(193, 46);
             this.label1.TabIndex = 20;
             this.label1.Text = "ISI SALDO";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panelBeliTiket
             // 
@@ -395,7 +394,7 @@
             this.labelLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogOut.Location = new System.Drawing.Point(37, 14);
             this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(123, 32);
+            this.labelLogOut.Size = new System.Drawing.Size(129, 33);
             this.labelLogOut.TabIndex = 17;
             this.labelLogOut.Text = "LOG OUT";
             this.labelLogOut.Click += new System.EventHandler(this.label26_Click);
@@ -577,7 +576,7 @@
             this.labelKonsumen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKonsumen.Location = new System.Drawing.Point(19, 11);
             this.labelKonsumen.Name = "labelKonsumen";
-            this.labelKonsumen.Size = new System.Drawing.Size(157, 32);
+            this.labelKonsumen.Size = new System.Drawing.Size(163, 33);
             this.labelKonsumen.TabIndex = 17;
             this.labelKonsumen.Text = "KONSUMEN";
             this.labelKonsumen.Click += new System.EventHandler(this.label14_Click);
@@ -605,7 +604,7 @@
             this.labelFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelFilm.Location = new System.Drawing.Point(19, 11);
             this.labelFilm.Name = "labelFilm";
-            this.labelFilm.Size = new System.Drawing.Size(73, 32);
+            this.labelFilm.Size = new System.Drawing.Size(75, 33);
             this.labelFilm.TabIndex = 17;
             this.labelFilm.Text = "FILM";
             // 
@@ -632,7 +631,7 @@
             this.labelJenisStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelJenisStudio.Location = new System.Drawing.Point(19, 11);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(183, 32);
+            this.labelJenisStudio.Size = new System.Drawing.Size(190, 33);
             this.labelJenisStudio.TabIndex = 17;
             this.labelJenisStudio.Text = "JENIS STUDIO";
             this.labelJenisStudio.Click += new System.EventHandler(this.label9_Click);
@@ -660,7 +659,7 @@
             this.labelStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelStudio.Location = new System.Drawing.Point(19, 11);
             this.labelStudio.Name = "labelStudio";
-            this.labelStudio.Size = new System.Drawing.Size(107, 32);
+            this.labelStudio.Size = new System.Drawing.Size(112, 33);
             this.labelStudio.TabIndex = 17;
             this.labelStudio.Text = "STUDIO";
             this.labelStudio.Click += new System.EventHandler(this.label7_Click);
@@ -688,7 +687,7 @@
             this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelGenre.Location = new System.Drawing.Point(19, 11);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(98, 32);
+            this.labelGenre.Size = new System.Drawing.Size(103, 33);
             this.labelGenre.TabIndex = 17;
             this.labelGenre.Text = "GENRE";
             this.labelGenre.Click += new System.EventHandler(this.label22_Click);
@@ -705,7 +704,7 @@
             this.panelMasterAktor.Size = new System.Drawing.Size(359, 50);
             this.panelMasterAktor.TabIndex = 23;
             this.panelMasterAktor.Click += new System.EventHandler(this.panelMasterAktor_Click);
-            this.panelMasterAktor.MouseEnter += new System.EventHandler(this.panelMasterAktor_MouseEnter);
+            this.panelMasterAktor.MouseLeave += new System.EventHandler(this.panelMasterAktor_MouseLeave);
             this.panelMasterAktor.MouseHover += new System.EventHandler(this.panelMasterAktor_MouseHover);
             // 
             // labelAktor
@@ -744,7 +743,7 @@
             this.labelKelompok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKelompok.Location = new System.Drawing.Point(19, 11);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(154, 32);
+            this.labelKelompok.Size = new System.Drawing.Size(162, 33);
             this.labelKelompok.TabIndex = 17;
             this.labelKelompok.Text = "KELOMPOK";
             this.labelKelompok.Click += new System.EventHandler(this.label18_Click);
@@ -772,7 +771,7 @@
             this.labelCinema.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCinema.Location = new System.Drawing.Point(19, 11);
             this.labelCinema.Name = "labelCinema";
-            this.labelCinema.Size = new System.Drawing.Size(113, 32);
+            this.labelCinema.Size = new System.Drawing.Size(117, 33);
             this.labelCinema.TabIndex = 17;
             this.labelCinema.Text = "CINEMA";
             this.labelCinema.Click += new System.EventHandler(this.label16_Click);
@@ -800,7 +799,7 @@
             this.labelPegawai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelPegawai.Location = new System.Drawing.Point(19, 11);
             this.labelPegawai.Name = "labelPegawai";
-            this.labelPegawai.Size = new System.Drawing.Size(133, 32);
+            this.labelPegawai.Size = new System.Drawing.Size(138, 33);
             this.labelPegawai.TabIndex = 17;
             this.labelPegawai.Text = "PEGAWAI";
             this.labelPegawai.Click += new System.EventHandler(this.label20_Click);
