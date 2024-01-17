@@ -13,10 +13,13 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormIsiSaldo : Form
     {
+        public FormUtama formUtama;
+
         public FormIsiSaldo()
         {
             InitializeComponent();
         }
+
         private void buttonBayar_Click(object sender, EventArgs e)
         {
             try
@@ -29,6 +32,7 @@ namespace Celikoor_FunnyTix
 
                 MessageBox.Show("Isi saldo sebesar " + int.Parse(textBoxNominal.Text) + " berhasil", "Informasi");
 
+                formUtama.UpdateSaldo();
                 this.Close();
             }
             catch (Exception ex)

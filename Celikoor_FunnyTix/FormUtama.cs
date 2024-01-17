@@ -159,6 +159,11 @@ namespace Celikoor_FunnyTix
             form.Show();
         }
 
+        public void UpdateSaldo()
+        {
+            form.labelNama.Text = Auth.GetKonsumen().Nama + "\n" + Auth.GetKonsumen().Saldo.ToString("C", CultureInfo.CreateSpecificCulture("id-ID"));
+        }
+
         #region SETTINGS
         private void panelProfil_MouseHover(object sender, EventArgs e)
         {
@@ -488,6 +493,7 @@ namespace Celikoor_FunnyTix
         private void panelIsiSaldo_Click(object sender, EventArgs e)
         {
             var frm = new FormIsiSaldo();
+            frm.formUtama = this;
             frm.ShowDialog();
         }
 
