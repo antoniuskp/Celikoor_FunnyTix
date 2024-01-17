@@ -43,7 +43,7 @@ namespace Celikoor_FunnyTix
                 string harga = In.Harga.ToString();
                 string judul = In.Judul.ToString();
 
-                dataGridViewHasil.Rows.Add(status, tgl, no_kursi, harga, judul);
+                dataGridViewHasil.Rows.Add(status, tgl, no_kursi, harga, judul, "Print");
             }
             dateTimePickerTglTransaksi.Value = DateTime.Now;
         }
@@ -71,6 +71,22 @@ namespace Celikoor_FunnyTix
         {
             List<Invoice> listInvoice = Invoice.BacaData("tanggal", dateTimePickerTglTransaksi.Value.ToString("yyyy-MM-dd"), Auth.GetKonsumen());
             InputDataGrid();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string noKursi = dataGridViewHasil.CurrentRow.Cells["no_kursi_column"].Value.ToString();
+            string status = dataGridViewHasil.CurrentRow.Cells["status_column"].Value.ToString();
+
+            if (e.ColumnIndex == dataGridViewHasil.Columns["btn_print"].Index)
+            {
+                //MessageBox.Show(noKursi + " " + status);
+                if (status.ToLower() == "terbayar")
+                {
+                    PrintTiket printTiket = new PrintTiket();
+                    printTiket.Print(noKursi);
+                }
+            }
         }
     }
 }

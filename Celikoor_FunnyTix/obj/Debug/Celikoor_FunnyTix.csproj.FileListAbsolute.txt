@@ -450,7 +450,6 @@ D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celi
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormDataTransaksi.resources
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormHistoryPembelian.resources
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormJadwalFilm.resources
-D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUpdateInvoice.resources
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLaporan.resources
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
@@ -569,3 +568,4 @@ C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Proje
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
+D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Zen.Barcode.Core.dll
