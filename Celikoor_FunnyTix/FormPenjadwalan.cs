@@ -343,10 +343,10 @@ namespace Celikoor_FunnyTix
                 DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
+                    for (int i = 0; i < dataGridViewHasil.Rows.Count; i++)
                     {
 
-                        if (dataGridViewHasil.Rows.Count != 1)
+                        if (dataGridViewHasil.Rows.Count != 0)
                         {
                             string namaFilm = dataGridViewHasil.Rows[i].Cells["columnJudul"].Value.ToString();
                             string namaStudio = dataGridViewHasil.Rows[i].Cells["columnStudio"].Value.ToString();
@@ -385,9 +385,6 @@ namespace Celikoor_FunnyTix
                             {
                                 Film.TambahDataSesiFilm(f, s, listJadwalFilm[0]);
                                 MessageBox.Show($"Penambahan Data film {f.Judul} dan studio {s.Nama} serta tanggal {tanggal} di sesi {jam} berhasil !", "SUCCESS ☑️");
-                                comboBoxJudulFilm.SelectedIndex = 0;
-                                comboBoxJenisStudio.SelectedIndex = 0;
-                                comboBoxCinema.SelectedIndex = 0;
                             }
                             else
                             {
