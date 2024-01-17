@@ -542,7 +542,6 @@ C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Proje
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormProfile.resources
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahDetailFilm.resources
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormTambahFilm.resources
-C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormUpdateInvoice.resources
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormLaporan.resources
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterAktor.resources
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\obj\Debug\Celikoor_FunnyTix.FormMasterGenre.resources
@@ -569,3 +568,4 @@ C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Proje
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\System.Buffers.dll
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\MySql.Data.dll
 D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\Celikoor_FunnyTix\bin\Debug\Zen.Barcode.Core.dll

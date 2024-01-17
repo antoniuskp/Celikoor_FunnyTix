@@ -250,7 +250,6 @@ namespace Celikoor_FunnyTix
 
         private void buttonPilihCinema_Click(object sender, EventArgs e)
         {
-            
             selectedCinema = (Cinema)comboBoxCinema.SelectedItem;
             listJenisStudio = JenisStudio.BacaJenisStudio(selectedCinema);
 
@@ -267,32 +266,24 @@ namespace Celikoor_FunnyTix
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {   
-                if (checkBoxI.Checked == false && checkBoxII.Checked == false && checkBoxIII.Checked == false && checkBoxIV.Checked == false)
-                {
-                    MessageBox.Show("Invalid data entry.");
-                }
+            {
                 if (checkBoxI.Checked == true)
                 {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "I");
-                    ClearTambah();
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToString("yyyy-MM-dd"), "I");
                 }
                 if (checkBoxII.Checked == true)
                 {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "II");
-                    ClearTambah();
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToString("yyyy-MM-dd"), "II");
                 }
                 if (checkBoxIII.Checked == true)
                 {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "III");
-                    ClearTambah();
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToString("yyyy-MM-dd"), "III");
                 }
                 if (checkBoxIV.Checked == true)
                 {
-                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToShortDateString(), "IV");
-                    ClearTambah();
+                    dataGridViewHasil.Rows.Add(selectedFilm.Judul, selectedCinema.NamaCabang, selectedStudio.Nama, dateTimePicker1.Value.ToString("yyyy-MM-dd"), "IV");
                 }
-                
+
                 if (dataGridViewHasil.Columns.Count == 5)
                 {
                     //button hapus
@@ -312,9 +303,10 @@ namespace Celikoor_FunnyTix
                     jf.Jam_pemutaran = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
                     listJadwal.Add(jf);
                 }
-                selectedFilm.TambahSesiFilm(selectedFilm, selectedStudio, listJadwal);
 
-                
+
+                //selectedFilm.TambahSesiFilm(selectedFilm, selectedStudio, listJadwal);
+                ClearTambah();
             }
             catch (Exception ex)
             {
@@ -348,32 +340,65 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                if (dataGridViewHasil.Rows.Count == 1)
+                DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    DialogResult result = MessageBox.Show("Yakin menambahkan?", "CONFIRMATION", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
+                    for (int i = 0; i < dataGridViewHasil.Rows.Count - 1; i++)
                     {
-                        if (dataGridViewHasil != null)
+
+                        if (dataGridViewHasil.Rows.Count != 1)
                         {
-                            try
+                            string namaFilm = dataGridViewHasil.Rows[i].Cells["columnJudul"].Value.ToString();
+                            string namaStudio = dataGridViewHasil.Rows[i].Cells["columnStudio"].Value.ToString();
+                            string tanggal = dataGridViewHasil.Rows[i].Cells["columnTanggal"].Value.ToString();
+                            string jam = dataGridViewHasil.Rows[i].Cells["columnJam"].Value.ToString();
+                            Film f = Film.CariFilm("judul", namaFilm)[0];
+                            Studio s = Studio.BacaData("nama", namaStudio)[0];
+                            List<JadwalFilm> listJadwalFilm = JadwalFilm.BacaData("tanggal", tanggal, jam);
+
+                            List<FilmStudio> listFilmStudio = Film.BacaDataFilmStudio(f.Id.ToString(), s.ID.ToString());
+                            if (listFilmStudio.Count == 0)
                             {
-                                Film.TambahSesiFilm(selectedFilm);
-                                MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+                                Film.TambahFilmStudio(f, s);
+                                MessageBox.Show("Penambahan Film Studio Berhasil!", "SUCCESS ☑️");
+                                listFilmStudio = Film.BacaDataFilmStudio(f.Id.ToString(), s.ID.ToString());
                             }
-                            catch (Exception ex)
+                            if (listJadwalFilm.Count == 0)
                             {
-                                MessageBox.Show("Penambahan Data Gagal!", "WARNING ⚠️");
+                                try
+                                {
+                                    JadwalFilm jadwal = new JadwalFilm();
+                                    jadwal.Tanggal = DateTime.Parse(tanggal);
+                                    jadwal.Jam_pemutaran = jam;
+                                    JadwalFilm.TambahData(jadwal);
+                                    MessageBox.Show($"Penambahan Jadwal tanggal {tanggal} di sesi {jam} Berhasil!", "SUCCESS ☑️");
+                                    listJadwalFilm.Add(jadwal);
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show($"Penambahan Data gagal untuk Jadwal Film tanggal {tanggal} sesi {jam}!");
+                                }
+                            }
+                            // Cek Sesi Film
+                            bool cek = JadwalFilm.BacaSesiFilm(listJadwalFilm[0], s, f);
+                            if (cek == false)
+                            {
+                                Film.TambahDataSesiFilm(f, s, listJadwalFilm[0]);
+                                MessageBox.Show($"Penambahan Data film {f.Judul} dan studio {s.Nama} serta tanggal {tanggal} di sesi {jam} berhasil !", "SUCCESS ☑️");
+                                comboBoxJudulFilm.SelectedIndex = 0;
+                                comboBoxJenisStudio.SelectedIndex = 0;
+                                comboBoxCinema.SelectedIndex = 0;
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Maaf Film dan Studio pada tanggal {tanggal} di sesi {jam} sudah ada!", "INFORMATION");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Maaf, Tidak Ada Data yang Ditambahkan", "WARNING ⚠️");
+                            MessageBox.Show("Maaf, Tolong tambahkan data terlebih dahulu!", "INFORMATION");
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Tolong, tambahkan Film, Studio, dan Jadwal Film", "WARNING ⚠");
                 }
             }
             catch (Exception ex)
@@ -381,7 +406,6 @@ namespace Celikoor_FunnyTix
                 MessageBox.Show(ex.Message);
 
             }
-            Bersihkan();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

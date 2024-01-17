@@ -86,6 +86,10 @@ namespace Celikoor_FunnyTix
                     PrintTiket printTiket = new PrintTiket();
                     printTiket.Print(noKursi);
                 }
+                else
+                {
+                    MessageBox.Show($"Maaf, invoice anda belum terverifikasi!", "WARNING ⚠️");
+                }
             }
         }
     }

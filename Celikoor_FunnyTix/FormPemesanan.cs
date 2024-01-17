@@ -612,7 +612,8 @@ namespace Celikoor_FunnyTix
                         t.Operators = Pegawai.BacaData("id", "1")[0];
 
                         string numericValue = new string(textBoxHarga.Text.Where(char.IsDigit).ToArray());
-                        t.Harga = int.Parse(numericValue);
+                        t.Harga = int.Parse(numericValue) - (selectedFilm.Diskon/100.0) * int.Parse(numericValue);
+                        MessageBox.Show(t.Harga.ToString());
 
                         string tglPilihan = dateTimePickerTambah.Value.ToString("yyyy-MM-dd");
                         t.JadwalFilm = JadwalFilm.BacaData("tanggal", tglPilihan, jam)[0];
@@ -622,8 +623,6 @@ namespace Celikoor_FunnyTix
                         t.Film = selectedFilm;
 
                         nota.TambahTiket(t);
-
-
                     }
 
                     string totalAkhir = new string(textBoxTotalAkhir.Text.Where(char.IsDigit).ToArray());

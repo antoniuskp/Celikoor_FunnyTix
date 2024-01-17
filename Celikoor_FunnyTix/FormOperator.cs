@@ -59,23 +59,32 @@ namespace Celikoor_FunnyTix
 
                     if (ticket != null)
                     {
-                        if (ticket.Status == true)
+                        if(ticket.IdInvoice.Status == "TERBAYAR")
                         {
-                            textBoxStatus.Text = "Checked in";
-                            buttonUpdate.Enabled = false;
+                            if (ticket.Status == true)
+                            {
+                                textBoxStatus.Text = "Checked in";
+                                buttonUpdate.Enabled = false;
+                            }
+                            else
+                            {
+                                textBoxStatus.Text = "Not checked in";
+                                buttonUpdate.Enabled = true;
+                            }
+                            textBoxKursi.Text = ticket.NoKursi;
+                            textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", ticket.Harga.ToString());
+                            textBoxID.Text = ticket.Operators.ID.ToString();
+                            dateTimePicker.Value = Invoice.CariInvoice(noInv, noKursi).Tanggal;
+                            textBoxJudul.Text = Tiket.CariFilm(noInv, noKursi).Judul;
+                            textBoxTime.Text = JadwalFilm.DefineJam(noInv, noKursi).ToString();
+                            textBoxStudio.Text = Tiket.CariStudio(noInv, noKursi).Nama;
                         }
                         else
                         {
-                            textBoxStatus.Text = "Not checked in";
-                            buttonUpdate.Enabled = true;
+                            MessageBox.Show($"Maaf, invoice anda sedang {ticket.IdInvoice.Status}");
+                            textBoxID.Clear();
                         }
-                        textBoxKursi.Text = ticket.NoKursi;
-                        textBoxHarga.Text = string.Format(new System.Globalization.CultureInfo("id-ID"), "Rp. {0:N}", ticket.Harga.ToString());
-                        textBoxID.Text = ticket.Operators.ID.ToString();
-                        dateTimePicker.Value = Invoice.CariInvoice(noInv, noKursi).Tanggal;
-                        textBoxJudul.Text = Tiket.CariFilm(noInv, noKursi).Judul;
-                        textBoxTime.Text = JadwalFilm.DefineJam(noInv, noKursi).ToString();
-                        textBoxStudio.Text = Tiket.CariStudio(noInv, noKursi).Nama;
+                        
                     }
                 }
             }

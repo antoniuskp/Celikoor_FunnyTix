@@ -336,55 +336,85 @@ namespace FunnyTix_LIB
             }
         }
 
-        public static void TambahSesiFilm(Film f)
+        //public static void TambahSesiFilm(Film f)
+        //{
+        //    //tambah Data ke film studio
+        //    if (f.ListFilmStudio.Count > 0)
+        //    {
+        //        for (int i = 0; i < f.ListFilmStudio.Count; i++)
+        //        {
+        //            List<FilmStudio> fs = Film.BacaDataFilmStudio(f.ListFilmStudio[i].Film.Id.ToString(), f.ListFilmStudio[i].Studio.ID.ToString());
+        //            //Pengecekan Ada film Studio 
+        //            if (fs.Count == 0)
+        //            {
+        //                //membuat filmstudio
+        //                string query = $"INSERT INTO film_studio (studios_id, films_id) VALUES ('{f.ListFilmStudio[i].Studio.ID}','{f.ListFilmStudio[i].Film.Id}');";
+        //                Koneksi.JalankanPerintahNonQuery(query);
+        //            }
+
+        //            //Tambah ke Sesi_Films
+        //            for (int j = 0; j < f.ListSesiFilm.Count; j++)
+        //            {
+        //                bool cek = Film.CekJadwalFilmStudio(f.ListFilmStudio[i], f.ListSesiFilm[j].JadwalFilm);
+        //                if (cek == false)
+        //                {
+        //                    //Cek Jadwal Sesi Film
+        //                    string tanggal = f.ListSesiFilm[j].JadwalFilm.Tanggal.ToString("yyyy-MM-dd");
+        //                    string jam = f.ListSesiFilm[j].JadwalFilm.Jam_pemutaran;
+        //                    JadwalFilm jf = f.ListSesiFilm[j].JadwalFilm;
+        //                    List<JadwalFilm> cari = JadwalFilm.BacaData("tanggal", tanggal, jam);
+        //                    if (cari.Count == 0)
+        //                    {
+        //                        JadwalFilm.TambahData(jf);
+        //                    }
+        //                    Film.TambahDataSesiFilm(f.ListSesiFilm[j]);
+        //                }
+        //                else throw new Exception($"Film {f.ListFilmStudio[i].Film.Judul} " +
+        //                    $"di Studio {f.ListFilmStudio[i].Studio.Nama} tanggal {f.ListSesiFilm[j].JadwalFilm.Tanggal.ToShortDateString()} " +
+        //                    $"sesi {f.ListSesiFilm[j].JadwalFilm.Jam_pemutaran} sudah ada!");
+        //            }
+        //        }
+
+
+
+
+        //    }
+        //}
+        public static void TambahFilmStudio(Film f, Studio s)
         {
-            //tambah Data ke film studio
-            if(f.ListFilmStudio.Count > 0)
-            {
-                for (int i = 0; i < f.ListFilmStudio.Count; i++)
-                {
-                    List<FilmStudio> fs = Film.BacaDataFilmStudio(f.ListFilmStudio[i].Film.Id.ToString(), f.ListFilmStudio[i].Studio.ID.ToString());
-                    //Pengecekan Ada film Studio 
-                    if (fs.Count == 0)
-                    {
-                        //membuat filmstudio
-                        string query = $"INSERT INTO film_studio (studios_id, films_id) VALUES ('{f.ListFilmStudio[i].Studio.ID}','{f.ListFilmStudio[i].Film.Id}');";
-                        Koneksi.JalankanPerintahNonQuery(query);
-                    }
-
-                    //Tambah ke Sesi_Films
-                    for (int j = 0; j < f.ListSesiFilm.Count; j++)
-                    {
-                        bool cek = Film.CekJadwalFilmStudio(f.ListFilmStudio[i], f.ListSesiFilm[j].JadwalFilm);
-                        if (cek == false)
-                        {
-                            //Cek Jadwal Sesi Film
-                            string tanggal = f.ListSesiFilm[j].JadwalFilm.Tanggal.ToString("yyyy-MM-dd");
-                            string jam = f.ListSesiFilm[j].JadwalFilm.Jam_pemutaran;
-                            JadwalFilm jf = f.ListSesiFilm[j].JadwalFilm;
-                            List<JadwalFilm> cari = JadwalFilm.BacaData("tanggal", tanggal, jam);
-                            if (cari.Count == 0)
-                            {
-                                JadwalFilm.TambahData(jf);
-                            }
-                            Film.TambahDataSesiFilm(f.ListSesiFilm[j]);
-                        }
-                        else throw new Exception($"Film {f.ListFilmStudio[i].Film.Judul} " +
-                            $"di Studio {f.ListFilmStudio[i].Studio.Nama} tanggal {f.ListSesiFilm[j].JadwalFilm.Tanggal.ToShortDateString()} " +
-                            $"sesi {f.ListSesiFilm[j].JadwalFilm.Jam_pemutaran} sudah ada!");
-                    }
-                }
-                
-                
-
-                
-            }
+            string query = $"INSERT INTO film_studio (studios_id, films_id) VALUES ('{s.ID}','{f.Id}');";
+            Koneksi.JalankanPerintahNonQuery(query);
         }
-            
-        public static void TambahDataSesiFilm(SesiFilm sf)
+
+        public static List<Film> CariFilm(string filter = "", string value = "")
         {
-            JadwalFilm jf = JadwalFilm.BacaData("tanggal", sf.JadwalFilm.Tanggal.ToString("yyyy-MM-dd"), sf.JadwalFilm.Jam_pemutaran)[0];
-            string query = $"INSERT INTO sesi_films (jadwal_film_id, studios_id, films_id) VALUES ('{jf.Id}', '{sf.FilmStudio.Studio.ID}', '{sf.FilmStudio.Film.Id}');";
+            string query = $"SELECT * FROM films f WHERE {filter} = '{value}';";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<Film> listFilm = new List<Film>();
+
+            while (hasil.Read() == true)
+            {
+                Film film = new Film(
+                    hasil.GetValue(1).ToString(),
+                    hasil.GetValue(2).ToString(),
+                    int.Parse(hasil.GetValue(3).ToString()),
+                    int.Parse(hasil.GetValue(4).ToString()),
+                    Kelompok.BacaData("id", hasil.GetValue(5).ToString())[0],
+                    hasil.GetValue(6).ToString(),
+                    int.Parse(hasil.GetValue(7).ToString()),
+                    hasil.GetValue(8).ToString(),
+                    double.Parse(hasil.GetValue(9).ToString()));
+
+                film.Id = int.Parse(hasil.GetValue(0).ToString());
+                listFilm.Add(film);
+            }
+            return listFilm;
+        }
+        public static void TambahDataSesiFilm(Film f, Studio s, JadwalFilm jadwal)
+        {
+            JadwalFilm jf = JadwalFilm.BacaData("tanggal", jadwal.Tanggal.ToString("yyyy-MM-dd"), jadwal.Jam_pemutaran)[0];
+            string query = $"INSERT INTO sesi_films (jadwal_film_id, studios_id, films_id) VALUES ('{jf.Id}', '{s.ID}', '{f.Id}');";
             Koneksi.JalankanPerintahNonQuery(query);
         }
         public static void TambahData(Film film)
