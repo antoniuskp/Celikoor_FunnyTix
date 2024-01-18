@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,6 +53,7 @@ namespace Celikoor_FunnyTix
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;
                     form.panelLaporan.Visible = true;
+                    form.panelMakanan.Visible = false;
 
                 }
                 else if (role == "OPERATOR")
@@ -64,6 +66,8 @@ namespace Celikoor_FunnyTix
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;    
                     form.panelLaporan.Visible = false;
+                    form.panelMakanan.Visible = false;
+
                 }
                 else if (role == "KASIR")
                 {
@@ -76,6 +80,9 @@ namespace Celikoor_FunnyTix
                     form.panelListMaster.Visible = false;
                     form.panelLogout.Visible = true;
                     form.panelLaporan.Visible =false;
+                    form.panelMakanan.Visible = false;
+
+
                 }
                 form.labelNama.Text = Auth.GetPegawai().Nama + " - " + Auth.GetPegawai().Username + "\n" + Auth.GetPegawai().Roles;
                 MessageBox.Show("LOGIN BERHASIL!", "SUCCESS ☑️");
@@ -107,6 +114,8 @@ namespace Celikoor_FunnyTix
                 form.panelPegawaiKasir.Visible = false;
                 form.panelPegawaiOperator.Visible = false;
                 form.panelKonsumen.Visible = true;
+                form.panelBeliTiket.Visible = true;
+                form.panelMakanan.Visible = true;
 
                 form.panelListMaster.Visible = false;
 

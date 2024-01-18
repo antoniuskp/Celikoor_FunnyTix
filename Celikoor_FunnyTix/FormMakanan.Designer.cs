@@ -28,58 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonTambahh = new System.Windows.Forms.Button();
-            this.panelUbah = new System.Windows.Forms.Panel();
+            this.panelRincian = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBoxGenderUbah = new System.Windows.Forms.ComboBox();
+            this.labelHarga = new System.Windows.Forms.Label();
+            this.comboBoxKuantitas = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxNamaUbah = new System.Windows.Forms.TextBox();
+            this.textBoxNamaMakanan = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxCinema = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
             this.textBoxFilter = new System.Windows.Forms.TextBox();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxCinema = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.labelHarga = new System.Windows.Forms.Label();
-            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.harga_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tambah_column = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBoxTotal = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelSaldo = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonBayar = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
-            this.labelSaldo = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewKeranjang = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ubah_column = new System.Windows.Forms.DataGridViewButtonColumn();
             this.hapus_column = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panelUbah.SuspendLayout();
+            this.nama_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deskripsi_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.harga_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tambah_column = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panelRincian.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.panel1.SuspendLayout();
@@ -100,24 +102,24 @@
             this.buttonTambahh.Text = "TAMBAH";
             this.buttonTambahh.UseVisualStyleBackColor = false;
             // 
-            // panelUbah
+            // panelRincian
             // 
-            this.panelUbah.Controls.Add(this.groupBox2);
-            this.panelUbah.Controls.Add(this.buttonTambahh);
-            this.panelUbah.Controls.Add(this.label12);
-            this.panelUbah.Location = new System.Drawing.Point(480, 402);
-            this.panelUbah.Name = "panelUbah";
-            this.panelUbah.Size = new System.Drawing.Size(549, 360);
-            this.panelUbah.TabIndex = 29;
-            this.panelUbah.Visible = false;
+            this.panelRincian.Controls.Add(this.groupBox2);
+            this.panelRincian.Controls.Add(this.buttonTambahh);
+            this.panelRincian.Controls.Add(this.label12);
+            this.panelRincian.Location = new System.Drawing.Point(480, 402);
+            this.panelRincian.Name = "panelRincian";
+            this.panelRincian.Size = new System.Drawing.Size(549, 360);
+            this.panelRincian.TabIndex = 29;
+            this.panelRincian.Visible = false;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.labelHarga);
-            this.groupBox2.Controls.Add(this.comboBoxGenderUbah);
+            this.groupBox2.Controls.Add(this.comboBoxKuantitas);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBoxNamaUbah);
+            this.groupBox2.Controls.Add(this.textBoxNamaMakanan);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(34, 95);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -127,17 +129,29 @@
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             // 
-            // comboBoxGenderUbah
+            // labelHarga
             // 
-            this.comboBoxGenderUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxGenderUbah.FormattingEnabled = true;
-            this.comboBoxGenderUbah.Items.AddRange(new object[] {
+            this.labelHarga.AutoSize = true;
+            this.labelHarga.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHarga.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelHarga.Location = new System.Drawing.Point(177, 130);
+            this.labelHarga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHarga.Name = "labelHarga";
+            this.labelHarga.Size = new System.Drawing.Size(24, 25);
+            this.labelHarga.TabIndex = 12;
+            this.labelHarga.Text = "0";
+            // 
+            // comboBoxKuantitas
+            // 
+            this.comboBoxKuantitas.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxKuantitas.FormattingEnabled = true;
+            this.comboBoxKuantitas.Items.AddRange(new object[] {
             "L",
             "P"});
-            this.comboBoxGenderUbah.Location = new System.Drawing.Point(182, 78);
-            this.comboBoxGenderUbah.Name = "comboBoxGenderUbah";
-            this.comboBoxGenderUbah.Size = new System.Drawing.Size(62, 32);
-            this.comboBoxGenderUbah.TabIndex = 11;
+            this.comboBoxKuantitas.Location = new System.Drawing.Point(182, 78);
+            this.comboBoxKuantitas.Name = "comboBoxKuantitas";
+            this.comboBoxKuantitas.Size = new System.Drawing.Size(62, 32);
+            this.comboBoxKuantitas.TabIndex = 11;
             // 
             // label9
             // 
@@ -163,14 +177,14 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "Harga :";
             // 
-            // textBoxNamaUbah
+            // textBoxNamaMakanan
             // 
-            this.textBoxNamaUbah.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaUbah.Location = new System.Drawing.Point(182, 31);
-            this.textBoxNamaUbah.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxNamaUbah.Name = "textBoxNamaUbah";
-            this.textBoxNamaUbah.Size = new System.Drawing.Size(263, 28);
-            this.textBoxNamaUbah.TabIndex = 4;
+            this.textBoxNamaMakanan.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNamaMakanan.Location = new System.Drawing.Point(182, 31);
+            this.textBoxNamaMakanan.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNamaMakanan.Name = "textBoxNamaMakanan";
+            this.textBoxNamaMakanan.Size = new System.Drawing.Size(263, 28);
+            this.textBoxNamaMakanan.TabIndex = 4;
             // 
             // label11
             // 
@@ -200,21 +214,22 @@
             // dataGridViewHasil
             // 
             this.dataGridViewHasil.AllowUserToAddRows = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.NavajoWhite;
-            this.dataGridViewHasil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.dataGridViewHasil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHasil.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewHasil.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewHasil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHasil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHasil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nama_column,
+            this.deskripsi_column,
             this.harga_column,
             this.tambah_column});
             this.dataGridViewHasil.EnableHeadersVisualStyles = false;
@@ -223,16 +238,16 @@
             this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewHasil.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHasil.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewHasil.RowHeadersWidth = 51;
             this.dataGridViewHasil.RowTemplate.Height = 24;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(555, 707);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(743, 707);
             this.dataGridViewHasil.TabIndex = 25;
             // 
             // label1
@@ -261,6 +276,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1488, 86);
             this.panel1.TabIndex = 24;
+            // 
+            // comboBoxCinema
+            // 
+            this.comboBoxCinema.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCinema.FormattingEnabled = true;
+            this.comboBoxCinema.Items.AddRange(new object[] {
+            "Nama",
+            "Harga"});
+            this.comboBoxCinema.Location = new System.Drawing.Point(154, 26);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCinema.Name = "comboBoxCinema";
+            this.comboBoxCinema.Size = new System.Drawing.Size(467, 40);
+            this.comboBoxCinema.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Maroon;
+            this.label14.Location = new System.Drawing.Point(19, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 39);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Cinema";
             // 
             // buttonCari
             // 
@@ -307,82 +346,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Filter";
             // 
-            // comboBoxCinema
-            // 
-            this.comboBoxCinema.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Items.AddRange(new object[] {
-            "Nama",
-            "Harga"});
-            this.comboBoxCinema.Location = new System.Drawing.Point(154, 26);
-            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(439, 40);
-            this.comboBoxCinema.TabIndex = 5;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Maroon;
-            this.label14.Location = new System.Drawing.Point(19, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 39);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Cinema";
-            // 
-            // labelHarga
-            // 
-            this.labelHarga.AutoSize = true;
-            this.labelHarga.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHarga.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.labelHarga.Location = new System.Drawing.Point(177, 130);
-            this.labelHarga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(24, 25);
-            this.labelHarga.TabIndex = 12;
-            this.labelHarga.Text = "0";
-            // 
-            // nama_column
-            // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.DarkRed;
-            this.nama_column.DefaultCellStyle = dataGridViewCellStyle16;
-            this.nama_column.HeaderText = "Nama";
-            this.nama_column.MinimumWidth = 6;
-            this.nama_column.Name = "nama_column";
-            this.nama_column.ReadOnly = true;
-            this.nama_column.Width = 125;
-            // 
-            // harga_column
-            // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.DarkRed;
-            this.harga_column.DefaultCellStyle = dataGridViewCellStyle17;
-            this.harga_column.HeaderText = "Harga";
-            this.harga_column.MinimumWidth = 6;
-            this.harga_column.Name = "harga_column";
-            this.harga_column.ReadOnly = true;
-            this.harga_column.Width = 125;
-            // 
-            // tambah_column
-            // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.DarkRed;
-            this.tambah_column.DefaultCellStyle = dataGridViewCellStyle18;
-            this.tambah_column.HeaderText = "Aksi";
-            this.tambah_column.MinimumWidth = 6;
-            this.tambah_column.Name = "tambah_column";
-            this.tambah_column.ReadOnly = true;
-            this.tambah_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tambah_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tambah_column.Text = "Hapus";
-            this.tambah_column.Width = 125;
-            // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.NavajoWhite;
@@ -390,7 +353,7 @@
             this.label4.ForeColor = System.Drawing.Color.Maroon;
             this.label4.Location = new System.Drawing.Point(26, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(555, 65);
+            this.label4.Size = new System.Drawing.Size(743, 65);
             this.label4.TabIndex = 31;
             this.label4.Text = "MENU";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -400,7 +363,7 @@
             this.label13.BackColor = System.Drawing.Color.NavajoWhite;
             this.label13.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Maroon;
-            this.label13.Location = new System.Drawing.Point(853, 214);
+            this.label13.Location = new System.Drawing.Point(827, 214);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(651, 65);
             this.label13.TabIndex = 32;
@@ -443,12 +406,48 @@
             this.groupBoxTotal.Controls.Add(this.label21);
             this.groupBoxTotal.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTotal.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.groupBoxTotal.Location = new System.Drawing.Point(922, 669);
+            this.groupBoxTotal.Location = new System.Drawing.Point(896, 669);
             this.groupBoxTotal.Name = "groupBoxTotal";
             this.groupBoxTotal.Size = new System.Drawing.Size(582, 333);
             this.groupBoxTotal.TabIndex = 73;
             this.groupBoxTotal.TabStop = false;
             this.groupBoxTotal.Text = "Rincian Pembayaran";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.NavajoWhite;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(380, 163);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 31);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "0";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelSaldo
+            // 
+            this.labelSaldo.BackColor = System.Drawing.Color.Transparent;
+            this.labelSaldo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.labelSaldo.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelSaldo.Location = new System.Drawing.Point(385, 59);
+            this.labelSaldo.Name = "labelSaldo";
+            this.labelSaldo.Size = new System.Drawing.Size(175, 31);
+            this.labelSaldo.TabIndex = 73;
+            this.labelSaldo.Text = "0";
+            this.labelSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelTotal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.ForeColor = System.Drawing.Color.NavajoWhite;
+            this.labelTotal.Location = new System.Drawing.Point(385, 100);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(175, 31);
+            this.labelTotal.TabIndex = 74;
+            this.labelTotal.Text = "0";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // button1
             // 
@@ -486,57 +485,21 @@
             this.label21.Text = "Total Akhir";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // labelSaldo
-            // 
-            this.labelSaldo.BackColor = System.Drawing.Color.Transparent;
-            this.labelSaldo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.labelSaldo.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.labelSaldo.Location = new System.Drawing.Point(385, 59);
-            this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(175, 31);
-            this.labelSaldo.TabIndex = 73;
-            this.labelSaldo.Text = "0";
-            this.labelSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelTotal
-            // 
-            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.labelTotal.Location = new System.Drawing.Point(385, 100);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(175, 31);
-            this.labelTotal.TabIndex = 74;
-            this.labelTotal.Text = "0";
-            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(380, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 31);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "0";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // dataGridViewKeranjang
             // 
             this.dataGridViewKeranjang.AllowUserToAddRows = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.NavajoWhite;
-            this.dataGridViewKeranjang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.NavajoWhite;
+            this.dataGridViewKeranjang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewKeranjang.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dataGridViewKeranjang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewKeranjang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKeranjang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -545,17 +508,17 @@
             this.hapus_column});
             this.dataGridViewKeranjang.EnableHeadersVisualStyles = false;
             this.dataGridViewKeranjang.GridColor = System.Drawing.Color.Maroon;
-            this.dataGridViewKeranjang.Location = new System.Drawing.Point(853, 302);
+            this.dataGridViewKeranjang.Location = new System.Drawing.Point(827, 302);
             this.dataGridViewKeranjang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewKeranjang.Name = "dataGridViewKeranjang";
             this.dataGridViewKeranjang.ReadOnly = true;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewKeranjang.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewKeranjang.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewKeranjang.RowHeadersWidth = 51;
             this.dataGridViewKeranjang.RowTemplate.Height = 24;
             this.dataGridViewKeranjang.Size = new System.Drawing.Size(651, 332);
@@ -563,10 +526,10 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.DarkRed;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DarkRed;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn1.HeaderText = "Nama";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -575,10 +538,10 @@
             // 
             // total_column
             // 
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.DarkRed;
-            this.total_column.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.DarkRed;
+            this.total_column.DefaultCellStyle = dataGridViewCellStyle11;
             this.total_column.HeaderText = "Total";
             this.total_column.MinimumWidth = 6;
             this.total_column.Name = "total_column";
@@ -587,11 +550,11 @@
             // 
             // ubah_column
             // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.DarkRed;
-            this.ubah_column.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DarkRed;
+            this.ubah_column.DefaultCellStyle = dataGridViewCellStyle12;
             this.ubah_column.HeaderText = "Aksi";
             this.ubah_column.MinimumWidth = 6;
             this.ubah_column.Name = "ubah_column";
@@ -603,11 +566,11 @@
             // 
             // hapus_column
             // 
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.DarkRed;
-            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.DarkRed;
+            this.hapus_column.DefaultCellStyle = dataGridViewCellStyle13;
             this.hapus_column.HeaderText = "Aksi";
             this.hapus_column.MinimumWidth = 6;
             this.hapus_column.Name = "hapus_column";
@@ -617,6 +580,58 @@
             this.hapus_column.Text = "Hapus";
             this.hapus_column.Width = 125;
             // 
+            // nama_column
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            this.nama_column.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nama_column.HeaderText = "Nama";
+            this.nama_column.MinimumWidth = 6;
+            this.nama_column.Name = "nama_column";
+            this.nama_column.ReadOnly = true;
+            this.nama_column.Width = 125;
+            // 
+            // deskripsi_column
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            this.deskripsi_column.DefaultCellStyle = dataGridViewCellStyle4;
+            this.deskripsi_column.HeaderText = "Deskripsi";
+            this.deskripsi_column.MinimumWidth = 6;
+            this.deskripsi_column.Name = "deskripsi_column";
+            this.deskripsi_column.ReadOnly = true;
+            this.deskripsi_column.Width = 125;
+            // 
+            // harga_column
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            this.harga_column.DefaultCellStyle = dataGridViewCellStyle5;
+            this.harga_column.HeaderText = "Harga";
+            this.harga_column.MinimumWidth = 6;
+            this.harga_column.Name = "harga_column";
+            this.harga_column.ReadOnly = true;
+            this.harga_column.Width = 125;
+            // 
+            // tambah_column
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
+            this.tambah_column.DefaultCellStyle = dataGridViewCellStyle6;
+            this.tambah_column.HeaderText = "Aksi";
+            this.tambah_column.MinimumWidth = 6;
+            this.tambah_column.Name = "tambah_column";
+            this.tambah_column.ReadOnly = true;
+            this.tambah_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tambah_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tambah_column.Text = "Hapus";
+            this.tambah_column.Width = 125;
+            // 
             // FormMakanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -624,7 +639,7 @@
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1520, 1029);
             this.ControlBox = false;
-            this.Controls.Add(this.panelUbah);
+            this.Controls.Add(this.panelRincian);
             this.Controls.Add(this.dataGridViewKeranjang);
             this.Controls.Add(this.groupBoxTotal);
             this.Controls.Add(this.label13);
@@ -635,7 +650,7 @@
             this.ForeColor = System.Drawing.Color.DarkRed;
             this.Name = "FormMakanan";
             this.Text = "FormMakanan";
-            this.panelUbah.ResumeLayout(false);
+            this.panelRincian.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
@@ -649,12 +664,12 @@
 
         #endregion
         private System.Windows.Forms.Button buttonTambahh;
-        private System.Windows.Forms.Panel panelUbah;
+        private System.Windows.Forms.Panel panelRincian;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBoxGenderUbah;
+        private System.Windows.Forms.ComboBox comboBoxKuantitas;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxNamaUbah;
+        private System.Windows.Forms.TextBox textBoxNamaMakanan;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
@@ -667,9 +682,6 @@
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelHarga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nama_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn harga_column;
-        private System.Windows.Forms.DataGridViewButtonColumn tambah_column;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
@@ -686,5 +698,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn total_column;
         private System.Windows.Forms.DataGridViewButtonColumn ubah_column;
         private System.Windows.Forms.DataGridViewButtonColumn hapus_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deskripsi_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn harga_column;
+        private System.Windows.Forms.DataGridViewButtonColumn tambah_column;
     }
 }

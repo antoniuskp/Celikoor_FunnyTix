@@ -81,6 +81,8 @@
             this.panelMasterPegawai = new System.Windows.Forms.Panel();
             this.labelPegawai = new System.Windows.Forms.Label();
             this.labelProfile = new System.Windows.Forms.Label();
+            this.panelMakanan = new System.Windows.Forms.Panel();
+            this.labelMakanan = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelPegawaiOperator.SuspendLayout();
@@ -109,6 +111,7 @@
             this.panelMasterKelompok.SuspendLayout();
             this.panelMasterCinema.SuspendLayout();
             this.panelMasterPegawai.SuspendLayout();
+            this.panelMakanan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPIlihan
@@ -190,6 +193,7 @@
             // 
             // panelKonsumen
             // 
+            this.panelKonsumen.Controls.Add(this.panelMakanan);
             this.panelKonsumen.Controls.Add(this.panelIsiSaldo);
             this.panelKonsumen.Controls.Add(this.panelBeliTiket);
             this.panelKonsumen.Controls.Add(this.panelHistory);
@@ -198,7 +202,7 @@
             this.panelKonsumen.Location = new System.Drawing.Point(1, 358);
             this.panelKonsumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelKonsumen.Name = "panelKonsumen";
-            this.panelKonsumen.Size = new System.Drawing.Size(523, 506);
+            this.panelKonsumen.Size = new System.Drawing.Size(523, 592);
             this.panelKonsumen.TabIndex = 27;
             // 
             // panelIsiSaldo
@@ -377,7 +381,7 @@
             this.panelLogout.Controls.Add(this.labelLogOut);
             this.panelLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLogout.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold);
-            this.panelLogout.Location = new System.Drawing.Point(0, 914);
+            this.panelLogout.Location = new System.Drawing.Point(0, 971);
             this.panelLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Size = new System.Drawing.Size(523, 50);
@@ -394,7 +398,7 @@
             this.labelLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogOut.Location = new System.Drawing.Point(37, 14);
             this.labelLogOut.Name = "labelLogOut";
-            this.labelLogOut.Size = new System.Drawing.Size(129, 33);
+            this.labelLogOut.Size = new System.Drawing.Size(123, 32);
             this.labelLogOut.TabIndex = 17;
             this.labelLogOut.Text = "LOG OUT";
             this.labelLogOut.Click += new System.EventHandler(this.label26_Click);
@@ -576,7 +580,7 @@
             this.labelKonsumen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKonsumen.Location = new System.Drawing.Point(19, 11);
             this.labelKonsumen.Name = "labelKonsumen";
-            this.labelKonsumen.Size = new System.Drawing.Size(163, 33);
+            this.labelKonsumen.Size = new System.Drawing.Size(157, 32);
             this.labelKonsumen.TabIndex = 17;
             this.labelKonsumen.Text = "KONSUMEN";
             this.labelKonsumen.Click += new System.EventHandler(this.label14_Click);
@@ -604,7 +608,7 @@
             this.labelFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelFilm.Location = new System.Drawing.Point(19, 11);
             this.labelFilm.Name = "labelFilm";
-            this.labelFilm.Size = new System.Drawing.Size(75, 33);
+            this.labelFilm.Size = new System.Drawing.Size(73, 32);
             this.labelFilm.TabIndex = 17;
             this.labelFilm.Text = "FILM";
             // 
@@ -631,7 +635,7 @@
             this.labelJenisStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelJenisStudio.Location = new System.Drawing.Point(19, 11);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(190, 33);
+            this.labelJenisStudio.Size = new System.Drawing.Size(183, 32);
             this.labelJenisStudio.TabIndex = 17;
             this.labelJenisStudio.Text = "JENIS STUDIO";
             this.labelJenisStudio.Click += new System.EventHandler(this.label9_Click);
@@ -659,7 +663,7 @@
             this.labelStudio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelStudio.Location = new System.Drawing.Point(19, 11);
             this.labelStudio.Name = "labelStudio";
-            this.labelStudio.Size = new System.Drawing.Size(112, 33);
+            this.labelStudio.Size = new System.Drawing.Size(107, 32);
             this.labelStudio.TabIndex = 17;
             this.labelStudio.Text = "STUDIO";
             this.labelStudio.Click += new System.EventHandler(this.label7_Click);
@@ -687,7 +691,7 @@
             this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelGenre.Location = new System.Drawing.Point(19, 11);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(103, 33);
+            this.labelGenre.Size = new System.Drawing.Size(98, 32);
             this.labelGenre.TabIndex = 17;
             this.labelGenre.Text = "GENRE";
             this.labelGenre.Click += new System.EventHandler(this.label22_Click);
@@ -743,7 +747,7 @@
             this.labelKelompok.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelKelompok.Location = new System.Drawing.Point(19, 11);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(162, 33);
+            this.labelKelompok.Size = new System.Drawing.Size(154, 32);
             this.labelKelompok.TabIndex = 17;
             this.labelKelompok.Text = "KELOMPOK";
             this.labelKelompok.Click += new System.EventHandler(this.label18_Click);
@@ -771,7 +775,7 @@
             this.labelCinema.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelCinema.Location = new System.Drawing.Point(19, 11);
             this.labelCinema.Name = "labelCinema";
-            this.labelCinema.Size = new System.Drawing.Size(117, 33);
+            this.labelCinema.Size = new System.Drawing.Size(113, 32);
             this.labelCinema.TabIndex = 17;
             this.labelCinema.Text = "CINEMA";
             this.labelCinema.Click += new System.EventHandler(this.label16_Click);
@@ -799,7 +803,7 @@
             this.labelPegawai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelPegawai.Location = new System.Drawing.Point(19, 11);
             this.labelPegawai.Name = "labelPegawai";
-            this.labelPegawai.Size = new System.Drawing.Size(138, 33);
+            this.labelPegawai.Size = new System.Drawing.Size(133, 32);
             this.labelPegawai.TabIndex = 17;
             this.labelPegawai.Text = "PEGAWAI";
             this.labelPegawai.Click += new System.EventHandler(this.label20_Click);
@@ -816,6 +820,29 @@
             this.labelProfile.Size = new System.Drawing.Size(116, 38);
             this.labelProfile.TabIndex = 17;
             this.labelProfile.Text = "Profile";
+            // 
+            // panelMakanan
+            // 
+            this.panelMakanan.BackColor = System.Drawing.Color.Transparent;
+            this.panelMakanan.Controls.Add(this.labelMakanan);
+            this.panelMakanan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMakanan.Location = new System.Drawing.Point(-2, 503);
+            this.panelMakanan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMakanan.Name = "panelMakanan";
+            this.panelMakanan.Size = new System.Drawing.Size(523, 100);
+            this.panelMakanan.TabIndex = 23;
+            // 
+            // labelMakanan
+            // 
+            this.labelMakanan.AutoSize = true;
+            this.labelMakanan.BackColor = System.Drawing.Color.Transparent;
+            this.labelMakanan.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMakanan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelMakanan.Location = new System.Drawing.Point(35, 27);
+            this.labelMakanan.Name = "labelMakanan";
+            this.labelMakanan.Size = new System.Drawing.Size(291, 46);
+            this.labelMakanan.TabIndex = 20;
+            this.labelMakanan.Text = "BELI MAKANAN";
             // 
             // FormUtama
             // 
@@ -882,6 +909,8 @@
             this.panelMasterCinema.PerformLayout();
             this.panelMasterPegawai.ResumeLayout(false);
             this.panelMasterPegawai.PerformLayout();
+            this.panelMakanan.ResumeLayout(false);
+            this.panelMakanan.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -940,5 +969,7 @@
         private System.Windows.Forms.Panel panelLaporan;
         private System.Windows.Forms.Label labelLaporan;
         private System.Windows.Forms.Label labelNama;
+        private System.Windows.Forms.Panel panelMakanan;
+        private System.Windows.Forms.Label labelMakanan;
     }
 }

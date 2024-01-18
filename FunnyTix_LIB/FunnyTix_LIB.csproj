@@ -68,6 +68,7 @@
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />
     <Compile Include="Laporan.cs" />
+    <Compile Include="Makanan.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="PrintTiket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
