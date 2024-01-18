@@ -25,6 +25,7 @@ namespace Celikoor_FunnyTix
         {
             try
             {
+                buttonPrintNota.Visible = false;
                 listInvoice = Invoice.BacaData();
                 InputDataGrid();
                 FormatHeaderDataGrid();
@@ -144,22 +145,33 @@ namespace Celikoor_FunnyTix
                     comboBoxStatus.Text = status;
                     panelValidasiInvoice.Visible = true;
                 }
+                if(status=="TERBAYAR")
+                {
+                    buttonPrintNota.Visible = true;
+                    listTiket = PrintInvoice.Print(kode);
+                }
+                else
+                {
+                    buttonPrintNota.Visible = false;
+                    listTiket.Clear();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
             }
         }
+        List<PrintInvoice> listTiket = new List<PrintInvoice>();
+        private void buttonPrintNota_Click(object sender, EventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            PrintInvoice.CetakInvoice(kode, listTiket);
+            MessageBox.Show("Nota berhasil diprint!");
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
-
-        private void panelValidasiInvoice_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();

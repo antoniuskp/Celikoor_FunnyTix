@@ -70,6 +70,7 @@
     <Compile Include="Laporan.cs" />
     <Compile Include="Makanan.cs" />
     <Compile Include="Pegawai.cs" />
+    <Compile Include="PrintInvoice.cs" />
     <Compile Include="PrintTiket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
