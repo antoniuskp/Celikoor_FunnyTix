@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,9 @@ namespace FunnyTix_LIB
     public class Makanan
     {
         #region DATA MEMBER
-
+        public int Id { get; set; }
+        public string Nama { get; set; }
+        public string Deskripsi { get; set; }
         #endregion
 
 
@@ -21,10 +24,76 @@ namespace FunnyTix_LIB
         #region CONSTRUCTOR
 
         #endregion
+        public Makanan()
+        {
+            Id = 0;
+            Nama = "";
+            Deskripsi = "";
+        }
 
+        #region METHODS
+        public static List<Makanan> BacaData(string filter="", string val="")
+        {
+            string cmd = (filter == "") ? "SELECT * FROM makanans;" : $"SELECT * makanans WHERE {filter} LIKE '%{val}%'";
 
-        #region METHOD
+            var res = Koneksi.JalankanPerintahSelect(cmd);
 
+            List<Makanan> lst = new List<Makanan>();
+
+            while (res.Read())
+            {
+                Makanan makan = new Makanan();
+                makan.Id = res.GetInt32(0);
+                makan.Nama = res.GetValue(1).ToString();
+                makan.Deskripsi = res.GetValue(2).ToString();
+
+                lst.Add(makan);
+            }
+
+            return lst;
+        }
+
+        public static Makanan CariMakanan(int id)
+        {
+            string cmd = $"SELECT * FROM makanans WHERE id = '{id}'";
+
+            var res = Koneksi.JalankanPerintahSelect(cmd);
+
+            if (res.Read())
+            {
+                Makanan makanan = new Makanan();
+                makanan.Id = res.GetInt32(0);
+                makanan.Nama = res.GetValue(1).ToString();
+                makanan.Deskripsi = res.GetValue(2).ToString();
+
+                return makanan;
+            }
+
+            return null;
+        }
+
+        public static List<Cinema> BacaCinemaMakanan()
+        {
+            string cmd = $"SELECT c.* FROM cinemas as c WHERE c.id IN (SELECT distinct mc.cinemas_id FROM makanans_cinemas as mc);";
+
+            var res = Koneksi.JalankanPerintahSelect(cmd);
+
+            var listCinema = new List<Cinema>();
+
+            while (res.Read() == true)
+            {
+                Cinema c = new Cinema(
+                    res.GetValue(1).ToString(),
+                    res.GetValue(2).ToString(),
+                    DateTime.Parse(res.GetValue(3).ToString()),
+                    res.GetValue(4).ToString()
+                    );
+                c.ID = int.Parse(res.GetValue(0).ToString());
+
+                listCinema.Add(c);
+            }
+            return listCinema;
+        }
         #endregion
     }
 }

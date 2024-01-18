@@ -505,6 +505,13 @@ namespace Celikoor_FunnyTix
             frm.formUtama = this;
             frm.ShowDialog();
         }
+        private void panelMakanan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMakanan());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+
 
         private void panelMasterFilm_Click(object sender, EventArgs e)
         {
@@ -740,6 +747,16 @@ namespace Celikoor_FunnyTix
         private void panelMasterAktor_MouseLeave(object sender, EventArgs e)
         {
             panelMasterAktor.BackColor = Color.Transparent;
+        }
+
+        private void panelMakanan_MouseHover(object sender, EventArgs e)
+        {
+            panelMakanan.BackColor = Color.LightSalmon;
+        }
+
+        private void panelMakanan_MouseLeave(object sender, EventArgs e)
+        {
+            panelMakanan.BackColor = Color.Transparent;
         }
     }
 }

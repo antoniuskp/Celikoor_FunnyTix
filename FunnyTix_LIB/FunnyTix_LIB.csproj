@@ -69,6 +69,7 @@
     <Compile Include="Konsumen.cs" />
     <Compile Include="Laporan.cs" />
     <Compile Include="Makanan.cs" />
+    <Compile Include="MakananCinemas.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="PrintInvoice.cs" />
     <Compile Include="PrintTiket.cs" />
