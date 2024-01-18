@@ -210,6 +210,12 @@
     <Compile Include="FormValidasiInvoice.Designer.cs">
       <DependentUpon>FormValidasiInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormValidasiMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormValidasiMenu.Designer.cs">
+      <DependentUpon>FormValidasiMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDataTransaksi.resx">
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormValidasiInvoice.resx">
       <DependentUpon>FormValidasiInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormValidasiMenu.resx">
+      <DependentUpon>FormValidasiMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

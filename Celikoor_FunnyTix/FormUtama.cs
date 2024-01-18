@@ -238,6 +238,13 @@ namespace Celikoor_FunnyTix
                 visiblePanelList = false;
             }
         }
+
+        private void panelMasterFilm_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterFilm());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
         #endregion
         //List SubPanel Master
         #region Konsumen
@@ -410,6 +417,15 @@ namespace Celikoor_FunnyTix
         {
             form.OpenChild(new FormValidasiInvoice());
         }
+        private void panelValidasiMakanan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormValidasiMenu());
+        }
+        private void labelInvoiceMenu_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormValidasiMenu());
+        }
+
         #endregion
 
         #region Panel Pegawai Operator
@@ -468,6 +484,16 @@ namespace Celikoor_FunnyTix
 
         }
 
+        private void panelIsiSaldo_Click(object sender, EventArgs e)
+        {
+            var frm = new FormIsiSaldo();
+            frm.formUtama = this;
+            frm.ShowDialog();
+        }
+        private void panelMakanan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMakanan());
+        }
 
         #endregion
 
@@ -497,28 +523,6 @@ namespace Celikoor_FunnyTix
             FormUtama_Load(this, e);
         }
         #endregion
-
-
-        private void panelIsiSaldo_Click(object sender, EventArgs e)
-        {
-            var frm = new FormIsiSaldo();
-            frm.formUtama = this;
-            frm.ShowDialog();
-        }
-        private void panelMakanan_Click(object sender, EventArgs e)
-        {
-            form.OpenChild(new FormMakanan());
-            form.panelListMaster.Visible = false;
-            visiblePanelList = false;
-        }
-
-
-        private void panelMasterFilm_Click(object sender, EventArgs e)
-        {
-            form.OpenChild(new FormMasterFilm());
-            form.panelListMaster.Visible = false;
-            visiblePanelList = false;
-        }
 
         private void panelMasterKonsumen_MouseHover(object sender, EventArgs e)
         {
@@ -758,5 +762,17 @@ namespace Celikoor_FunnyTix
         {
             panelMakanan.BackColor = Color.Transparent;
         }
+
+        private void panelValidasiMakanan_MouseHover(object sender, EventArgs e)
+        {
+            panelValidasiMakanan.BackColor = Color.LightSalmon;
+        }
+
+        private void panelValidasiMakanan_DoubleClick(object sender, EventArgs e)
+        {
+            panelValidasiMakanan.BackColor = Color.Transparent;
+        }
+
+        
     }
 }
