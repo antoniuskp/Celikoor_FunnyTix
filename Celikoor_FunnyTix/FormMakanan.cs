@@ -60,6 +60,8 @@ namespace Celikoor_FunnyTix
                 if (e.ColumnIndex == dataGridViewHasil.Columns["tambah_column"].Index)
                 {
                     panelRincian.Visible = true;
+                    buttonUbah.Visible = false;
+                    buttonTambahh.Visible = true;
                     labelHarga.Text = harga.ToString();
                     textBoxNamaMakanan.Text = nama;
                 }
@@ -86,6 +88,8 @@ namespace Celikoor_FunnyTix
                         if (namaCell != null && namaCell.Value.ToString() == nama) 
                         {
                             panelRincian.Visible = true;
+                            buttonUbah.Visible = true;
+                            buttonTambahh.Visible = false;
                             textBoxNamaMakanan.Text = nama;
                             labelHarga.Text = hargaCell.Value.ToString();
                             numericUpDownJumlah.Value = (int)(total / double.Parse(hargaCell.Value.ToString()));
@@ -141,6 +145,43 @@ namespace Celikoor_FunnyTix
             }
         }
 
+        private void buttonUbah_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nama = textBoxNamaMakanan.Text;
+                int jumlah = (int)numericUpDownJumlah.Value;
+                double harga = double.Parse(labelHarga.Text);
 
+                if (jumlah < 1)
+                {
+                    MessageBox.Show("Jumlah Harus lebih dari 1");
+                }
+                else
+                {
+                    bool isExist = false;
+                    foreach (DataGridViewRow row in dataGridViewKeranjang.Rows)
+                    {
+                        DataGridViewCell cell = row.Cells["nama_keranjang_column"];
+                        if (cell != null && cell.Value != null && cell.Value.ToString() == nama)
+                        {
+                            row.Cells["total_column"].Value = jumlah * harga;
+                            isExist = true;
+                            break;
+                        }
+                    }
+
+                    if (!isExist)
+                    {
+                        dataGridViewKeranjang.Rows.Add(nama, jumlah * harga, "Ubah", "Hapus");
+                    }
+                    panelRincian.Visible = false;
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
     }
 }
