@@ -100,11 +100,11 @@ namespace Celikoor_FunnyTix
             switch (comboBox.Text)
             {
                 case "Nama":
-                    listMakanan = Makanan.SearchMakanan("Nama", textBox.Text);
+                    listMakanan = Makanan.BacaData("Nama", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
                 case "Deskripsi":
-                    listMakanan = Makanan.SearchMakanan("Deskripsi", textBox.Text);
+                    listMakanan = Makanan.BacaData("Deskripsi", textBox.Text);
                     dataGridViewHasil.Refresh();
                     break;
             }

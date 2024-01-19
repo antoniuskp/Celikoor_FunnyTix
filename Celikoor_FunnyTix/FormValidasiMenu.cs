@@ -14,6 +14,7 @@ namespace Celikoor_FunnyTix
     public partial class FormValidasiMenu : Form
     {
         List<InvoiceMenu> listInvoiceMenu;
+        private string status = "";
 
         public FormValidasiMenu()
         {
@@ -49,7 +50,7 @@ namespace Celikoor_FunnyTix
                 string status = In.Status.ToString();
                 string validasi = "Validasi";
 
-                dataGridViewHasil.Rows.Add(id, tgl, grand_total, konsumen, kasir, status, validasi);
+                dataGridViewHasil.Rows.Add(id, tgl, grand_total, konsumen, kasir, status, validasi, "Print");
             }
             comboBox.SelectedIndex = 0;
         }
@@ -66,6 +67,40 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+        }
+        int index;
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = dataGridViewHasil.CurrentRow.Index;
+            string idNota = dataGridViewHasil.Rows[index].Cells["id_column"].Value.ToString();
+            if (e.ColumnIndex == dataGridViewHasil.Columns["print_column"].Index)
+            {
+                string status = dataGridViewHasil.Rows[index].Cells["status_column"].Value.ToString();
+                if (status == "TERBAYAR")
+                {
+                    InvoiceMenu nota = InvoiceMenu.CariInvoice("id", idNota);
+                    InvoiceMenu.CetakNota(nota);
+                }
+                else if (status == "VALIDASI" || status == "PENDING")
+                {
+
+                    MessageBox.Show($"Maaf, Nota anda masih dalam status {status}");
+                }
+            }
+            else if(e.ColumnIndex == dataGridViewHasil.Columns["validasi_column"].Index)
+            {
+                labelId.Text = idNota;
+                panelValidasiInvoice.Visible = true;
+
+            }
+        }
+
+        
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            status = comboBoxStatus.Text;
+            dataGridViewHasil.Rows[index].Cells["status_column"].Value = status;
+            panelValidasiInvoice.Visible = false;
         }
     }
 }

@@ -56,7 +56,7 @@ namespace FunnyTix_LIB
 
         public static List<Makanan> SearchMakanan(string filter = "", string value = "")
         {
-            string query = $"SELECT * FROM makanans where {filter} like '%{value}%';";
+            string query = $"SELECT * FROM makanans where {filter} = '{value}';";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<Makanan> listMakanan = new List<Makanan>();
 

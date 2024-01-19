@@ -56,6 +56,7 @@
     <Compile Include="Cinema.cs" />
     <Compile Include="CredentialsTiket.cs" />
     <Compile Include="CustomPrint.cs" />
+    <Compile Include="DetailPesanan.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmStudio.cs" />
     <Compile Include="Genre.cs" />
