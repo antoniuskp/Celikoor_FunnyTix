@@ -96,6 +96,12 @@
     <Compile Include="FormMasterJenisStudio.Designer.cs">
       <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterMakanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterMakanan.Designer.cs">
+      <DependentUpon>FormMasterMakanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMasterStudio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterJenisStudio.resx">
       <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterMakanan.resx">
+      <DependentUpon>FormMasterMakanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterStudio.resx">
       <DependentUpon>FormMasterStudio.cs</DependentUpon>

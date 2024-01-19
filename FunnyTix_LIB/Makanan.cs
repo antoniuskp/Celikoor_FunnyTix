@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -53,6 +54,24 @@ namespace FunnyTix_LIB
             return lst;
         }
 
+        public static List<Makanan> SearchMakanan(string filter = "", string value = "")
+        {
+            string query = $"SELECT * FROM makanans where {filter} like '%{value}%';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<Makanan> listMakanan = new List<Makanan>();
+
+            while (hasil.Read() == true)
+            {
+                Makanan mk = new Makanan();
+                mk.Nama = hasil.GetValue(1).ToString();
+                mk.Deskripsi = hasil.GetValue(2).ToString();
+                mk.Id = int.Parse(hasil.GetValue(0).ToString());
+
+                listMakanan.Add(mk);
+            }
+            return listMakanan;
+
+        }
         public static Makanan CariMakanan(int id)
         {
             string cmd = $"SELECT * FROM makanans WHERE id = '{id}'";
@@ -93,6 +112,20 @@ namespace FunnyTix_LIB
                 listCinema.Add(c);
             }
             return listCinema;
+        }
+        public static void TambahData(Makanan mk)
+        {
+            string cmd = $"INSERT INTO makanans (nama, deskripsi) values ('{mk.Nama}', '{mk.Deskripsi}');";
+
+            Koneksi.JalankanPerintahNonQuery(cmd);
+        }
+        public static void HapusData(string kodeHapus)
+        {
+            string cmd = $"DELETE FROM makanans_cinemas WHERE makanans_id= '{kodeHapus}';";
+            Koneksi.JalankanPerintahNonQuery(cmd);
+
+            cmd = $"DELETE FROM makanans WHERE id= '{kodeHapus}';";
+            Koneksi.JalankanPerintahNonQuery(cmd);
         }
         #endregion
     }

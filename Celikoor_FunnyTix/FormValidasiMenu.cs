@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FunnyTix_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,59 @@ namespace Celikoor_FunnyTix
 {
     public partial class FormValidasiMenu : Form
     {
+        List<InvoiceMenu> listInvoiceMenu;
+
         public FormValidasiMenu()
         {
             InitializeComponent();
+        }
+
+        private void FormValidasiMenu_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                listInvoiceMenu = InvoiceMenu.BacaData();
+                InputDataGrid();
+                FormatHeaderDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void InputDataGrid()
+        {
+            dataGridViewHasil.Rows.Clear();
+
+
+            foreach (InvoiceMenu In in listInvoiceMenu)
+            {
+                string id = In.Id.ToString();
+                string tgl = In.Tanggal.ToString("yyyy-MM-dd");
+                string grand_total = In.Grand_total.ToString();
+                string konsumen = In.Konsumen.ToString();
+                string kasir = In.Kasir.ToString();
+                string status = In.Status.ToString();
+                string validasi = "Validasi";
+
+                dataGridViewHasil.Rows.Add(id, tgl, grand_total, konsumen, kasir, status, validasi);
+            }
+            comboBox.SelectedIndex = 0;
+        }
+        private void FormatHeaderDataGrid()
+        {
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewHasil.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewHasil.EnableHeadersVisualStyles = false;
+
+            dataGridViewHasil.AllowUserToAddRows = false;
+            dataGridViewHasil.ReadOnly = true;
+            dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
     }
 }

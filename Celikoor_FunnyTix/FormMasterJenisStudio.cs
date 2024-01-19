@@ -122,6 +122,7 @@ namespace Celikoor_FunnyTix
                     JenisStudio jn = new JenisStudio(nama, deskripsi);
                     JenisStudio.TambahData(jn);
                     MessageBox.Show("Penambahan Data Berhasil!", "SUCCESS ☑️");
+
                     textBoxNama.Clear();
                     richTextBox1.Text = "";
 

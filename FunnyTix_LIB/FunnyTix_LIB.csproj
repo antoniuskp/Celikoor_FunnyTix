@@ -62,6 +62,7 @@
     <Compile Include="GenreFilm.cs" />
     <Compile Include="History.cs" />
     <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceMenu.cs" />
     <Compile Include="JadwalFilm.cs" />
     <Compile Include="JenisStudio.cs" />
     <Compile Include="Kelompok.cs" />

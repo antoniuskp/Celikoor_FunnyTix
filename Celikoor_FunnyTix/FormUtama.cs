@@ -376,6 +376,20 @@ namespace Celikoor_FunnyTix
         }
         #endregion
         #endregion
+        #region MAKANAN
+        private void panelMasterMakanan_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterMakanan());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            form.OpenChild(new FormMasterMakanan());
+            form.panelListMaster.Visible = false;
+            visiblePanelList = false;
+        }
+        #endregion
         //
 
         #region Penjadwalan
@@ -773,6 +787,16 @@ namespace Celikoor_FunnyTix
             panelValidasiMakanan.BackColor = Color.Transparent;
         }
 
-        
+        private void panelMasterMakanan_MouseHover(object sender, EventArgs e)
+        {
+            panelMasterMakanan.BackColor = Color.LightSalmon;
+
+        }
+
+        private void panelMasterMakanan_MouseLeave(object sender, EventArgs e)
+        {
+            panelMasterMakanan.BackColor = Color.Transparent;
+
+        }
     }
 }

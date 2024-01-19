@@ -48,12 +48,6 @@ namespace Celikoor_FunnyTix
             this.label5 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonCari = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
-            this.comboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.id_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tgl_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grand_total_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +55,12 @@ namespace Celikoor_FunnyTix
             this.kasir_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.validasi_column = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonCari = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelValidasiInvoice.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
@@ -113,7 +113,7 @@ namespace Celikoor_FunnyTix
             this.labelId.Location = new System.Drawing.Point(165, 39);
             this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(200, 26);
+            this.labelId.Size = new System.Drawing.Size(191, 25);
             this.labelId.TabIndex = 16;
             this.labelId.Text = "ID Invoice Makanan";
             // 
@@ -138,7 +138,7 @@ namespace Celikoor_FunnyTix
             this.label6.Location = new System.Drawing.Point(75, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 26);
+            this.label6.Size = new System.Drawing.Size(78, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "Status :";
             // 
@@ -150,7 +150,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(109, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 26);
+            this.label3.Size = new System.Drawing.Size(41, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID :";
             // 
@@ -225,76 +225,6 @@ namespace Celikoor_FunnyTix
             this.dataGridViewHasil.RowTemplate.Height = 24;
             this.dataGridViewHasil.Size = new System.Drawing.Size(1488, 743);
             this.dataGridViewHasil.TabIndex = 25;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panel1.Controls.Add(this.buttonCari);
-            this.panel1.Controls.Add(this.textBox);
-            this.panel1.Controls.Add(this.comboBox);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(14, 95);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1488, 86);
-            this.panel1.TabIndex = 24;
-            // 
-            // buttonCari
-            // 
-            this.buttonCari.BackColor = System.Drawing.Color.Maroon;
-            this.buttonCari.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
-            this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(1296, 22);
-            this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(170, 51);
-            this.buttonCari.TabIndex = 3;
-            this.buttonCari.Text = "Cari";
-            this.buttonCari.UseVisualStyleBackColor = false;
-            // 
-            // textBox
-            // 
-            this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(611, 29);
-            this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(667, 36);
-            this.textBox.TabIndex = 2;
-            // 
-            // comboBox
-            // 
-            this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Items.AddRange(new object[] {
-            "Tanggal",
-            "Status"});
-            this.comboBox.Location = new System.Drawing.Point(321, 25);
-            this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(269, 40);
-            this.comboBox.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(27, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 39);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Cari Berdasarkan : ";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(14, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1488, 65);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "VALIDASI MENU";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // id_column
             // 
@@ -376,6 +306,76 @@ namespace Celikoor_FunnyTix
             this.validasi_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.validasi_column.Width = 125;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.Controls.Add(this.buttonCari);
+            this.panel1.Controls.Add(this.textBox);
+            this.panel1.Controls.Add(this.comboBox);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(14, 95);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1488, 86);
+            this.panel1.TabIndex = 24;
+            // 
+            // buttonCari
+            // 
+            this.buttonCari.BackColor = System.Drawing.Color.Maroon;
+            this.buttonCari.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.buttonCari.ForeColor = System.Drawing.Color.White;
+            this.buttonCari.Location = new System.Drawing.Point(1296, 22);
+            this.buttonCari.Name = "buttonCari";
+            this.buttonCari.Size = new System.Drawing.Size(170, 51);
+            this.buttonCari.TabIndex = 3;
+            this.buttonCari.Text = "Cari";
+            this.buttonCari.UseVisualStyleBackColor = false;
+            // 
+            // textBox
+            // 
+            this.textBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Location = new System.Drawing.Point(611, 29);
+            this.textBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(667, 36);
+            this.textBox.TabIndex = 2;
+            // 
+            // comboBox
+            // 
+            this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Items.AddRange(new object[] {
+            "Tanggal",
+            "Status"});
+            this.comboBox.Location = new System.Drawing.Point(321, 25);
+            this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(269, 40);
+            this.comboBox.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(27, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(291, 39);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Cari Berdasarkan : ";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(14, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1488, 65);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "VALIDASI MENU";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormValidasiMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,6 +390,7 @@ namespace Celikoor_FunnyTix
             this.Controls.Add(this.label1);
             this.Name = "FormValidasiMenu";
             this.Text = "FormValidasiMenu";
+            this.Load += new System.EventHandler(this.FormValidasiMenu_Load);
             this.panelValidasiInvoice.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
