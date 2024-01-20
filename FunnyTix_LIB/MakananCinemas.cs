@@ -40,5 +40,24 @@ namespace FunnyTix_LIB
 
             return lst;
         }
+        public static List<MakananCinemas> SearchData(string filter = "", string value = "", string filter2 = "", string value2 = "")
+        {
+            string cmd = $"SELECT * FROM makanans_cinemas WHERE '{filter}' LIKE '%{value}%' AND '{filter2}' LIKE '%{value2}%'";
+            var res = Koneksi.JalankanPerintahSelect(cmd);
+
+            var lst = new List<MakananCinemas>();
+
+            while (res.Read())
+            {
+                MakananCinemas mc = new MakananCinemas();
+                mc.Cinema = Cinema.BacaData("id", res.GetValue(0).ToString())[0];
+                mc.Makanan_ = Makanan.CariMakanan(res.GetInt32(1));
+                mc.Harga = res.GetDouble(2);
+
+                lst.Add(mc);
+            }
+
+            return lst;
+        }
     }
 }

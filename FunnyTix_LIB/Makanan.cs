@@ -35,7 +35,7 @@ namespace FunnyTix_LIB
         #region METHODS
         public static List<Makanan> BacaData(string filter="", string val="")
         {
-            string cmd = (filter == "") ? "SELECT * FROM makanans;" : $"SELECT * makanans WHERE {filter} LIKE '%{val}%'";
+            string cmd = (filter == "") ? "SELECT * FROM makanans;" : $"SELECT * FROM makanans WHERE {filter} LIKE '%{val}%'";
 
             var res = Koneksi.JalankanPerintahSelect(cmd);
 

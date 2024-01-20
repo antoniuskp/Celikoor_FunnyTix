@@ -29,13 +29,13 @@ namespace Celikoor_FunnyTix
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonPrintNota = new System.Windows.Forms.Button();
             this.panelValidasiInvoice = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -114,7 +114,7 @@ namespace Celikoor_FunnyTix
             this.labelId.Location = new System.Drawing.Point(165, 39);
             this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(200, 26);
+            this.labelId.Size = new System.Drawing.Size(191, 25);
             this.labelId.TabIndex = 16;
             this.labelId.Text = "ID Invoice Makanan";
             // 
@@ -123,7 +123,7 @@ namespace Celikoor_FunnyTix
             this.comboBoxStatus.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStatus.FormattingEnabled = true;
             this.comboBoxStatus.Items.AddRange(new object[] {
-            "PENDING",
+            "TERBAYAR",
             "TERAMBIL"});
             this.comboBoxStatus.Location = new System.Drawing.Point(170, 85);
             this.comboBoxStatus.Name = "comboBoxStatus";
@@ -138,7 +138,7 @@ namespace Celikoor_FunnyTix
             this.label6.Location = new System.Drawing.Point(75, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 26);
+            this.label6.Size = new System.Drawing.Size(78, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "Status :";
             // 
@@ -150,7 +150,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(109, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 26);
+            this.label3.Size = new System.Drawing.Size(41, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID :";
             // 
@@ -232,10 +232,10 @@ namespace Celikoor_FunnyTix
             // 
             // id_column
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.DarkRed;
-            this.id_column.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkRed;
+            this.id_column.DefaultCellStyle = dataGridViewCellStyle1;
             this.id_column.HeaderText = "ID";
             this.id_column.MinimumWidth = 6;
             this.id_column.Name = "id_column";
@@ -243,10 +243,10 @@ namespace Celikoor_FunnyTix
             // 
             // tgl_column
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.DarkRed;
-            this.tgl_column.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkRed;
+            this.tgl_column.DefaultCellStyle = dataGridViewCellStyle2;
             this.tgl_column.HeaderText = "Tanggal";
             this.tgl_column.MinimumWidth = 6;
             this.tgl_column.Name = "tgl_column";
@@ -254,10 +254,10 @@ namespace Celikoor_FunnyTix
             // 
             // grand_total_column
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.DarkRed;
-            this.grand_total_column.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkRed;
+            this.grand_total_column.DefaultCellStyle = dataGridViewCellStyle3;
             this.grand_total_column.HeaderText = "Grand Total";
             this.grand_total_column.MinimumWidth = 6;
             this.grand_total_column.Name = "grand_total_column";
@@ -265,10 +265,10 @@ namespace Celikoor_FunnyTix
             // 
             // konsumen_column
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.DarkRed;
-            this.konsumen_column.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DarkRed;
+            this.konsumen_column.DefaultCellStyle = dataGridViewCellStyle4;
             this.konsumen_column.HeaderText = "Konsumen";
             this.konsumen_column.MinimumWidth = 6;
             this.konsumen_column.Name = "konsumen_column";
@@ -276,10 +276,10 @@ namespace Celikoor_FunnyTix
             // 
             // kasir_column
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.DarkRed;
-            this.kasir_column.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkRed;
+            this.kasir_column.DefaultCellStyle = dataGridViewCellStyle5;
             this.kasir_column.HeaderText = "Kasir";
             this.kasir_column.MinimumWidth = 6;
             this.kasir_column.Name = "kasir_column";
@@ -287,10 +287,10 @@ namespace Celikoor_FunnyTix
             // 
             // status_column
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.DarkRed;
-            this.status_column.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkRed;
+            this.status_column.DefaultCellStyle = dataGridViewCellStyle6;
             this.status_column.HeaderText = "Status";
             this.status_column.MinimumWidth = 6;
             this.status_column.Name = "status_column";
@@ -298,11 +298,11 @@ namespace Celikoor_FunnyTix
             // 
             // validasi_column
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DarkRed;
-            this.validasi_column.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DarkRed;
+            this.validasi_column.DefaultCellStyle = dataGridViewCellStyle7;
             this.validasi_column.HeaderText = "Aksi";
             this.validasi_column.MinimumWidth = 6;
             this.validasi_column.Name = "validasi_column";

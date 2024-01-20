@@ -9,12 +9,15 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Celikoor_FunnyTix
 {
     public partial class FormMakanan : Form
     {
+        public FormUtama frmUtama;
         private Cinema selectedCinema;
+        private List<MakananCinemas> lstMakananCin;
         public FormMakanan()
         {
             InitializeComponent();
@@ -24,6 +27,7 @@ namespace Celikoor_FunnyTix
         {
             try
             {
+                frmUtama = (FormUtama)this.Owner;
                 comboBoxCinema.DataSource = Makanan.BacaCinemaMakanan();
                 comboBoxCinema.DisplayMember = "NamaCabang";
                 labelSaldo.Text = Auth.GetKonsumen().Saldo.ToString();
@@ -39,10 +43,10 @@ namespace Celikoor_FunnyTix
             try
             {
                 selectedCinema = comboBoxCinema.SelectedItem as Cinema;
-                List<MakananCinemas> lst = MakananCinemas.BacaData(selectedCinema);
+                lstMakananCin = MakananCinemas.BacaData(selectedCinema);
                 dataGridViewHasil.Rows.Clear();
 
-                foreach (MakananCinemas mc in lst)
+                foreach (MakananCinemas mc in lstMakananCin)
                 {
                     dataGridViewHasil.Rows.Add(mc.Makanan_.Nama, mc.Makanan_.Deskripsi, mc.Harga, "Tambah");
                 }
@@ -217,36 +221,58 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                DialogResult respond = MessageBox.Show("Apakah yakin untuk menambahkan data?", "CONFIRMATION", MessageBoxButtons.YesNo);
-                if(respond == DialogResult.Yes)
+                int saldo = int.Parse(labelSaldo.Text);
+                int totalAkhir = int.Parse(labelTotalAkhir.Text);   
+                if(saldo > totalAkhir)
                 {
-                    string NoNota = InvoiceMenu.GenerateNota();
-                    //Buat nota makanan
-                    InvoiceMenu im = new InvoiceMenu();
-                    im.Tanggal = DateTime.Now;
-                    im.Grand_total = double.Parse(labelTotalAkhir.Text);
-                    im.Konsumen = Auth.GetKonsumen();
-                    im.Id = int.Parse(NoNota);
-                    //Masukin detail ke db
-                    for (int i = 0; i < dataGridViewKeranjang.Rows.Count; i++)
+                    DialogResult respond = MessageBox.Show("Apakah yakin untuk membeli menu di keranjang?", "CONFIRMATION", MessageBoxButtons.YesNo);
+                    if (respond == DialogResult.Yes)
                     {
-                        string nama = dataGridViewKeranjang.Rows[i].Cells["nama_keranjang_column"].Value.ToString();
-                        int jumlah = int.Parse(dataGridViewKeranjang.Rows[i].Cells["column_jumlah"].Value.ToString());
-                        double harga = double.Parse(dataGridViewKeranjang.Rows[i].Cells["column_harga"].Value.ToString());
-                        List<Makanan> food = Makanan.SearchMakanan("nama", nama);
-                        if (food != null)
+                        string NoNota = InvoiceMenu.GenerateNota();
+                        //Buat nota makanan
+                        InvoiceMenu im = new InvoiceMenu();
+                        im.Tanggal = DateTime.Now;
+                        im.Grand_total = double.Parse(labelTotalAkhir.Text);
+                        im.Konsumen = Auth.GetKonsumen();
+                        im.Id = int.Parse(NoNota);
+
+                        //Masukin detail ke db
+                        for (int i = 0; i < dataGridViewKeranjang.Rows.Count; i++)
                         {
-                            MakananCinemas mc = new MakananCinemas();
-                            mc.Harga = harga;
-                            mc.Cinema = selectedCinema;
-                            mc.Makanan_ = food[0];
-                            im.TambahDetail(jumlah, mc);
+                            string nama = dataGridViewKeranjang.Rows[i].Cells["nama_keranjang_column"].Value.ToString();
+                            int jumlah = int.Parse(dataGridViewKeranjang.Rows[i].Cells["column_jumlah"].Value.ToString());
+                            double harga = double.Parse(dataGridViewKeranjang.Rows[i].Cells["column_harga"].Value.ToString());
+                            List<Makanan> food = Makanan.SearchMakanan("nama", nama);
+                            if (food != null)
+                            {
+                                MakananCinemas mc = new 
+                                    MakananCinemas();
+                                mc.Harga = harga;
+                                mc.Cinema = selectedCinema;
+                                mc.Makanan_ = food[0];
+                                im.TambahDetail(jumlah, mc);
+                            }
                         }
+
+                        //mengurangi saldo 
+                        double totalYgDIbayar = double.Parse(labelTotalAkhir.Text);
+                        Konsumen.UbahSaldo(Auth.GetKonsumen(), -(int)totalYgDIbayar);
+
+                        frmUtama.UpdateSaldo();
+
+                        InvoiceMenu.TambahData(im);
+                        MessageBox.Show("Pembayaran Berhasil!", "SUCCESS ☑️");
+                        FormMakanan_Load(this, e);
+
+                        dataGridViewKeranjang.Rows.Clear();
+
                     }
-                    InvoiceMenu.TambahData(im);
-                    MessageBox.Show("Penambahan Data berhasil!");
-                    dataGridViewKeranjang.Rows.Clear();
                 }
+                else
+                {
+                    MessageBox.Show("Saldo Anda tidak mencukupi", "WARNING ⚠️");
+                }
+
             }
             catch(Exception ex)
             {
@@ -254,6 +280,37 @@ namespace Celikoor_FunnyTix
             }
             
             
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            switch (comboBox.Text)
+            {
+                case "Nama":
+                    lstMakananCin = MakananCinemas.SearchData("Nama", textBoxFilter.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+                case "Harga":
+                    lstMakananCin = MakananCinemas.SearchData("Harga", textBoxFilter.Text);
+                    dataGridViewHasil.Refresh();
+                    break;
+            }
+
+            if (lstMakananCin.Count > 0)
+            {
+                //InputDataGrid();
+            }
+            else
+            {
+                dataGridViewHasil.DataSource = null;
+                MessageBox.Show("Tidak ada data yang cocok.");
+                textBoxFilter.Text = "";
+                comboBox.SelectedIndex = 0;
+            }
+            for (int i = 0; i < dataGridViewHasil.Columns.Count; i++)
+            {
+                dataGridViewHasil.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
         }
     }
 }

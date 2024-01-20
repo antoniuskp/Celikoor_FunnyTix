@@ -15,6 +15,7 @@ namespace Celikoor_FunnyTix
     public partial class FormHistoryPembelian : Form
     {
         List<History> listHistory;
+        List<InvoiceMenu> listInvoiceMenu;
         public FormHistoryPembelian()
         {
             InitializeComponent();
@@ -26,14 +27,14 @@ namespace Celikoor_FunnyTix
 
             int kode = Auth.GetKonsumen().ID;
             listHistory = History.BacaHistory(kode);
-
+            listInvoiceMenu = InvoiceMenu.BacaHistory("", kode);
             InputDataGrid();
             FormatHeaderDataGrid();
         }
         private void InputDataGrid()
         {
             dataGridViewHasil.Rows.Clear();
-
+            dataGridViewMenu.Rows.Clear();
 
             foreach (History In in listHistory)
             {
@@ -46,9 +47,20 @@ namespace Celikoor_FunnyTix
                 dataGridViewHasil.Rows.Add(status, tgl, no_kursi, harga, judul, "Print");
             }
             dateTimePickerTglTransaksi.Value = DateTime.Now;
+
+            foreach (InvoiceMenu Im in listInvoiceMenu)
+            {
+                int id = int.Parse(Im.Id.ToString());
+                string tgl = Im.Tanggal.ToString("yyyy-MM-dd");
+                string status = Im.Status.ToString();
+                double grand_total = double.Parse(Im.Grand_total.ToString());
+
+                dataGridViewMenu.Rows.Add(status, tgl, grand_total, "Print");
+            }
         }
         private void FormatHeaderDataGrid()
         {
+            //tiket
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
             dataGridViewHasil.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
@@ -60,6 +72,19 @@ namespace Celikoor_FunnyTix
             dataGridViewHasil.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+
+            //menu
+            dataGridViewMenu.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewMenu.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewMenu.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewMenu.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewMenu.EnableHeadersVisualStyles = false;
+
+            dataGridViewMenu.AllowUserToAddRows = false;
+            dataGridViewMenu.ReadOnly = true;
+            dataGridViewMenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewMenu.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

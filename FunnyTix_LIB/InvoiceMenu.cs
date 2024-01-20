@@ -27,7 +27,7 @@ namespace FunnyTix_LIB
             this.Grand_total = 0;
             this.Konsumen = new Konsumen();
             this.Kasir = new Pegawai();
-            this.Status = "PENDING";
+            this.Status = "TERBAYAR";
             this.ListDetailPesanan = new List<DetailPesanan>();
             
         }
@@ -194,7 +194,44 @@ namespace FunnyTix_LIB
             }
             return listInvoiceMenu;
         }
+        public static List<InvoiceMenu> BacaHistory(string filter = "", int value = 0, Konsumen k = null)
+        {
+            string query = "SELECT * FROM invoices_makanans;";
+            if (value < 0 && k == null)
+            {
+                query = $"SELECT * FROM invoices_makanans where {filter} like '%{value}%';";
+            }
+            else if (filter == "tanggal" && value < 0 && k != null)
+            {
+                query = $"SELECT * FROM invoices_makanans WHERE tanggal LIKE '{value}%' AND konsumens_id = '{k.ID}';";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<InvoiceMenu> listInvoiceMenu = new List<InvoiceMenu>();
 
+            while (hasil.Read() == true)
+            {
+                InvoiceMenu invoice = new InvoiceMenu();
+                invoice.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                invoice.Grand_total = double.Parse(hasil.GetValue(2).ToString());
+                invoice.Konsumen = Konsumen.BacaData("Id", hasil.GetValue(3).ToString())[0];
+                invoice.Kasir = new Pegawai();
+
+                string hasilIDKasir = hasil.IsDBNull(hasil.GetOrdinal("pegawais_id")) ? null : hasil["pegawais_id"].ToString();
+                if (hasilIDKasir != null)
+                {
+                    invoice.Kasir = Pegawai.BacaData("Id", hasil.GetValue(4).ToString())[0];
+                }
+
+                invoice.Id = int.Parse(hasil.GetValue(0).ToString());
+
+                if (invoice.Kasir.Nama != "")
+                {
+                    invoice.Status = "TERAMBIL";
+                }
+                listInvoiceMenu.Add(invoice);
+            }
+            return listInvoiceMenu;
+        }
         public void TambahDetail(int jumlah, MakananCinemas mc)
         {
             DetailPesanan dp = new DetailPesanan();

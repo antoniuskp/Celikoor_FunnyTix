@@ -51,17 +51,17 @@
             // 
             this.textBoxNominal.BackColor = System.Drawing.Color.Maroon;
             this.textBoxNominal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNominal.Font = new System.Drawing.Font("Montserrat SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNominal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNominal.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBoxNominal.Location = new System.Drawing.Point(95, 232);
             this.textBoxNominal.Name = "textBoxNominal";
-            this.textBoxNominal.Size = new System.Drawing.Size(343, 29);
+            this.textBoxNominal.Size = new System.Drawing.Size(343, 27);
             this.textBoxNominal.TabIndex = 30;
             this.textBoxNominal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // comboBoxMetode
             // 
-            this.comboBoxMetode.Font = new System.Drawing.Font("Montserrat SemiBold", 10F, System.Drawing.FontStyle.Bold);
+            this.comboBoxMetode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.comboBoxMetode.ForeColor = System.Drawing.Color.Maroon;
             this.comboBoxMetode.FormattingEnabled = true;
             this.comboBoxMetode.Items.AddRange(new object[] {
@@ -70,7 +70,7 @@
             "Virtual Account"});
             this.comboBoxMetode.Location = new System.Drawing.Point(93, 354);
             this.comboBoxMetode.Name = "comboBoxMetode";
-            this.comboBoxMetode.Size = new System.Drawing.Size(343, 32);
+            this.comboBoxMetode.Size = new System.Drawing.Size(343, 28);
             this.comboBoxMetode.TabIndex = 32;
             // 
             // FormIsiSaldo
