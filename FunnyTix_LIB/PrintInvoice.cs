@@ -58,7 +58,12 @@ namespace FunnyTix_LIB
         {
             string nama = "Laporan_" + kodeInvoice;
             StreamWriter NamaFile = new StreamWriter(nama);
+            Cinema cinema = listPrint[0].Pstudio.Cinema;
 
+            NamaFile.WriteLine(cinema.NamaCabang.PadLeft(38 + Convert.ToInt32(Math.Ceiling(decimal.Parse((cinema.NamaCabang.Length / 2).ToString()))), ' '));
+            NamaFile.WriteLine(cinema.Alamat.PadLeft(38 + Convert.ToInt32(Math.Ceiling(decimal.Parse((cinema.Alamat.Length / 2).ToString()))), ' '));
+            NamaFile.WriteLine(" ");
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
             Invoice invoice = Invoice.BacaData("id", kodeInvoice)[0];
             NamaFile.WriteLine("No.Pesanan = " + invoice.Tanggal.ToString("yyyyMMdd") + kodeInvoice.PadLeft(6, '0'));
             NamaFile.WriteLine("--------------------------------------------------------------------------");
