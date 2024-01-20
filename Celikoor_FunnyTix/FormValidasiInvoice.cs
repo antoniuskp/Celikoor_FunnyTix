@@ -158,7 +158,7 @@ namespace Celikoor_FunnyTix
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hapus data gagal. Error : " + ex.Message);
+                MessageBox.Show("Perubahan data gagal. Error : " + ex.Message);
             }
         }
         List<PrintInvoice> listTiket = new List<PrintInvoice>();

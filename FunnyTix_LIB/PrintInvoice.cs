@@ -70,7 +70,7 @@ namespace FunnyTix_LIB
             NamaFile.WriteLine(invoice.Konsumen.No_Hp);
             NamaFile.WriteLine("--------------------------------------------------------------------------");
             NamaFile.WriteLine("Rincian Pemesanan");
-            NamaFile.WriteLine("Studio    |Film           |Jadwal Film         |Nomor Kursi|Harga");
+            NamaFile.WriteLine("Studio     Film            Jadwal Film          Nomor Kursi      Harga");
             double subtotal = 0;
             for(int i =0; i<listPrint.Count; i++)
             {
@@ -93,11 +93,11 @@ namespace FunnyTix_LIB
                     film = listPrint[i].Pfilm.Judul.PadRight(15,' ');
                 }
                 string jadwalFilm = JadwalFilm.SesiToJam(listPrint[i].PjadwalFilm.Jam_pemutaran).PadRight(20, ' ');
-                string nomorKursi = listPrint[i].NomorKursi.PadRight(11, ' ');
+                string nomorKursi = listPrint[i].NomorKursi.PadRight(16, ' ');
                 string harga = listPrint[i].Harga.ToString();
                 subtotal += listPrint[i].Harga;
 
-                NamaFile.WriteLine(studio + "|" + film + "|" + jadwalFilm + "|" + nomorKursi + "|" + harga);
+                NamaFile.WriteLine(studio + " " + film + " " + jadwalFilm + " " + nomorKursi + " " + harga);
             }
             NamaFile.WriteLine("--------------------------------------------------------------------------");
             NamaFile.WriteLine("Subtotal            Rp. " + subtotal.ToString());

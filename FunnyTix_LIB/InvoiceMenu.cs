@@ -57,23 +57,23 @@ namespace FunnyTix_LIB
         {
             string nama = "InvoicesMenu_" + im.Id;
             StreamWriter NamaFile = new StreamWriter(nama);
-            //List < DetailJual> listCetak = this.ListItem;
-            NamaFile.WriteLine($"FunnyTix");
-            NamaFile.WriteLine("-------------------");
-            NamaFile.WriteLine("NOTA JUAL " + im.Id);
-            NamaFile.WriteLine("");
-            NamaFile.WriteLine("Tanggal " + im.Tanggal.ToString("dd-MM-yyyy"));
-            NamaFile.WriteLine("Konnsumen " + im.Konsumen.Nama);
-            NamaFile.WriteLine("Kasir " + im.Kasir.Nama);
-            NamaFile.WriteLine("-------------------");
-            //NamaFile.WriteLine("Item           Qty  Sub total");
-            NamaFile.Write("Item".PadRight(15, ' '));
-            NamaFile.Write("Qty".PadRight(5, ' '));
-            NamaFile.Write("Sub Total".PadRight(8, ' '));
-            NamaFile.WriteLine("");
-
             string kode = im.Id.ToString();
             List<DetailPesanan> listPesanan = InvoiceMenu.BacaDetailPesanan(kode);
+
+            Cinema cinema = Cinema.BacaData("Id", listPesanan[0].Cinema.ToString())[0];
+  
+            NamaFile.WriteLine(cinema.NamaCabang.PadLeft(38 + Convert.ToInt32(Math.Ceiling(decimal.Parse((cinema.NamaCabang.Length / 2).ToString()))), ' '));
+            NamaFile.WriteLine(cinema.Alamat.PadLeft(38 + Convert.ToInt32(Math.Ceiling(decimal.Parse((cinema.Alamat.Length / 2).ToString()))), ' '));
+            NamaFile.WriteLine(" ");
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
+            NamaFile.WriteLine("Tanggal".PadRight(38, ' ') + "No.Pesanan");
+            NamaFile.WriteLine(im.Tanggal.ToString("dd-MM-yyyy").PadRight(38,' ') + im.Tanggal.ToString("yyyyMMdd") + "M" + im.Id.ToString().PadLeft(5, '0'));
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
+            NamaFile.WriteLine("Rincian Konsumen");
+            NamaFile.WriteLine("Konsumen".PadRight(38, ' ') + "Kasir");
+            NamaFile.WriteLine(im.Konsumen.Nama.PadRight(38, ' ') + im.Kasir.Nama);
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
+            NamaFile.WriteLine("Item".PadRight(30, ' ') + "Quantity".PadRight(20, ' ') + "Harga".PadRight(15,' ')+"Subtotal".PadRight(10,' '));
 
             //Memindah listCetak ke filetext
             double total = 0;
@@ -81,19 +81,19 @@ namespace FunnyTix_LIB
             {
                 double subtotal = listPesanan[i].Jumlah * listPesanan[i].Harga;
                 total += subtotal;
-                string barang = listPesanan[i].Makanan.Nama.PadRight(15, ' ');
-                string jumlah = listPesanan[i].Jumlah.ToString().PadLeft(3, ' ');
-                string nilai = subtotal.ToString().PadLeft(8, ' ');
+                string barang = listPesanan[i].Makanan.Nama.PadRight(30, ' ');
+                string jumlah = listPesanan[i].Jumlah.ToString().PadRight(20, ' ');
+                string harga = listPesanan[i].Harga.ToString().PadRight(15, ' ');
+                string nilai = subtotal.ToString();
 
-                NamaFile.WriteLine($"{barang} {jumlah} {nilai}");
+                NamaFile.WriteLine($"{barang}{jumlah}{harga}{nilai}");
             }
-            NamaFile.WriteLine("-------------------");
-            NamaFile.WriteLine($"Total Rp " + total.ToString());
-            NamaFile.WriteLine("-------------------");
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
+            NamaFile.WriteLine($"Total ".PadRight(61,' ')+ "Rp. " + total.ToString());
+            NamaFile.WriteLine("--------------------------------------------------------------------------");
             NamaFile.WriteLine($"Dicetak oleh " + im.Kasir.Nama);
             NamaFile.WriteLine($"Dicetak tanggal " + DateTime.Now.ToString("dd-MM-yyyy HH:mm"));
-            NamaFile.WriteLine("-------------------");
-            NamaFile.WriteLine($"");
+            NamaFile.WriteLine("------------------------------F U N N Y T I X------------------------------");
             NamaFile.Close();
 
             CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
@@ -176,13 +176,19 @@ namespace FunnyTix_LIB
                 invoice.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
                 invoice.Grand_total = double.Parse(hasil.GetValue(2).ToString());
                 invoice.Konsumen = Konsumen.BacaData("Id", hasil.GetValue(3).ToString())[0];
-                invoice.Kasir = Pegawai.BacaData("Id", hasil.GetValue(4).ToString())[0];
+                invoice.Kasir = new Pegawai();
+
+                string hasilIDKasir = hasil.IsDBNull(hasil.GetOrdinal("pegawais_id")) ? null : hasil["pegawais_id"].ToString();
+                if (hasilIDKasir!=null)
+                {
+                    invoice.Kasir = Pegawai.BacaData("Id", hasil.GetValue(4).ToString())[0];
+                }
 
                 invoice.Id = int.Parse(hasil.GetValue(0).ToString());
 
-                if(invoice.Kasir != null)
+                if(invoice.Kasir.Nama != "")
                 {
-                    invoice.Status = "TERBAYAR";
+                    invoice.Status = "TERAMBIL";
                 }
                 listInvoiceMenu.Add(invoice);
             }
@@ -214,9 +220,12 @@ namespace FunnyTix_LIB
                 Koneksi.JalankanPerintahNonQuery(perintah);
             }
         }
+        public static void UpdateInvoice(InvoiceMenu invoice)
+        {
+            string cmd = $"UPDATE invoices_makanans SET pegawais_id = '{invoice.Kasir.ID}' WHERE id = '{invoice.Id}';";
 
-
-        
+            Koneksi.JalankanPerintahNonQuery(cmd);
+        }
         #endregion
     }
 }

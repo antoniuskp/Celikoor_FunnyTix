@@ -25,6 +25,7 @@ namespace Celikoor_FunnyTix
         {
             try
             {
+                buttonPrintNota.Visible = false;
                 listInvoiceMenu = InvoiceMenu.BacaData();
                 InputDataGrid();
                 FormatHeaderDataGrid();
@@ -39,7 +40,6 @@ namespace Celikoor_FunnyTix
         {
             dataGridViewHasil.Rows.Clear();
 
-
             foreach (InvoiceMenu In in listInvoiceMenu)
             {
                 string id = In.Id.ToString();
@@ -50,7 +50,7 @@ namespace Celikoor_FunnyTix
                 string status = In.Status.ToString();
                 string validasi = "Validasi";
 
-                dataGridViewHasil.Rows.Add(id, tgl, grand_total, konsumen, kasir, status, validasi, "Print");
+                dataGridViewHasil.Rows.Add(id, tgl, grand_total, konsumen, kasir, status, validasi);
             }
             comboBox.SelectedIndex = 0;
         }
@@ -68,38 +68,79 @@ namespace Celikoor_FunnyTix
 
             dataGridViewHasil.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
-        int index;
+
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = dataGridViewHasil.CurrentRow.Index;
-            string idNota = dataGridViewHasil.Rows[index].Cells["id_column"].Value.ToString();
-            if (e.ColumnIndex == dataGridViewHasil.Columns["print_column"].Index)
+            try
             {
-                string status = dataGridViewHasil.Rows[index].Cells["status_column"].Value.ToString();
-                if (status == "TERBAYAR")
+                string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+                string status = dataGridViewHasil.CurrentRow.Cells["status_column"].Value.ToString();
+                if (e.ColumnIndex == dataGridViewHasil.Columns["validasi_column"].Index)
                 {
-                    InvoiceMenu nota = InvoiceMenu.CariInvoice("id", idNota);
-                    InvoiceMenu.CetakNota(nota);
+                    InvoiceMenu invoice = InvoiceMenu.BacaData("Id", kode)[0];
+                    labelId.Text = kode;
+                    comboBoxStatus.Text = status;
+                    panelValidasiInvoice.Visible = true;
                 }
-                else if (status == "VALIDASI" || status == "PENDING")
+                if (status == "TERAMBIL")
                 {
+                    buttonPrintNota.Visible = true;
+                }
+                else
+                {
+                    buttonPrintNota.Visible = false;
+                }
 
-                    MessageBox.Show($"Maaf, Nota anda masih dalam status {status}");
-                }
             }
-            else if(e.ColumnIndex == dataGridViewHasil.Columns["validasi_column"].Index)
+            catch (Exception ex)
             {
-                labelId.Text = idNota;
-                panelValidasiInvoice.Visible = true;
-
+                MessageBox.Show("Perubahan data gagal. Error : " + ex.Message);
             }
         }
 
-        
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            status = comboBoxStatus.Text;
-            dataGridViewHasil.Rows[index].Cells["status_column"].Value = status;
+            int id = int.Parse(labelId.Text);
+            string status = comboBoxStatus.Text;
+            if (status == "TERAMBIL")
+            {
+                InvoiceMenu invoice = new InvoiceMenu();
+                invoice.Id = id;
+                invoice.Status = status;
+                invoice.Kasir = Auth.GetPegawai();//gabisa
+
+                InvoiceMenu.UpdateInvoice(invoice);
+                MessageBox.Show("Pengubahan Data Berhasil!", "SUCCESS ☑️");
+                panelValidasiInvoice.Visible = false;
+
+                FormValidasiMenu_Load(this, e);
+            }
+            /*try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Pengubahan Data Gagal!", "WARNING ⚠️");
+
+            }*/
+        }
+
+        private void buttonPrintNota_Click(object sender, EventArgs e)
+        {
+            string kode = dataGridViewHasil.CurrentRow.Cells["id_column"].Value.ToString();
+            InvoiceMenu invoice = InvoiceMenu.BacaData("Id", kode)[0];
+            InvoiceMenu.CetakNota(invoice);
+            MessageBox.Show("Nota berhasil diprint!");
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonBatal_Click(object sender, EventArgs e)
+        {
             panelValidasiInvoice.Visible = false;
         }
     }
