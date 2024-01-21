@@ -197,14 +197,14 @@ namespace FunnyTix_LIB
                 }
                 listInvoiceMenu.Add(invoice);
             }
-            return listInvoiceMenu;
+            return listInvoiceMenu; 
         }
         public static List<InvoiceMenu> BacaDataHariIni(string filter = "", string value = "")
         {
-            string query = "SELECT * FROM invoices_makanans where tanggal=now();";
+            string query = "SELECT * FROM invoices_makanans where tanggal=curdate();";
             if (value != "")
             {
-                query = $"SELECT * FROM invoices_makanans where tanggal=now() and {filter} like '%{value}%';";
+                query = $"SELECT * FROM invoices_makanans where tanggal=curdate() and {filter} like '%{value}%';";
             }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<InvoiceMenu> listInvoiceMenu = new List<InvoiceMenu>();

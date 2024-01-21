@@ -798,5 +798,15 @@ namespace Celikoor_FunnyTix
             panelMasterMakanan.BackColor = Color.Transparent;
 
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelIsiSaldo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

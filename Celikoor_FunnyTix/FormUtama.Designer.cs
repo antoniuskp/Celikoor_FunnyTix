@@ -87,6 +87,7 @@
             this.panelMasterPegawai = new System.Windows.Forms.Panel();
             this.labelPegawai = new System.Windows.Forms.Label();
             this.labelProfile = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelPIlihan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelPegawaiOperator.SuspendLayout();
@@ -124,6 +125,7 @@
             // 
             this.panelPIlihan.BackColor = System.Drawing.Color.Maroon;
             this.panelPIlihan.Controls.Add(this.labelNama);
+            this.panelPIlihan.Controls.Add(this.labelLogOut);
             this.panelPIlihan.Controls.Add(this.pictureBoxProfile);
             this.panelPIlihan.Controls.Add(this.panelPegawaiOperator);
             this.panelPIlihan.Controls.Add(this.panelKonsumen);
@@ -131,10 +133,10 @@
             this.panelPIlihan.Controls.Add(this.panelLogout);
             this.panelPIlihan.Controls.Add(this.panelPegawaiAdmin);
             this.panelPIlihan.Controls.Add(this.panelHeader);
-            this.panelPIlihan.Location = new System.Drawing.Point(1, 1);
+            this.panelPIlihan.Location = new System.Drawing.Point(1, -17);
             this.panelPIlihan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelPIlihan.Name = "panelPIlihan";
-            this.panelPIlihan.Size = new System.Drawing.Size(523, 1034);
+            this.panelPIlihan.Size = new System.Drawing.Size(523, 1054);
             this.panelPIlihan.TabIndex = 15;
             // 
             // labelNama
@@ -142,7 +144,7 @@
             this.labelNama.BackColor = System.Drawing.Color.NavajoWhite;
             this.labelNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNama.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelNama.Location = new System.Drawing.Point(-1, 289);
+            this.labelNama.Location = new System.Drawing.Point(0, 295);
             this.labelNama.Name = "labelNama";
             this.labelNama.Size = new System.Drawing.Size(522, 60);
             this.labelNama.TabIndex = 36;
@@ -208,7 +210,7 @@
             this.panelKonsumen.Location = new System.Drawing.Point(1, 358);
             this.panelKonsumen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelKonsumen.Name = "panelKonsumen";
-            this.panelKonsumen.Size = new System.Drawing.Size(523, 609);
+            this.panelKonsumen.Size = new System.Drawing.Size(523, 606);
             this.panelKonsumen.TabIndex = 27;
             // 
             // panelBeliTiket
@@ -275,6 +277,7 @@
             this.panelIsiSaldo.Size = new System.Drawing.Size(523, 100);
             this.panelIsiSaldo.TabIndex = 22;
             this.panelIsiSaldo.Click += new System.EventHandler(this.panelIsiSaldo_Click);
+            this.panelIsiSaldo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIsiSaldo_Paint);
             this.panelIsiSaldo.MouseLeave += new System.EventHandler(this.panelIsiSaldo_MouseLeave);
             this.panelIsiSaldo.MouseHover += new System.EventHandler(this.panelIsiSaldo_MouseHover);
             // 
@@ -289,6 +292,7 @@
             this.label1.Size = new System.Drawing.Size(193, 46);
             this.label1.TabIndex = 20;
             this.label1.Text = "ISI SALDO";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panelHistory
             // 
@@ -439,10 +443,10 @@
             // panelLogout
             // 
             this.panelLogout.BackColor = System.Drawing.Color.Transparent;
-            this.panelLogout.Controls.Add(this.labelLogOut);
+            this.panelLogout.Controls.Add(this.label3);
             this.panelLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLogout.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Bold);
-            this.panelLogout.Location = new System.Drawing.Point(0, 971);
+            this.panelLogout.Location = new System.Drawing.Point(0, 984);
             this.panelLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Size = new System.Drawing.Size(523, 50);
@@ -455,9 +459,9 @@
             // 
             this.labelLogOut.AutoSize = true;
             this.labelLogOut.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogOut.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogOut.Font = new System.Drawing.Font("Montserrat", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLogOut.Location = new System.Drawing.Point(37, 14);
+            this.labelLogOut.Location = new System.Drawing.Point(10, 28);
             this.labelLogOut.Name = "labelLogOut";
             this.labelLogOut.Size = new System.Drawing.Size(123, 32);
             this.labelLogOut.TabIndex = 17;
@@ -911,6 +915,18 @@
             this.labelProfile.TabIndex = 17;
             this.labelProfile.Text = "Profile";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(36, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 32);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "LOG OUT";
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -928,6 +944,7 @@
             this.Text = " FunnyTix";
             this.Load += new System.EventHandler(this.FormUtama_Load);
             this.panelPIlihan.ResumeLayout(false);
+            this.panelPIlihan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panelPegawaiOperator.ResumeLayout(false);
             this.panelUpdateStatus.ResumeLayout(false);
@@ -1046,5 +1063,6 @@
         private System.Windows.Forms.Label labelInvoiceMenu;
         private System.Windows.Forms.Panel panelMasterMakanan;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -38,8 +38,6 @@ namespace Celikoor_FunnyTix
         private void InputDataGrid()
         {
             dataGridViewHasil.Rows.Clear();
-
-
             foreach (Invoice In in listInvoice)
             {
                 string id = In.Id.ToString();
@@ -106,6 +104,7 @@ namespace Celikoor_FunnyTix
                 case "Tanggal":
                     listInvoices = Invoice.BacaData("Tanggal", textBox.Text);
                     dataGridViewHasil.Refresh();
+
                     break;
                 case "Status":
                     listInvoices = Invoice.BacaData("Status", textBox.Text);
@@ -119,7 +118,7 @@ namespace Celikoor_FunnyTix
             }
             else
             {
-                dataGridViewHasil.DataSource = listInvoices;
+                dataGridViewHasil.DataSource = listInvoice;
                 MessageBox.Show("Tidak ada data yang cocok.");
                 textBox.Text = "";
                 comboBox.SelectedIndex = 0;

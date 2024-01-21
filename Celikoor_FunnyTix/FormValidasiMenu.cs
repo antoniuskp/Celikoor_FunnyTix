@@ -8,13 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Windows.Forms.VisualStyles;
 
 namespace Celikoor_FunnyTix
 {
     public partial class FormValidasiMenu : Form
     {
         List<InvoiceMenu> listInvoiceMenu;
-        private string status = "";
+        private string status;
 
         public FormValidasiMenu()
         {
@@ -148,12 +150,17 @@ namespace Celikoor_FunnyTix
         {
             try
             {
-                buttonPrintNota.Visible = false;
-                listInvoiceMenu = InvoiceMenu.BacaDataHariIni(comboBox.Text, textBox.Text);
-                InputDataGrid();
-                FormatHeaderDataGrid();
+                if (textBox.Text.Length == 11)
+                {
+                    string noInv = textBox.Text.Substring(8, 3).TrimStart('0');
+                    listInvoiceMenu = InvoiceMenu.BacaDataHariIni("id", noInv);
+
+                    buttonPrintNota.Visible = false;
+                    InputDataGrid();
+                    FormatHeaderDataGrid();
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

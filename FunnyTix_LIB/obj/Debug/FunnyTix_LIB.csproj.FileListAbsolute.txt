@@ -114,3 +114,4 @@ D:\Kuliah\Mata Kuliah\Semester 3\Database\Project UAS\New\Celikoor_FunnyTix\Funn
 C:\Users\fanny\Documents\College Life\2. Sophmore Year\Semester 3\Database\Project\Project UAS\FunnyTix\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\Zen.Barcode.Core.dll
 C:\Users\HP\Documents\GitHub\DataBase Celikoor\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\Zen.Barcode.Core.dll
 C:\Users\Anastasya Putri\OneDrive\Documents\Semester 3\Database\git hub\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\Janet Deby Marlien M\Dropbox\PC\Downloads\Database\Project DB\Celikoor_FunnyTix\FunnyTix_LIB\bin\Debug\Zen.Barcode.Core.dll

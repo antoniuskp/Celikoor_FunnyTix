@@ -25,17 +25,10 @@ namespace Celikoor_FunnyTix
 
         private void FormMakanan_Load(object sender, EventArgs e)
         {
-            try
-            {
-                frmUtama = (FormUtama)this.Owner;
-                comboBoxCinema.DataSource = Makanan.BacaCinemaMakanan();
-                comboBoxCinema.DisplayMember = "NamaCabang";
-                labelSaldo.Text = Auth.GetKonsumen().Saldo.ToString();
-            }
-            catch (Exception x)
-            {
-                MessageBox.Show(x.Message);
-            }
+            frmUtama = (FormUtama)this.Owner;
+            comboBoxCinema.DataSource = Makanan.BacaCinemaMakanan();
+            comboBoxCinema.DisplayMember = "NamaCabang";
+            labelSaldo.Text = Auth.GetKonsumen().Saldo.ToString();
         }
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,7 +251,6 @@ namespace Celikoor_FunnyTix
                         double totalYgDIbayar = double.Parse(labelTotalAkhir.Text);
                         Konsumen.UbahSaldo(Auth.GetKonsumen(), -(int)totalYgDIbayar);
 
-                        frmUtama.UpdateSaldo();
 
                         InvoiceMenu.TambahData(im);
                         MessageBox.Show("Pembayaran Berhasil!", "SUCCESS ☑️");
@@ -279,7 +271,7 @@ namespace Celikoor_FunnyTix
                 MessageBox.Show("Penambahan Data gagal! " + ex.Message);
             }
             
-            
+            frmUtama.UpdateSaldo();
         }
 
         private void buttonCari_Click(object sender, EventArgs e)
