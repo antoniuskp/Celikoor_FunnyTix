@@ -27,7 +27,8 @@ namespace Celikoor_FunnyTix
 
             int kode = Auth.GetKonsumen().ID;
             listHistory = History.BacaHistory(kode);
-            listInvoiceMenu = InvoiceMenu.BacaHistory("", kode);
+            listInvoiceMenu = InvoiceMenu.BacaHistory("tanggal",0,Auth.GetKonsumen());
+            panelDetailMenu.Visible = false;
             InputDataGrid();
             FormatHeaderDataGrid();
         }
@@ -46,7 +47,6 @@ namespace Celikoor_FunnyTix
 
                 dataGridViewHasil.Rows.Add(status, tgl, no_kursi, harga, judul, "Print");
             }
-            dateTimePickerTglTransaksi.Value = DateTime.Now;
 
             foreach (InvoiceMenu Im in listInvoiceMenu)
             {
@@ -55,7 +55,7 @@ namespace Celikoor_FunnyTix
                 string status = Im.Status.ToString();
                 double grand_total = double.Parse(Im.Grand_total.ToString());
 
-                dataGridViewMenu.Rows.Add(status, tgl, grand_total, "Print");
+                dataGridViewMenu.Rows.Add(status, tgl, grand_total, "Detail", "Barcode");
             }
         }
         private void FormatHeaderDataGrid()
@@ -85,6 +85,19 @@ namespace Celikoor_FunnyTix
             dataGridViewMenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             dataGridViewMenu.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+
+            //DetailMenu
+            dataGridViewDetail.ColumnHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
+            dataGridViewDetail.ColumnHeadersDefaultCellStyle.Font = new Font("Montserrat", 8, FontStyle.Bold);
+            dataGridViewDetail.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.DarkRed;
+            dataGridViewDetail.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewDetail.EnableHeadersVisualStyles = false;
+
+            dataGridViewDetail.AllowUserToAddRows = false;
+            dataGridViewDetail.ReadOnly = true;
+            dataGridViewDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridViewDetail.RowHeadersDefaultCellStyle.BackColor = Color.NavajoWhite;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -92,11 +105,11 @@ namespace Celikoor_FunnyTix
             this.Close();
         }
 
-        private void buttonCari_Click(object sender, EventArgs e)
+        /*private void buttonCari_Click(object sender, EventArgs e)
         {
             List<Invoice> listInvoice = Invoice.BacaData("tanggal", dateTimePickerTglTransaksi.Value.ToString("yyyy-MM-dd"), Auth.GetKonsumen());
             InputDataGrid();
-        }
+        }*/
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -116,6 +129,42 @@ namespace Celikoor_FunnyTix
                     MessageBox.Show($"Maaf, invoice anda belum terverifikasi!", "WARNING ⚠️");
                 }
             }
+        }
+
+        private void dataGridViewMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string status = dataGridViewMenu.CurrentRow.Cells["kolom_status"].Value.ToString();
+            string tanggal = dataGridViewMenu.CurrentRow.Cells["kolom_tanggal"].Value.ToString();
+            string harga = dataGridViewMenu.CurrentRow.Cells["kolom_total_harga"].Value.ToString();
+            InvoiceMenu im = InvoiceMenu.CariInvoice("grand_total", harga, "tanggal", tanggal);
+            if (e.ColumnIndex == dataGridViewMenu.Columns["detail_button"].Index)
+            {
+                dataGridViewDetail.Rows.Clear();
+                List<DetailPesanan> listDetailPesanan = InvoiceMenu.BacaDetailPesanan(im.Id.ToString());
+                labelStatus.Text = status;
+                labelTanggal.Text = tanggal;
+                labelTotalHarga.Text = harga;
+                labelCinema.Text = Cinema.BacaData("id", listDetailPesanan[0].Cinema.ID.ToString())[0].NamaCabang;
+                
+                foreach(DetailPesanan dp in listDetailPesanan)
+                {
+                    string nama = dp.Makanan.Nama;
+                    string jumlah = dp.Jumlah.ToString();
+                    string subHarga = dp.Harga.ToString();
+                    dataGridViewDetail.Rows.Add(nama, jumlah, subHarga);
+                }
+
+                panelDetailMenu.Visible = true;
+            }
+            if (e.ColumnIndex == dataGridViewMenu.Columns["barcode_button"].Index)
+            {
+
+            }
+        }
+
+        private void buttonTutup_Click(object sender, EventArgs e)
+        {
+            panelDetailMenu.Visible = false;
         }
     }
 }

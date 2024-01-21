@@ -114,9 +114,13 @@ namespace FunnyTix_LIB
             return notaBaru;
         }
 
-        public static InvoiceMenu CariInvoice (string filter, string value)
+        public static InvoiceMenu CariInvoice (string filter, string value, string filter2="", string value2="")
         {
             string query = $"SELECT * FROM invoices_makanans WHERE {filter} = '{value}';";
+            if(value2!="")
+            {
+                query = $"SELECT * FROM invoices_makanans WHERE {filter} = '{value}' and {filter2} like '%{value2}%';";
+            }
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
 
             if (hasil.Read() == true)
@@ -147,10 +151,11 @@ namespace FunnyTix_LIB
             while(hasil.Read() == true)
             {
                 DetailPesanan ds = new DetailPesanan();
-                ds.Jumlah = int.Parse(hasil.GetValue(0).ToString());
+                ds.Jumlah = int.Parse(hasil.GetValue(2).ToString());
                 ds.Harga = double.Parse(hasil.GetValue(1).ToString());
                 int kode = int.Parse(hasil.GetValue(5).ToString());
                 ds.Makanan = Makanan.CariMakanan(kode);
+                ds.Cinema = Cinema.BacaData("id", hasil.GetValue(4).ToString())[0];
                 listData.Add(ds);
             }
             return listData;
@@ -230,15 +235,21 @@ namespace FunnyTix_LIB
         }
         public static List<InvoiceMenu> BacaHistory(string filter = "", int value = 0, Konsumen k = null)
         {
-            string query = "SELECT * FROM invoices_makanans;";
-            if (value < 0 && k == null)
+            string query = $"SELECT * FROM invoices_makanans WHERE konsumens_id = '{k.ID}';";
+
+            if(filter!="")
+            {
+                query = $"SELECT * FROM invoices_makanans WHERE konsumens_id = '{k.ID}' and {filter} like '%{value}%';";
+            }
+
+            /*if (value < 0 && k == null)
             {
                 query = $"SELECT * FROM invoices_makanans where {filter} like '%{value}%';";
             }
             else if (filter == "tanggal" && value < 0 && k != null)
             {
                 query = $"SELECT * FROM invoices_makanans WHERE tanggal LIKE '{value}%' AND konsumens_id = '{k.ID}';";
-            }
+            }*/
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
             List<InvoiceMenu> listInvoiceMenu = new List<InvoiceMenu>();
 

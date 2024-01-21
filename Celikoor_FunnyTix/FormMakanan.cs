@@ -287,18 +287,24 @@ namespace Celikoor_FunnyTix
             switch (comboBox.Text)
             {
                 case "Nama":
-                    lstMakananCin = MakananCinemas.SearchData("Nama", textBoxFilter.Text);
+                    lstMakananCin = MakananCinemas.SearchData(selectedCinema ,"Nama", textBoxFilter.Text);
+                    
                     dataGridViewHasil.Refresh();
                     break;
                 case "Harga":
-                    lstMakananCin = MakananCinemas.SearchData("Harga", textBoxFilter.Text);
+                    lstMakananCin = MakananCinemas.SearchData(selectedCinema ,"Harga", textBoxFilter.Text);
                     dataGridViewHasil.Refresh();
                     break;
             }
 
             if (lstMakananCin.Count > 0)
             {
-                //InputDataGrid();
+                dataGridViewHasil.Rows.Clear();
+
+                foreach (MakananCinemas mc in lstMakananCin)
+                {
+                    dataGridViewHasil.Rows.Add(mc.Makanan_.Nama, mc.Makanan_.Deskripsi, mc.Harga, "Tambah");
+                }
             }
             else
             {

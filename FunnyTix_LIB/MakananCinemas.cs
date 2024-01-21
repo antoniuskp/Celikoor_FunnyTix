@@ -40,9 +40,13 @@ namespace FunnyTix_LIB
 
             return lst;
         }
-        public static List<MakananCinemas> SearchData(string filter = "", string value = "", string filter2 = "", string value2 = "")
+        public static List<MakananCinemas> SearchData(Cinema cinema, string filter = "", string value = "")
         {
-            string cmd = $"SELECT * FROM makanans_cinemas WHERE '{filter}' LIKE '%{value}%' AND '{filter2}' LIKE '%{value2}%'";
+            string cmd = $"SELECT * FROM makanans_cinemas WHERE cinemas_id = '{cinema.ID}' and {filter} LIKE '%{value}%';";
+            if(filter=="Nama")
+            {
+                cmd = $"SELECT * FROM makanans_cinemas mc inner join makanans m on mc.makanans_id=m.id where mc.cinemas_id = '{cinema.ID}' and m.nama like '%{value}%';";
+            }
             var res = Koneksi.JalankanPerintahSelect(cmd);
 
             var lst = new List<MakananCinemas>();
