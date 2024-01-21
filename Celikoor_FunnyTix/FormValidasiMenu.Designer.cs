@@ -114,7 +114,7 @@ namespace Celikoor_FunnyTix
             this.labelId.Location = new System.Drawing.Point(165, 39);
             this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(191, 25);
+            this.labelId.Size = new System.Drawing.Size(200, 26);
             this.labelId.TabIndex = 16;
             this.labelId.Text = "ID Invoice Makanan";
             // 
@@ -138,7 +138,7 @@ namespace Celikoor_FunnyTix
             this.label6.Location = new System.Drawing.Point(75, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.Size = new System.Drawing.Size(82, 26);
             this.label6.TabIndex = 6;
             this.label6.Text = "Status :";
             // 
@@ -150,7 +150,7 @@ namespace Celikoor_FunnyTix
             this.label3.Location = new System.Drawing.Point(109, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 25);
+            this.label3.Size = new System.Drawing.Size(43, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID :";
             // 
@@ -334,6 +334,7 @@ namespace Celikoor_FunnyTix
             this.buttonCari.TabIndex = 3;
             this.buttonCari.Text = "Cari";
             this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // textBox
             // 
@@ -349,7 +350,6 @@ namespace Celikoor_FunnyTix
             this.comboBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
-            "Tanggal",
             "Status"});
             this.comboBox.Location = new System.Drawing.Point(321, 25);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

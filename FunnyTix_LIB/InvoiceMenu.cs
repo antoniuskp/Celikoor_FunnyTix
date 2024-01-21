@@ -194,6 +194,40 @@ namespace FunnyTix_LIB
             }
             return listInvoiceMenu;
         }
+        public static List<InvoiceMenu> BacaDataHariIni(string filter = "", string value = "")
+        {
+            string query = "SELECT * FROM invoices_makanans where tanggal=now();";
+            if (value != "")
+            {
+                query = $"SELECT * FROM invoices_makanans where tanggal=now() and {filter} like '%{value}%';";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(query);
+            List<InvoiceMenu> listInvoiceMenu = new List<InvoiceMenu>();
+
+            while (hasil.Read() == true)
+            {
+                InvoiceMenu invoice = new InvoiceMenu();
+                invoice.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                invoice.Grand_total = double.Parse(hasil.GetValue(2).ToString());
+                invoice.Konsumen = Konsumen.BacaData("Id", hasil.GetValue(3).ToString())[0];
+                invoice.Kasir = new Pegawai();
+
+                string hasilIDKasir = hasil.IsDBNull(hasil.GetOrdinal("pegawais_id")) ? null : hasil["pegawais_id"].ToString();
+                if (hasilIDKasir != null)
+                {
+                    invoice.Kasir = Pegawai.BacaData("Id", hasil.GetValue(4).ToString())[0];
+                }
+
+                invoice.Id = int.Parse(hasil.GetValue(0).ToString());
+
+                if (invoice.Kasir.Nama != "")
+                {
+                    invoice.Status = "TERAMBIL";
+                }
+                listInvoiceMenu.Add(invoice);
+            }
+            return listInvoiceMenu;
+        }
         public static List<InvoiceMenu> BacaHistory(string filter = "", int value = 0, Konsumen k = null)
         {
             string query = "SELECT * FROM invoices_makanans;";

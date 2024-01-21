@@ -26,7 +26,7 @@ namespace Celikoor_FunnyTix
             try
             {
                 buttonPrintNota.Visible = false;
-                listInvoiceMenu = InvoiceMenu.BacaData();
+                listInvoiceMenu = InvoiceMenu.BacaDataHariIni();
                 InputDataGrid();
                 FormatHeaderDataGrid();
             }
@@ -142,6 +142,21 @@ namespace Celikoor_FunnyTix
         private void buttonBatal_Click(object sender, EventArgs e)
         {
             panelValidasiInvoice.Visible = false;
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                buttonPrintNota.Visible = false;
+                listInvoiceMenu = InvoiceMenu.BacaDataHariIni(comboBox.Text, textBox.Text);
+                InputDataGrid();
+                FormatHeaderDataGrid();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
