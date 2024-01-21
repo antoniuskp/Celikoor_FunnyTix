@@ -56,10 +56,11 @@ namespace Celikoor_FunnyTix
                     string noKursi = textBoxNoTiket.Text.Substring(3, 3);
                     int noInv = int.Parse(textBoxNoTiket.Text.Substring(0, 3).TrimStart('0'));
                     Tiket ticket = Tiket.CariTiket(noInv, noKursi);
+                    Invoice i = Invoice.CariInvoice(noInv, noKursi);
 
                     if (ticket != null)
                     {
-                        if(ticket.IdInvoice.Status == "TERBAYAR")
+                        if( i.Status == "TERBAYAR")
                         {
                             if (ticket.Status == true)
                             {
@@ -81,7 +82,7 @@ namespace Celikoor_FunnyTix
                         }
                         else
                         {
-                            MessageBox.Show($"Maaf, invoice anda sedang {ticket.IdInvoice.Status}");
+                            MessageBox.Show($"Maaf, invoice anda sedang dalam status {i.Status}");
                             textBoxID.Clear();
                         }
                         
