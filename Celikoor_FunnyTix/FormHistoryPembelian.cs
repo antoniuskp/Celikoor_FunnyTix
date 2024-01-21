@@ -158,7 +158,8 @@ namespace Celikoor_FunnyTix
             }
             if (e.ColumnIndex == dataGridViewMenu.Columns["barcode_button"].Index)
             {
-
+                GenerateBarcodeMenu generate = new GenerateBarcodeMenu();
+                generate.Print(im);
             }
         }
 

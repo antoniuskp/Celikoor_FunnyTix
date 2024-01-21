@@ -59,6 +59,7 @@
     <Compile Include="DetailPesanan.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="FilmStudio.cs" />
+    <Compile Include="GenerateBarcodeMenu.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="GenreFilm.cs" />
     <Compile Include="History.cs" />

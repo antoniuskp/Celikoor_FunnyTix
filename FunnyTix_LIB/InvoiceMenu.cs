@@ -67,7 +67,7 @@ namespace FunnyTix_LIB
             NamaFile.WriteLine(" ");
             NamaFile.WriteLine("--------------------------------------------------------------------------");
             NamaFile.WriteLine("Tanggal".PadRight(38, ' ') + "No.Pesanan");
-            NamaFile.WriteLine(im.Tanggal.ToString("dd-MM-yyyy").PadRight(38,' ') + im.Tanggal.ToString("yyyyMMdd") + "M" + im.Id.ToString().PadLeft(5, '0'));
+            NamaFile.WriteLine(im.Tanggal.ToString("dd-MM-yyyy").PadRight(38,' ') + im.Tanggal.ToString("yyyyMMdd") + im.Id.ToString().PadLeft(6, '0'));
             NamaFile.WriteLine("--------------------------------------------------------------------------");
             NamaFile.WriteLine("Rincian Konsumen");
             NamaFile.WriteLine("Konsumen".PadRight(38, ' ') + "Kasir");
