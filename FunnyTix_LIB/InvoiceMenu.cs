@@ -60,7 +60,7 @@ namespace FunnyTix_LIB
             string kode = im.Id.ToString();
             List<DetailPesanan> listPesanan = InvoiceMenu.BacaDetailPesanan(kode);
 
-            Cinema cinema = Cinema.BacaData("Id", listPesanan[0].Cinema.ToString())[0];
+            Cinema cinema = Cinema.BacaData("nama_cabang", listPesanan[0].Cinema.ToString())[0];
   
             NamaFile.WriteLine(cinema.NamaCabang.PadLeft(38 + Convert.ToInt32(Math.Ceiling(decimal.Parse((cinema.NamaCabang.Length / 2).ToString()))), ' '));
             NamaFile.WriteLine(cinema.Alamat.PadLeft(38 + Convert.ToInt32(Math.Ceiling(decimal.Parse((cinema.Alamat.Length / 2).ToString()))), ' '));
